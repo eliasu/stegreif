@@ -1,4 +1,4 @@
-# site.ext
+# Stegreif Repo
 
 ## Installation instructions
 
