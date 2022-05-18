@@ -22,7 +22,7 @@ return [
         ],
 
         'en' => [
-            'name' => 'en',
+            'name' => 'Translations',
             'locale' => 'en_US',
             'url' => '/en/',
         ],
