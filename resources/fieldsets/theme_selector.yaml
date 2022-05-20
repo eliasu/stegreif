@@ -1,0 +1,16 @@
+title: 'Theme Selector'
+fields:
+  -
+    handle: select_theme
+    field:
+      options:
+        dark: Dark
+        yellow: Yellow
+        light: Light
+      default: dark
+      display: 'Select Theme'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      read_only: false

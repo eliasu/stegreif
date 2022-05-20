@@ -1,0 +1,39 @@
+title: 'Contact Details'
+fields:
+  -
+    handle: contact_details
+    field:
+      default: false
+      display: 'Add Contact Details'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: contact_description
+    field: common.text_single
+    config:
+      display: 'Contact Description'
+      localizable: true
+      width: 75
+      if:
+        contact_details: 'equals true'
+  -
+    handle: contact_phone
+    field: common.text_single
+    config:
+      input_type: tel
+      display: Phone
+      if:
+        contact_details: 'equals true'
+      width: 50
+  -
+    handle: contact_email
+    field: common.text_single
+    config:
+      input_type: email
+      display: eMail
+      if:
+        contact_details: 'equals true'
+      width: 50

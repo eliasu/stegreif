@@ -1,0 +1,19 @@
+title: Details
+fields:
+  -
+    handle: details
+    field:
+      fields:
+        -
+          import: detail
+      mode: stacked
+      add_row: 'Add Detail'
+      reorderable: true
+      display: Details
+      type: grid
+      icon: grid
+      instructions: 'Add details to the sidebar for additional information.'
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      localizable: true

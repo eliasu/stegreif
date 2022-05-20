@@ -1,0 +1,63 @@
+title: Reihen
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          localizable: true
+          listable: true
+          display: Title
+          validate:
+            - required
+      -
+        import: header_media
+      -
+        import: section
+      -
+        import: details
+      -
+        import: sections
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          generate: true
+          listable: hidden
+          display: Slug
+          validate:
+            - required
+      -
+        handle: aktuell
+        field: common.aktuell
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
+      -
+        handle: programme
+        field: common.entry
+        config:
+          max_items: 99
+          localizable: false
+          display: Programme
+          create: false
+          collections:
+            - programme

@@ -1,0 +1,68 @@
+title: 'Show Content'
+fields:
+  -
+    handle: description
+    field: article.article
+    config:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - removeformat
+        - anchor
+      display: Description
+      validate:
+        - required
+      width: 100
+  -
+    handle: details
+    field:
+      fields:
+        -
+          import: entry_detail
+      mode: stacked
+      add_row: 'Add Detail'
+      reorderable: true
+      display: Details
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      localizable: true
+  -
+    handle: additional_content_switch
+    field:
+      default: false
+      display: 'Additional Content'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      instructions: 'Add additional content blocks to this page.'
+  -
+    handle: additional_content
+    field: article.article
+    config:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - removeformat
+        - anchor
+      display: 'Additional Content'
+      validate:
+        - 'required_if:additional_content_switch,true'
+      if:
+        additional_content_switch: 'equals true'

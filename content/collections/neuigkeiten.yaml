@@ -1,0 +1,15 @@
+title: Neuigkeiten
+sites:
+  - de
+  - en
+propagate: true
+template: neuigkeiten/show
+layout: layout
+mount: 6b15baac-a9f9-4f3a-bda8-b81ac77ef726
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

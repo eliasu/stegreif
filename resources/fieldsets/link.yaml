@@ -1,0 +1,86 @@
+title: Link
+fields:
+  -
+    handle: label
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: Label
+      width: 66
+      replicator_preview: false
+      instructions_position: above
+      antlers: false
+  -
+    handle: target_blank
+    field:
+      type: toggle
+      localizable: true
+      width: 33
+      listable: false
+      display: 'Open in new window?'
+      replicator_preview: false
+      instructions_position: above
+      read_only: false
+      default: true
+  -
+    handle: link_type
+    field:
+      options:
+        url: URL
+        email: E-mail
+        tel: Telephone
+      type: button_group
+      localizable: true
+      default: url
+      listable: false
+      display: 'Link type'
+      replicator_preview: false
+      width: 50
+      instructions_position: above
+      read_only: false
+  -
+    handle: url
+    field:
+      placeholder: 'https://site.com'
+      input_type: url
+      type: text
+      localizable: true
+      listable: false
+      display: URL
+      width: 50
+      validate:
+        - 'required_if:{this}.link_type,url'
+      if:
+        link_type: url
+  -
+    handle: email
+    field:
+      placeholder: info@site.com
+      input_type: email
+      type: text
+      localizable: true
+      listable: false
+      display: E-mail
+      width: 50
+      replicator_preview: false
+      validate:
+        - 'required_if:{this}.link_type,email'
+      if:
+        link_type: email
+  -
+    handle: tel
+    field:
+      placeholder: '+0 (0)12 345678'
+      input_type: tel
+      type: text
+      localizable: true
+      listable: false
+      display: Telephone
+      width: 50
+      replicator_preview: false
+      validate:
+        - 'required_if:{this}.link_type,tel'
+      if:
+        link_type: tel

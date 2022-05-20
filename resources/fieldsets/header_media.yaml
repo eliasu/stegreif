@@ -1,0 +1,47 @@
+title: 'Header Media'
+fields:
+  -
+    handle: select_header_theme
+    field: theme_selector.select_theme
+    config:
+      display: 'Select Header Theme'
+      width: 100
+  -
+    handle: select_header_media
+    field:
+      options:
+        Video: Video
+        Image: Image
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: Image
+      display: 'Select Header Media'
+      type: select
+      icon: select
+      width: 50
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: image
+    field: common.image
+    config:
+      restrict: true
+      display: 'Header Image'
+      width: 50
+      if:
+        select_header_media: 'equals Image'
+      folder: header_images
+  -
+    handle: video
+    field: video.youtube_url
+    config:
+      localizable: false
+      width: 50
+      display: 'Header Video'
+      if:
+        select_header_media: 'equals Video'

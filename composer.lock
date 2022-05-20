@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90587a3e6414cfe42853a9164f43ec30",
+    "content-hash": "512b580f5da9e788bc8be10d8d734d89",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -975,6 +975,56 @@
                 }
             ],
             "time": "2022-02-28T11:07:21+00:00"
+        },
+        {
+            "name": "doublethreedigital/duplicator",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doublethreedigital/duplicator.git",
+                "reference": "85c3e94dbbf4d583832886ff215bef35eae46e5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublethreedigital/duplicator/zipball/85c3e94dbbf4d583832886ff215bef35eae46e5b",
+                "reference": "85c3e94dbbf4d583832886ff215bef35eae46e5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0 || ^8.1",
+                "statamic/cms": "3.2.* || 3.3.*"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^4.2 || ^5.0 || ^6.1",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Duplicator",
+                    "description": "Duplicate Entries in the Statamic 3 Control Panel"
+                },
+                "laravel": {
+                    "providers": [
+                        "DoubleThreeDigital\\Duplicator\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DoubleThreeDigital\\Duplicator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Duplicate Entries in the Statamic 3 Control Panel",
+            "support": {
+                "issues": "https://github.com/doublethreedigital/duplicator/issues",
+                "source": "https://github.com/doublethreedigital/duplicator/tree/v2.2.0"
+            },
+            "time": "2022-04-15T09:55:50+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -4471,16 +4521,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.11",
+            "version": "v3.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "f06cf8350365577f0d2db0732a55fd487e47217c"
+                "reference": "d0c57332e716be3070c328ddc494286ffe1ccdfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/f06cf8350365577f0d2db0732a55fd487e47217c",
-                "reference": "f06cf8350365577f0d2db0732a55fd487e47217c",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/d0c57332e716be3070c328ddc494286ffe1ccdfa",
+                "reference": "d0c57332e716be3070c328ddc494286ffe1ccdfa",
                 "shasum": ""
             },
             "require": {
@@ -4558,7 +4608,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.11"
+                "source": "https://github.com/statamic/cms/tree/v3.3.12"
             },
             "funding": [
                 {
@@ -4566,7 +4616,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-10T21:53:18+00:00"
+            "time": "2022-05-18T22:34:02+00:00"
         },
         {
             "name": "statamic/stringy",

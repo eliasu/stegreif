@@ -21,7 +21,7 @@ fields:
       target_blank: false
       reading_time: true
       fullscreen: true
-      allow_source: true
+      allow_source: false
       type: bard
       localizable: true
       listable: hidden
@@ -51,6 +51,11 @@ fields:
           fields:
             -
               import: table
+        test_set:
+          display: 'Test Set'
+          fields:
+            -
+              import: test_set
         video:
           display: Video
           fields:
@@ -59,3 +64,11 @@ fields:
       container: assets
       enable_input_rules: true
       enable_paste_rules: true
+      instructions_position: above
+      read_only: false
+      link_collections:
+        - pages
+        - termine
+        - reihen
+        - programme
+      antlers: false

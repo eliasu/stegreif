@@ -1,0 +1,43 @@
+title: 'Partner*innen'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          listable: true
+          display: Title
+          validate:
+            - required
+          width: 50
+      -
+        handle: logo
+        field: common.image
+        config:
+          restrict: true
+          display: Logo
+          localizable: false
+          folder: partner_innen
+          width: 50
+      -
+        handle: description
+        field: common.text_plain
+        config:
+          display: Description
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          generate: true
+          listable: hidden
+          display: Slug
+          validate:
+            - required

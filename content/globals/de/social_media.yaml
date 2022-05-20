@@ -1,1 +1,11 @@
-{  }
+social_media:
+  -
+    handle: test
+    prefix: 'https://www.facebook.com/'
+    type: facebook
+    enabled: true
+  -
+    handle: test
+    prefix: 'https://www.instagram.com/'
+    type: instagram
+    enabled: true

@@ -2,7 +2,7 @@ title: Pages
 sites:
   - de
   - en
-propagate: false
+propagate: true
 template: default
 layout: layout
 revisions: false

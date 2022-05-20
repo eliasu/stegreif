@@ -1,0 +1,68 @@
+title: Termine
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: header_media
+      -
+        import: section
+      -
+        import: details
+      -
+        import: sections
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+          instructions_position: above
+          listable: hidden
+          read_only: false
+          mode: single
+          time_enabled: true
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
+      -
+        handle: programme
+        field: common.entry
+        config:
+          max_items: 1
+          localizable: false
+          display: Programme
+          create: false
+          collections:
+            - programme
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo

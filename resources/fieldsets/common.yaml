@@ -9,18 +9,27 @@ fields:
       allow_uploads: true
       max_files: 1
       type: assets
-      localizable: true
       listable: hidden
       display: Image
   -
-      handle: entry
-      field:
-        max_items: 1
-        mode: default
-        type: entries
-        localizable: true
-        listable: false
-        display: Entry
+    handle: images
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      type: assets
+      listable: hidden
+      display: Images
+  -
+    handle: entry
+    field:
+      max_items: 1
+      mode: default
+      type: entries
+      localizable: true
+      listable: false
+      display: Entry
   -
     handle: text_rich
     field:
@@ -79,6 +88,17 @@ fields:
       listable: hidden
       display: Text
   -
+    handle: text_single
+    field:
+      input_type: text
+      antlers: false
+      display: Text
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
     handle: size
     field:
       options:
@@ -90,3 +110,58 @@ fields:
       default: md
       listable: hidden
       display: Size
+  -
+    handle: team-tag
+    field:
+      mode: default
+      create: true
+      taxonomies:
+        - team_tags
+      display: 'Team Tag'
+      type: terms
+      icon: taxonomy
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: tags
+    field:
+      mode: default
+      create: true
+      taxonomies:
+        - tags
+      display: Tags
+      type: terms
+      icon: taxonomy
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: aktuell
+    field:
+      default: true
+      display: Aktuell
+      type: toggle
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: select_type
+    field:
+      options:
+        Programm: Programm
+        Education: Education
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: Programm
+      display: 'Select Type'
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      read_only: false

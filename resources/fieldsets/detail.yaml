@@ -1,0 +1,17 @@
+title: Detail
+fields:
+  -
+    handle: headline
+    field: common.text_single
+    config:
+      display: Headline
+      localizable: true
+      width: 50
+  -
+    handle: description
+    field: common.text_plain
+    config:
+      display: Description
+      width: 50
+  -
+    import: links

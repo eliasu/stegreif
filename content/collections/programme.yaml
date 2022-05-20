@@ -1,0 +1,14 @@
+title: Programme
+sites:
+  - de
+  - en
+propagate: true
+template: default
+layout: layout
+taxonomies:
+  - tags
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
