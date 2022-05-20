@@ -4,14 +4,11 @@ fields:
     handle: article
     field:
       buttons:
-        - h1
         - h2
         - h3
-        - bold
-        - italic
-        - unorderedlist
-        - orderedlist
-        - quote
+        - h4
+        - h5
+        - accent
         - removeformat
         - anchor
       save_html: false
@@ -30,37 +27,6 @@ fields:
       always_show_set_button: true
       validate:
         - required
-      sets:
-        buttons:
-          display: Buttons
-          fields:
-            -
-              import: buttons
-        figure:
-          display: Figure
-          fields:
-            -
-              import: figure
-        pull_quote:
-          display: 'Pull quote'
-          fields:
-            -
-              import: pull_quote
-        table:
-          display: Table
-          fields:
-            -
-              import: table
-        test_set:
-          display: 'Test Set'
-          fields:
-            -
-              import: test_set
-        video:
-          display: Video
-          fields:
-            -
-              import: video
       container: assets
       enable_input_rules: true
       enable_paste_rules: true
@@ -72,3 +38,34 @@ fields:
         - reihen
         - programme
       antlers: false
+      sets:
+        bard_buttons:
+          display: Buttons
+          fields:
+            -
+              import: bard_buttons
+        bard_feature:
+          display: Feature
+          fields:
+            -
+              import: bard_feature
+        bard_gallery:
+          display: Gallery
+          fields:
+            -
+              import: bard_gallery
+        bard_media:
+          display: Media
+          fields:
+            -
+              import: bard_media
+        bard_partners:
+          display: Partners
+          fields:
+            -
+              import: bard_partners
+        bard_quotes:
+          display: Quote
+          fields:
+            -
+              import: bard_quotes

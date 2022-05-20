@@ -1,0 +1,18 @@
+title: bard_feature
+fields:
+  -
+    handle: allignment
+    field: common.allignment
+  -
+    handle: image
+    field: common.image
+    config:
+      restrict: true
+      folder: article_images
+  -
+    handle: text_basics
+    field: common.text_basic
+    config:
+      buttons:
+        - h3
+        - anchor

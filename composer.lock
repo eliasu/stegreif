@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "512b580f5da9e788bc8be10d8d734d89",
+    "content-hash": "2579df652e352763d466855e3310ceab",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1826,6 +1826,89 @@
                 }
             ],
             "time": "2021-12-16T16:49:26+00:00"
+        },
+        {
+            "name": "jacksleight/statamic-bard-mutator",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacksleight/statamic-bard-mutator.git",
+                "reference": "50b7f03625580bedb3b87a595780aec4f0d55e09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacksleight/statamic-bard-mutator/zipball/50b7f03625580bedb3b87a595780aec4f0d55e09",
+                "reference": "50b7f03625580bedb3b87a595780aec4f0d55e09",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "~3.1.14 || 3.2.* || 3.3.*"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Bard Mutator",
+                    "description": "This Statamic addon allows you to modify the data and tags rendered by the Bard fieldtype, giving you full control over the final HTML."
+                },
+                "laravel": {
+                    "providers": [
+                        "JackSleight\\StatamicBardMutator\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JackSleight\\StatamicBardMutator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/jacksleight/statamic-bard-mutator/issues",
+                "source": "https://github.com/jacksleight/statamic-bard-mutator/tree/1.1.1"
+            },
+            "time": "2022-05-09T16:36:33+00:00"
+        },
+        {
+            "name": "jacksleight/statamic-bard-texstyle",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacksleight/statamic-bard-texstyle.git",
+                "reference": "e49850da937d3cc447450802fc8970b006969a50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacksleight/statamic-bard-texstyle/zipball/e49850da937d3cc447450802fc8970b006969a50",
+                "reference": "e49850da937d3cc447450802fc8970b006969a50",
+                "shasum": ""
+            },
+            "require": {
+                "jacksleight/statamic-bard-mutator": "^1.0.3",
+                "statamic/cms": "~3.2.24 || 3.3.*"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Bard Texstyle",
+                    "description": "This Statamic addon gives you the ability to add custom heading, paragraph and inline (span) text styles to the Bard fieldtype."
+                },
+                "laravel": {
+                    "providers": [
+                        "JackSleight\\StatamicBardTexstyle\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JackSleight\\StatamicBardTexstyle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/jacksleight/statamic-bard-texstyle/issues",
+                "source": "https://github.com/jacksleight/statamic-bard-texstyle/tree/1.0.2"
+            },
+            "time": "2022-05-17T12:34:14+00:00"
         },
         {
             "name": "james-heinrich/getid3",
@@ -10605,5 +10688,5 @@
         "php": "^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }

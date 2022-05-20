@@ -1,0 +1,21 @@
+{{#
+	@name Button Block
+	@desc The Button Block component.
+    @set page.article.button_block
+#}}
+
+<!-- /components/_button_block.antlers.html -->
+<div
+    class="
+        not-prose
+        {{ switch(
+            (size == 'md') => 'size-md',
+            (size == 'lg') => 'size-lg',
+            (size == 'xl') => 'size-xl',
+            () => 'size-md'
+        )}}
+    "
+>
+    <h2>🔧<br>Button Block</h2>
+</div>
+<!-- End: /components/_button_block.antlers.html -->

@@ -1,8 +1,8 @@
 title: Section
 fields:
   -
-    handle: select_theme
-    field: theme_selector.select_theme
+    handle: theme_selector
+    field: common.theme_selector
     config:
       display: 'Select Section Theme'
   -

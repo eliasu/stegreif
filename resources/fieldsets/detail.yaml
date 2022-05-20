@@ -14,4 +14,4 @@ fields:
       display: Description
       width: 50
   -
-    import: links
+    import: buttons

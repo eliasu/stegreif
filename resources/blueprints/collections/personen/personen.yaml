@@ -45,7 +45,7 @@ sections:
           display: 'Fun Fact'
       -
         handle: links
-        field: links.links
+        field: buttons.buttons
         config:
           display: 'Appart from Stegreif'
   sidebar:

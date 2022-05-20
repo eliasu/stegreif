@@ -1,0 +1,21 @@
+{{#
+	@name bard_media
+	@desc The bard_media component.
+    @set page.article.bard_media
+#}}
+
+<!-- /components/_bard_media.antlers.html -->
+<div
+    class="
+        not-prose
+        {{ switch(
+            (size == 'md') => 'size-md',
+            (size == 'lg') => 'size-lg',
+            (size == 'xl') => 'size-xl',
+            () => 'size-md'
+        )}}
+    "
+>
+    <h2>🔧<br>bard_media</h2>
+</div>
+<!-- End: /components/_bard_media.antlers.html -->

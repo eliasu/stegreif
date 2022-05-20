@@ -15,9 +15,11 @@ sections:
           validate:
             - required
       -
-        import: header_media
+        import: header
       -
         import: section
+      -
+        import: sections
   seo:
     display: SEO
     fields:

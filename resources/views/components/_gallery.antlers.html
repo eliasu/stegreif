@@ -1,0 +1,21 @@
+{{#
+	@name Gallery
+	@desc The Gallery component.
+    @set page.article.gallery
+#}}
+
+<!-- /components/_gallery.antlers.html -->
+<div
+    class="
+        not-prose
+        {{ switch(
+            (size == 'md') => 'size-md',
+            (size == 'lg') => 'size-lg',
+            (size == 'xl') => 'size-xl',
+            () => 'size-md'
+        )}}
+    "
+>
+    <h2>🔧<br>Gallery</h2>
+</div>
+<!-- End: /components/_gallery.antlers.html -->

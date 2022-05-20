@@ -1,24 +1,23 @@
-title: 'Header Media'
+title: Header
 fields:
   -
-    handle: select_header_theme
-    field: theme_selector.select_theme
+    handle: theme_selector_header
+    field: common.theme_selector
     config:
       display: 'Select Header Theme'
-      width: 100
   -
-    handle: select_header_media
+    handle: select_header
     field:
       options:
-        Video: Video
-        Image: Image
+        image: Image
+        video: Video
       multiple: false
       clearable: false
       searchable: true
       taggable: false
       push_tags: false
       cast_booleans: false
-      default: Image
+      default: image
       display: 'Select Header Media'
       type: select
       icon: select
@@ -33,15 +32,14 @@ fields:
       restrict: true
       display: 'Header Image'
       width: 50
-      if:
-        select_header_media: 'equals Image'
       folder: header_images
-  -
-    handle: video
-    field: video.youtube_url
-    config:
-      localizable: false
-      width: 50
-      display: 'Header Video'
       if:
-        select_header_media: 'equals Video'
+        select_header: 'equals image'
+  -
+    handle: header_video
+    field: common.youtube_url
+    config:
+      display: 'Header Video'
+      width: 50
+      if:
+        select_header: 'equals video'
