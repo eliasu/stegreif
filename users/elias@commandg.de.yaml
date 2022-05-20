@@ -13,7 +13,7 @@ preferences:
     reihen:
       after_save: continue_editing
     programme:
-      after_save: continue_editing
+      after_save: create_another
   taxonomies:
     team_tags:
       after_save: create_another

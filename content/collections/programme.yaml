@@ -3,11 +3,12 @@ sites:
   - de
   - en
 propagate: true
-template: default
+template: programme/show
 layout: layout
 taxonomies:
   - tags
 revisions: false
+route: '/programm/{slug}'
 sort_dir: asc
 date_behavior:
   past: public
