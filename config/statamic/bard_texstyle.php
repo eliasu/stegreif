@@ -34,7 +34,7 @@ return [
             'type'   => 'span',
             'name'   => 'Accent Color',
             'ident'  => 'A',
-            'class'  => 'accent-color',
+            'class'  => 'text-skin-primary',
             'cp_css' => 'color: dodgerblue; font-weight: 700',
         ],
 

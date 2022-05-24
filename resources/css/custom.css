@@ -1,13 +1,97 @@
 /* If you don't want to use the JS in CSS syntax from `tailwind.config.site.js` you can add your own custom CSS here. Use different layers to make sure your CSS either get's purged or not: https://tailwindcss.com/docs/functions-and-directives#layer. CSS in the base layer won't get purged. */
 
 @layer base {
-
-}
-
+    :root {
+        --color-base: 245, 241, 235;
+        --color-inverted: 2, 1, 34;
+        --color-primary: 255, 189, 66;
+        --color-accent: 60, 136, 126;
+    }
+    .theme-dark {
+        --color-base: 245, 241, 235;
+        --color-inverted: 2, 1, 34;
+        --color-primary: 255, 189, 66;
+        --color-accent: 60, 136, 126;
+    }
+    .theme-yellow {
+        --color-base: 2, 1, 34;
+        --color-inverted: 255, 189, 66;
+        --color-primary: 60, 136, 126;
+        --color-accent: 245, 241, 235;
+    }
+    .theme-light {
+        --color-base: 2, 1, 34;
+        --color-inverted: 245, 241, 235;
+        --color-primary: 255, 189, 66;
+        --color-accent: 60, 136, 126;
+    }
+}   
+ 
 @layer components {
-
-}
+   
+}   
 
 @layer utilities {
+   
+}   
 
+/* Regular */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/site_assets/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+        url('../../public/site_assets/fonts/PlusJakartaSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+/* Regular Italic */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/site_assets/fonts/PlusJakartaSans-Italic.woff2') format('woff2'),
+        url('../../public/site_assets/fonts/PlusJakartaSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold*/
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/site_assets/fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+        url('../../public/site_assets/fonts/PlusJakartaSans-Bold.woff') format('woff');
+    font-weight: 700;    
+    font-style: normal;
+    font-display: swap;
+}    
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/site_assets/fonts/PlusJakartaSans-BoldItalic.woff2') format('woff2'),
+        url('../../public/site_assets/fonts/PlusJakartaSans-BoldItalic.woff') format('woff');
+    font-weight: 700;    
+    font-style: italic;
+    font-display: swap;
+}    
+
+/* Extra Bold */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+        url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+    font-weight: 800;    
+    font-style: normal;
+    font-display: swap;
+}    
+
+/* Extra Bold Italic */
+@font-face {
+   font-family: 'Plus Jakarta Sans';
+   src: url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff2') format('woff2'),
+   url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff') format('woff');
+   font-weight: 800;
+   font-style: italic;
+   font-display: swap;
+}   
+

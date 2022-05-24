@@ -14,14 +14,10 @@ module.exports = {
       colors: {
         current: 'currentColor',
         transparent: 'transparent',
-        // Gray colors.
-        gray: colors.slate,
-        // Error styling colors.
-        red: colors.red,
-        // Notice styling colors.
-        yellow: colors.amber,
-        // Success styling colors.
-        green: colors.green,
+        // gray: colors.slate,
+        // red: colors.red,
+        // yellow: colors.amber,
+        // green: colors.green,
       },
       spacing: {
         // Used for the mobile navigation toggle.
@@ -82,8 +78,7 @@ module.exports = {
             gridColumnStart: '3',
           },
           '.size-xl': {
-            gridColumn: 'span 10 / span 10',
-            gridColumnStart: '2',
+            gridColumn: 'span 12 / span 12',
           },
         },
         '@media screen(lg)': {
@@ -98,13 +93,12 @@ module.exports = {
             gridColumnStart: '3',
           },
           '.size-xl': {
-            gridColumn: 'span 10 / span 10',
-            gridColumnStart: '2',
+            gridColumn: 'span 12 / span 12',
           },
         },
       })
     }),
-
+  
     // Render screen names in the breakpoint display.
     plugin(function({ addBase, theme}) {
       const breakpoints = Object.entries(theme('screens'))
@@ -122,7 +116,6 @@ module.exports = {
           }
         }
       )
-
       addBase(breakpoints)
     }),
 
@@ -131,12 +124,12 @@ module.exports = {
         // The main wrapper for all sections on our website. Has a max width and is centered.
         '.fluid-container': {
           width: '100%',
-          maxWidth: theme('screens.xl'),
+          maxWidth: theme('screens.2xl'),
           marginLeft: 'auto',
           marginRight: 'auto',
           // Use safe-area-inset together with default padding for Apple devices with a notch.
-          paddingLeft: `calc(env(safe-area-inset-left, 0rem) + ${theme('padding.8')})`,
-          paddingRight: `calc(env(safe-area-inset-right, 0rem) + ${theme('padding.8')})`,
+          paddingLeft: `calc(env(safe-area-inset-left, 0rem) + ${theme('padding.4')})`,
+          paddingRight: `calc(env(safe-area-inset-right, 0rem) + ${theme('padding.4')})`,
         },
         // The outer grid where all block builder blocks are a child of. Spreads out all blocks
         // vertically with a uniform space between them.
@@ -168,8 +161,8 @@ module.exports = {
           // Larger horizontal padding on larger screens.
           '.fluid-container': {
             // Use safe-area-inset together with default padding for Apple devices with a notch.
-            paddingLeft: `calc(env(safe-area-inset-left, 0rem) + ${theme('padding.12')})`,
-            paddingRight: `calc(env(safe-area-inset-right, 0rem) + ${theme('padding.12')})`,
+            paddingLeft: `calc(env(safe-area-inset-left, 0rem) + ${theme('padding.20')})`,
+            paddingRight: `calc(env(safe-area-inset-right, 0rem) + ${theme('padding.20')})`,
           },
           // Larger vertical spacing between blocks on larger screens.
           '.outer-grid': {

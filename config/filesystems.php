@@ -87,6 +87,13 @@ return [
             'url' => '/social_images',
             'visibility' => 'public',
         ],
+        
+        'site_assets' => [
+            'driver' => 'local',
+            'root' => public_path('site_assets'),
+            'url' => '/site_assets',
+            'visibility' => 'public',
+        ],
 
     ],
 
