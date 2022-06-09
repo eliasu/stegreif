@@ -7,23 +7,9 @@
 {{ if label }}
     <{{ as or 'a' }}
         {{ slot:attributes }}
-        class="
-            font-bold focus:outline-none focus-visible:ring focus-visible:ring-offset-2
-            {{ if button_type === 'inline' }}
-                underline motion-safe:transition
-                {{ inverted
-                    ? 'text-white focus-visible:ring-white'
-                    : 'text-primary focus-visible:ring-primary'
-                }}
-            {{ else }}
-                inline-flex items-center py-3 px-4 border-2 leading-none uppercase tracking-widest text-sm no-underline select-none whitespace-nowrap motion-safe:transition
-                {{ inverted
-                    ? 'border-white text-white focus-visible:ring-white'
-                    : 'border-primary text-primary focus-visible:ring-primary'
-                }}
-            {{ /if }}
-            {{ class }}
-        "
+        {{ if button_type == 'background' }}
+            class="{{ color }} block h-8 px-4 font-extrabold uppercase cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition md:text-lg leading-s focus:outline-none focus-visible:ring-2 ring-primary md:items-center md:flex bg-skin-primary hover:bg-skin-accent hover:text-skin-base"
+        {{ /if }}
         {{ !faux ?= { partial:snippets/button_attributes } }}
     >
         {{ label }}

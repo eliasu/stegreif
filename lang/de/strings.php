@@ -54,6 +54,7 @@ return [
     'subnav_close'                      => 'Unternavigation schließen',
     'subnav_open'                       => 'Unternavigation öffnen',
     'skip_to_content'                   => 'Springe zum Inhalt',
+    'support'                           => 'Unterstützen',
 
     // Other
     'no_results'                        => 'There are currently no posts.',

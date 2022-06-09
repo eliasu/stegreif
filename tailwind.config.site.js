@@ -10,15 +10,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 const colors = require('tailwindcss/colors')
 
-function withOpacity(variableName) {
-	return ({ opacityValue }) => {
-	  if (opacityValue !== undefined) {
-		 return `rgba(var(${variableName}), ${opacityValue})`
-	  }
-	  return `rgb(var(${variableName}))`
-	}
-}
-
 module.exports = {
 	presets: [],
 	theme: {
@@ -28,47 +19,48 @@ module.exports = {
 		 },
 		
 		colors: {
-			black: '#020122',
-			white: '#F5F1EB',
-			light: "#F5F1EB",
-			yellow: "#FFBD42",
-			green: "#3C887E",
-			blue: "#030233",
-			darkblue: "#020122",
+			black: 'rgb(var(--color-black) / <alpha-value>)',
+			white: 'rgb(var(--color-white) / <alpha-value>)',
+			
+			darkblue: 'rgb(var(--color-darkblue) / <alpha-value>)',
+			blue: 'rgb(var(--color-blue) / <alpha-value>)',
+			yellow: 'rgb(var(--color-yellow) / <alpha-value>)',
+			green: 'rgb(var(--color-green) / <alpha-value>)',
+			light: 'rgb(var(--color-light) / <alpha-value>)',
 
 			// get themed color by f.Ex. text-skin-base
 			skin: {
 				base: {
-					DEFAULT: withOpacity('--color-base'),
+					DEFAULT: 'rgb(var(--color-base) / <alpha-value>)',
 				},
 				inverted: {
-					DEFAULT: withOpacity('--color-inverted'),
+					DEFAULT: 'rgb(var(--color-inverted) / <alpha-value>)',
 				},
 				primary: {
-					DEFAULT: withOpacity('--color-primary'),
+					DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
 				},
 				accent: {
-					DEFAULT: withOpacity('--color-accent'),
+					DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
 				},
 			}
 		},
 		
 		fontSize: {
 			// only sizing and letter spacing because line-height differs between paragrahs and headings
-			'xs': ['clamp(.75rem, 4vw, .875rem)', { letterSpacing: '1px' }], 			/* 12px */
-			'sm': ['clamp(.875rem, 4vw, 1rem)', { letterSpacing: '1px' }], 			/* 14px */
-			'base': ['clamp(1rem, 8vw, 1.2rem)', { letterSpacing: '1px' }], 			/* 16px */
-			'lg': ['clamp(1.125rem, 8vw, 1.3rem)',  { letterSpacing: '1px' }], 		/* 18px */
-			'xl': ['clamp(1.25rem, 8vw, 1.75rem)', { letterSpacing: '1px' }], 		/* 20px */
-			'2xl': ['clamp(1.5rem, 8vw, 2rem)', { letterSpacing: '1px' }], 			/* 24px */
-			'2-5xl': ['clamp(1.75rem, 8vw, 2.2rem)', { letterSpacing: '1px' }], 		/* 28px */
-			'3xl': ['clamp(2rem, 8vw, 2.5rem)', { letterSpacing: '1.5px' }], 			/* 32px */
-			'4xl': ['clamp(2.5rem, 8vw, 3rem)', { letterSpacing: '2px' }], 			/* 40px */
-			'5xl': ['clamp(3rem, 8vw, 3.5rem)', { letterSpacing: '2px' }], 			/* 48px */
-			'6xl': ['clamp(4rem, 7vw, 4.5rem)', { letterSpacing: '2px' }], 			/* 64px */
-			'7xl': ['clamp(4.5rem, 8vw, 5rem)', { letterSpacing: '3px' }], 			/* 72px */
-			'8xl': ['clamp(6rem, 8.5vw, 6.5rem)', { letterSpacing: '3px' }], 			/* 96px */
-			'9xl': ['clamp(8rem, 8.5vw, 10rem)', { letterSpacing: '3px' }], 			/* 128px */
+			'xs': ['clamp(.75rem, 1vw, .875rem)', { letterSpacing: '1px' }], 			/* 12px */
+			'sm': ['clamp(.875rem, 1vw, 1rem)', { letterSpacing: '1px' }], 			/* 14px */
+			'base': ['clamp(1rem, 1vw, 1.2rem)', { letterSpacing: '1px' }], 			/* 16px */
+			'lg': ['clamp(1.125rem, 1vw, 1.3rem)',  { letterSpacing: '1px' }], 		/* 18px */
+			'xl': ['clamp(1.25rem, 1vw, 1.75rem)', { letterSpacing: '1px' }], 		/* 20px */
+			'2xl': ['clamp(1.5rem, 1vw, 2rem)', { letterSpacing: '1px' }], 			/* 24px */
+			'2-5xl': ['clamp(1.75rem, 1vw, 2.2rem)', { letterSpacing: '1px' }], 		/* 28px */
+			'3xl': ['clamp(2rem, 1vw, 2.5rem)', { letterSpacing: '1.5px' }], 			/* 32px */
+			'4xl': ['clamp(2.5rem, 1vw, 3rem)', { letterSpacing: '2px' }], 			/* 40px */
+			'5xl': ['clamp(3rem, 1vw, 3.5rem)', { letterSpacing: '2px' }], 			/* 48px */
+			'6xl': ['clamp(4rem, 1vw, 4.5rem)', { letterSpacing: '2px' }], 			/* 64px */
+			'7xl': ['clamp(4.5rem, 1vw, 5rem)', { letterSpacing: '3px' }], 			/* 72px */
+			'8xl': ['clamp(6rem, 1vw, 6.5rem)', { letterSpacing: '3px' }], 			/* 96px */
+			'9xl': ['clamp(8rem, 1vw, 10rem)', { letterSpacing: '3px' }], 			/* 128px */
 		},
 
 		lineHeight: {

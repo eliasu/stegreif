@@ -14,3 +14,5 @@ tree:
   -
     id: 736a38fe-ef77-4eff-91d5-bc15bc2c6e6d
     entry: 5ee49051-9493-4e3f-a459-4c1d765e797d
+    data:
+      button: true

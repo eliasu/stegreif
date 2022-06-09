@@ -9,3 +9,8 @@ social_media:
     prefix: 'https://www.instagram.com/'
     type: instagram
     enabled: true
+  -
+    handle: test
+    prefix: 'https://www.youtube.com/'
+    type: youtube
+    enabled: true

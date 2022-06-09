@@ -54,6 +54,7 @@ return [
     'subnav_close'                      => 'Close sub navigation',
     'subnav_open'                       => 'Open sub navigation',
     'skip_to_content'                   => 'Skip to content',
+    'support'                           => 'Support Us',
 
     // Other
     'no_results'                        => 'There are currently no posts.',

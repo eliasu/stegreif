@@ -4,76 +4,47 @@
 #}}
 
 <!-- /navigation/_main_desktop.antlers.html -->
-<nav class="hidden md:block" aria-label="{{ trans:strings.main_navigation }}">
-    <ul class="flex items-center space-x-8">
-        {{ nav:main max_depth="2" include_home="true" }}
-            <li
-                {{ if children }}
-                    x-data="{ subnavOpen: false }"
-                    @keyup.escape.stop.prevent="subnavOpen = false"
-                    @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
-                    x-cloak
+<nav class="flex" aria-label="{{ trans:strings.main_navigation }}">
+    <div class="hidden h-8 px-6 md:items-center md:flex bg-light">
+        <ul class="flex items-center space-x-8 text-darkblue">
+            
+            {{# get all nav items #}}
+            {{ nav:main max_depth="1" include_home="false" }}
+                {{ if button == false }}
+                    <li class="relative">
+                        <a
+                            class="
+                                text-base md:text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary
+                                {{ is_current || is_parent
+                                    ? 'text-green'
+                                    : 'text-darkblue' }}
+                            "href="{{ url }}">
+                            {{ title }}
+                        </a>
+                    </li>
                 {{ /if }}
-                class="relative leading-none"
-            >
+            {{ /nav:main }}
+        </ul>
+
+        {{# language picker #}}
+        <div class="flex gap-2 ml-8">
+            {{ locales all="true" self="true" current_first="false" }}
                 <a
-                    class="
-                        p-1 -m-1 flex items-center font-bold text-xs uppercase tracking-wide hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
-                        {{ is_current || is_parent
-                            ? 'text-primary'
-                            : 'text-neutral' }}
-                    "
-                    {{ if children }}
-                        href="#"
-                        @click.prevent="subnavOpen = !subnavOpen"
-                        :aria-label="subnavOpen
-                            ? '{{ trans:strings.subnav_close }}'
-                            : '{{ trans:strings.subnav_open }}'"
-                        :aria-expanded="subnavOpen"
-                    {{ else }}
-                        href="{{ url }}"
-                    {{ /if }}
+                    href="{{ permalink }}"
+                    aria-label="{{ locale:name }}"
+                    class="{{ is_current ? "text-yellow" : "" }} block px-1 py-2 -mx-1 text-xs font-bold tracking-wide uppercase whitespace-nowrap hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
                 >
-                    {{ title }}
-                    {{ if children }}
-                        <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral"
-                            :class="{ 'rotate-180': subnavOpen }"
-                            aria-hidden="true"
-                            stroke-width="16"
-                            viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                        /></svg>
-                    {{ /if }}
+                    {{ locale:short }}
                 </a>
-                {{ if children }}
-                    <ul
-                        x-show="subnavOpen"
-                        x-ref="subnav"
-                        class="absolute mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
-                        @click.outside="subnavOpen = false"
-                        x-transition
-                    >
-                        {{ children }}
-                            <li class="">
-                                <a
-                                    class="
-                                        whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
-                                        {{ is_current || is_parent
-                                            ? 'text-primary'
-                                            : 'text-neutral' }}
-                                    "
-                                    href="{{ url }}"
-                                >
-                                    {{ title }}
-                                </a>
-                            </li>
-                        {{ /children }}
-                    </ul>
-                {{ /if }}
-            </li>
-        {{ /nav:main }}
-        <li>
-            {{ partial:navigation/language_picker }}
-        </li>
-    </ul>
+            {{ /locales }}
+        </div>
+    </div>
+    
+    {{# nav items as cta's #}}
+    {{ nav:main max_depth="1" include_home="false" }}
+        {{ if button == true }}
+            {{ partial:components/button label="{{ trans:strings.support }}" color="theme-dark" button_type="background" link_type="url"}}
+        {{ /if }}
+    {{ /nav:main }}
 </nav>
 <!-- End: /navigation/_main_desktop.antlers.html -->
