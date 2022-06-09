@@ -14,10 +14,6 @@ module.exports = {
       colors: {
         current: 'currentColor',
         transparent: 'transparent',
-        // gray: colors.slate,
-        // red: colors.red,
-        // yellow: colors.amber,
-        // green: colors.green,
       },
       spacing: {
         // Used for the mobile navigation toggle.

@@ -4,8 +4,8 @@
 #}}
 
 <!-- /navigation/_main_desktop.antlers.html -->
-<nav class="flex" aria-label="{{ trans:strings.main_navigation }}">
-    <div class="hidden h-8 px-6 md:items-center md:flex bg-light">
+<nav class="hidden lg:flex" aria-label="{{ trans:strings.main_navigation }}">
+    <div class="flex items-center h-8 px-6 bg-light">
         <ul class="flex items-center space-x-8 text-darkblue">
             
             {{# get all nav items #}}
@@ -14,7 +14,7 @@
                     <li class="relative">
                         <a
                             class="
-                                text-base md:text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary
+                                text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap 
                                 {{ is_current || is_parent
                                     ? 'text-green'
                                     : 'text-darkblue' }}
@@ -32,7 +32,7 @@
                 <a
                     href="{{ permalink }}"
                     aria-label="{{ locale:name }}"
-                    class="{{ is_current ? "text-yellow" : "" }} block px-1 py-2 -mx-1 text-xs font-bold tracking-wide uppercase whitespace-nowrap hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
+                    class="{{ is_current ?= "text-yellow" }} block px-1 py-2 -mx-1 text-xs font-bold tracking-wide uppercase whitespace-nowrap hover:text-green focus:outline-none focus-visible:ring-2 ring-primary"
                 >
                     {{ locale:short }}
                 </a>
@@ -43,7 +43,7 @@
     {{# nav items as cta's #}}
     {{ nav:main max_depth="1" include_home="false" }}
         {{ if button == true }}
-            {{ partial:components/button label="{{ trans:strings.support }}" color="theme-dark" button_type="background" link_type="url"}}
+            {{ partial:components/button label="{{ title }}" color="theme-dark" button_type="background" link_type="url"}}
         {{ /if }}
     {{ /nav:main }}
 </nav>

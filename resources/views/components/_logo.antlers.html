@@ -5,10 +5,11 @@
 
 <!-- /components/_logo.antlers.html -->
 <a
-	class="p-2 -m-2 focus:outline-none focus-visible:ring-2 ring-primary bg-light"
+	class="z-20 flex items-center h-12 px-3 pb-2 pt-3 lg:h-8 lg:px-2 lg:py-1.5 focus:outline-none focus-visible:ring-2 ring-primary bg-light hover:bg-green hover:text-light motion-safe:transition"
 	aria-label="Logo {{ config:app:name }}"
 	href="{{ site:url }}"
 >
-   <img src="/visuals/statamic-peak-logo.svg" class="select-none {{ class }}" width="{{ width }}" alt="{{ config:app:name }}"/>
+	{{ partial:icons/logo_small class="select-none" }}
+	{{# <img src="/visuals/statamic-peak-logo.svg" class="select-none {{ class }}" width="{{ width }}" alt="{{ config:app:name }}"/> #}}
 </a>
 <!-- End: /components/_logo.antlers.html -->

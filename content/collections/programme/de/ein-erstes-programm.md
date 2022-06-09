@@ -62,11 +62,19 @@ article:
         type: bard_buttons
         buttons:
           -
-            label: 'Weitere Informationen'
+            label: 'Weitere Informationenn'
             target_blank: true
             button_type: lined
             link_type: url
             url: google.de
+            type: button
+            enabled: true
+          -
+            label: xfgdfg
+            target_blank: false
+            button_type: background
+            link_type: url
+            url: googlre.de
             type: button
             enabled: true
   -
@@ -121,5 +129,5 @@ select_type: Programm
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1653056076
+updated_at: 1654780904
 ---

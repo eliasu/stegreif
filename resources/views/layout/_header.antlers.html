@@ -4,10 +4,9 @@
 #}}
 
 <!-- /layout/_header.antlers.html -->
-<header class="fixed top-20 left-20 right-20">
-    <div class="flex items-center justify-between">
-        {{# Make partials you want to use for the header or use and edit premade examples like the following ones. #}}
-        {{ partial:components/logo width="80" }}
+<header class="fixed w-full top-4 lg:top-20">
+    <div class="flex items-center justify-between fluid-container lg:px-20 lg:m-0 lg:max-w-none">
+        {{ partial:components/logo }}
         {{ partial:navigation/main }}
     </div>
 </header>

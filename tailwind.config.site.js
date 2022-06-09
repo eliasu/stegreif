@@ -71,6 +71,13 @@ module.exports = {
 		
 
 		extend: {			
+			transitionProperty: {
+				'right': 'right',
+				'left': 'left',
+				'top': 'top',
+				'bottom': 'bottom',
+			},
+
 			gridTemplateColumns: {
 				// Simple 16 column grid
 				'18': 'repeat(18, minmax(0, 1fr))',
