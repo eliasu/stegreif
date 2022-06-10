@@ -1,6 +1,6 @@
 social_media:
   -
-    handle: test
+    handle: tester
     prefix: 'https://www.facebook.com/'
     type: facebook
     enabled: true

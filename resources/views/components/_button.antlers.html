@@ -22,16 +22,16 @@
     >
     {{# background button #}}
     {{ if button_type == "background" }}
-        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base [&>svg]:hover:translate-x-0.5 [&>svg]:motion-safe:transition-transform">
+        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base [&>svg]:hover:translate-x-0.5 [&>svg]:motion-safe:transition-transform">
             {{ label }}
-            {{ icon ? {{ partial:icons/{icon} }} : {{ partial:icons/arrow_right }} }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-8 h-8 overflow-visible fill-current" alt="" }}
         </div>
     
     {{# lined button #}}
     {{ else if button_type == undefined }}
-        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent group">
+        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent group">
             {{ label }}
-            {{ icon ? {{ partial:icons/{icon} }} : {{ partial:icons/arrow_right }} }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-8 h-8 overflow-visible fill-current" alt="" }}
             
             {{# underline #}}
             <div class="h-0.5 bg-skin-primary motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>

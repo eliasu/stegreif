@@ -1,12 +1,24 @@
 title: Header
 fields:
   -
-    handle: theme_selector_header
+    handle: header_headline
+    field: common.text_single
+    config:
+      display: 'Header Headline'
+      width: 50
+  -
+    handle: header_theme_selector
     field: common.theme_selector
     config:
+      options:
+        theme-header-dark: Dark
+        theme-header-yellow: Yellow
+        theme-header-light: Light
+        disable: Disable
       display: 'Select Header Theme'
+      width: 50
   -
-    handle: select_header
+    handle: header_select
     field:
       options:
         image: Image
@@ -17,7 +29,7 @@ fields:
       taggable: false
       push_tags: false
       cast_booleans: false
-      default: image
+      default: Image
       display: 'Select Header Media'
       type: select
       icon: select
@@ -26,7 +38,7 @@ fields:
       instructions_position: above
       read_only: false
   -
-    handle: image
+    handle: header_image
     field: common.image
     config:
       restrict: true
@@ -34,7 +46,7 @@ fields:
       width: 50
       folder: header_images
       if:
-        select_header: 'equals image'
+        header_select: 'not video'
   -
     handle: header_video
     field: common.youtube_url
@@ -42,4 +54,4 @@ fields:
       display: 'Header Video'
       width: 50
       if:
-        select_header: 'equals video'
+        header_select: 'equals video'

@@ -3,6 +3,7 @@ import collapse from '@alpinejs/collapse'
 import persist from '@alpinejs/persist'
 import focus from '@alpinejs/focus'
 import 'focus-visible'
+import YouTubeToHtml5 from '@thelevicole/youtube-to-html5-loader'
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
@@ -22,3 +23,5 @@ Alpine.plugin(collapse)
 Alpine.plugin(persist)
 Alpine.plugin(focus)
 Alpine.start()
+
+new YouTubeToHtml5();

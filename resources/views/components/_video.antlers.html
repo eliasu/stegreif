@@ -5,21 +5,21 @@
 #}}
 
 <!-- /components/_video.antlers.html -->
-<div
-    class="
-        not-prose
-        {{ switch(
-            (size == 'md') => 'size-md',
-            (size == 'lg') => 'size-lg',
-            (size == 'xl') => 'size-xl',
-            () => 'size-md'
-        )}}
-    "
->
-    <div class="aspect-w-16 aspect-h-9">
-        <iframe class="absolute top-0 left-0 w-full h-full" width="100%" height="auto" src="{{ youtube_url | embed_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div>
+    <video autoplay muted loop class="absolute inset-0 object-cover w-screen h-screen pointer-events-none" data-yt2html5="{{ youtube_url }}"></video>
 
-    {{ partial:typography/caption }}
+    {{ if tint === "dark" }}
+        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-color"></div>
+        <div class="absolute inset-0 pointer-events-none bg-green mix-blend-multiply"></div>
+        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-lighten"></div>
+    {{ elseif tint === "yellow" }}
+        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-color"></div>
+        <div class="absolute inset-0 pointer-events-none bg-yellow mix-blend-multiply"></div>
+        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-lighten"></div>
+    {{ elseif tint === "light" }}
+        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-color"></div>
+        <div class="absolute inset-0 pointer-events-none bg-light mix-blend-multiply"></div>
+        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-lighten"></div>
+    {{ /if }}
 </div>
 <!-- End: /components/_video.antlers.html -->

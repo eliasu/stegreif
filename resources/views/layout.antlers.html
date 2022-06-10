@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <link rel="stylesheet" href="{{ mix src='css/site.css' }}">
         <script src="{{ mix src='/js/site.js' }}" defer></script>
+        
         {{ partial:snippets/seo }}
         {{ partial:snippets/browser_appearance }}
     </head>
@@ -20,7 +21,7 @@
         {{ partial:navigation/skip_to_content }}
         {{ partial:components/toolbar }}
         {{ yield:seo_body }}
-
+        
         {{ partial:layout/header }}
         {{ template_content }}
         {{ partial:layout/footer }}

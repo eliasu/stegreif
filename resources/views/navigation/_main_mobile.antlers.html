@@ -11,11 +11,11 @@
 >
     <button
         @click.prevent="mobileNavOpen = !mobileNavOpen"
-        class="relative right-0 z-20 flex items-center justify-center w-12 h-12 text-xs font-bold text-darkblue bg-light focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 hover:bg-green hover:text-light motion-safe:transition"
+        class="relative right-0 z-20 flex items-center justify-center w-12 h-12 p-2 text-xs font-bold text-darkblue bg-light focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 hover:bg-green hover:text-light motion-safe:transition"
         :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
         :aria-expanded="mobileNavOpen"
     >
-        {{ partial:icons/burger }}
+        {{ svg src="burger" class="select-none fill-current" alt="" }}
     </button>
 
     <div

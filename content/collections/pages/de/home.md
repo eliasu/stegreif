@@ -3,23 +3,12 @@ id: home
 blueprint: page
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1653353817
+updated_at: 1654824102
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
-page_builder:
-  -
-    article:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Ein deutschtest'
-    type: article
-    enabled: true
 article:
   -
     type: heading
@@ -68,4 +57,12 @@ article:
       -
         type: text
         text: 'sei sehen was passieren in Platz. In diese Spiel es waren zwei, drei diese Spieler waren schwach wie eine Flasche leer! Haben Sie gesehen Mittwoch, welche Mannschaft hat gespielt Mittwoch? Hat gespielt Mehmet oder gespielt Basler oder hat gespielt Trapattoni? Diese Spieler beklagen mehr als sie spielen! Wissen Sie, warum die Italienmannschaften kaufen nicht diese Spieler? Weil wir haben gesehen viele Male solche Spiel! Haben'
+template: home
+theme_selector_header: dark
+select_header: image
+image: header_images/c_navina_neuschl_02.-cinematic.jpg
+header_headline: 'The Improvising Symphony Orchestra'
+header_theme_selector: theme-header-dark
+header_select: video
+header_video: 'https://youtu.be/VbDbVlDBi9E'
 ---

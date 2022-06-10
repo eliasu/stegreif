@@ -19,6 +19,8 @@
         --color-primary: var(--color-yellow);
         --color-accent: var(--color-green);
     }
+
+    /* general Themes Content */
     .theme-dark {
         --color-base: var(--color-light);
         --color-inverted: var(--color-darkblue);
@@ -36,6 +38,26 @@
         --color-inverted: var(--color-light);
         --color-primary: var(--color-green);
         --color-accent: var(--color-yellow);
+    }
+
+    /* Themes Header */
+    .theme-header-dark {
+        --color-base: var(--color-light);
+        --color-inverted: var(--color-darkblue);
+        --color-primary: var(--color-yellow);
+        --color-accent: var(--color-green);
+    }
+    .theme-header-yellow {
+        --color-base: var(--color-green);
+        --color-inverted: var(--color-darkblue);
+        --color-primary: var(--color-light);
+        --color-accent: var(--color-yellow);
+    }
+    .theme-header-light {
+        --color-base: var(--color-yellow);
+        --color-inverted: var(--color-darkblue);
+        --color-primary: var(--color-light);
+        --color-accent: var(--color-green);
     }
 }   
  
