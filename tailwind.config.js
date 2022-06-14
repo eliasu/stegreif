@@ -23,5 +23,11 @@ module.exports = {
     './resources/views/**/*.html',
     './resources/js/**/*.js',
   ],
-  safelist: []
+  safelist: [
+    {
+      pattern: /text-.+/,
+      pattern: /decoration-.+/,
+      pattern: /color-.+/,
+    },
+  ]
 }

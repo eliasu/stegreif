@@ -22,13 +22,21 @@ return [
         //     'cp_css' => 'font-family: Caslon',
         // ],
 
-        // 'intro' => [
-        //     'type'   => 'paragraph',
-        //     'name'   => 'Introduction',
-        //     'ident'  => 'I',
-        //     'class'  => 'introduction',
-        //     'cp_css' => 'font-size: 1.25em; margin-top: -0.5em',
-        // ],
+        'bigger' => [
+            'type'   => 'paragraph',
+            'name'   => 'Bigger',
+            'ident'  => 'B',
+            'class'  => 'text-2xl leading-l', 
+            'cp_css' => 'font-size: 1.25em;',
+        ],
+
+        'smaller' => [
+            'type'   => 'paragraph',
+            'name'   => 'Smaller',
+            'ident'  => 'S',
+            'class'  => 'text-base leading-l',
+            'cp_css' => 'font-size: 0.85em;',
+        ],
 
         'accent' => [
             'type'   => 'span',

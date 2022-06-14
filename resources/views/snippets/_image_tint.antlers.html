@@ -1,0 +1,19 @@
+{{#
+	@name Image Tint helper
+#}}
+
+<!-- /snippets/_image_tint.antlers.html -->
+{{ if tint === "dark" }}
+    <div class="absolute inset-0 bg-darkblue mix-blend-color"></div>
+    <div class="absolute inset-0 bg-green mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-darkblue mix-blend-lighten"></div>
+{{ elseif tint === "yellow" }}
+    <div class="absolute inset-0 bg-darkblue mix-blend-color"></div>
+    <div class="absolute inset-0 bg-yellow mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-darkblue mix-blend-lighten"></div>
+{{ elseif tint === "light" }}
+    <div class="absolute inset-0 bg-darkblue mix-blend-color"></div>
+    <div class="absolute inset-0 bg-light mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-darkblue mix-blend-lighten"></div>
+{{ /if }}
+<!-- End: /snippets/_image_tint.antlers.html -->

@@ -1,79 +1,135 @@
 /* If you don't want to use the JS in CSS syntax from `tailwind.config.site.js` you can add your own custom CSS here. Use different layers to make sure your CSS either get's purged or not: https://tailwindcss.com/docs/functions-and-directives#layer. CSS in the base layer won't get purged. */
+:root {
+    /* Brand Colors */
+    --color-darkblue: 2 1 34;
+    --color-blue: 3 2 51;
+    --color-yellow: 255 189 66;
+    --color-green: 60 136 126;
+    --color-light: 245 241 235;
+
+    /* Utility Colors */
+    --color-black: 2 1 34;
+    --color-white: 245 241 235; 
+
+    /* Theming Colors */
+    --color-base: var(--color-light);
+    --color-inverted: var(--color-darkblue);
+    --color-primary: var(--color-yellow);
+    --color-accent: var(--color-green); 
+}
+
 
 @layer base {
-    :root {
-        /* Brand Colors */
-        --color-darkblue: 2 1 34;
-        --color-blue: 3 2 51;
-        --color-yellow: 255 189 66;
-        --color-green: 60 136 126;
-        --color-light: 245 241 235;
-
-        /* Utility Colors */
-        --color-black: var(--color-darkblue);
-        --color-white: var(--color-light);
-
-        /* Theming Colors */
-        --color-base: var(--color-light);
-        --color-inverted: var(--color-darkblue);
-        --color-primary: var(--color-yellow);
-        --color-accent: var(--color-green);
+    p, h1, h2, h3, h4, h5, h6, strong, em, span, u  {
+        @apply text-skin-base decoration-skin-primary;
+    }
+    
+    h1, h2, h3, h4, h6  {
+        @apply leading-s font-extrabold uppercase;
     }
 
-    /* general Themes Content */
-    .theme-dark {
-        --color-base: var(--color-light);
-        --color-inverted: var(--color-darkblue);
-        --color-primary: var(--color-yellow);
-        --color-accent: var(--color-green);
-    }
-    .theme-yellow {
-        --color-base: var(--color-darkblue);
-        --color-inverted: var(--color-yellow);
-        --color-primary: var(--color-green);
-        --color-accent: var(--color-light);
-    }
-    .theme-light {
-        --color-base: var(--color-darkblue);
-        --color-inverted: var(--color-light);
-        --color-primary: var(--color-green);
-        --color-accent: var(--color-yellow);
-    }
+    p   { @apply text-lg sm:text-xl leading-l; } 
+    h1  { @apply text-4xl xs:text-5xl md:text-7xl lg:text-8xl; }
+    h2  { @apply text-2xl sm:text-4xl md:text-5xl xl:text-6xl; }
+    h3  { @apply text-lg sm:text-xl md:text-3xl xl:text-4xl; }
+    h4  { @apply text-base md:text-2xl; }
+    h5  { @apply text-base md:text-2xl leading-s font-bold; }
 
-    /* Themes Header */
-    .theme-header-dark {
-        --color-base: var(--color-light);
-        --color-inverted: var(--color-darkblue);
-        --color-primary: var(--color-yellow);
-        --color-accent: var(--color-green);
-    }
-    .theme-header-yellow {
-        --color-base: var(--color-green);
-        --color-inverted: var(--color-darkblue);
-        --color-primary: var(--color-light);
-        --color-accent: var(--color-yellow);
-    }
-    .theme-header-light {
-        --color-base: var(--color-yellow);
-        --color-inverted: var(--color-darkblue);
-        --color-primary: var(--color-light);
-        --color-accent: var(--color-green);
+    .prose > p   { @apply col-start-4 col-end-5; }
+    .prose > h2  { @apply mb-16 col-start-2 col-end-5; } 
+    .prose > h3  { @apply mb-10 col-start-3 col-end-5; } 
+    .prose > h4  { @apply mb-4 col-start-3 col-end-5; } 
+    .prose > h5  { @apply mb-4 col-start-4 col-end-5; } 
+
+    .prose > *:last-child {
+        @apply mb-0;
     }
 }   
- 
+
 @layer components {
-   
-}   
+
+}
 
 @layer utilities {
    
 }   
 
+.theme-dark {
+    --color-base: var(--color-light);
+    --color-inverted: var(--color-darkblue);
+    --color-primary: var(--color-yellow);
+    --color-accent: var(--color-green);
+}
+.theme-yellow {
+    --color-base: var(--color-darkblue);
+    --color-inverted: var(--color-yellow);
+    --color-primary: var(--color-green);
+    --color-accent: var(--color-light);
+}
+.theme-light {
+    --color-base: var(--color-darkblue);
+    --color-inverted: var(--color-light);
+    --color-primary: var(--color-green);
+    --color-accent: var(--color-yellow);
+}
+
+/* Themes Header */
+.header-dark {
+    --color-base: var(--color-light);
+    --color-inverted: var(--color-darkblue);
+    --color-primary: var(--color-yellow);
+    --color-accent: var(--color-green);
+}
+.header-yellow {
+    --color-base: var(--color-green);
+    --color-inverted: var(--color-darkblue);
+    --color-primary: var(--color-light);
+    --color-accent: var(--color-yellow);
+}
+.header-light {
+    --color-base: var(--color-yellow);
+    --color-inverted: var(--color-darkblue);
+    --color-primary: var(--color-light);
+    --color-accent: var(--color-green);
+}
+
+/* image masks and spacing (m+b)*/
+.bird-mask {
+    mask-image: url("/site_assets/transition_birds/black.png"),
+                url("/site_assets/transition_birds/birds1.png");
+    mask-size: 100% calc(100% - 30rem + 1px), auto 30rem;
+    mask-position: center top, center bottom;
+    mask-repeat: repeat-x;
+}
+
+.bird-space {
+    margin-top: -30rem;
+    padding-top: calc(30rem + 5rem);
+    padding-bottom: calc(30rem + 5rem);
+}
+
+.bird-section {
+    @apply bg-skin-inverted;
+    mask-image: url("/site_assets/transition_birds/black.png"),
+                url("/site_assets/transition_birds/birds1.png");
+    mask-size: 100% calc(100% - 30rem + 1px), auto 30rem;
+    mask-position: center top, center bottom;
+    mask-repeat: repeat-x;
+    
+    margin-top: -30rem;
+    padding-top: calc(30rem + 5rem);
+    padding-bottom: calc(30rem + 5rem);
+}
+
+ 
+
+
+
 /* Regular */
 @font-face {
     font-family: 'Plus Jakarta Sans';
-    src: url('../../public/site_assets/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
-        url('../../public/site_assets/fonts/PlusJakartaSans-Regular.woff') format('woff');
+    src: url('/site_assets/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+        url('/site_assets/fonts/PlusJakartaSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -82,8 +138,8 @@
 /* Regular Italic */
 @font-face {
     font-family: 'Plus Jakarta Sans';
-    src: url('../../public/site_assets/fonts/PlusJakartaSans-Italic.woff2') format('woff2'),
-        url('../../public/site_assets/fonts/PlusJakartaSans-Italic.woff') format('woff');
+    src: url('/site_assets/fonts/PlusJakartaSans-Italic.woff2') format('woff2'),
+        url('/site_assets/fonts/PlusJakartaSans-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -92,8 +148,8 @@
 /* Bold*/
 @font-face {
     font-family: 'Plus Jakarta Sans';
-    src: url('../../public/site_assets/fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
-        url('../../public/site_assets/fonts/PlusJakartaSans-Bold.woff') format('woff');
+    src: url('/site_assets/fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+        url('/site_assets/fonts/PlusJakartaSans-Bold.woff') format('woff');
     font-weight: 700;    
     font-style: normal;
     font-display: swap;
@@ -102,8 +158,8 @@
 /* Bold Italic */
 @font-face {
     font-family: 'Plus Jakarta Sans';
-    src: url('../../public/site_assets/fonts/PlusJakartaSans-BoldItalic.woff2') format('woff2'),
-        url('../../public/site_assets/fonts/PlusJakartaSans-BoldItalic.woff') format('woff');
+    src: url('/site_assets/fonts/PlusJakartaSans-BoldItalic.woff2') format('woff2'),
+        url('/site_assets/fonts/PlusJakartaSans-BoldItalic.woff') format('woff');
     font-weight: 700;    
     font-style: italic;
     font-display: swap;
@@ -112,8 +168,8 @@
 /* Extra Bold */
 @font-face {
     font-family: 'Plus Jakarta Sans';
-    src: url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
-        url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+    src: url('/site_assets/fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+        url('/site_assets/fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
     font-weight: 800;    
     font-style: normal;
     font-display: swap;
@@ -121,11 +177,10 @@
 
 /* Extra Bold Italic */
 @font-face {
-   font-family: 'Plus Jakarta Sans';
-   src: url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff2') format('woff2'),
-   url('../../public/site_assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff') format('woff');
-   font-weight: 800;
-   font-style: italic;
-   font-display: swap;
-}   
-
+font-family: 'Plus Jakarta Sans';
+src: url('/site_assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff2') format('woff2'),
+url('/site_assets/fonts/PlusJakartaSans-ExtraBoldItalic.woff') format('woff');
+font-weight: 800;
+font-style: italic;
+font-display: swap;
+}

@@ -28,20 +28,17 @@ module.exports = {
 			green: 'rgb(var(--color-green) / <alpha-value>)',
 			light: 'rgb(var(--color-light) / <alpha-value>)',
 
+			current: 'currentColor',
+      	transparent: 'transparent',
+			
+			inherit: 'inherit',
+
 			// get themed color by f.Ex. text-skin-base
 			skin: {
-				base: {
-					DEFAULT: 'rgb(var(--color-base) / <alpha-value>)',
-				},
-				inverted: {
-					DEFAULT: 'rgb(var(--color-inverted) / <alpha-value>)',
-				},
-				primary: {
-					DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
-				},
-				accent: {
-					DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
-				},
+				base: 'rgb(var(--color-base) / <alpha-value>)',
+				inverted: 'rgb(var(--color-inverted) / <alpha-value>)',
+				primary: 'rgb(var(--color-primary) / <alpha-value>)',
+				accent: 'rgb(var(--color-accent) / <alpha-value>)',
 			}
 		},
 		
@@ -71,6 +68,10 @@ module.exports = {
 		
 
 		extend: {			
+			height: {
+				'header': 'calc(100vh + 15rem)',
+			},
+
 			transitionProperty: {
 				'right': 'right',
 				'left': 'left',
@@ -80,8 +81,10 @@ module.exports = {
 
 			gridTemplateColumns: {
 				// Simple 16 column grid
-				'18': 'repeat(18, minmax(0, 1fr))',
-			 },
+				'content-l': '5rem, 2.5rem, 2.5rem, minmax(auto,75ch), minmax(5rem,auto)',
+				'content-m': '5rem, 1rem, 1rem, minmax(auto,75ch), minmax(1rem,auto)',
+				'content-s': '1rem, 1rem, 1rem, minmax(auto,75ch), minmax(1rem,auto)',
+			},
 			
 			// Set default transition durations and easing when using the transition utilities.
 			transitionDuration: {

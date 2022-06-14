@@ -1,29 +1,32 @@
 <!-- /components/_header.antlers.html -->
 {{ if header_theme_selector != "disable" }}
-    <section class="flex flex-col justify-end w-full h-screen gap-10 py-4 lg:py-20 bg-skin-inverted relative {{ header_theme_selector }}">
-
-        {{ if header_select == "image" }}
-            {{ partial:components/picture :image="header_image" tint="{{ header_theme_selector | remove_left:theme-header-}}" class="absolute inset-0 pointer-events-none" cover="true" sizes="(min-width: 768px) 100vw, 100vw" }}
-        {{ elseif header_select == "video" }}
-            {{ partial:components/video :youtube_url="header_video" tint="{{ header_theme_selector | remove_left:theme-header-}}" cover="true" }}
-        {{ /if }}
+    <section class="{{ header_theme_selector | ensure_left:"header-" }} flex flex-col relative z-front h-header">
         
-        {{ partial:typography/h1 content="{header_headline}" class="relative fluid-container z-500" color="text-skin-primary"}}
-        
-        <div class="relative flex flex-col md:flex-row-reverse md:justify-end gap-x-20 gap-y-10 fluid-container">
-            <div class="flex flex-wrap gap-x-8 gap-y-4">
-                {{ partial:components/button label="Nächste Termine" link_type="url" url="google.de" }}
-                {{ partial:components/button label="Aktuelle Programme" link_type="url" url="google.de" }}
-            </div>
-            {{ if social_media:social_media }}
-                <div class="flex gap-8">
-                    {{ social_media:social_media }}
-                        <a class="w-8 h-8 text-skin-base hover:text-skin-accent focus:outline-none focus-visible:ring-2 ring-primary" href="{{ prefix }}{{ handle }}" rel="noopener" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src='type' class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" }}</a>
-                    {{ /social_media:social_media }}
+        <div class="flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
+            {{ partial:typography/h1 content="{header_headline}" class="text-skin-primary"}}
+            
+            <div class="flex flex-col flex-wrap md:flex-row-reverse md:justify-end gap-x-20 gap-y-10">
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                    {{ partial:components/button label="Nächste Termine" link_type="url" url="google.de" }}
+                    {{ partial:components/button label="Aktuelle Programme" link_type="url" url="google.de" }}
                 </div>
+                {{ if social_media:social_media }}
+                    <div class="flex gap-8">
+                        {{ social_media:social_media }}
+                            <a class="w-8 h-8 text-skin-base hover:text-skin-accent focus:outline-none focus-visible:ring-2 ring-primary" href="{{ prefix }}{{ handle }}" rel="noopener" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src='type' class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" }}</a>
+                        {{ /social_media:social_media }}
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+        
+        <div class="absolute inset-0 pointer-events-none bird-mask z-behind">
+            {{ if header_select == "image" }}
+                {{ partial:components/picture :image="header_image" tint="{{ header_theme_selector }}" cover="true" sizes="(min-width: 768px) 100vw, 100vw" }}
+            {{ elseif header_select == "video" }}
+                {{ partial:components/video :youtube_url="header_video" tint="{{ header_theme_selector }}" cover="true" }}
             {{ /if }}
         </div>
-
     </section>
 {{ /if }}
 <!-- End: /components/_header.antlers.html -->

@@ -6,20 +6,7 @@
 
 <!-- /components/_video.antlers.html -->
 <div>
-    <video autoplay muted loop class="absolute inset-0 object-cover w-screen h-screen pointer-events-none" data-yt2html5="{{ youtube_url }}"></video>
-
-    {{ if tint === "dark" }}
-        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-color"></div>
-        <div class="absolute inset-0 pointer-events-none bg-green mix-blend-multiply"></div>
-        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-lighten"></div>
-    {{ elseif tint === "yellow" }}
-        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-color"></div>
-        <div class="absolute inset-0 pointer-events-none bg-yellow mix-blend-multiply"></div>
-        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-lighten"></div>
-    {{ elseif tint === "light" }}
-        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-color"></div>
-        <div class="absolute inset-0 pointer-events-none bg-light mix-blend-multiply"></div>
-        <div class="absolute inset-0 pointer-events-none bg-darkblue mix-blend-lighten"></div>
-    {{ /if }}
+    <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full pointer-events-none" data-yt2html5="{{ youtube_url }}"></video>
+    {{ partial:snippets/image_tint }}
 </div>
 <!-- End: /components/_video.antlers.html -->

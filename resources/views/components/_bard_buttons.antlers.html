@@ -5,17 +5,9 @@
 #}}
 
 <!-- /components/_bard_buttons.antlers.html -->
-<div
-    class="
-        not-prose
-        {{ switch(
-            (size == 'md') => 'size-md',
-            (size == 'lg') => 'size-lg',
-            (size == 'xl') => 'size-xl',
-            () => 'size-xl'
-        )}}
-    "
->
-    <h2>🔧<br>bard_buttons</h2>
+<div class="flex col-start-4 col-end-5 gap-8 not-prose" >
+    {{ buttons }}
+        {{ partial:components/button }}
+    {{ /buttons }}
 </div>
 <!-- End: /components/_bard_buttons.antlers.html -->

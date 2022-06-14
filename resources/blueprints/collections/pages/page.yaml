@@ -11,9 +11,12 @@ sections:
           input_type: text
           localizable: true
           listable: true
-          display: Title
+          display: 'Page Title'
           validate:
             - required
+          instructions_position: above
+          read_only: false
+          antlers: false
       -
         import: header
       -

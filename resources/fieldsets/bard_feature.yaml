@@ -3,6 +3,11 @@ fields:
   -
     handle: allignment
     field: common.allignment
+    config:
+      options:
+        left: Left
+        right: Right
+        bird: Bird
   -
     handle: image
     field: common.image

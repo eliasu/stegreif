@@ -1,0 +1,63 @@
+1655117169a:2:{s:9:"completed";b:1;s:6:"output";s:3997:"Info from https://repo.packagist.org: #StandWithUkraine
+Using version ^2.2 for doublethreedigital/duplicator
+./composer.json has been updated
+Running composer update doublethreedigital/duplicator --with-dependencies
+> Statamic\Console\Composer\Scripts::preUpdateCmd
+Loading composer repositories with package information
+Dependency statamic/cms is also a root requirement. Package has not been listed as an update argument, so keeping locked at old version. Use --with-all-dependencies (-W) to include root dependencies.
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking doublethreedigital/duplicator (v2.2.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+As there is no 'unzip' nor '7z' command installed zip files are being unpacked using the PHP zip extension.
+This may cause invalid reports of corrupted archives. Besides, any UNIX permissions (e.g. executable) defined in the archives will be lost.
+Installing 'unzip' or '7z' (21.01+) may remediate them.
+  - Installing doublethreedigital/duplicator (v2.2.0): Extracting archive
+Package ueberdosis/html-to-prosemirror is abandoned, you should avoid using it. No replacement was suggested.
+Package ueberdosis/prosemirror-to-html is abandoned, you should avoid using it. No replacement was suggested.
+Package symfony/debug is abandoned, you should avoid using it. Use symfony/error-handler instead.
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+Discovered Package: [32majthinking/archetype[39m
+Discovered Package: [32mbarryvdh/laravel-debugbar[39m
+Discovered Package: [32mdoublethreedigital/duplicator[39m
+Discovered Package: [32mfruitcake/laravel-cors[39m
+Discovered Package: [32mintervention/image[39m
+Discovered Package: [32mjacksleight/statamic-bard-mutator[39m
+Discovered Package: [32mjacksleight/statamic-bard-texstyle[39m
+Discovered Package: [32mlaravel/sail[39m
+Discovered Package: [32mlaravel/sanctum[39m
+Discovered Package: [32mlaravel/tinker[39m
+Discovered Package: [32mnesbot/carbon[39m
+Discovered Package: [32mnunomaduro/collision[39m
+Discovered Package: [32mrebing/graphql-laravel[39m
+Discovered Package: [32mspatie/laravel-ignition[39m
+Discovered Package: [32mstatamic/cms[39m
+Discovered Package: [32mwilderborn/partyline[39m
+[32mPackage manifest generated successfully.[39m
+> @php artisan statamic:install --ansi
+Discovered Addon: [32mdoublethreedigital/duplicator[39m
+Discovered Addon: [32mjacksleight/statamic-bard-mutator[39m
+Discovered Addon: [32mjacksleight/statamic-bard-texstyle[39m
+[32mAddon manifest generated successfully.[39m
+[32mCopied Directory[39m [33m[/vendor/statamic/cms/resources/users][39m [32mTo[39m [33m[/resources/users][39m
+[32mPublishing complete.[39m
+[32mCopied Directory[39m [33m[/vendor/statamic/cms/resources/dist][39m [32mTo[39m [33m[/public/vendor/statamic/cp][39m
+[32mPublishing complete.[39m
+[32mCopied Directory[39m [33m[/vendor/statamic/cms/resources/dist-frontend][39m [32mTo[39m [33m[/public/vendor/statamic/frontend][39m
+[32mPublishing complete.[39m
+[32mCopied File[39m [33m[/vendor/jacksleight/statamic-bard-mutator/dist/js/addon.js][39m [32mTo[39m [33m[/public/vendor/statamic-bard-mutator/js/addon.js][39m
+[32mPublishing complete.[39m
+[32mCopied File[39m [33m[/vendor/jacksleight/statamic-bard-texstyle/dist/js/addon.js][39m [32mTo[39m [33m[/public/vendor/statamic-bard-texstyle/js/addon.js][39m
+[32mPublishing complete.[39m
+[32mCompiled views cleared successfully.[39m
+[32mApplication cache cleared successfully.[39m
+104 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+[33mNo publishable resources for tag [laravel-assets].[39m
+[32mPublishing complete.[39m
+";}

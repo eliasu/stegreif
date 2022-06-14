@@ -7,8 +7,12 @@
 <{{ as or 'article' }}
 	class="
 		prose
-		max-w-none
-		py-20
+		flex
+		flex-col
+		sm:grid
+		sm:grid-cols-content-s
+		md:grid-cols-content-l
+		gap-y-8
 		prose-a:text-skin-primary
 		hover:prose-a:text-skin-accent
 		focus:prose-a:outline-none
@@ -16,6 +20,8 @@
 		focus-visible:prose-a:ring-skin-primary
 		focus-visible:prose-a:rounded-sm
 		prose-pre:whitespace-pre-wrap
+		fluid-container
+		md:grid-cols-content
 		{{ class }}
 	"
 >

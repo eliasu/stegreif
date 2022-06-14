@@ -11,10 +11,6 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   theme: {
     extend: {
-      colors: {
-        current: 'currentColor',
-        transparent: 'transparent',
-      },
       spacing: {
         // Used for the mobile navigation toggle.
         'safe': 'calc(env(safe-area-inset-bottom, 0rem) + 2rem)',
@@ -22,6 +18,12 @@ module.exports = {
       zIndex: {
         // Z-index stuff behind it's parent.
         'behind': '-1',
+        'nav': '500',
+        'front': '100',
+        '60': '60',
+        '70': '70',
+        '80': '80',
+        '90': '90',
       },
     },
   },

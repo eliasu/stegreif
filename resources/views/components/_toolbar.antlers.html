@@ -6,7 +6,7 @@
 <!-- /components/_toolbar.antlers.html -->
 {{ if environment == 'local' }}
     <aside
-        class="fixed z-50 flex text-xs divide-x shadow-sm top-1 right-1 divide-light divide-solid motion-safe:transition-opacity hover:opacity-100"
+        class="fixed flex text-xs divide-x shadow-sm theme-light z-nav top-1 right-1 divide-light divide-solid motion-safe:transition-opacity hover:opacity-100"
         x-data="{ toolbarVisible: $persist(true).as('toolbarVisible') }"
         x-ref="toolbar"
         :class="{ 'opacity-100': toolbarVisible, 'opacity-0': !toolbarVisible }"
@@ -23,7 +23,6 @@
                 <span>Edit</span>
             </a>
         {{ /if }}
-
         <button
             @click="toolbarVisible = !toolbarVisible"
             title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="flex items-center justify-center px-2 bg-light hover:text-light hover:bg-green"

@@ -48,20 +48,7 @@
             {{ /if }}
         {{ /asset }}
 
-        {{ if tint === "dark" }}
-            <div class="absolute inset-0 bg-darkblue mix-blend-color"></div>
-            <div class="absolute inset-0 bg-green mix-blend-multiply"></div>
-            <div class="absolute inset-0 bg-darkblue mix-blend-lighten"></div>
-        {{ elseif tint === "yellow" }}
-            <div class="absolute inset-0 bg-darkblue mix-blend-color"></div>
-            <div class="absolute inset-0 bg-yellow mix-blend-multiply"></div>
-            <div class="absolute inset-0 bg-darkblue mix-blend-lighten"></div>
-        {{ elseif tint === "light" }}
-            <div class="absolute inset-0 bg-darkblue mix-blend-color"></div>
-            <div class="absolute inset-0 bg-light mix-blend-multiply"></div>
-            <div class="absolute inset-0 bg-darkblue mix-blend-lighten"></div>
-        {{ /if }}
-
+        {{ partial:snippets/image_tint }}
     </picture>
 {{ /if }}
 <!-- End: /components/_picture.antlers.html -->
