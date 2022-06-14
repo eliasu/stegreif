@@ -7,8 +7,8 @@
 
 {{# optional button parameters: 
     label => text
-    color => button colors are themed. For direct theming use f.ex. ".theme-dark"
-    icon => fallback to "arrow_right" / you can use all icons from partials/icons
+    color => button colors are themed. For direct theming use primary/inverted/accent
+    icon => fallback to "arrow_right" / you can use all icons from ressources/svg
     button_type => optional use "background" instead of standard "lined"
     link_type => see types in partials/snippets/button_attributes
     reverse => set to true to reverse flex order
@@ -16,19 +16,29 @@
 
 {{ if label }}
     <{{ as or 'a' }} 
-        class="{{ color }}" 
+        class="{{ class }}" 
         {{ slot:attributes }} 
         {{ !faux ?= { partial:snippets/button_attributes } }}
     >
     {{# background button #}}
     {{ if button_type == "background" }}
-        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base [&>svg]:hover:translate-x-0.5 [&>svg]:motion-safe:transition-transform">
+        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base [&>svg]:hover:translate-x-0.5 [&>svg]:motion-safe:transition-transform">
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-8 h-8 overflow-visible fill-current" alt="" }}
         </div>
     
+    {{# lined button with base color #}}
+    {{ elseif button_type == "lined_base" }}
+        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary group">
+            {{ label }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-8 h-8 overflow-visible fill-current" alt="" }}
+            
+            {{# underline #}}
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
     {{# lined button #}}
-    {{ else if button_type == undefined }}
+    {{ else }}
         <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent group">
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-8 h-8 overflow-visible fill-current" alt="" }}

@@ -121,6 +121,10 @@
     padding-bottom: calc(30rem + 5rem);
 }
 
+.hyphens {
+    hyphens: auto;
+}
+
  
 
 

@@ -59,6 +59,16 @@ sections:
           display: 'Headline Dates'
           validate:
             - required
+          width: 50
+      -
+        handle: all_dates_page
+        field: common.entry
+        config:
+          localizable: false
+          display: 'All Dates Page'
+          width: 50
+          collections:
+            - pages
       -
         handle: headline_news
         field: common.text_single
@@ -66,6 +76,16 @@ sections:
           display: 'Headline News'
           validate:
             - required
+          width: 50
+      -
+        handle: all_news_page
+        field: common.entry
+        config:
+          localizable: false
+          display: 'All News Page'
+          width: 50
+          collections:
+            - pages
       -
         handle: current_productions_section
         field:

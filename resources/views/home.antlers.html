@@ -3,12 +3,73 @@
 
     {{ partial:components/header }}
     
-    <section class="{{ select_section_theme_intro | ensure_left:"theme-" }} relative flex flex-col z-90 bird-section">
+    <section class="{{ select_section_theme_intro | ensure_left:"theme-" }} relative flex flex-col gap-80 z-90 bird-section">
+        
+        {{# intruduction bard #}}
         {{ partial:typography/prose as="div" }}
             {{ introduction_content }}
                 {{ partial src="components/{type}" }}
             {{ /introduction_content }}
         {{ /partial:typography/prose }}
+
+        {{# next dates #}}
+        <div class="flex flex-col fluid-container">
+            
+            {{# block header with lin to all dates #}}
+            <div class="flex justify-between mb-20 lg:px-20">
+                {{ partial:typography/h3 :content="headline_dates" }}
+                {{ partial:components/button label="Juhu" link_type="entry" :entry="all_dates_page" }}
+            </div>
+
+            {{# date cards #}}
+            <div class="grid grid-cols-3 gap-y-20 gap-x-12 lg:px-20">
+                {{ collection:termine limit="6" }}
+                    <div class="flex flex-col">
+
+                        {{# time #}}
+                        {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-1" }}
+                        {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-1" }} {{ /if }}
+                        
+                        {{# date #}}
+                        {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-6" }}
+                        
+                        
+                        {{# tags  #}}
+                        <div class="flex">
+                            {{ total = "0" }}
+                            
+                            {{# get reihe if available #}}
+                            {{ collection from="reihen" }}
+                                {{ related_programme }}
+                                    {{ if title == programm.title }}
+                                        
+                                    {{ /if }}
+                                {{ /related_programme }}
+                            {{ /collection from="reihen" }}
+                                    
+                            {{ partial:typography/tag class="mb-4" color="yellow" content="{ header_headline ?? title }" }}
+                            {{# if theres a programm #}}
+                            {{ partial:typography/tag class="mb-4" color="yellow" content="{ programm:header_headline ?? programm:title }" }}
+                            
+                            {{# {{ programm.title }} #}}
+                            
+                            {{ programm }}
+                                
+
+                                    {{ partial:typography/tag class="mb-4" color="green" content="{ header_headline ?? title }" }}
+                                    {{ /programm }} 
+                        </div>
+                            
+                        {{# headline or title fallback #}}
+                        {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens" }}
+                        
+                        {{# link to detail view #}}
+                        {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}
+                    </div>
+                {{ /collection:termine }}
+            </div>
+        </div>
+
     </section>
     
     <section class="{{ select_section_theme_current_production | ensure_left:"theme-" }} relative flex flex-col z-80 bird-section">

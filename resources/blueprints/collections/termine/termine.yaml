@@ -37,12 +37,25 @@ sections:
           listable: hidden
           read_only: false
           mode: single
-          time_enabled: true
+          time_enabled: false
           time_seconds_enabled: false
           full_width: false
           inline: false
           columns: 1
           rows: 1
+          display: Date
+      -
+        handle: time
+        field:
+          seconds_enabled: false
+          display: Time
+          type: time
+          icon: time
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
       -
         handle: tags
         field:
@@ -52,12 +65,12 @@ sections:
           display: Tags
           mode: select
       -
-        handle: programme
+        handle: programm
         field: common.entry
         config:
           max_items: 1
           localizable: false
-          display: Programme
+          display: Programm
           create: false
           collections:
             - programme

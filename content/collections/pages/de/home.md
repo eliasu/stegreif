@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655170867
+updated_at: 1655223299
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -65,4 +65,6 @@ support_us_content:
       class: null
 template: home
 select_section_theme_current_production: yellow
+all_dates_page: dfc7cad0-4b67-4668-aadf-3c270123de5c
+all_news_page: bf69ff1c-e425-4ed3-a2ac-c08976694b0d
 ---

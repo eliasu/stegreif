@@ -52,12 +52,12 @@ sections:
           display: Tags
           mode: select
       -
-        handle: programme
+        handle: related_programme
         field: common.entry
         config:
           max_items: 99
           localizable: false
-          display: Programme
+          display: 'Related Programme'
           create: false
           collections:
             - programme

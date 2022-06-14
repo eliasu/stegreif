@@ -1,0 +1,16 @@
+{{#
+	@name Tag
+	@desc The typography tag partial to render a paragraph with `class`, `as`, `color` and `content` attributes.
+#}}
+
+<!-- /typography/_tag.antlers.html -->
+<{{ as or 'div' }} class="	px-2 py-1 text-sm uppercase leading-100 
+									{{ if color == "green" }} bg-green text-light
+									{{ elseif color == "yellow" }} bg-yellow text-darkblue
+									{{ elseif color == "dark" }} bg-darkblue text-light
+									{{ elseif color == "light" }} bg-light text-darkblue
+									{{ else }} bg-yellow text-darkblue
+									{{ /if }}
+									{{ class }}
+								">	{{ content | nl2br }}</{{ as or 'div' }}>
+<!-- End: /typography/_tag.antlers.html -->
