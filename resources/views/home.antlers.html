@@ -33,31 +33,28 @@
                         {{# date #}}
                         {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-6" }}
                         
-                        
                         {{# tags  #}}
                         <div class="flex">
-                            {{ total = "0" }}
                             
                             {{# get reihe if available #}}
                             {{ collection from="reihen" }}
                                 {{ related_programme }}
                                     {{ if title == programm.title }}
-                                        
+                                        {{ partial:typography/tag class="mb-4" color="yellow" content="{ header_headline ?? title }" }}
                                     {{ /if }}
                                 {{ /related_programme }}
                             {{ /collection from="reihen" }}
-                                    
-                            {{ partial:typography/tag class="mb-4" color="yellow" content="{ header_headline ?? title }" }}
+                            
                             {{# if theres a programm #}}
                             {{ partial:typography/tag class="mb-4" color="yellow" content="{ programm:header_headline ?? programm:title }" }}
                             
                             {{# {{ programm.title }} #}}
                             
-                            {{ programm }}
+                            {{# {{ programm }}
                                 
 
                                     {{ partial:typography/tag class="mb-4" color="green" content="{ header_headline ?? title }" }}
-                                    {{ /programm }} 
+                                    {{ /programm }}  #}}
                         </div>
                             
                         {{# headline or title fallback #}}
