@@ -23,5 +23,8 @@ sitemap_priority: 0.5
 aktuell: true
 select_type: Programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655239695
+updated_at: 1655244440
+related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
+related_termine:
+  - 3adeb39b-0436-47b5-97b9-0ce623287123
 ---

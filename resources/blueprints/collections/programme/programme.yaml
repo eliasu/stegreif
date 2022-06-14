@@ -54,3 +54,22 @@ sections:
             - tags
           display: Tags
           mode: select
+      -
+        handle: related_reihe
+        field: common.entry
+        config:
+          localizable: false
+          display: 'Related Reihe'
+          create: false
+          collections:
+            - reihen
+      -
+        handle: related_termine
+        field: common.entry
+        config:
+          max_items: 100
+          localizable: false
+          display: 'Related Termine'
+          create: true
+          collections:
+            - termine

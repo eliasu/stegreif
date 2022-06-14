@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use Statamic\Statamic;
 use Statamic\Facades\GlobalSet;
 use Statamic\Fieldtypes\Section;
+use Stillat\Relationships\Support\Facades\Relate;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -38,5 +39,16 @@ class AppServiceProvider extends ServiceProvider
                 $view->with($entry->toAugmentedArray());
             }
         });
+
+        // relationship addon 
+        Relate::oneToMany(
+            'programme.related_reihe',
+            'reihen.related_programme'
+        );
+        
+        Relate::oneToMany(
+            'termine.related_programm',
+            'programme.related_termine'
+        );
     }
 }

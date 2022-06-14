@@ -129,7 +129,11 @@ select_type: Programm
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655240861
+updated_at: 1655244192
 header_theme_selector: dark
 header_select: Image
+related_termine:
+  - f8116011-b75e-4795-8b2f-71d972ff494e
+  - dc8781a7-90b7-42f2-9af0-a608cc586c3a
+  - a12c12e1-a158-4a32-89e9-5bb9297cc8eb
 ---
