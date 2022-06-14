@@ -1765,3 +1765,195 @@ Use the `composer fund` command to find out more!
 #124 /Users/elias/.composer/vendor/laravel/valet/server.php(234): require('/Users/elias/Si...')
 #125 {main}
 "} 
+[2022-06-14 15:56:20] local.ERROR: require(/Users/elias/Sites/Github/stegreif/vendor/statamic/cms/config/amp.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): require(/Users/elias/Sites/Github/stegreif/vendor/statamic/cms/config/amp.php): Failed to open stream: No such file or directory at /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php:138)
+[stacktrace]
+#0 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(257): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'require(/Users/...', '/Users/elias/Si...', 138)
+#1 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(138): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'require(/Users/...', '/Users/elias/Si...', 138)
+#2 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(138): require('/Users/elias/Si...')
+#3 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/AppServiceProvider.php(90): Illuminate\\Support\\ServiceProvider->mergeConfigFrom('/Users/elias/Si...', 'statamic.amp')
+#4 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(263): Statamic\\Providers\\AppServiceProvider->Statamic\\Providers\\{closure}('amp', 0)
+#5 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/AppServiceProvider.php(91): Illuminate\\Support\\Collection->each(Object(Closure))
+#6 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(686): Statamic\\Providers\\AppServiceProvider->register()
+#7 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/AggregateServiceProvider.php(31): Illuminate\\Foundation\\Application->register(Object(Statamic\\Providers\\AppServiceProvider))
+#8 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(686): Illuminate\\Support\\AggregateServiceProvider->register()
+#9 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(75): Illuminate\\Foundation\\Application->register(Object(Statamic\\Providers\\StatamicServiceProvider))
+#10 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#11 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#12 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#13 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#14 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#15 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#16 /Users/elias/Sites/Github/stegreif/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#17 /Users/elias/.composer/vendor/laravel/valet/server.php(234): require('/Users/elias/Si...')
+#18 {main}
+"} 
+[2022-06-14 15:56:21] local.ERROR: require(/Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/../../config/amp.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): require(/Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/../../config/amp.php): Failed to open stream: No such file or directory at /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php:138)
+[stacktrace]
+#0 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(257): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'require(/Users/...', '/Users/elias/Si...', 138)
+#1 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(138): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'require(/Users/...', '/Users/elias/Si...', 138)
+#2 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(138): require('/Users/elias/Si...')
+#3 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/AppServiceProvider.php(90): Illuminate\\Support\\ServiceProvider->mergeConfigFrom('/Users/elias/Si...', 'statamic.amp')
+#4 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(263): Statamic\\Providers\\AppServiceProvider->Statamic\\Providers\\{closure}('amp', 0)
+#5 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/AppServiceProvider.php(91): Illuminate\\Support\\Collection->each(Object(Closure))
+#6 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(686): Statamic\\Providers\\AppServiceProvider->register()
+#7 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/AggregateServiceProvider.php(31): Illuminate\\Foundation\\Application->register(Object(Statamic\\Providers\\AppServiceProvider))
+#8 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(686): Illuminate\\Support\\AggregateServiceProvider->register()
+#9 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(75): Illuminate\\Foundation\\Application->register(Object(Statamic\\Providers\\StatamicServiceProvider))
+#10 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#11 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#12 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#13 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#14 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#15 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#16 /Users/elias/Sites/Github/stegreif/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#17 /Users/elias/.composer/vendor/laravel/valet/server.php(234): require('/Users/elias/Si...')
+#18 {main}
+"} 
+[2022-06-14 15:56:35] local.ERROR: Class "Facades\Statamic\Fields\FieldtypeRepository" not found {"exception":"[object] (Error(code: 0): Class \"Facades\\Statamic\\Fields\\FieldtypeRepository\" not found at /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Fields/Fieldtype.php:107)
+[stacktrace]
+#0 /Users/elias/Sites/Github/stegreif/app/Providers/AppServiceProvider.php(33): Statamic\\Fields\\Fieldtype::makeSelectableInForms()
+#1 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Container/Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(928): Illuminate\\Container\\Container->call(Array)
+#7 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(909): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 53)
+#9 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(910): array_walk(Array, Object(Closure))
+#10 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(239): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#14 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#15 /Users/elias/Sites/Github/stegreif/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#16 /Users/elias/.composer/vendor/laravel/valet/server.php(234): require('/Users/elias/Si...')
+#17 {main}
+"} 
+[2022-06-14 15:56:36] local.ERROR: Composer Process: ./composer.json has been updated
+Running composer update statamic/cms --with-dependencies
+> Statamic\Console\Composer\Scripts::preUpdateCmd
+Loading composer repositories with package information
+Info from https://repo.packagist.org: #StandWithUkraine
+Dependency guzzlehttp/guzzle is also a root requirement. Package has not been listed as an update argument, so keeping locked at old version. Use --with-all-dependencies (-W) to include root dependencies.
+Dependency laravel/framework is also a root requirement. Package has not been listed as an update argument, so keeping locked at old version. Use --with-all-dependencies (-W) to include root dependencies.
+Updating dependencies
+Lock file operations: 0 installs, 3 updates, 0 removals
+- Upgrading league/flysystem (3.0.20 => 3.0.21)
+- Upgrading rebing/graphql-laravel (8.2.1 => 8.3.0)
+  - Upgrading statamic/cms (v3.3.15 => v3.3.16)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 0 installs, 3 updates, 0 removals
+As there is no 'unzip' nor '7z' command installed zip files are being unpacked using the PHP zip extension.
+This may cause invalid reports of corrupted archives. Besides, any UNIX permissions (e.g. executable) defined in the archives will be lost.
+Installing 'unzip' or '7z' (21.01+) may remediate them.
+- Downloading league/flysystem (3.0.21)
+- Downloading rebing/graphql-laravel (8.3.0)
+- Downloading statamic/cms (v3.3.16)
+- Upgrading league/flysystem (3.0.20 => 3.0.21): Extracting archive
+- Upgrading rebing/graphql-laravel (8.2.1 => 8.3.0): Extracting archive
+- Upgrading statamic/cms (v3.3.15 => v3.3.16): Extracting archive
+- Downloading statamic/cms (dist)
+- Installing statamic/cms (dist): Extracting archive
+- Downloading statamic/cms (dist)
+- Installing statamic/cms (dist): Extracting archive
+Package ueberdosis/html-to-prosemirror is abandoned, you should avoid using it. No replacement was suggested.
+Package ueberdosis/prosemirror-to-html is abandoned, you should avoid using it. No replacement was suggested.
+Package symfony/debug is abandoned, you should avoid using it. Use symfony/error-handler instead.
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+> @php artisan statamic:install --ansi
+104 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force  
+[2022-06-14 15:57:28] local.ERROR: Class "Facades\Statamic\Marketplace\Client" not found {"userId":"7d709850-5c35-4065-be68-b627c348051d","exception":"[object] (Error(code: 0): Class \"Facades\\Statamic\\Marketplace\\Client\" not found at /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Marketplace/Marketplace.php:33)
+[stacktrace]
+#0 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Providers/CacheServiceProvider.php(66): Statamic\\Marketplace\\Marketplace->Statamic\\Marketplace\\{closure}()
+#1 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(124): Illuminate\\Cache\\Repository->Statamic\\Providers\\{closure}('marketplace-pac...', Object(Closure))
+#2 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Cache/Repository.php(665): Illuminate\\Cache\\Repository->macroCall('rememberWithExp...', Array)
+#3 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Cache/CacheManager.php(418): Illuminate\\Cache\\Repository->__call('rememberWithExp...', Array)
+#4 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(337): Illuminate\\Cache\\CacheManager->__call('rememberWithExp...', Array)
+#5 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Marketplace/Marketplace.php(37): Illuminate\\Support\\Facades\\Facade::__callStatic('rememberWithExp...', Array)
+#6 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(337): Statamic\\Marketplace\\Marketplace->releases('statamic/cms')
+#7 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/Changelog.php(32): Illuminate\\Support\\Facades\\Facade::__callStatic('releases', Array)
+#8 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/CoreChangelog.php(22): Statamic\\Updater\\Changelog->get()
+#9 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/Changelog.php(63): Statamic\\Updater\\CoreChangelog->get()
+#10 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/UpdatesOverview.php(100): Statamic\\Updater\\Changelog->latest()
+#11 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/UpdatesOverview.php(76): Statamic\\Updater\\UpdatesOverview->checkForStatamicUpdates()
+#12 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/UpdatesOverview.php(61): Statamic\\Updater\\UpdatesOverview->checkAndCache()
+#13 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Updater/UpdatesOverview.php(26): Statamic\\Updater\\UpdatesOverview->getCached('updates-overvie...', false)
+#14 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(337): Statamic\\Updater\\UpdatesOverview->count(false)
+#15 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Controllers/CP/Updater/UpdaterController.php(45): Illuminate\\Support\\Facades\\Facade::__callStatic('count', Array)
+#16 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): Statamic\\Http\\Controllers\\CP\\Updater\\UpdaterController->count(Object(Illuminate\\Http\\Request))
+#17 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('count', Array)
+#18 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Route.php(261): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Statamic\\Http\\Controllers\\CP\\Updater\\UpdaterController), 'count')
+#19 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Route.php(204): Illuminate\\Routing\\Route->runController()
+#20 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Router.php(725): Illuminate\\Routing\\Route->run()
+#21 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CP/CountUsers.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CP\\CountUsers->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CP/Localize.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CP\\Localize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CP/Authorize.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CP\\Authorize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CP/AddToasts.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CP\\AddToasts->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CP/AuthGuard.php(14): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CP\\AuthGuard->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CP/ContactOutpost.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CP\\ContactOutpost->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#42 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/SwapExceptionHandler.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\SwapExceptionHandler->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#51 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#52 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#53 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Routing/Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#54 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#55 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/DisableFloc.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\DisableFloc->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CheckMultisite.php(14): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CheckMultisite->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/CheckComposerJsonScripts.php(14): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\CheckComposerJsonScripts->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 /Users/elias/Sites/Github/stegreif/vendor/statamic/cms/src/Http/Middleware/PoweredByHeader.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Statamic\\Http\\Middleware\\PoweredByHeader->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 /Users/elias/Sites/Github/stegreif/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(60): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#68 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#69 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#70 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#71 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#72 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#73 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#74 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#75 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#76 /Users/elias/Sites/Github/stegreif/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#77 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#78 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#79 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#80 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#81 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#82 /Users/elias/Sites/Github/stegreif/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#83 /Users/elias/Sites/Github/stegreif/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#84 /Users/elias/.composer/vendor/laravel/valet/server.php(234): require('/Users/elias/Si...')
+#85 {main}
+"} 
