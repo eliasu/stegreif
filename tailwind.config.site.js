@@ -80,7 +80,6 @@ module.exports = {
 			},
 
 			gridTemplateColumns: {
-				// Simple 16 column grid
 				'content-l': '5rem, 2.5rem, 2.5rem, minmax(auto,75ch), minmax(5rem,auto)',
 				'content-m': '5rem, 1rem, 1rem, minmax(auto,75ch), minmax(1rem,auto)',
 				'content-s': '1rem, 1rem, 1rem, minmax(auto,75ch), minmax(1rem,auto)',
