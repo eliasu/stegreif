@@ -17,6 +17,12 @@ sections:
       -
         import: header
       -
+        handle: teaser_text
+        field: common.text_plain
+        config:
+          display: 'Teaser Text'
+          character_limit: '210'
+      -
         import: section
       -
         import: sections

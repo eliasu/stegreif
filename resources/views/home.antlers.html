@@ -12,60 +12,85 @@
             {{ /introduction_content }}
         {{ /partial:typography/prose }}
 
-        {{# next dates #}}
+        {{# next dates block #}}
         <div class="flex flex-col fluid-container">
             
             {{# block header with lin to all dates #}}
-            <div class="flex justify-between mb-20 lg:px-20">
-                {{ partial:typography/h3 :content="headline_dates" }}
-                {{ partial:components/button label="Juhu" link_type="entry" :entry="all_dates_page" }}
+            <div class="flex flex-col items-center justify-between mb-20 gap-y-4 xs:flex-row lg:px-20">
+                {{ partial:typography/h3 :content="headline_dates" class="text-skin-primary" }}
+                {{ partial:components/button label="{ trans:strings.all_dates }" link_type="entry" :entry="all_dates_page" }}
             </div>
 
-            {{# date cards #}}
-            <div class="grid grid-cols-3 gap-y-20 gap-x-12 lg:px-20">
+            {{# date cards grid wrapper #}}
+            <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-y-20 2xl:gap-x-20 gap-x-12 lg:px-20">
+                
+                {{# all dates #}}
                 {{ collection:termine limit="6" }}
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-start">
 
                         {{# time #}}
-                        {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-1" }}
-                        {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-1" }} {{ /if }}
+                        {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
+                        {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-0 xs:mb-1" }} {{ /if }}
                         
                         {{# date #}}
-                        {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-6" }}
+                        {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-4 sm:mb-6" }}
                         
                         {{# tags  #}}
-                        <div class="flex">
-                            
-                            {{# get reihe if available #}}
-                            {{ collection from="reihen" }}
-                                {{ related_programme }}
-                                    {{ if title == programm.title }}
-                                        {{ partial:typography/tag class="mb-4" color="yellow" content="{ header_headline ?? title }" }}
-                                    {{ /if }}
-                                {{ /related_programme }}
-                            {{ /collection from="reihen" }}
-                            
-                            {{# if theres a programm #}}
-                            {{ partial:typography/tag class="mb-4" color="yellow" content="{ programm:header_headline ?? programm:title }" }}
-                            
-                            {{# {{ programm.title }} #}}
-                            
-                            {{# {{ programm }}
-                                
+                        {{ related_programm }}
+                            <div class="flex flex-wrap mb-4">
+                                {{ related_reihe }}
+                                    {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
+                                {{ /related_reihe }}
+                                {{ partial:typography/tag color="green" content="{ header_headline ?? title }" }}
+                            </div>
+                        {{ /related_programm }}
 
-                                    {{ partial:typography/tag class="mb-4" color="green" content="{ header_headline ?? title }" }}
-                                    {{ /programm }}  #}}
-                        </div>
-                            
                         {{# headline or title fallback #}}
                         {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens" }}
                         
                         {{# link to detail view #}}
                         {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}
+                        
                     </div>
                 {{ /collection:termine }}
+
             </div>
         </div>
+
+        {{# all news block #}}
+        <div class="flex flex-col fluid-container">
+            
+            {{# block header with lin to all dates #}}
+            <div class="flex flex-col items-center justify-between mb-20 gap-y-4 xs:flex-row lg:px-20">
+                {{ partial:typography/h3 :content="headline_news" class="text-skin-primary" }}
+                {{ partial:components/button label="{ trans:strings.all_news }" link_type="entry" :entry="all_news_page" }}
+            </div>
+
+            {{# news cards grid wrapper #}}
+            <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-y-20 2xl:gap-x-20 gap-x-12 lg:px-20">
+                
+                {{# all news #}}
+                {{ collection:neuigkeiten limit="3" }}
+                    <div class="flex flex-col items-start">
+
+                        {{# date tag #}}
+                        {{ partial:typography/tag color="light" content={ date iso_format="DD.MM.YYYY" } class="mb-4" }}
+                        
+                        {{# headline or title fallback #}}
+                        {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens text-skin-primary" }}
+                        
+                        {{# teaser text #}}
+                        {{ partial:typography/p content="{ teaser_text }" class="mb-6" }}
+
+                        {{# link to detail view #}}
+                        {{ partial:components/button button_type="lined_base" label="{ trans:strings.read_more }" link_type="url" entry="{ url }" }}
+                        
+                    </div>
+                {{ /collection:neuigkeiten }}
+
+            </div>
+        </div>
+
 
     </section>
     

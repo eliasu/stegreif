@@ -4,5 +4,5 @@
 #}}
 
 <!-- /typography/_h4.antlers.html -->
-<{{ as or 'h4' }} class="{{ class }}">{{ content | nl2br }}</{{ as or 'h4' }}>
+<{{ as or 'h4' }} {{ class ?= 'class="{class}"' }}>{{ content | nl2br }}</{{ as or 'h4' }}>
 <!-- End: /typography/_h4.antlers.html -->

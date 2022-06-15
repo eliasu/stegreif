@@ -17,7 +17,7 @@ module.exports = {
 			'xs': '475px',
 			...defaultTheme.screens,
 		 },
-		
+		 
 		colors: {
 			black: 'rgb(var(--color-black) / <alpha-value>)',
 			white: 'rgb(var(--color-white) / <alpha-value>)',

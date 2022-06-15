@@ -28,11 +28,11 @@
         @apply leading-s font-extrabold uppercase;
     }
 
-    p   { @apply text-lg sm:text-xl leading-l; } 
+    p   { @apply text-base md:text-lg leading-l; } 
     h1  { @apply text-4xl xs:text-5xl md:text-7xl lg:text-8xl; }
     h2  { @apply text-2xl sm:text-4xl md:text-5xl xl:text-6xl; }
-    h3  { @apply text-lg sm:text-xl md:text-3xl xl:text-4xl; }
-    h4  { @apply text-base md:text-2xl; }
+    h3  { @apply text-2xl md:text-3xl xl:text-4xl; }
+    h4  { @apply text-lg md:text-2xl; }
     h5  { @apply text-base md:text-2xl leading-s font-bold; }
 
     .prose > p   { @apply col-start-4 col-end-5; }

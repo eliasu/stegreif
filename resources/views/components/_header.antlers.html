@@ -2,14 +2,22 @@
 {{ if header_theme_selector != "disable" }}
     <section class="{{ header_theme_selector | ensure_left:"header-" }} flex flex-col relative z-front h-header">
         
+        {{# header content wrapper #}}
         <div class="flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
+            
+            {{# header headline #}}
             {{ partial:typography/h1 content="{header_headline}" class="text-skin-primary"}}
             
+            {{# social icons and quick links wrapper #}}
             <div class="flex flex-col flex-wrap md:flex-row-reverse md:justify-end gap-x-20 gap-y-10">
+                
+                {{# quick links #}}
                 <div class="flex flex-wrap gap-x-8 gap-y-4">
                     {{ partial:components/button label="Nächste Termine" link_type="url" url="google.de" }}
                     {{ partial:components/button label="Aktuelle Programme" link_type="url" url="google.de" }}
                 </div>
+
+                {{# social icons #}}
                 {{ if social_media:social_media }}
                     <div class="flex gap-8">
                         {{ social_media:social_media }}
@@ -20,12 +28,18 @@
             </div>
         </div>
         
+        {{# background media #}}
         <div class="absolute inset-0 pointer-events-none bird-mask z-behind">
+            
+            {{# background image #}}
             {{ if header_select == "image" }}
                 {{ partial:components/picture :image="header_image" tint="{{ header_theme_selector }}" cover="true" sizes="(min-width: 768px) 100vw, 100vw" }}
+            
+            {{# background video #}}
             {{ elseif header_select == "video" }}
                 {{ partial:components/video :youtube_url="header_video" tint="{{ header_theme_selector }}" cover="true" }}
             {{ /if }}
+            
         </div>
     </section>
 {{ /if }}

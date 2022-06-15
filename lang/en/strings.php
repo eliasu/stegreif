@@ -60,6 +60,9 @@ return [
     'no_results'                        => 'There are currently no posts.',
     'no_script'                         => 'This website requires Javascript for some parts to function properly. Your experience may vary.',
     'more'                              => 'Read more',
+    'read_more'                         => 'Read more',
+    'all_dates'                         => 'All Dates',
+    'all_news'                          => 'All News',
 
     // Pagination
     'next'                              => 'next',
