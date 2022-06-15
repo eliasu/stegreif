@@ -14,6 +14,11 @@ preferences:
       after_save: continue_editing
     programme:
       after_save: continue_editing
+    termine:
+      columns:
+        - title
+        - date
+        - time
   taxonomies:
     team_tags:
       after_save: create_another

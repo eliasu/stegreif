@@ -26,6 +26,5 @@ updated_by: 7d709850-5c35-4065-be68-b627c348051d
 updated_at: 1655244440
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 related_termine:
-  - 3adeb39b-0436-47b5-97b9-0ce623287123
   - 18c74337-dd9e-44f3-b42a-a7f3b1d98afb
 ---

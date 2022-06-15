@@ -25,7 +25,7 @@
             <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-y-20 2xl:gap-x-20 gap-x-12 lg:px-20">
                 
                 {{# all dates #}}
-                {{ collection:termine limit="6" }}
+                {{ collection:termine limit="6" sort="date" show_past="false" }}
                     <div class="flex flex-col items-start">
 
                         {{# time #}}
