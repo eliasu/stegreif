@@ -63,6 +63,10 @@ return [
     'read_more'                         => 'Read more',
     'all_dates'                         => 'All Dates',
     'all_news'                          => 'All News',
+    'all_productions'                   => 'All Productions',
+    'production'                        => 'Production',
+    'education'                         => 'Education',
+    'collection'                        => 'Collection',
 
     // Pagination
     'next'                              => 'next',

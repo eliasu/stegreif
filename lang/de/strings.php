@@ -63,6 +63,10 @@ return [
     'read_more'                         => 'Weiterlesen',
     'all_dates'                         => 'Alle Termine',
     'all_news'                          => 'Alle Neuigkeiten',
+    'all_productions'                   => 'Alle Programme',
+    'production'                        => 'Programm',
+    'education'                         => 'Education',
+    'collection'                        => 'Reihe',
 
     // Pagination
     'next'                              => 'next',

@@ -27,6 +27,8 @@ sections:
           type: slug
           localizable: true
       -
+        import: select_transition_theme
+      -
         handle: date
         field:
           type: date

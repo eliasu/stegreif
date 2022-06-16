@@ -41,6 +41,8 @@ sections:
             - required
             - 'unique_entry_value:{collection},{id},{site}'
       -
+        import: select_transition_theme
+      -
         handle: parent
         field:
           type: entries

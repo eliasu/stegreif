@@ -1,0 +1,45 @@
+{{#
+	@name next news block
+	@desc The next news block component.
+
+    @ parameters 
+        show_header (bool - shows headline and "all news" link)
+        show (int - limits the displayed items falls back to 6)
+#}}
+
+<!-- /components/_next_news_block.antlers.html -->
+<div class="flex flex-col fluid-container">
+            
+    {{# block header with lin to all dates #}}
+    {{ if show_header }}
+        <div class="flex flex-row flex-wrap items-center justify-between mb-20 gap-y-4 gap-x-8 lg:px-20">
+            {{ partial:typography/h3 :content="headline_news" class="text-skin-primary" }}
+            {{ partial:components/button label="{ trans:strings.all_news }" link_type="entry" :entry="all_news_page" }}
+        </div>
+    {{ /if }}
+
+    {{# news cards grid wrapper #}}
+    <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-y-20 2xl:gap-x-20 gap-x-12 lg:px-20">
+        
+        {{# all news #}}
+        {{ collection:neuigkeiten limit="{ show ?? '6' }" }}
+            <div class="flex flex-col items-start">
+
+                {{# date tag #}}
+                {{ partial:typography/tag color="light" content={ date iso_format="DD.MM.YYYY" } class="mb-4" }}
+                
+                {{# headline or title fallback #}}
+                {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens text-skin-primary" }}
+                
+                {{# teaser text #}}
+                {{ partial:typography/p content="{ teaser_text }" class="mb-6" }}
+
+                {{# link to detail view #}}
+                {{ partial:components/button button_type="lined_base" label="{ trans:strings.read_more }" link_type="url" entry="{ url }" }}
+                
+            </div>
+        {{ /collection:neuigkeiten }}
+
+    </div>
+</div>
+<!-- End: /components/_next_news_block.antlers.html -->

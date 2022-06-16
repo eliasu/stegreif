@@ -105,6 +105,16 @@ sections:
           display: 'Headline Current Productions'
           validate:
             - required
+          width: 50
+      -
+        handle: all_productions_page
+        field: common.entry
+        config:
+          localizable: false
+          display: 'All Productions Page'
+          width: 50
+          collections:
+            - pages
       -
         handle: support_us_section
         field:
@@ -157,6 +167,8 @@ sections:
             - required
             - 'unique_entry_value:{collection},{id},{site}'
       -
+        import: select_transition_theme
+      -
         handle: template
         field:
           hide_partials: true
@@ -175,3 +187,6 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  new_section:
+    display: 'New Section'
+    fields: {  }

@@ -17,6 +17,9 @@ sections:
       -
         import: header
       -
+        handle: teaser_text
+        field: common.teaser_text
+      -
         import: section
       -
         import: details
@@ -40,6 +43,8 @@ sections:
           display: Slug
           validate:
             - required
+      -
+        import: select_transition_theme
       -
         handle: aktuell
         field: common.aktuell

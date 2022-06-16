@@ -18,10 +18,7 @@ sections:
         import: header
       -
         handle: teaser_text
-        field: common.text_plain
-        config:
-          display: 'Teaser Text'
-          character_limit: '210'
+        field: common.teaser_text
       -
         import: section
       -
@@ -51,6 +48,8 @@ sections:
           inline: false
           columns: 1
           rows: 1
+      -
+        import: select_transition_theme
       -
         handle: slug
         field:

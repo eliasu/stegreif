@@ -208,15 +208,28 @@ fields:
       instructions_position: above
       read_only: false
   -
-    handle: allignment
+    handle: alignment
     field:
       options:
         left: Left
         right: Right
       default: left
-      display: Allignment
+      display: Alignment
       type: button_group
       icon: button_group
       listable: hidden
       instructions_position: above
       read_only: false
+  -
+    handle: teaser_text
+    field:
+      character_limit: '210'
+      antlers: false
+      display: 'Teaser Text'
+      type: textarea
+      icon: textarea
+      instructions: 'Teaser text for feature blocks etc.'
+      listable: hidden
+      instructions_position: above
+      read_only: false
+      localizable: true

@@ -1,117 +1,38 @@
 <!-- /home.antlers.html -->
 <main class="relative w-full" id="content"> 
 
-    {{ partial:components/header }}
-    
-    <section class="{{ select_section_theme_intro | ensure_left:"theme-" }} relative flex flex-col gap-80 z-90 bird-section">
+    {{# Header #}}
+    {{ partial:components/header social_icons="true" }}
+
+    {{# intruduction section #}}
+    {{ partial:layout/section color="{ select_section_theme_intro }" z="z-90" }}
         
         {{# intruduction bard #}}
-        {{ partial:typography/prose as="div" }}
-            {{ introduction_content }}
-                {{ partial src="components/{type}" }}
-            {{ /introduction_content }}
-        {{ /partial:typography/prose }}
-
+        {{ partial:components/bard handle="{introduction_content}" }}
+        
         {{# next dates block #}}
-        <div class="flex flex-col fluid-container">
-            
-            {{# block header with lin to all dates #}}
-            <div class="flex flex-col items-center justify-between mb-20 gap-y-4 xs:flex-row lg:px-20">
-                {{ partial:typography/h3 :content="headline_dates" class="text-skin-primary" }}
-                {{ partial:components/button label="{ trans:strings.all_dates }" link_type="entry" :entry="all_dates_page" }}
-            </div>
-
-            {{# date cards grid wrapper #}}
-            <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-y-20 2xl:gap-x-20 gap-x-12 lg:px-20">
-                
-                {{# all dates #}}
-                {{ collection:termine limit="6" sort="date" show_past="false" }}
-                    <div class="flex flex-col items-start">
-
-                        {{# time #}}
-                        {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
-                        {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-0 xs:mb-1" }} {{ /if }}
-                        
-                        {{# date #}}
-                        {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-4 sm:mb-6" }}
-                        
-                        {{# tags  #}}
-                        {{ related_programm }}
-                            <div class="flex flex-wrap mb-4">
-                                {{ related_reihe }}
-                                    {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
-                                {{ /related_reihe }}
-                                {{ partial:typography/tag color="green" content="{ header_headline ?? title }" }}
-                            </div>
-                        {{ /related_programm }}
-
-                        {{# headline or title fallback #}}
-                        {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens" }}
-                        
-                        {{# link to detail view #}}
-                        {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}
-                        
-                    </div>
-                {{ /collection:termine }}
-
-            </div>
-        </div>
-
+        {{ partial:components/next_dates_block show_header="true" show="6" }}
+        
         {{# all news block #}}
-        <div class="flex flex-col fluid-container">
-            
-            {{# block header with lin to all dates #}}
-            <div class="flex flex-col items-center justify-between mb-20 gap-y-4 xs:flex-row lg:px-20">
-                {{ partial:typography/h3 :content="headline_news" class="text-skin-primary" }}
-                {{ partial:components/button label="{ trans:strings.all_news }" link_type="entry" :entry="all_news_page" }}
-            </div>
+        {{ partial:components/next_news_block show_header="true" show="3" }}
 
-            {{# news cards grid wrapper #}}
-            <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-y-20 2xl:gap-x-20 gap-x-12 lg:px-20">
-                
-                {{# all news #}}
-                {{ collection:neuigkeiten limit="3" }}
-                    <div class="flex flex-col items-start">
-
-                        {{# date tag #}}
-                        {{ partial:typography/tag color="light" content={ date iso_format="DD.MM.YYYY" } class="mb-4" }}
-                        
-                        {{# headline or title fallback #}}
-                        {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens text-skin-primary" }}
-                        
-                        {{# teaser text #}}
-                        {{ partial:typography/p content="{ teaser_text }" class="mb-6" }}
-
-                        {{# link to detail view #}}
-                        {{ partial:components/button button_type="lined_base" label="{ trans:strings.read_more }" link_type="url" entry="{ url }" }}
-                        
-                    </div>
-                {{ /collection:neuigkeiten }}
-
-            </div>
-        </div>
-
-
-    </section>
+    {{ /partial:layout/section }}
     
-    <section class="{{ select_section_theme_current_production | ensure_left:"theme-" }} relative flex flex-col z-80 bird-section">
-        {{ partial:typography/prose as="div" }}
-            {{ introduction_content }}
-                {{ partial src="components/{type}" }}
-            {{ /introduction_content }}
-        {{ /partial:typography/prose }}
-    </section>
-    
-    <section class="{{ select_section_theme_support_us | ensure_left:"theme-" }} relative flex flex-col z-70 bird-section">
-        {{ partial:typography/prose as="div" }}
-            {{ introduction_content }}
-                {{ partial src="components/{type}" }}
-            {{ /introduction_content }}
-        {{ /partial:typography/prose }}
-    </section>
+    {{# current productions section #}}
+    {{ partial:layout/section color="{ select_section_theme_current_production }" z="z-80" }}
 
-    
+        {{# current productions block #}}
+        {{ partial:components/current_productions_block show_header="true" show="4" }}
 
+    {{ /partial:layout/section }}
+    
+    {{# support us section #}}
+    {{ partial:layout/section color="{ select_section_theme_support_us }" z="z-70" }}
+        
+        hello
+
+    {{ /partial:layout/section }}
+    
     {{# {{ trans:strings.search }} #}}
 </main>
 <!-- End: /home.antlers.html -->

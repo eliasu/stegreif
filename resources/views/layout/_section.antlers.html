@@ -1,0 +1,14 @@
+{{#
+	@name Section
+	@desc A section with bird transition if needed
+
+    @parameters:
+        color: dark/light/yellow
+
+#}}
+
+<!-- /layout/_section.antlers.html -->
+<section class="{{ color | ensure_left:"theme-" }} relative flex flex-col gap-80 {{ z ?? "z-90" }} {{ select_transition_theme | ensure_right:"-section" }}">
+    {{ slot }}
+</section>
+<!-- End: /layout/_section.antlers.html -->

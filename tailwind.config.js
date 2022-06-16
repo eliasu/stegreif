@@ -24,6 +24,8 @@ module.exports = {
     './resources/js/**/*.js',
   ],
   safelist: [
+    'sm:flex-row',
+    'sm:flex-row-reverse',
     {
       pattern: /text-.+/,
       pattern: /decoration-.+/,
