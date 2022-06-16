@@ -12,7 +12,6 @@
     {{# current productions headline #}}
     {{ partial:typography/h2 :content="headline_current_productions" }}
 
-        
         {{# all productions #}}
         {{ collection:programme limit="{ show ?? '2' }" }}
             
@@ -28,5 +27,8 @@
                 
             </div>
         {{ /collection:programme }}
+
+        {{# link to detail view #}}
+        {{ partial:components/button label="{ trans:strings.all_productions }" class="self-center" button_type="background" link_type="entry" :entry="all_productions_page" }}
 </div>
 <!-- End: /components/_current_productions_block.antlers.html --> 
