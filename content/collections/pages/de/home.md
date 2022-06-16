@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655380124
+updated_at: 1655385288
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -53,8 +53,37 @@ introduction_content:
         type: bard_feature
         alignment: right
         feature_type: big
-        reference_content: true
-        select_content: a2f49489-9dd6-4724-86f8-8e959ad6fcc3
+        reference_content: false
+        select_media_feature: video
+        feature_video: 'https://youtu.be/kxesw_UUzYE'
+        article:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Das STEGREIF '
+              -
+                type: text
+                marks:
+                  -
+                    type: bts_span
+                    attrs:
+                      class: text-skin-primary
+                text: orchester
+              -
+                type: text
+                text: ' '
+          -
+            type: paragraph
+            attrs:
+              class: null
+            content:
+              -
+                type: text
+                text: 'ist ein Pool von 30 internationalen, genreübergreifenden Musiker*innen, die das Erbe klassischer Komposition ebenso schätzen wie die freie Improvisation. Wir betrachten klassische Sinfonien als Ausgangspunkt für ein neues Klangerlebnis. Mit choreographischen Elementen wechselt diese dirigenten- und notenblattfreie Konzertform zwischen Rekomposition und Improvisation.'
   -
     type: paragraph
     attrs:

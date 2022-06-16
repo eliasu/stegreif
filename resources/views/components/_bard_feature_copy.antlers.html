@@ -41,9 +41,9 @@
   
                 {{# media wrapper #}}
                 <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
-                
+                        
                     {{# image #}}
-                    {{ if select_media_feature == "image" }}
+                    {{ if header_select == "image" }}
                         {{ partial:components/picture :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
                     
                     {{# video #}}

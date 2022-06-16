@@ -1,7 +1,7 @@
 ---
 id: e4b0674d-0648-4242-9589-22eae363721e
 blueprint: programme
-title: 'Feeling (Duplicated)'
+title: 'Ein anderes Programm ziemlich'
 theme_selector_header: dark
 select_header: image
 image: header_images/monk_600x600.jpg
@@ -125,13 +125,13 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
-select_type: Programm
+select_type: Education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655348326
+updated_at: 1655385170
 header_theme_selector: dark
-header_select: image
+header_select: video
 related_termine:
   - f8116011-b75e-4795-8b2f-71d972ff494e
   - dc8781a7-90b7-42f2-9af0-a608cc586c3a
@@ -139,5 +139,5 @@ related_termine:
 select_transition_theme: birds
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
-header_image: header_images/monk_600x600.jpg
+header_video: 'https://youtu.be/kxesw_UUzYE'
 ---
