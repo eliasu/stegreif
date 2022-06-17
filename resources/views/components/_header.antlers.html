@@ -6,7 +6,7 @@
         <div class="flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
             
             {{# header headline #}}
-            {{ partial:typography/h1 content="{header_headline}" class="text-skin-primary"}}
+            {{ partial:typography/h1 content="{header_headline ?? title }" class="text-skin-primary"}}
             
             {{# social icons and quick links wrapper #}}
             <div class="flex flex-col flex-wrap md:flex-row-reverse md:justify-end gap-x-20 gap-y-10">

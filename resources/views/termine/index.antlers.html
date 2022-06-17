@@ -4,26 +4,18 @@
 #}}
 
 <!-- /termine/index.antlers.html -->
-<main class="outer-grid" id="content">
-    <div class="fluid-container grid md:grid-cols-12 gap-12">
-        {{ collection:termine sort="date:desc" paginate="true" limit="10" as="items" }}
-            {{ unless no_results }}
-                {{ items }}
-                    <div class="md:col-span-6">
-                        <a class="underline" href="{{ url }}">{{ title }}</a>
-                    </div>
-                {{ /items }}
-            {{ else }}
-                <div class="md:col-span-6">
-                    {{ trans:strings.no_results }}
-                </div>
-            {{ /unless }}
-            {{ partial:components/pagination class="md:col-span-12" }}
-        {{ /collection:termine }}
-    </div>
+<main class="relative w-full" id="content"> 
 
-    {{ page_builder scope="block" }}
-        {{ partial src="page_builder/{type}" }}
-    {{ /page_builder }}
+    {{# Header #}}
+    {{ partial:components/header social_icons="false" }}
+
+    {{# dates #}}
+    {{ partial:layout/section color="{ select_section_theme_intro }" z="z-90" }}
+       
+        {{# next dates block #}}
+        {{ partial:components/next_dates_block show_header="false" show="99" }}
+    
+    {{ /partial:layout/section }}
+    
 </main>
 <!-- End: /termine/index.antlers.html -->
