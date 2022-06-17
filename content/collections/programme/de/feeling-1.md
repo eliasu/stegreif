@@ -1,7 +1,7 @@
 ---
 id: e4b0674d-0648-4242-9589-22eae363721e
 blueprint: programme
-title: Feeling
+title: 'Education III'
 theme_selector_header: dark
 select_header: image
 image: header_images/monk_600x600.jpg
@@ -125,11 +125,11 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
-select_type: Education
+select_type: education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655427025
+updated_at: 1655427588
 header_theme_selector: dark
 header_select: video
 related_termine:

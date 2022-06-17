@@ -51,6 +51,10 @@ sections:
       -
         handle: select_type
         field: common.select_type
+        config:
+          options:
+            programm: Programm
+            education: Education
       -
         handle: tags
         field:

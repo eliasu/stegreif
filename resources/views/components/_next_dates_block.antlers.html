@@ -38,7 +38,12 @@
                         {{ related_reihe }}
                             {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
                         {{ /related_reihe }}
-                        {{ partial:typography/tag color="green" content="{ header_headline ?? title }" }}
+
+                        {{ if select_type == "programm"}} 
+                            {{ partial:typography/tag color="green" content="{ header_headline ?? title }" }}
+                        {{ else }} 
+                            {{ partial:typography/tag color="dark" content="{ header_headline ?? title }" }}
+                        {{ /if }}
                     </div>
                 {{ /related_programm }}
 
