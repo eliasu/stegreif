@@ -1,7 +1,7 @@
 ---
 id: e4b0674d-0648-4242-9589-22eae363721e
 blueprint: programme
-title: 'Ein anderes Programm ziemlich'
+title: Feeling
 theme_selector_header: dark
 select_header: image
 image: header_images/monk_600x600.jpg
@@ -129,7 +129,7 @@ select_type: Education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655385170
+updated_at: 1655427025
 header_theme_selector: dark
 header_select: video
 related_termine:

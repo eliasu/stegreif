@@ -125,11 +125,11 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
-select_type: Programm
+select_type: Education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655383727
+updated_at: 1655427100
 header_theme_selector: dark
 header_select: image
 related_termine:

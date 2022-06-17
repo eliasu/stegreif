@@ -19,6 +19,7 @@ fields:
     handle: select_media_feature
     field: header.header_select
     config:
+      default: image
       display: 'Select Media Feature'
       if:
         reference_content: 'equals false'

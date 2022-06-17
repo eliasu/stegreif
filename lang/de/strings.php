@@ -4,14 +4,15 @@ return [
     'form_honeypot'                     => 'Fax',
     'form_mail_body_owner'              => 'A contact form has been sent.',
     'form_mail_body_sender'             => 'Thanks for your message. We will contact you as soon as possible.',
-    'form_mail_closing'                 => 'Kind regards',
+    'form_mail_closing'                 => 'Beste Grüße',
     'form_mail_from'                    => config('app.name'),
-    'form_mail_greeting'                => 'Dear',
+    'form_mail_greeting'                => 'Hallo',
     'form_mail_logo'                    => 'https://cdn.studio1902.nl/assets/statamic-peak/statamic-peak-logo.png',
-    'form_mail_submitted'               => 'Submitted',
-    'form_mail_title'                   => 'Contact form',
+    'form_mail_submitted'               => 'Abgesendet',
+    'form_mail_title'                   => 'Kontakt Formular',
     'form_mail_url'                     => config('app.url'),
-    'form_send'                         => 'Send message',
+    'form_send'                         => 'Absenden',
+    'form_sending'                      => 'Sende',
     'form_success'                      => 'Thank you, we received your message and will contact you as soon as possible.',
 
     // Cookie banner
@@ -67,6 +68,7 @@ return [
     'production'                        => 'Programm',
     'education'                         => 'Education',
     'collection'                        => 'Reihe',
+    'join_newsletter'                   => 'In den Newsletter eintragen',
 
     // Pagination
     'next'                              => 'next',

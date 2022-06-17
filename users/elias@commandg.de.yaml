@@ -22,3 +22,10 @@ preferences:
   taxonomies:
     team_tags:
       after_save: create_another
+  forms:
+    contact:
+      columns:
+        - datestamp
+        - name
+        - email
+        - consent

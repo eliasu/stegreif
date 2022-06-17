@@ -7,14 +7,13 @@
 <!-- /components/_bard_feature.antlers.html -->
 <div
     class="
-        flex gap-8 not-prose my-8 lg:my-20
+        flex gap-8 not-prose my-20
         {{ switch(
             (feature_type == 'small') => 'col-span-full',
             (feature_type == 'big') => 'col-span-full -mx-4 lg:-mx-20',
             () => 'col-span-full'
         )}}
-    "
->   
+    ">   
         
     {{# block wrapper #}}
     <div class="flex flex-col-reverse gap-8 lg:gap-20 {{ if alignment == "right" }}sm:flex-row-reverse{{else}}sm:flex-row{{ /if }}">
@@ -25,9 +24,11 @@
             {{# content wrap #}}
             <div class="flex flex-col items-start py-0 sm:py-20 w-full gap-8
                 {{ if feature_type == "small" }} sm:w-[50%] {{ if alignment == "right" }}pr-0 lg:pr-8 xl:pr-20{{else}}pl-0 lg:pl-8 xl:pl-20{{ /if }}
-                {{ elseif feature_type == "big" }} p-4 sm:pl-0 w-full sm:w-[40%] {{ if alignment == "right" }}px-4 lg:pr-16 2xl:pr-40{{else}}pl-4 lg:pl-16 2xl:pl-40{{ /if }}
+                {{ elseif feature_type == "big" }} p-4 w-full sm:w-[40%] {{ if alignment == "right" }} sm:pl-0 px-4 lg:pr-16 2xl:pr-40{{else}}pl-4 lg:pl-16 2xl:pl-40{{ /if }}
                 {{ /if }}
             ">
+                
+                {{# article content #}}
                 <div class="flex flex-col not-prose-align gap-y-8"> 
                     {{ article }}
                         {{ partial src="components/{type}" }}
@@ -55,66 +56,66 @@
         
         {{# referenced content #}}
         {{ else }}
+            
+            {{# content wrap #}}
+            <div class="flex flex-col items-start py-0 sm:py-20 w-full 
+                {{ if feature_type == "small" }} sm:w-[50%] {{ if alignment == "right" }}pr-0 lg:pr-8 xl:pr-20{{else}}pl-0 lg:pl-8 xl:pl-20{{ /if }}
+                {{ elseif feature_type == "big" }} p-4 w-full sm:w-[40%] {{ if alignment == "right" }} sm:pl-0 px-4 lg:pr-16 2xl:pr-40{{else}}pl-4 lg:pl-16 2xl:pl-40{{ /if }}
+                {{ /if }}
+            ">
 
-                {{# content wrap #}}
-                <div class="flex flex-col items-start py-0 sm:py-20 w-full 
-                    {{ if feature_type == "small" }} sm:w-[50%] {{ if alignment == "right" }}pr-0 lg:pr-8 xl:pr-20{{else}}pl-0 lg:pl-8 xl:pl-20{{ /if }}
-                    {{ elseif feature_type == "big" }} p-4 w-full sm:w-[40%] {{ if alignment == "right" }} sm:pl-0 px-4 lg:pr-16 2xl:pr-40{{else}}pl-4 lg:pl-16 2xl:pl-40{{ /if }}
-                    {{ /if }}
-                ">
-
-                    {{# tags #}}
-                    <div class="flex flex-wrap mb-4">
-                        
-                        {{# if its a programm and has a related reihe #}}
-                        {{ select_content ? select_content.related_reihe : related_reihe }}
-                            {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
-                        {{ /select_content ? select_content.related_reihe : related_reihe }}
-
-                        {{# if it is a production  #}}
-                        {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
-                            
-                            {{# production or education tag #}}
-                            {{ if { select_content ? select_content.select_type : select_type } == "Programm" }}
-                                {{ partial:typography/tag color="green" content="{ trans:strings.production }" }}
-                            {{ else }}
-                                {{ partial:typography/tag color="dark" content="{ trans:strings.education }" }}
-                            {{ endif }}
-                        
-                        {{# if it is a reihe #}}
-                        {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
-                            {{ partial:typography/tag color="yellow" content="{ select_content.header_headline ?? select_content.title ?? header_headline ?? title }" }}
-                            {{ partial:typography/tag color="green" content="{ trans:strings.collection }" }}
-                        {{ /if }}
-                    </div>
-
-                    {{# title #}}
-                    {{ partial:typography/h3 content="{ select_content.header_headline ?? select_content.title ?? header_headline ?? title }" class="mb-6 sm:mb-8 hyphens" }}
+                {{# tags #}}
+                <div class="flex flex-wrap mb-4">
                     
-                    {{# preview text field #}}
-                    {{ partial:typography/p content="{select_content.teaser_text ?? teaser_text}" class="mb-8" }}
-                    
-                    {{# link to detail view #}}
-                    {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}
-                </div>
+                    {{# if its a programm and has a related reihe #}}
+                    {{ select_content ? select_content.related_reihe : related_reihe }}
+                        {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
+                    {{ /select_content ? select_content.related_reihe : related_reihe }}
 
-                {{# media #}}
-                {{ if feature_type == 'small' }} <div class="relative w-full sm:w-[50%]">
-                {{ elseif feature_type == 'big' }} <div class="relative w-full sm:w-[60%]"> {{ /if }}
-                    
-                    {{# media wrapper #}}
-                    <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
+                    {{# if it is a production  #}}
+                    {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
                         
-                        {{# image #}}
-                        {{ if header_select == "image" }}
-                            {{ partial:components/picture image="{select_content.header_image ?? header_image }" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
-                        
-                        {{# video #}}
+                        {{# production or education tag #}}
+                        {{ if { select_content ? select_content.select_type : select_type } == "Programm" }}
+                            {{ partial:typography/tag color="green" content="{ trans:strings.production }" }}
                         {{ else }}
-                            {{ partial:components/video youtube_url="{select_content.header_video ?? header_video}" cover="true" }}
-                        {{ /if }} 
-                    </div>    
+                            {{ partial:typography/tag color="dark" content="{ trans:strings.education }" }}
+                        {{ endif }}
+                    
+                    {{# if it is a reihe #}}
+                    {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
+                        {{ partial:typography/tag color="yellow" content="{ select_content.header_headline ?? select_content.title ?? header_headline ?? title }" }}
+                        {{ partial:typography/tag color="green" content="{ trans:strings.collection }" }}
+                    {{ /if }}
                 </div>
+
+                {{# title #}}
+                {{ partial:typography/h3 content="{ select_content.header_headline ?? select_content.title ?? header_headline ?? title }" class="mb-6 sm:mb-8 hyphens" }}
+                
+                {{# preview text field #}}
+                {{ partial:typography/p content="{select_content.teaser_text ?? teaser_text}" class="mb-8" }}
+                
+                {{# link to detail view #}}
+                {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}
+            </div>
+
+            {{# media #}}
+            {{ if feature_type == 'small' }} <div class="relative w-full sm:w-[50%]">
+            {{ elseif feature_type == 'big' }} <div class="relative w-full sm:w-[60%]"> {{ /if }}
+                
+                {{# media wrapper #}}
+                <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
+                    
+                    {{# image #}}
+                    {{ if header_select == "image" }}
+                        {{ partial:components/picture image="{select_content.header_image ?? header_image }" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
+                    
+                    {{# video #}}
+                    {{ else }}
+                        {{ partial:components/video youtube_url="{select_content.header_video ?? header_video}" cover="true" }}
+                    {{ /if }} 
+                </div>    
+            </div>
                 
         {{ /if }}
     </div>

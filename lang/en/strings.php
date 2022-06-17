@@ -11,7 +11,8 @@ return [
     'form_mail_submitted'               => 'Submitted',
     'form_mail_title'                   => 'Contact form',
     'form_mail_url'                     => config('app.url'),
-    'form_send'                         => 'Send message',
+    'form_send'                         => 'Submit',
+    'form_sending'                      => 'Sending',
     'form_success'                      => 'Thank you, we received your message and will contact you as soon as possible.',
 
     // Cookie banner
@@ -67,6 +68,7 @@ return [
     'production'                        => 'Production',
     'education'                         => 'Education',
     'collection'                        => 'Collection',
+    'join_newsletter'                   => 'Join the newsletter',
 
     // Pagination
     'next'                              => 'next',

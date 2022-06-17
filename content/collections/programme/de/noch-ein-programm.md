@@ -24,6 +24,7 @@ updated_by: 7d709850-5c35-4065-be68-b627c348051d
 updated_at: 1655343205
 related_termine:
   - 18c74337-dd9e-44f3-b42a-a7f3b1d98afb
+  - a8e8ee20-0ef9-46d3-b51b-b12b1f2f8ad5
 teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 select_transition_theme: bird-section
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a

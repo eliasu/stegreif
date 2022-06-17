@@ -36,6 +36,8 @@
                     {{ if cover }}
                         class="object-cover w-full h-full {{ class }}"
                         style="object-position: {{ focus | background_position }}"
+                    {{ elseif contain }}
+                        class="object-contain w-full h-full {{ class }}"
                     {{ else }}
                         class="{{ class }}"
                     {{ /if }}

@@ -40,7 +40,7 @@ fields:
       taggable: false
       push_tags: false
       cast_booleans: false
-      default: Image
+      default: image
       display: 'Select Header Media'
       type: select
       icon: select

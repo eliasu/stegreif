@@ -120,6 +120,7 @@
 .section-last {
     margin-top: -30rem;
     padding-top: calc(30rem + 5rem);
+    padding-bottom: 10rem; 
 }
 
 .bird-section {
@@ -215,3 +216,6 @@ font-weight: 800;
 font-style: italic;
 font-display: swap;
 }
+
+
+
