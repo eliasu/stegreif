@@ -118,6 +118,7 @@
 }
 
 .section-last {
+    @apply bg-skin-inverted;
     margin-top: -30rem;
     padding-top: calc(30rem + 5rem);
     padding-bottom: 10rem; 

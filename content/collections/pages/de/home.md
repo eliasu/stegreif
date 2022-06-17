@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655426998
+updated_at: 1655427737
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -105,9 +105,9 @@ support_us_content:
         text: 'Ein Kooperationsprojekt von STEGREIF und PODIUM Esslingen im Rahmen von #bebeethoven – gefördert durch die KULTURSTIFTUNG des BUNDES und das Land Baden-Württemberg - und außerdem gefördert durch die Karl-Schlecht-Stiftung.'
         entires:
           - d0e4ef90-45fd-483d-842a-1d597388850b
-          - 3a5e2101-66da-4377-8baa-9488da03bf72
           - 90cc8a9e-1837-46bb-88f3-1bda9a49c29e
-          - 7a38a00d-95cc-4b11-b645-bcc3d066062b
+          - f3744684-a1fd-4225-baaa-a6613df71d40
+          - e847a09e-87f8-4092-8c0e-457f64129ecb
 template: home
 select_section_theme_current_production: yellow
 all_dates_page: 12b9e5fb-017c-4632-96df-5bdcde74f796
