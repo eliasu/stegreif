@@ -2,9 +2,6 @@
 id: 25698410-a795-4c19-84ba-c9cb1fed500a
 blueprint: reihen
 title: '#Bechange'
-select_header_theme: dark
-select_header: Image
-select_theme: dark
 article:
   -
     type: paragraph
@@ -29,7 +26,7 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655379865
+updated_at: 1655680047
 theme_selector_header: dark
 theme_selector: dark
 header_theme_selector: dark

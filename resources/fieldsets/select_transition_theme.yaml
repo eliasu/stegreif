@@ -12,7 +12,7 @@ fields:
       taggable: false
       push_tags: false
       cast_booleans: false
-      default: bird-section
+      default: bird
       display: 'Select Transition Theme'
       type: select
       icon: select

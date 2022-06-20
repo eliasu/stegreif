@@ -1,0 +1,85 @@
+{{#
+	@name dates block
+	@desc The date block component.
+#}}
+
+<!-- /components/_dates_block.antlers.html -->
+{{# dates block wrapper  #}}
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
+    
+    {{# filter bar #}}
+    <div class="flex flex-col flex-wrap items-start w-full pt-20 xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
+        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.current }" }}
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.past }" }}
+        </div>
+        
+        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.collections }" }}
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.productions }" }}
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.education }" }}
+        </div>
+        
+        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Digital" }}
+            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Chamber" }}
+        </div>
+    </div>
+    
+    {{# date cards grid wrapper #}}
+    <div class="grid items-start w-full grid-cols-pill-s lg:grid-cols-pill-m 2xl:grid-cols-pill-l gap-x-8 gap-y-20">
+            
+        {{# all dates #}}
+        {{ collection:termine sort="date" show_past="true" }}
+            
+            {{# dates card #}}
+            <a href="{{ url }}" class="relative flex flex-col items-start p-4 group">
+                
+                {{# time #}}
+                {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
+                {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-0 xs:mb-1" }} {{ /if }}
+                
+                {{# date #}}
+                {{ partial:typography/h3 content="{ date iso_format="DD.MM.YYYY" }" }}
+                
+                {{# square spacer for height #}}
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-4"></div>
+                
+                {{# tags  #}}
+                {{ related_programm }}
+                    <div class="flex flex-wrap mb-4">
+                        {{ related_reihe }}
+                            {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
+                        {{ /related_reihe }}
+
+                        {{ if select_type == "programm"}} 
+                            {{ partial:typography/tag color="green" content="{ header_headline ?? title }" }}
+                        {{ else }} 
+                            {{ partial:typography/tag color="dark" content="{ header_headline ?? title }" }}
+                        {{ /if }}
+                    </div>
+                {{ /related_programm }}
+
+                {{# headline or title fallback #}}
+                {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens group-hover:text-skin-primary" }}
+                
+                {{# link to detail view #}}
+                {{ partial:components/button button_type="card_lined_base" as="button" label="{ trans:strings.more }" }}
+
+                {{# media wrapper #}}
+                <div class="absolute inset-0 overflow-hidden transition-[inset_border-radius] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                
+                    {{# image #}}
+                    {{ if header_select == "image" }}
+                        {{ partial:components/picture tint="dark" :image="header_image" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
+                    
+                    {{# video #}}
+                    {{ else }}
+                        {{ partial:components/video tint="dark" :youtube_url="header_video" }}
+                    {{ /if }} 
+                </div>
+            </a>
+        {{ /collection:termine }}
+    </div>
+</div>
+<!-- End: /components/_dates_block.antlers.html -->

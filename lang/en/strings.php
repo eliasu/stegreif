@@ -66,9 +66,14 @@ return [
     'all_news'                          => 'All News',
     'all_productions'                   => 'All Productions',
     'production'                        => 'Production',
+    'productions'                       => 'Productions',
     'education'                         => 'Education',
     'collection'                        => 'Collection',
+    'collections'                       => 'Collections',
     'join_newsletter'                   => 'Join the newsletter',
+    'load_more'                         => 'Load more',
+    'current'                           => 'Current',
+    'past'                              => 'Past',
 
     // Pagination
     'next'                              => 'next',

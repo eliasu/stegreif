@@ -1,0 +1,22 @@
+<!-- /werwirsind.antlers.html -->
+<main class="relative w-full" id="content"> 
+
+    {{# Header #}}
+    {{ partial:components/header social_icons="true" }}
+
+    {{# intruduction section #}}
+    {{ partial:layout/section color="{ select_section_theme_intro }" }}
+        
+        {{# intruduction bard #}}
+        {{ partial:components/bard handle="{introduction_content}" }}
+        
+        {{# next dates block #}}
+        {{ partial:components/next_dates_block show_header="true" show="6" }}
+        
+        {{# all news block #}}
+        {{ partial:components/next_news_block show_header="true" show="3" }}
+
+    {{ /partial:layout/section }}
+    
+</main>
+<!-- End: /werwirsind.antlers.html -->

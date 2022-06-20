@@ -3,7 +3,6 @@ id: e4b0674d-0648-4242-9589-22eae363721e
 blueprint: programme
 title: 'Education III'
 theme_selector_header: dark
-select_header: image
 image: header_images/monk_600x600.jpg
 theme_selector: dark
 article:
@@ -129,15 +128,16 @@ select_type: education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655427588
+updated_at: 1655678719
 header_theme_selector: dark
 header_select: video
 related_termine:
-  - f8116011-b75e-4795-8b2f-71d972ff494e
   - dc8781a7-90b7-42f2-9af0-a608cc586c3a
   - a12c12e1-a158-4a32-89e9-5bb9297cc8eb
+  - 3ce5d2a5-7c7c-4e16-a3f1-3328c9c34fe6
+  - 786c8d48-12e0-4ccc-93c6-24cfd0382746
 select_transition_theme: birds
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
-header_video: 'https://youtu.be/kxesw_UUzYE'
+header_video: 'https://youtu.be/Faow3SKIzq0'
 ---

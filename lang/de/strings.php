@@ -66,9 +66,15 @@ return [
     'all_news'                          => 'Alle Neuigkeiten',
     'all_productions'                   => 'Alle Programme',
     'production'                        => 'Programm',
+    'productions'                       => 'Programme',
     'education'                         => 'Education',
     'collection'                        => 'Reihe',
+    'collections'                       => 'Reihen',
     'join_newsletter'                   => 'In den Newsletter eintragen',
+    'load_more'                         => 'Mehr Laden',
+    'current'                           => 'Aktuelles',
+    'past'                              => 'Vergangenes',
+
 
     // Pagination
     'next'                              => 'next',

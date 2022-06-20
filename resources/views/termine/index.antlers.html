@@ -10,12 +10,19 @@
     {{ partial:components/header social_icons="false" }}
 
     {{# dates #}}
-    {{ partial:layout/section color="{ select_section_theme_intro }" z="z-90" }}
+    {{ partial:layout/section color="dark" }}
        
         {{# next dates block #}}
-        {{ partial:components/next_dates_block show_header="false" show="99" }}
+        {{ partial:components/dates_block }}
     
     {{ /partial:layout/section }}
+    
+    {{# if there is additional content #}}
+    {{ add_section }}
+        {{ partial:layout/section color="{ theme_selector }" }}
+            {{ partial:components/bard handle="{ article }" }}
+        {{ /partial:layout/section }}
+    {{ /add_section }}
     
 </main>
 <!-- End: /termine/index.antlers.html -->

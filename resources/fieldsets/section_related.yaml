@@ -1,0 +1,16 @@
+title: 'Section Related'
+fields:
+  -
+    handle: theme_selector
+    field: common.theme_selector
+    config:
+      display: 'Select Section Theme'
+  -
+    handle: headline
+    field: common.text_single
+    config:
+      display: Headline
+      validate:
+        - required
+      width: 100
+      placeholder: 'Leave empty for no headline'
