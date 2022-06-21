@@ -1,0 +1,35 @@
+{{#
+	@name Button attributes
+	@desc A single button component. Faux is used when a button is displayed inside a link (for example in link blocks).
+#}}
+
+<!-- /components/_select.antlers.html -->
+
+{{# optional button parameters: 
+    label => text
+#}}
+
+{{ if label }}
+    <div class="relative flex items-center gap-4 cursor-pointer pointer-events-auto text-skin-primary hover:text-skin-accent group">
+        <select 
+            class="h-8 py-0 pl-2 pr-8 m-0 text-lg font-extrabold uppercase bg-transparent border-none cursor-pointer pointer-events-auto bg-none whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:outline-none focus:ring-0"
+            {{ slot:attributes }} 
+            {{ !faux ?= { partial:snippets/button_attributes } }}
+        >
+
+            {{# start item not selectable #}}
+            <option value="" selected>{{ label }}</option>
+            
+            {{# select items #}}
+            {{ slot }}
+        
+        </select>
+        
+        {{# icon #}}
+        {{ svg src="arrow_down" class="absolute right-0 w-6 h-4 pointer-events-none fill-current motion-safe:transition-colors md:w-8 md:h-6" alt="open dropdown" }}
+
+        {{# underline #}}
+        <div class="h-0.5 bg-skin-primary motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+    </div>
+{{ /if }}
+<!-- End: /components/_select.antlers.html -->

@@ -31,9 +31,6 @@ sections:
           folder: personen
           width: 50
       -
-        handle: team_tag
-        field: common.team-tag
-      -
         handle: description
         field: common.text_plain
         config:
@@ -61,3 +58,15 @@ sections:
           display: Slug
           validate:
             - required
+      -
+        handle: team_tags
+        field:
+          type: terms
+          taxonomies:
+            - team_tags
+          display: 'Team Tags'
+          mode: select
+          instructions_position: above
+          listable: hidden
+          read_only: false
+          create: true

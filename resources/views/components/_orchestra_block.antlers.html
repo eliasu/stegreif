@@ -1,0 +1,57 @@
+{{#
+	@name orchestra block
+	@desc The orchestra block component.
+
+    @ parameters 
+        show => (int - limits the displayed items falls back to unlimited)
+        start => if start is set to "right" collection will start right
+#}}
+
+<!-- /components/_orchestra_block.antlers.html -->
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
+    
+    <div class="flex flex-col gap-8">
+        {{# orchestra headline #}}
+        {{ partial:typography/h2 :content="headline" }}
+
+        {{# filter bar #}}
+        <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
+            {{ taxonomy:team_tags show="all" }}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ title }" }}
+            {{ /taxonomy:team_tags }}
+        </div>
+    </div>
+    
+    {{# team cards grid wrapper #}}
+    <div class="grid items-start w-full grid-cols-pill-s gap-x-8 gap-y-8">
+            
+        {{# all team #}}
+        {{ collection:personen }}
+            
+            {{# team card #}}
+            <div class="relative flex flex-col items-start p-4 cursor-pointer group">
+                
+                {{# tags  #}}
+                <div class="flex flex-col items-start">
+                    {{ partial:typography/tag color="yellow" content="{ title }" }}
+                    {{ team_tags }}
+                        {{ partial:typography/tag color="{team_tag_type}" content="{ title }" }}
+                    {{ /team_tags }}
+                </div>
+
+                {{# square spacer for height #}}
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                {{# read more #}}
+                {{ partial:typography/h6 content="{ trans:strings.more }" class="tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light transition-transform" }}
+                
+                {{# media wrapper #}}
+                <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    {{# image #}}
+                    {{ partial:components/picture :image="thumbnail" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
+                </div>
+            </div>
+        {{ /collection:personen }}
+    </div>
+</div>
+<!-- End: /components/_orchestra_block.antlers.html --> 

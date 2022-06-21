@@ -4,7 +4,6 @@
 #}}
 
 <!-- /components/_dates_block.antlers.html -->
-{{# dates block wrapper  #}}
 <div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
     
     {{# filter bar #}}
@@ -14,15 +13,19 @@
             {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.past }" }}
         </div>
         
+        {{# dropdowns #}}
         <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.collections }" }}
-            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.productions }" }}
-            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.education }" }}
-        </div>
-        
-        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Digital" }}
-            {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Chamber" }}
+            {{ partial:components/select label="{ trans:strings.date }" }}
+                <option value="Volvo">Volvo</option>
+                <option value="Bauernhausen">Bauernhausen</option>
+                <option value="kleinertest">kleinertest</option>
+                <option value="test">test</option>
+            {{ /partial:components/select }}
+            
+            {{ partial:components/select label="{ trans:strings.place }" }}
+                <option value="Volvo">Volvo</option>
+                <option value="test">test</option>
+            {{ /partial:components/select }}
         </div>
     </div>
     
@@ -67,7 +70,7 @@
                 {{ partial:components/button button_type="card_lined_base" as="button" label="{ trans:strings.more }" }}
 
                 {{# media wrapper #}}
-                <div class="absolute inset-0 overflow-hidden transition-[inset_border-radius] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
                 
                     {{# image #}}
                     {{ if header_select == "image" }}

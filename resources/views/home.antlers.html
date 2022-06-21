@@ -11,18 +11,18 @@
         {{ partial:components/bard handle="{introduction_content}" }}
         
         {{# next dates block #}}
-        {{ partial:components/next_dates_block show_header="true" show="6" }}
+        {{ partial:components/next_dates_block show="6" }}
         
         {{# all news block #}}
-        {{ partial:components/next_news_block show_header="true" show="3" }}
+        {{ partial:components/news_block show_header="true" show="3" }}
 
     {{ /partial:layout/section }}
     
     {{# current productions section #}}
-    {{ partial:layout/section color="{ select_section_theme_current_production }" }}
+    {{ partial:layout/section color="{ select_section_theme_current_production }" }} 
 
         {{# current productions block #}}
-        {{ partial:components/current_productions_block show_header="true" show="2" }}
+        {{ partial:components/productions_block from="programme" filter="programm" sort="updated_at:desc" show_header="true" show="2" link_all="true" start="right" }}
 
     {{ /partial:layout/section }}
     

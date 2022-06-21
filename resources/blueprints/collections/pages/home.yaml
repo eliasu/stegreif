@@ -99,7 +99,7 @@ sections:
         handle: select_section_theme_current_production
         field: section.theme_selector
       -
-        handle: headline_current_productions
+        handle: headline_productions
         field: common.text_single
         config:
           display: 'Headline Current Productions'

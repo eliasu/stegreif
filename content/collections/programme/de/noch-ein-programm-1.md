@@ -19,9 +19,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
-select_type: Education
+select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655427505
+updated_at: 1655766788
 related_termine:
   - 18c74337-dd9e-44f3-b42a-a7f3b1d98afb
   - c2fd6687-12cd-46aa-bc74-de290817142f

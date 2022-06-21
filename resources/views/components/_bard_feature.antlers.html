@@ -76,7 +76,7 @@
                     {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
                         
                         {{# production or education tag #}}
-                        {{ if { select_content ? select_content.select_type : select_type } == "Programm" }}
+                        {{ if { select_content ? select_content.select_type : select_type } == "programm" }}
                             {{ partial:typography/tag color="green" content="{ trans:strings.production }" }}
                         {{ else }}
                             {{ partial:typography/tag color="dark" content="{ trans:strings.education }" }}

@@ -5,6 +5,8 @@ sites:
 propagate: true
 template: default
 layout: layout
+taxonomies:
+  - team_tags
 revisions: false
 sort_dir: asc
 date_behavior:

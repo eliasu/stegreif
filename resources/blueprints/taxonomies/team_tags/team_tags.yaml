@@ -10,6 +10,26 @@ sections:
           localizable: true
           validate:
             - required
+      -
+        handle: team_tag_type
+        field:
+          options:
+            green: Instrument
+            dark: Other
+          multiple: false
+          clearable: false
+          searchable: false
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: green
+          display: 'Team Tag Type'
+          type: select
+          icon: select
+          instructions: 'This defines the color of the tag'
+          listable: hidden
+          instructions_position: above
+          read_only: false
   sidebar:
     display: Sidebar
     fields:
@@ -18,4 +38,6 @@ sections:
         field:
           type: slug
           required: true
+          validate:
+            - required
 title: 'Team Tags'

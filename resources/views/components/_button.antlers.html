@@ -24,14 +24,14 @@
     {{ if button_type == "background" }}
         <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base [&>svg]:hover:translate-x-0.5 [&>svg]:motion-safe:transition-transform">
             {{ label }}
-            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-6 overflow-visible fill-current md:w-8 md:h-8" alt="" }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
         </div>
     
     {{# lined button with base color #}}
     {{ elseif button_type == "lined_base" }}
         <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary group">
 			{{ label }}
-            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-6 overflow-visible fill-current md:w-8 md:h-8" alt="" }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
             {{# underline #}}
             <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
@@ -40,7 +40,7 @@
     {{ elseif button_type == "lined_dark" }}
         <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-green group">
             {{ label }}
-            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-6 overflow-visible fill-current md:w-8 md:h-8" alt="" }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
             {{# underline #}}
             <div class="h-0.5 bg-darkblue motion-safe:transition-all group-hover:bg-green absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
@@ -50,7 +50,7 @@
     {{ elseif button_type == "card_lined_base" }}
         <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary group-hover:text-skin-primary">
 			{{ label }}
-            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-6 overflow-visible fill-current md:w-8 md:h-8" alt="" }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
             {{# underline #}}
             <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
@@ -60,7 +60,7 @@
     {{ else }}
         <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent group">
             {{ label }}
-            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-6 overflow-visible fill-current md:w-8 md:h-8" alt="" }}
+            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
             {{# underline #}}
             <div class="h-0.5 bg-skin-primary motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>

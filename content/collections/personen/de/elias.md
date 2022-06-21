@@ -1,7 +1,22 @@
 ---
 id: 8007e1b8-1af0-429f-b35c-f4c4dc4a68b5
 blueprint: personen
-title: Elias
+title: 'Antonio Rivero'
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655217792
+updated_at: 1655772166
+thumbnail: personen/anne-willem1.jpg
+image: personen/anne-willem2.jpg
+description: 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente'
+team_tags:
+  - violine
+fun_fact: "Twenty years ago, i used to sleep with my cello, until i realized – despite it's woman shape."
+links:
+  -
+    label: Soundcloud
+    target_blank: true
+    button_type: lined
+    link_type: url
+    url: google.de
+    type: button
+    enabled: true
 ---

@@ -63,6 +63,7 @@ return [
     'more'                              => 'Read more',
     'read_more'                         => 'Read more',
     'all_dates'                         => 'All Dates',
+    'next_dates'                        => 'Next dates',
     'all_news'                          => 'All News',
     'all_productions'                   => 'All Productions',
     'production'                        => 'Production',
@@ -74,6 +75,8 @@ return [
     'load_more'                         => 'Load more',
     'current'                           => 'Current',
     'past'                              => 'Past',
+    'date'                              => 'Date',
+    'place'                             => 'Place',
 
     // Pagination
     'next'                              => 'next',

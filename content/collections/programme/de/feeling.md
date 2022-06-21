@@ -128,7 +128,7 @@ select_type: education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655656733
+updated_at: 1655768089
 header_theme_selector: dark
 header_select: image
 related_termine:
@@ -136,7 +136,7 @@ related_termine:
   - dc8781a7-90b7-42f2-9af0-a608cc586c3a
   - a12c12e1-a158-4a32-89e9-5bb9297cc8eb
 select_transition_theme: birds
-teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
+teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qud'
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 ---

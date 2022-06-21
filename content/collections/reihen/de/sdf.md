@@ -38,6 +38,9 @@ related_programme:
   - 8ca524ed-6576-4384-b983-b286a95c5386
   - e4b0674d-0648-4242-9589-22eae363721e
   - 231b2e4f-f97f-46f6-a372-70c63946402c
+  - 63eefbb3-f0bf-4e40-878c-6c18c4774209
+  - a0726922-0e01-40f7-aff2-a12b0944e6aa
+  - 5c081f9e-9649-4cc7-9943-509cfe9043e3
 teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 select_transition_theme: bird-section
 header_image: header_images/bild_roman_novitzky.-cinematic.jpg

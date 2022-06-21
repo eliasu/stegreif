@@ -1,13 +1,13 @@
 {{#
-	@name next news block
-	@desc The next news block component.
+	@name news block
+	@desc The news block component.
 
     @ parameters 
         show_header (bool - shows headline and "all news" link)
-        show (int - limits the displayed items falls back to 6)
+        show (int - limits the displayed items falls back to unlimited)
 #}}
 
-<!-- /components/_next_news_block.antlers.html -->
+<!-- /components/_news_block.antlers.html -->
 <div class="flex flex-col fluid-container">
             
     {{# block header with lin to all dates #}}
@@ -22,7 +22,7 @@
     <div class="grid grid-cols-1 md:px-12 gap-x-12 xs:grid-cols-2 xl:grid-cols-3 gap-y-20 2xl:gap-x-20 lg:px-20">
         
         {{# all news #}}
-        {{ collection:neuigkeiten limit="{ show ?? '6' }" }}
+        {{ collection:neuigkeiten limit="{show}" }}
             <div class="flex flex-col items-start">
 
                 {{# date tag #}}
@@ -42,4 +42,4 @@
 
     </div>
 </div>
-<!-- End: /components/_next_news_block.antlers.html -->
+<!-- End: /components/_news_block.antlers.html -->

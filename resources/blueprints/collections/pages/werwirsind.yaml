@@ -61,7 +61,7 @@ sections:
           instructions_position: above
           read_only: false
       -
-        handle: theme_selector_orchestra
+        handle: select_section_theme_orchestra
         field: common.theme_selector
         config:
           width: 50
