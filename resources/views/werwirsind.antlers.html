@@ -1,5 +1,9 @@
 <!-- /werwirsind.antlers.html -->
 <main class="relative w-full" id="content"> 
+    {{# modal for orchestra #}}
+    {{ collection:personen limit="1" }}
+        {{ partial:components/orchestra_modal  }}
+    {{ /collection:personen }}
 
     {{# Header #}}
     {{ partial:components/header social_icons="true" }}

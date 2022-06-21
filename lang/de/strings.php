@@ -77,6 +77,9 @@ return [
     'past'                              => 'Vergangenes',
     'date'                              => 'Zeitraum',
     'place'                             => 'Ort',
+    'back'                              => 'Zurück',
+    'fun_fact'                          => 'Fun Fact',
+    'further_links'                     => 'Appart from Stegreif',
 
 
     // Pagination

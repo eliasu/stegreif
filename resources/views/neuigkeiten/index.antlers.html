@@ -4,26 +4,25 @@
 #}}
 
 <!-- /neuigkeiten/index.antlers.html -->
-<main class="outer-grid" id="content">
-    <div class="fluid-container grid md:grid-cols-12 gap-12">
-        {{ collection:neuigkeiten sort="date:desc" paginate="true" limit="10" as="items" }}
-            {{ unless no_results }}
-                {{ items }}
-                    <div class="md:col-span-6">
-                        <a class="underline" href="{{ url }}">{{ title }}</a>
-                    </div>
-                {{ /items }}
-            {{ else }}
-                <div class="md:col-span-6">
-                    {{ trans:strings.no_results }}
-                </div>
-            {{ /unless }}
-            {{ partial:components/pagination class="md:col-span-12" }}
-        {{ /collection:neuigkeiten }}
-    </div>
+<main class="relative w-full" id="content"> 
 
-    {{ page_builder scope="block" }}
-        {{ partial src="page_builder/{type}" }}
-    {{ /page_builder }}
+    {{# Header #}}
+    {{ partial:components/header social_icons="false" }}
+
+    {{# dates #}}
+    {{ partial:layout/section color="dark" }}
+       
+        {{# next dates block #}}
+        {{ partial:components/news_block }}
+    
+    {{ /partial:layout/section }}
+    
+    {{# if there is additional content #}}
+    {{ add_section }}
+        {{ partial:layout/section color="{ theme_selector }" }}
+            {{ partial:components/bard handle="{ article }" }}
+        {{ /partial:layout/section }}
+    {{ /add_section }}
+    
 </main>
 <!-- End: /neuigkeiten/index.antlers.html -->

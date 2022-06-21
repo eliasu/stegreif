@@ -1,0 +1,74 @@
+{{#
+	@name Button attributes
+	@desc A single button component. Faux is used when a button is displayed inside a link (for example in link blocks).
+#}}
+
+<!-- /components/_orchestra_modal.antlers.html -->
+
+{{# person modal #}}
+<dialog class="h-auto p-0 m-5 bg-transparent lg:m-8 theme-dark z-nav " id="orchestra-modal">
+                
+    <div class="relative grid h-full grid-rows-[minmax(1fr,_25%,_1fr),_1fr] pointer-events-auto lg:grid-rows-1 lg:grid-cols-2 bg-darkblue">
+        
+        <div class="fixed p-4 lg:hidden md:p-8">
+            {{ partial:components/button as="button" reverse="true" icon="arrow_left" button_type="lined_base" label="{ trans:strings.back }" }}
+                {{ slot:attributes }}
+                    onClick="document.querySelector('#orchestra-modal').close()"
+                {{ /slot:attributes }}    
+            {{ /partial:components/button }}
+        </div>
+
+        {{# image wrapper #}}
+        <div class="h-full">
+            {{ partial:components/picture :image="image" cover="true" sizes="(min-width: 768px) 50vw, 95vw" }}
+        </div>
+
+        {{# content wrapper #}}
+        <div class="flex flex-col items-start justify-between h-full gap-20 p-4 md:p-8 bg-darkblue">
+            {{# back button #}}
+            {{ partial:components/button class="hidden lg:block" as="button" reverse="true" icon="arrow_left" button_type="lined_base" label="{ trans:strings.back }" }}
+                {{ slot:attributes }}
+                    onClick="document.querySelector('#orchestra-modal').close()"
+                {{ /slot:attributes }}    
+            {{ /partial:components/button }}
+
+            {{# main content #}}
+            <div class="flex flex-col items-start gap-8">
+                {{# tags  #}}
+                <div class="flex items-start">
+                    {{ team_tags }}
+                        {{ partial:typography/tag color="{team_tag_type}" content="{ title }" }}
+                    {{ /team_tags }}
+                </div>
+
+                {{# name #}}
+                {{ partial:typography/h3 :content="title" }}
+                
+                {{# text #}}
+                {{ partial:typography/p :content="description" }}
+            </div>
+
+            {{# adiitional content #}}
+            {{ if fun_fact || links }}
+                <div class="flex flex-col items-start">
+                    {{# display fun fact #}}
+                    {{ if fun_fact }}
+                        {{ partial:typography/h6 content="{ trans:strings.fun_fact }" class="mb-2 text-yellow" }}
+                        {{ partial:typography/p :content="fun_fact" class="mb-8"}}
+                    {{ /if }}
+                    
+                    {{# display appart from stegreif links #}}
+                    {{ if links }}
+                        {{ partial:typography/h6 content="{ trans:strings.further_links }" class="mb-2 text-yellow" }}
+                        {{ links }}
+                            <div class="flex gap-8">
+                                {{ partial:components/button button_type="lined_base" label="{ label }" link_type="url" entry="{ url }" }}
+                            </div>
+                        {{ /links }}
+                    {{ /if }}
+                </div>
+            {{ /if }}
+        </div>
+    </div>
+</dialog>
+<!-- End: /components/_orchestra_modal.antlers.html -->

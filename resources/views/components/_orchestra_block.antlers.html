@@ -8,6 +8,7 @@
 #}}
 
 <!-- /components/_orchestra_block.antlers.html -->
+
 <div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
     
     <div class="flex flex-col gap-8">
@@ -23,13 +24,13 @@
     </div>
     
     {{# team cards grid wrapper #}}
-    <div class="grid items-start w-full grid-cols-pill-s gap-x-8 gap-y-8">
+    <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">
             
         {{# all team #}}
-        {{ collection:personen }}
+        {{ collection:personen limit="1" }}
             
             {{# team card #}}
-            <div class="relative flex flex-col items-start p-4 cursor-pointer group">
+            <button onClick="document.querySelector('#orchestra-modal').showModal();" class="relative flex flex-col items-start p-4 cursor-pointer group">
                 
                 {{# tags  #}}
                 <div class="flex flex-col items-start">
@@ -45,12 +46,11 @@
                 {{# read more #}}
                 {{ partial:typography/h6 content="{ trans:strings.more }" class="tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light transition-transform" }}
                 
-                {{# media wrapper #}}
+                {{# image #}}
                 <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
-                    {{# image #}}
                     {{ partial:components/picture :image="thumbnail" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
                 </div>
-            </div>
+            </button>
         {{ /collection:personen }}
     </div>
 </div>
