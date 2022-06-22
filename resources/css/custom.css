@@ -24,10 +24,6 @@
         @apply text-skin-base decoration-skin-primary;
     }
 
-    a {
-        @apply transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;
-    }
-    
     h1, h2, h3, h4  {
         @apply leading-s font-extrabold uppercase;
     }
@@ -46,6 +42,7 @@
     .prose > h3  { @apply mt-10 block-inset-1 max-w-[50rem]; } 
     .prose > h4  { @apply mt-4 block-inset-1 max-w-[50rem]; } 
     .prose > h5  { @apply mt-4 block-inset-2; }
+    p > a { @apply transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
     
     .prose > *:last-child {
         @apply mb-0;
@@ -53,7 +50,7 @@
 }   
 
 @layer components {
-    /* .block-inset-1 { @apply pl-0 sm:pl-in1 lg:pl-in2 sm:pr-in1 } */
+    
     .block-inset-full  { @apply -m-4 lg:-m-20; }
     .block-inset-0 { @apply pl-0 sm:pl-5 lg:pl-8 xl:pl-20 sm:pr-10 lg:pr-20 }
     .block-inset-1 { @apply pl-0 sm:pl-10 lg:pl-16 xl:pl-30 sm:pr-10 lg:pr-20 }

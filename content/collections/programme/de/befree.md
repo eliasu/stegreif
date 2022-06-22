@@ -285,50 +285,11 @@ select_transition_theme: bird
 aktuell: true
 select_type: education
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655920592
+updated_at: 1655937106
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 headline: '#BFREE ist ein Versuch der Headlines eine Message zu geben.'
 details:
-  -
-    headline: Ort
-    description:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'Schloss Hegenbrücke'
-          -
-            type: hard_break
-          -
-            type: text
-            text: 'Am Weigenrand 322'
-          -
-            type: hard_break
-          -
-            type: text
-            text: Wiesbaden
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: link
-                attrs:
-                  href: 'https://Google.de'
-                  rel: null
-                  target: _blank
-                  title: 'Zum Oret'
-            text: 'Zum Ort'
-    type: detail
-    enabled: true
   -
     headline: Team
     description:
@@ -394,6 +355,60 @@ details:
           -
             type: text
             text: 'Robert Schaffersdoerffer'
+    type: detail
+    enabled: true
+  -
+    headline: Ort
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Schloss Hegenbrücke'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Am Weigenrand 322'
+          -
+            type: hard_break
+          -
+            type: text
+            text: Wiesbaden
+    type: detail
+    enabled: true
+  -
+    headline: Preis
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: '25€ bis 59€'
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: 'Tickets sichern'
+                target_blank: true
+                button_type: lined
+                link_type: url
+                url: google.de
+                type: button
+                enabled: true
+      -
+        type: paragraph
+        attrs:
+          class: null
     type: detail
     enabled: true
 ---
