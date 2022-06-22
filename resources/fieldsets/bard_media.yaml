@@ -27,9 +27,9 @@ fields:
     handle: image
     field: common.image
     config:
-      restrict: true
+      restrict: false
       width: 50
-      folder: article_images
+      folder: gallery_images
       if:
         select_type: 'equals image'
   -

@@ -23,6 +23,10 @@
     p, h1, h2, h3, h4, h5, h6, strong, em, span, u  {
         @apply text-skin-base decoration-skin-primary;
     }
+
+    a {
+        @apply transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;
+    }
     
     h1, h2, h3, h4  {
         @apply leading-s font-extrabold uppercase;
@@ -36,27 +40,12 @@
     h5  { @apply text-base md:text-2xl leading-s font-bold transition-colors; }
     h6  { @apply text-xs leading-s uppercase font-bold transition-colors; } 
 
-    /* .prose > *:first-child { @apply !mt-0 }
-    .prose > p   { @apply col-start-4 col-end-5 max-w-prose; }
-    .prose > h2  { @apply mt-8 md:mt-16 col-start-2 col-end-5 sm:max-w-[65%]; } 
-    .prose > h3  { @apply mt-10 col-start-3 col-end-5 sm:max-w-[65%]; } 
-    .prose > h4  { @apply mt-4 col-start-3 col-end-5 ; } 
-    .prose > h5  { @apply mt-4 col-start-4 col-end-5; }  */
-
-
-
     .prose > *:first-child { @apply !mt-0 }
     .prose > p   { @apply block-inset-2 max-w-[60rem]; }
     .prose > h2  { @apply mt-8 md:mt-16 block-inset-0 max-w-[60rem]; } 
     .prose > h3  { @apply mt-10 block-inset-1 max-w-[50rem]; } 
     .prose > h4  { @apply mt-4 block-inset-1 max-w-[50rem]; } 
     .prose > h5  { @apply mt-4 block-inset-2; }
-
-    .prose-reset > *:first-child { @apply !mt-0 }
-    .prose-reset > h2  { @apply mt-8 md:mt-16; } 
-    .prose-reset > h3  { @apply mt-10; } 
-    .prose-reset > h4  { @apply mt-4; } 
-    .prose-reset > h5  { @apply mt-4; } 
     
     .prose > *:last-child {
         @apply mb-0;

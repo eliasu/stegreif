@@ -18,5 +18,5 @@ fields:
     handle: images
     field: common.images
     config:
-      restrict: true
-      folder: article_images
+      restrict: false
+      folder: gallery_images

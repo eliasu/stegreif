@@ -6,7 +6,7 @@
 
 <!-- /components/_bard_feature.antlers.html -->
 <div
-    class="flex gap-8 prose-reset my-20 {{ if feature_type == "big" }}block-inset-full{{ /if }}">   
+    class="flex gap-8 my-20 {{ if feature_type == "big" }}block-inset-full{{ /if }}">   
         
     {{# block wrapper #}}
     <div class="flex flex-col-reverse gap-8 lg:gap-20 {{ if alignment == "right" }}sm:flex-row-reverse{{else}}sm:flex-row{{ /if }}">
@@ -21,7 +21,7 @@
                 {{ /if }}
             ">
                 {{# article content #}}
-                {{ partial:components/bard handle="{ article }" not_fluid="true" style="prose-reset"}}
+                {{ partial:components/bard handle="{ article }" not_fluid="true" style="block-inset-reset"}}
             </div>
 
             {{# media #}}

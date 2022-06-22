@@ -2,13 +2,13 @@
 	@name bard
 	@desc The bard component.
 
-    @param style => add prose classes f.ex. style="prose-reset" falls back to simple .prose
+    @param style => add prose classes f.ex. style="block-inset-reset" -- falls back to simple .prose
     @param class => add custom classes 
     @param not_fluid => set to true to avoid fluid container 
 #}}
 
 <!-- /components/_bard.antlers.html -->
-<{{ as or 'article' }} class="{{ style ?? "prose" }} flex flex-col gap-y-4 sm:gap-y-8 prose-a:text-skin-primary hover:prose-a:text-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm prose-pre:whitespace-pre-wrap {{ not_fluid ? "" : "fluid-container" }} {{ class }}">
+<{{ as or 'article' }} class="{{ style ?? "prose" }} flex flex-col gap-y-4 sm:gap-y-8 prose-pre:whitespace-pre-wrap {{ not_fluid ? "" : "fluid-container" }} {{ class }}">
     {{ handle }}
         {{ partial src="components/{type}" }}
     {{ /handle }}

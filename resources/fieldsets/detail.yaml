@@ -17,4 +17,5 @@ fields:
         - bold
         - italic
         - underline
+        - anchor
       display: Description

@@ -17,3 +17,4 @@ fields:
     field: common.text_single
     config:
       display: Author
+      instructions: 'Leave empty to hide author'

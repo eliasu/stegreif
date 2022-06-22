@@ -9,7 +9,7 @@ fields:
         - bold
         - italic
         - underline
-        - h6
+        - anchor
       save_html: false
       toolbar_mode: fixed
       link_noopener: false
