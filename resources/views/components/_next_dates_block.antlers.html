@@ -37,19 +37,19 @@
                 {{ related_programm }}
                     <div class="flex flex-wrap mb-4">
                         {{ related_reihe }}
-                            {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
+                            {{ partial:typography/tag color="yellow" content="{ title }" }}
                         {{ /related_reihe }}
 
                         {{ if select_type == "programm"}} 
-                            {{ partial:typography/tag color="green" content="{ header_headline ?? title }" }}
+                            {{ partial:typography/tag color="green" content="{ title }" }}
                         {{ else }} 
-                            {{ partial:typography/tag color="dark" content="{ header_headline ?? title }" }}
+                            {{ partial:typography/tag color="dark" content="{ title }" }}
                         {{ /if }}
                     </div>
                 {{ /related_programm }}
 
                 {{# headline or title fallback #}}
-                {{ partial:typography/h4 content="{ header_headline ?? title }" class="mb-6 hyphens" }}
+                {{ partial:typography/h4 content="{ title }" class="mb-6 hyphens" }}
                 
                 {{# link to detail view #}}
                 {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}

@@ -105,19 +105,6 @@ article:
           - article_images/zm_square.jpg
   -
     type: paragraph
-details:
-  -
-    headline: Kontakt
-    description: 'Bitte hier anrufen.'
-    buttons:
-      -
-        label: Buchungsanfrage
-        target_blank: true
-        button_type: lined
-        link_type: tel
-        tel: '01761234567'
-        type: button
-        enabled: true
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry

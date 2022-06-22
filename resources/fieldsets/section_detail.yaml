@@ -1,10 +1,26 @@
 title: 'Section Detail'
 fields:
   -
+    handle: content_section
+    field:
+      display: 'Content Section'
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
     handle: theme_selector
     field: common.theme_selector
     config:
       display: 'Select Section Theme'
+  -
+    handle: headline
+    field: common.text_single
+    config:
+      display: Headline
+      instructions: 'Give an exciting headline to engage the user.'
+      placeholder: 'Falls back to the title if left empty.'
   -
     handle: article
     field: article_text.article_text
@@ -51,7 +67,7 @@ fields:
       display: 'Extend Section'
       type: grid
       icon: grid
-      instructions: 'Extend this section to add modules.'
+      instructions: 'Extend this section to add bigger modules.'
       listable: hidden
       instructions_position: above
       read_only: false

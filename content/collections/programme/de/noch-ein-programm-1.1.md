@@ -78,13 +78,6 @@ select_transition_theme: bird
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_select: image
 header_image: header_images/monk_600x600.jpg
-details:
-  -
-    headline: 'Ein Detail'
-    description: 'Hier eine Description'
-  -
-    headline: 'Noch ein Detail'
-    description: 'Ein eweitere Beschreibiung'
 extend_section:
   -
     article:

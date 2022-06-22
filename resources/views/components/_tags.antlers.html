@@ -1,0 +1,34 @@
+{{#
+	@name Tags
+	@desc The Tags component.
+    @param vertical => set tu true to always display vertical
+    @param class => add custom css classes
+#}}
+
+
+<!-- /components/_tags.antlers.html -->
+
+{{# tags #}}
+<div class="{{ vertical ?= "flex-col" }} flex justify-start flex-wrap {{ class }}">
+            
+    {{# if its a programm and has a related reihe #}}
+    {{ select_content ? select_content.related_reihe : related_reihe }}
+        {{ partial:typography/tag color="yellow" content="{ title }" }}
+    {{ /select_content ? select_content.related_reihe : related_reihe }}
+
+    {{# if it is a production  #}}
+    {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
+        
+        {{# production or education tag #}}
+        {{ if { select_content ? select_content.select_type : select_type } == "programm" }}
+            {{ partial:typography/tag color="green" content="{ trans:strings.production }" }}
+        {{ else }}
+            {{ partial:typography/tag color="dark" content="{ trans:strings.education }" }}
+        {{ endif }}
+    
+    {{# if it is a reihe #}}
+    {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
+        {{ partial:typography/tag color="green" content="{ trans:strings.collection }" }}
+    {{ /if }}
+</div>
+<!-- End: /components/_tags.antlers.html -->

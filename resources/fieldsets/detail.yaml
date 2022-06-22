@@ -6,12 +6,15 @@ fields:
     config:
       display: Headline
       localizable: true
-      width: 50
+      width: 100
   -
     handle: description
-    field: common.text_plain
+    field: article_details.article_text
     config:
+      buttons:
+        - accent
+        - removeformat
+        - bold
+        - italic
+        - underline
       display: Description
-      width: 50
-  -
-    import: buttons

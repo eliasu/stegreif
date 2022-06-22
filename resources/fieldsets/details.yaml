@@ -1,28 +1,19 @@
 title: Details
 fields:
   -
-    handle: details_section
-    field:
-      display: Details
-      type: section
-      icon: section
-      listable: hidden
-      instructions_position: above
-      read_only: false
-  -
     handle: details
     field:
-      fields:
-        -
-          import: detail
-      mode: stacked
-      add_row: 'Add Detail'
-      reorderable: true
+      collapse: true
+      sets:
+        detail:
+          display: Detail
+          fields:
+            -
+              import: detail
       display: Details
-      type: grid
-      icon: grid
-      instructions: 'Add details to the sidebar for additional information.'
+      type: replicator
+      icon: replicator
+      localizable: true
       listable: hidden
       instructions_position: above
       read_only: false
-      localizable: true
