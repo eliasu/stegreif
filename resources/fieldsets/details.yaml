@@ -1,6 +1,15 @@
 title: Details
 fields:
   -
+    handle: details_section
+    field:
+      display: Details
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
     handle: details
     field:
       fields:

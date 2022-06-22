@@ -1,0 +1,46 @@
+{{#
+	@name sidebar attributes
+#}}
+
+<!-- /components/_sidebar.antlers.html -->
+
+{{# sidebar on show views #}}
+<div class="flex flex-col flex-wrap items-start gap-8 sm:ml-8 md:ml-[7.5rem] lg:ml-0 sm:gap-16 sm:flex-row lg:flex-col min-w-min">
+    
+    {{# tags #}}
+    <div class="flex-col justify-start hidden lg:flex">
+            
+        {{# if its a programm and has a related reihe #}}
+        {{ select_content ? select_content.related_reihe : related_reihe }}
+            {{ partial:typography/tag color="yellow" content="{ header_headline ?? title }" }}
+        {{ /select_content ? select_content.related_reihe : related_reihe }}
+
+        {{# if it is a production  #}}
+        {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
+            
+            {{# production or education tag #}}
+            {{ if { select_content ? select_content.select_type : select_type } == "programm" }}
+                {{ partial:typography/tag color="green" content="{ trans:strings.production }" }}
+            {{ else }}
+                {{ partial:typography/tag color="dark" content="{ trans:strings.education }" }}
+            {{ endif }}
+        
+        {{# if it is a reihe #}}
+        {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
+            {{ partial:typography/tag color="yellow" content="{ select_content.header_headline ?? select_content.title ?? header_headline ?? title }" }}
+            {{ partial:typography/tag color="green" content="{ trans:strings.collection }" }}
+        {{ /if }}
+    </div>
+
+    {{# details #}}
+    {{ details }}
+        <div class="flex flex-col items-start">
+            {{ partial:typography/h6 content="{ headline }" class="mb-2 sm:mb-4" }} 
+            {{ partial:typography/p content="{ description }" class="mb-4" }} 
+            {{ buttons }}
+                {{ partial:components/button label="{ label }" }}
+            {{ /buttons }}
+        </div>
+    {{ /details }}
+</div>
+<!-- End: /components/_sidebar.antlers.html -->

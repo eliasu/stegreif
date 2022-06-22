@@ -1,7 +1,35 @@
-<section class="fluid-container grid grid-cols-12">
-   {{ partial:typography/prose as="article" class="contents" }}
-       {{ article }}
-           {{ partial src="components/{type}" }}
-       {{ /article }}
-   {{ /partial:typography/prose }}
-</section>
+{{#
+	@name Programme show
+	@desc The Programme show template.
+#}}
+
+<!-- /programme/show.antlers.html -->
+<main class="relative w-full" id="content"> 
+
+    {{# Header #}}
+    {{ partial:components/header social_icons="false" }}
+
+    {{# first section and additional extend #}}
+    {{ partial:layout/section color="{ theme_selector }" }}
+    
+    
+    <div class="flex flex-col gap-y-20"> 
+            <div class="flex flex-row">
+                {{ partial:components/bard handle="{ article }" }}
+                {{ partial:components/sidebar }}
+            </div>
+            {{ extend_section }}
+                {{ partial:components/bard handle="{ article }" }}
+            {{ /extend_section }}
+        </div>
+    {{ /partial:layout/section }}
+
+    {{# if there is additional content #}}
+    {{ add_section }}
+        {{ partial:layout/section color="{ theme_selector }" }}
+            {{ partial:components/bard handle="{ article }" }}
+        {{ /partial:layout/section }}
+    {{ /add_section }}
+    
+</main>
+<!-- End: /programme/show.antlers.html -->

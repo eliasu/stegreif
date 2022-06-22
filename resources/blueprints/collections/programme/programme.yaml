@@ -20,9 +20,9 @@ sections:
         handle: teaser_text
         field: common.teaser_text
       -
-        import: section
-      -
         import: details
+      -
+        import: section_detail
       -
         import: sections
   seo:

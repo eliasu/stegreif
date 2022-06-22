@@ -26,7 +26,7 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655680047
+updated_at: 1655826347
 theme_selector_header: dark
 theme_selector: dark
 header_theme_selector: dark
@@ -41,7 +41,8 @@ related_programme:
   - 63eefbb3-f0bf-4e40-878c-6c18c4774209
   - a0726922-0e01-40f7-aff2-a12b0944e6aa
   - 5c081f9e-9649-4cc7-9943-509cfe9043e3
+  - 2f94c71d-bdb1-4b05-9173-410d49dfc125
 teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
-select_transition_theme: bird-section
+select_transition_theme: bird
 header_image: header_images/bild_roman_novitzky.-cinematic.jpg
 ---

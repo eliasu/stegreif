@@ -27,7 +27,7 @@
     <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">
             
         {{# all team #}}
-        {{ collection:personen limit="1" }}
+        {{ collection:personen }}
             
             {{# team card #}}
             <button onClick="document.querySelector('#orchestra-modal').showModal();" class="relative flex flex-col items-start p-4 cursor-pointer group">

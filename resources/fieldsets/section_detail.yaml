@@ -1,0 +1,57 @@
+title: 'Section Detail'
+fields:
+  -
+    handle: theme_selector
+    field: common.theme_selector
+    config:
+      display: 'Select Section Theme'
+  -
+    handle: article
+    field: article_text.article_text
+    config:
+      buttons:
+        - bigger
+        - smaller
+        - h3
+        - h4
+        - h5
+        - accent
+        - removeformat
+        - anchor
+        - bold
+        - italic
+        - underline
+  -
+    handle: extend_section
+    field:
+      fields:
+        -
+          handle: article
+          field: article.article
+          config:
+            buttons:
+              - bigger
+              - smaller
+              - h2
+              - h3
+              - h4
+              - h5
+              - accent
+              - removeformat
+              - anchor
+              - bold
+              - italic
+              - underline
+            validate:
+              - required
+      mode: stacked
+      max_rows: 1
+      add_row: 'Extend Section'
+      reorderable: false
+      display: 'Extend Section'
+      type: grid
+      icon: grid
+      instructions: 'Extend this section to add modules.'
+      listable: hidden
+      instructions_position: above
+      read_only: false

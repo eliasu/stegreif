@@ -24,6 +24,7 @@ preferences:
         - aktuell
         - select_type
         - tags
+      after_save: continue_editing
   taxonomies:
     team_tags:
       after_save: continue_editing

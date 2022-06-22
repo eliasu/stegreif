@@ -37,10 +37,10 @@
     h6  { @apply text-xs leading-s uppercase font-bold transition-colors; }
 
     .prose > *:first-child { @apply !mt-0 }
-    .prose > p   { @apply mt-4 col-start-4 col-end-5; }
-    .prose > h2  { @apply mt-8 md:mt-16 col-start-2 col-end-5; } 
-    .prose > h3  { @apply mt-10 col-start-3 col-end-5; } 
-    .prose > h4  { @apply mt-4 col-start-3 col-end-5; } 
+    .prose > p   { @apply col-start-4 col-end-5 max-w-prose; }
+    .prose > h2  { @apply mt-8 md:mt-16 col-start-2 col-end-5 sm:max-w-[65%]; } 
+    .prose > h3  { @apply mt-10 col-start-3 col-end-5 sm:max-w-[65%]; } 
+    .prose > h4  { @apply mt-4 col-start-3 col-end-5 ; } 
     .prose > h5  { @apply mt-4 col-start-4 col-end-5; } 
     
     .not-prose-align > *:first-child { @apply !mt-0 }

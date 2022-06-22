@@ -37,22 +37,24 @@
             </div>
 
             {{# media #}}
-            {{ if feature_type == 'small' }} <div class="relative sm:w-[50%]">
-            {{ elseif feature_type == 'big' }} <div class="relative sm:w-[60%]"> {{ /if }}
-  
-                {{# media wrapper #}}
-                <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
-                
-                    {{# image #}}
-                    {{ if select_media_feature == "image" }}
-                        {{ partial:components/picture :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
+            {{ if select_media_feature == "bird" }}
+                bird image
+            {{ else }}
+                <div class="relative {{ if feature_type == 'small' }}sm:w-[50%]{{ elseif feature_type == 'big' }}sm:w-[60%]{{ /if }}">
+                    {{# media wrapper #}}
+                    <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
                     
-                    {{# video #}}
-                    {{ else }}
-                        {{ partial:components/video :youtube_url="feature_video" cover="true" }}
-                    {{ /if }} 
-                </div> 
-            </div>
+                        {{# image #}}
+                        {{ if select_media_feature == "image" }}
+                            {{ partial:components/picture :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
+                        
+                        {{# video #}}
+                        {{ elseif select_media_feature == "video" }}
+                            {{ partial:components/video :youtube_url="feature_video" cover="true" }}
+                        {{ /if }} 
+                    </div> 
+                </div>
+            {{ /if }}
         
         {{# referenced content #}}
         {{ else }}
