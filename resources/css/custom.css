@@ -52,9 +52,9 @@
 @layer components {
     
     .block-inset-full  { @apply -m-4 lg:-m-20; }
-    .block-inset-0 { @apply pl-0 sm:pl-5 lg:pl-8 xl:pl-20 sm:pr-10 lg:pr-20 }
-    .block-inset-1 { @apply pl-0 sm:pl-10 lg:pl-16 xl:pl-30 sm:pr-10 lg:pr-20 }
-    .block-inset-2 { @apply pl-0 sm:pl-16 lg:pl-24 xl:pl-40 sm:pr-10 lg:pr-20 }
+    .block-inset-0 { @apply pl-0 sm:pl-5 lg:pl-8 xl:pl-20 sm:pr-10 md:pr-20 }
+    .block-inset-1 { @apply pl-0 sm:pl-10 lg:pl-16 xl:pl-30 sm:pr-10 md:pr-20 }
+    .block-inset-2 { @apply pl-0 sm:pl-16 lg:pl-24 xl:pl-40 sm:pr-10 md:pr-20 }
     
     /* hack for sidebar */
     .block-inset-reset > .block-inset-1, 

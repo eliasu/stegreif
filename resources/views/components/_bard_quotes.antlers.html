@@ -5,17 +5,16 @@
 #}}
 
 <!-- /components/_bard_quotes.antlers.html -->
-<div
-    class="
-        not-prose
-        {{ switch(
-            (size == 'md') => 'size-md',
-            (size == 'lg') => 'size-lg',
-            (size == 'xl') => 'size-xl',
-            () => 'size-md'
-        )}}
-    "
->
-    <h2>🔧<br>bard_quotes</h2>
+<div class="flex flex-col items-start gap-4 py-8 not-prose block-inset-0">
+    
+    {{ if author }}
+        {{ partial:typography/tag content="{ author }" color="base" }}
+    {{ /if }}
+
+    {{ if size == "small" }} 
+        {{ partial:typography/h3 content="{ quote ensure_left="»" ensure_right="«" }" class="text-skin-primary max-w-[50rem]" }}
+    {{ else }} 
+        {{ partial:typography/h2 content="{ quote ensure_left="»" ensure_right="«" }" class="text-skin-primary" }}    
+    {{ /if }}
 </div>
 <!-- End: /components/_bard_quotes.antlers.html -->

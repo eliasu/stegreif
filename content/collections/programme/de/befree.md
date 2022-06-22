@@ -78,22 +78,6 @@ article:
             url: asda
             type: button
             enabled: true
-  -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Noch eine Headline'
-  -
-    type: paragraph
-    attrs:
-      class: null
-    content:
-      -
-        type: text
-        text: 'ng sucht. Die Aktionsmöglichkeiten auf der Bühne sind eingeschränkt, direkter Kontakt mit dem Publikum unmöglich. Und doch ist es ein Stück über Freiheit geworden, über die Sehnsucht nach Nähe und Miteinander, über das Fliegen, über alle Grenzen hinweg.'
 add_section:
   -
     theme_selector: light
@@ -137,6 +121,7 @@ add_section:
             type: bard_quotes
             size: big
             quote: 'Ein großes Zitat noch dazu! Was soll das denn?'
+            author: 'Tagesblatt Mitte'
       -
         type: paragraph
         attrs:
@@ -285,7 +270,7 @@ select_transition_theme: bird
 aktuell: true
 select_type: education
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655937106
+updated_at: 1655939105
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 headline: '#BFREE ist ein Versuch der Headlines eine Message zu geben.'
@@ -398,7 +383,7 @@ details:
             type: bard_buttons
             buttons:
               -
-                label: 'Tickets sichern'
+                label: Tickets
                 target_blank: true
                 button_type: lined
                 link_type: url

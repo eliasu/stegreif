@@ -88,11 +88,15 @@ module.exports = {
 				'pill-s': 'repeat(auto-fit, minmax(16rem,1fr))',
 			},
 
+			spacing: {
+				'30': '7.5rem',
+			},
+
 			padding: {
 				'in1': 'clamp(1rem, 15vw, 5rem)',
 				'in2': 'clamp(1rem, 15vw, 7.5rem)',
 				'in3': 'clamp(1rem, 15vw, 10rem)',
-				'30': '7.5rem',
+				// '30': '7.5rem',
 			},
 			
 			// Set default transition durations and easing when using the transition utilities.
