@@ -1,4 +1,5 @@
-data: {  }
+data:
+  image_title: 'Eine Underline'
 size: 548245
 last_modified: 1654810930
 width: 1280

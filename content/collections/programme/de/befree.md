@@ -198,7 +198,7 @@ add_section:
             size: small
             select_type: image
             media_caption: 'Hier ist ein Bild'
-            image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
+            image: gallery_images/bildschirmfoto-2022-06-23-um-02.11.59.png
       -
         type: paragraph
         attrs:
@@ -223,7 +223,7 @@ add_section:
             size: medium
             select_type: image
             media_caption: 'Hier ist ein Bild'
-            image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
+            image: gallery_images/bildschirmfoto-2022-06-23-um-02.11.59.png
       -
         type: paragraph
         attrs:
@@ -248,7 +248,7 @@ add_section:
             size: big
             select_type: image
             media_caption: 'Hier ist ein Bild'
-            image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
+            image: header_images/bild_roman_novitzky.-cinematic.jpg
       -
         type: paragraph
         attrs:
@@ -257,6 +257,38 @@ add_section:
           -
             type: text
             text: 'Meine Mission ist erfüllt. Ich werde hier noch die Stellung halten, bis der geplante Text eintrifft. Ich wünsche Ihnen noch einen schönen Tag. Und arbeiten Sie nicht zuviel!Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS, JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben. Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten für den Internet'
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: Headline
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: Headline
+      -
+        type: heading
+        attrs:
+          level: 4
+        content:
+          -
+            type: text
+            text: Headline
+      -
+        type: heading
+        attrs:
+          level: 5
+        content:
+          -
+            type: text
+            text: Headline
       -
         type: paragraph
         attrs:
@@ -270,7 +302,7 @@ select_transition_theme: bird
 aktuell: true
 select_type: education
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655939105
+updated_at: 1655945437
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 headline: '#BFREE ist ein Versuch der Headlines eine Message zu geben.'

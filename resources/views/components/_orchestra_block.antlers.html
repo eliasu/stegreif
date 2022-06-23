@@ -48,7 +48,7 @@
                 
                 {{# image #}}
                 <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
-                    {{ partial:components/picture :image="thumbnail" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
+                    {{ partial:components/picture nocaption="true" :image="thumbnail" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
                 </div>
             </button>
         {{ /collection:personen }}

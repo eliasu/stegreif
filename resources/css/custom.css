@@ -37,11 +37,11 @@
     h6  { @apply text-xs leading-s uppercase font-bold transition-colors; } 
 
     .prose > *:first-child { @apply !mt-0 }
-    .prose > p   { @apply block-inset-2 max-w-[60rem]; }
-    .prose > h2  { @apply mt-8 md:mt-16 block-inset-0 max-w-[60rem]; } 
-    .prose > h3  { @apply mt-10 block-inset-1 max-w-[50rem]; } 
-    .prose > h4  { @apply mt-4 block-inset-1 max-w-[50rem]; } 
-    .prose > h5  { @apply mt-4 block-inset-2; }
+    .prose > p   { @apply block-in-2 block-size-1; }
+    .prose > h2  { @apply mt-8 md:mt-16 block-in-0 block-size-1; } 
+    .prose > h3  { @apply mt-10 block-in-1 block-size-2; } 
+    .prose > h4  { @apply mt-4 block-in-1 block-size-2; } 
+    .prose > h5  { @apply mt-4 block-in-2 block-size-1; }
     p > a { @apply transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
     
     .prose > *:last-child {
@@ -51,19 +51,24 @@
 
 @layer components {
     
-    .block-inset-full  { @apply -m-4 lg:-m-20; }
-    .block-inset-0 { @apply pl-0 sm:pl-5 lg:pl-8 xl:pl-20 sm:pr-10 md:pr-20 }
-    .block-inset-1 { @apply pl-0 sm:pl-10 lg:pl-16 xl:pl-30 sm:pr-10 md:pr-20 }
-    .block-inset-2 { @apply pl-0 sm:pl-16 lg:pl-24 xl:pl-40 sm:pr-10 md:pr-20 }
+    .block-full  { @apply -mx-4 lg:-mx-20; }
+    
+    .block-in-0 { @apply pl-0 sm:pl-5 lg:pl-8 xl:pl-20 sm:pr-10 md:pr-20 }
+    .block-in-1 { @apply pl-0 sm:pl-6 lg:pl-16 xl:pl-30 sm:pr-10 md:pr-20 }
+    .block-in-2 { @apply pl-0 sm:pl-10 lg:pl-24 xl:pl-40 sm:pr-10 md:pr-20 }
+    
+    .block-size-1 { @apply lg:max-w-[60rem] }
+    .block-size-2 { @apply lg:max-w-[50rem] }
+    .block-size-full-1 { @apply lg:max-w-[64rem] w-full md:pr-16 }
     
     /* hack for sidebar */
-    .block-inset-reset > .block-inset-1, 
-    .block-inset-reset > .block-inset-2, 
-    .block-inset-reset > .block-inset-full { @apply px-0; }
+    .block-inset-reset > .block-in-1, 
+    .block-inset-reset > .block-in-2, 
+    .block-inset-reset > .block-full { @apply px-0; }
 }
 
 @layer utilities {
-   
+
 }   
 
 dialog::backdrop {

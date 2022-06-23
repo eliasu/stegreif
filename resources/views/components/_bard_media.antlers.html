@@ -5,17 +5,24 @@
 #}}
 
 <!-- /components/_bard_media.antlers.html -->
-<div
-    class="
-        not-prose
-        {{ switch(
-            (size == 'md') => 'size-md',
-            (size == 'lg') => 'size-lg',
-            (size == 'xl') => 'size-xl',
-            () => 'size-md'
-        )}}
-    "
->
-    <h2>🔧<br>bard_media</h2>
-</div>
+<div class="flex flex-col not-prose relative py-8
+            {{ if size == "medium"}} block-full block-size-full-1
+            {{ elseif size == "small"}} block-in-2 block-size-1
+            {{ /if }}
+">
+
+    {{# media wrapper #}}
+    
+    <div class="w-full aspect-w-16 aspect-h-10">        
+        
+        {{# image #}}
+        {{ if select_type == "image" }}
+            {{ partial:components/picture cover="true" :image="image" sizes="(min-width: 768px) 70vw, 95vw" }}
+        
+        {{# video #}}
+        {{ else }}
+            {{ partial:components/video youtube_url="{video}" cover="true" }}
+        {{ /if }} 
+    </div>
+</div> 
 <!-- End: /components/_bard_media.antlers.html -->

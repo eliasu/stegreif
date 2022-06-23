@@ -33,7 +33,7 @@
             
             {{# background image #}}
             {{ if header_select == "image" }}
-                {{ partial:components/picture :image="header_image" tint="{{ header_theme_selector }}" cover="true" sizes="(min-width: 768px) 100vw, 100vw" }}
+                {{ partial:components/picture nocaption="true" :image="header_image" tint="{{ header_theme_selector }}" cover="true" sizes="(min-width: 768px) 100vw, 100vw" }}
             
             {{# background video #}}
             {{ elseif header_select == "video" }}

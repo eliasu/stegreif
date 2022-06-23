@@ -74,7 +74,7 @@
                 
                     {{# image #}}
                     {{ if header_select == "image" }}
-                        {{ partial:components/picture tint="dark" :image="header_image" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
+                        {{ partial:components/picture nocaption="true" tint="dark" :image="header_image" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
                     
                     {{# video #}}
                     {{ else }}

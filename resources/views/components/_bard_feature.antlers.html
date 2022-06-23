@@ -5,7 +5,7 @@
 
 <!-- /components/_bard_feature.antlers.html -->
 <div
-    class="flex gap-8 my-20 {{ if feature_type == "big" }}block-inset-full{{ /if }}">   
+    class="flex gap-8 my-20 {{ if feature_type == "big" }}block-full{{ /if }}">   
         
     {{# block wrapper #}}
     <div class="flex flex-col-reverse gap-8 lg:gap-20 {{ if alignment == "right" }}sm:flex-row-reverse{{else}}sm:flex-row{{ /if }}">
@@ -75,7 +75,7 @@
                     
                     {{# image #}}
                     {{ if header_select == "image" }}
-                        {{ partial:components/picture image="{select_content.header_image ?? header_image }" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
+                        {{ partial:components/picture :image="select_content.header_image ?? header_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
                     
                     {{# video #}}
                     {{ else }}
