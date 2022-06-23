@@ -64,6 +64,7 @@ sections:
           options:
             programm: Programm
             education: Education
+          default: programm
       -
         handle: tags
         field:

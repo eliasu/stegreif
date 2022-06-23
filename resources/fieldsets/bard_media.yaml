@@ -44,4 +44,5 @@ fields:
     field: common.text_single
     config:
       display: 'Media Caption'
-      instructions: 'Display credits or a title.'
+      instructions: 'If left empty it falls back to the image title.'
+      placeholder: 'Credits or a title'

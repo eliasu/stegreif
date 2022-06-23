@@ -150,15 +150,15 @@ fields:
     handle: select_type
     field:
       options:
-        Programm: Programm
-        Education: Education
+        programm: Programm
+        education: Education
       multiple: false
       clearable: false
       searchable: false
       taggable: false
       push_tags: false
       cast_booleans: false
-      default: Programm
+      default: programm
       display: 'Select Type'
       type: select
       icon: select

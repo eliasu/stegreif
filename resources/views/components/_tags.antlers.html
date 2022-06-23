@@ -9,26 +9,42 @@
 <!-- /components/_tags.antlers.html -->
 
 {{# tags #}}
-<div class="{{ vertical ?= "flex-col" }} flex justify-start flex-wrap {{ class }}">
-            
-    {{# if its a programm and has a related reihe #}}
-    {{ select_content ? select_content.related_reihe : related_reihe }}
-        {{ partial:typography/tag color="yellow" content="{ title }" }}
-    {{ /select_content ? select_content.related_reihe : related_reihe }}
-
+<div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
+    
     {{# if it is a production  #}}
     {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
         
+        {{# if its a programm and has a related reihe #}}
+        {{ select_content ? select_content.related_reihe : related_reihe }}
+            {{ partial:typography/tag class="" color="yellow" content="{ title }" }}
+        {{ /select_content ? select_content.related_reihe : related_reihe }}
+
         {{# production or education tag #}}
         {{ if { select_content ? select_content.select_type : select_type } == "programm" }}
-            {{ partial:typography/tag color="green" content="{ trans:strings.production }" }}
+            {{ partial:typography/tag class="" color="green" content="{ trans:strings.production }" }}
         {{ else }}
-            {{ partial:typography/tag color="dark" content="{ trans:strings.education }" }}
+            {{ partial:typography/tag class="" color="dark" content="{ trans:strings.education }" }}
         {{ endif }}
-    
+
+
+    {{# if it is a date  #}}
+    {{ elseif { select_content ? select_content.blueprint : blueprint } == "termine" }}
+        
+        {{# if its a date and has a related production #}}
+        {{ select_content ? select_content.related_programm : related_programm }}
+            
+            {{# does the related production has related collection? #}}
+            {{ select_content ? select_content.related_reihe : related_reihe }}
+                {{ partial:typography/tag class="" color="yellow" content="{ title }" }}
+            {{ /select_content ? select_content.related_reihe : related_reihe }}
+            
+            {{ partial:typography/tag class="" color="green" content="{ title }" }}
+        {{ /select_content ? select_content.related_programm : related_programm }}
+
+
     {{# if it is a reihe #}}
     {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
-        {{ partial:typography/tag color="green" content="{ trans:strings.collection }" }}
+        {{ partial:typography/tag class="" color="green" content="{ trans:strings.collection }" }}
     {{ /if }}
 </div>
 <!-- End: /components/_tags.antlers.html -->

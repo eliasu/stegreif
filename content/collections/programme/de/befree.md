@@ -299,10 +299,10 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
 aktuell: true
-select_type: education
+select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655988223
-related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
+updated_at: 1655992261
+related_reihe: 5217ad64-d0e8-40c0-afe1-7ce18a1ee5d9
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 headline: '#BFREE ist ein Versuch der Headlines eine Message zu geben.'
 details:
@@ -374,7 +374,7 @@ details:
     type: detail
     enabled: false
   -
-    headline: Ort
+    headline: Orts
     description:
       -
         type: paragraph
@@ -427,4 +427,6 @@ details:
           class: null
     type: detail
     enabled: false
+related_termine:
+  - a8e8ee20-0ef9-46d3-b51b-b12b1f2f8ad5
 ---

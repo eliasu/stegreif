@@ -8,14 +8,30 @@ sections:
         field:
           type: text
           required: true
+          input_type: text
+          localizable: true
+          listable: true
+          display: Title
           validate:
             - required
       -
         import: header
       -
-        import: section
+        handle: teaser_text
+        field: common.teaser_text
       -
         import: details
+      -
+        import: section_detail
+      -
+        handle: additional_sections
+        field:
+          display: 'Additional Sections'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          read_only: false
       -
         import: sections
   sidebar:

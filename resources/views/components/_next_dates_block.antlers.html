@@ -34,19 +34,7 @@
                 {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-4 sm:mb-6" }}
                 
                 {{# tags  #}}
-                {{ related_programm }}
-                    <div class="flex flex-wrap mb-4">
-                        {{ related_reihe }}
-                            {{ partial:typography/tag color="yellow" content="{ title }" }}
-                        {{ /related_reihe }}
-
-                        {{ if select_type == "programm"}} 
-                            {{ partial:typography/tag color="green" content="{ title }" }}
-                        {{ else }} 
-                            {{ partial:typography/tag color="dark" content="{ title }" }}
-                        {{ /if }}
-                    </div>
-                {{ /related_programm }}
+                {{ partial:components/tags class="mb-4" }}
 
                 {{# headline or title fallback #}}
                 {{ partial:typography/h4 content="{ title }" class="mb-6 hyphens" }}

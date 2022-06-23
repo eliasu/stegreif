@@ -3,7 +3,7 @@ sites:
   - de
   - en
 propagate: true
-template: reihen/show
+template: page_with_sidebar
 layout: layout
 taxonomies:
   - tags
