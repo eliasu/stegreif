@@ -8,5 +8,10 @@
 <div>
     <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full pointer-events-none" data-yt2html5="{{ youtube_url }}"></video>
     {{ partial:snippets/image_tint }}
+
+    {{# add image caption if set #}}
+    {{ if !nocaption && media_caption }}
+        {{ partial:typography/tag class="absolute self-start left-4 bottom-4 z-front" content="{ media_caption }" color="inverted" }}
+    {{ /if }}
 </div>
 <!-- End: /components/_video.antlers.html -->

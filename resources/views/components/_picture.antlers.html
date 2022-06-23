@@ -42,7 +42,7 @@
                         class="{{ class }}"
                     {{ /if }}
                     src="{{ glide:image preset='lg' }}"
-                    alt="{{ alt ensure_right='.' ?? image_title }}"
+                    alt="{{ media_caption ?? alt ensure_right='.' ?? image_title }}"
                     width="{{ image.width }}"
                     height="{{ image.height }}"
                     loading="lazy"
@@ -51,8 +51,10 @@
         {{ /asset }}
         
         {{# add image caption if set #}}
-        {{ if image.image_title and !nocaption }}
-            {{ partial:typography/tag class="absolute self-start left-4 bottom-4 z-front" content="{ image.image_title }" color="inverted" }}
+        {{ if !nocaption }}
+            {{ if image.image_title or media_caption }}
+                {{ partial:typography/tag class="absolute self-start left-4 bottom-4 z-front" content="{ media_caption ?? image.image_title }" color="inverted" }}
+            {{ /if }}
         {{ /if }}
         
         {{# add image tints if set #}}

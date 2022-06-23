@@ -197,7 +197,6 @@ add_section:
             type: bard_media
             size: small
             select_type: image
-            media_caption: 'Hier ist ein Bild'
             image: gallery_images/bildschirmfoto-2022-06-23-um-02.11.59.png
       -
         type: paragraph
@@ -221,9 +220,9 @@ add_section:
           values:
             type: bard_media
             size: medium
-            select_type: image
-            media_caption: 'Hier ist ein Bild'
-            image: gallery_images/bildschirmfoto-2022-06-23-um-02.11.59.png
+            select_type: video
+            media_caption: 'Auch Videos mit Subs'
+            video: 'https://youtu.be/kxesw_UUzYE'
       -
         type: paragraph
         attrs:
@@ -247,7 +246,7 @@ add_section:
             type: bard_media
             size: big
             select_type: image
-            media_caption: 'Hier ist ein Bild'
+            media_caption: 'So was von Media Caption'
             image: header_images/bild_roman_novitzky.-cinematic.jpg
       -
         type: paragraph
@@ -302,7 +301,7 @@ select_transition_theme: bird
 aktuell: true
 select_type: education
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655945437
+updated_at: 1655945805
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 headline: '#BFREE ist ein Versuch der Headlines eine Message zu geben.'
