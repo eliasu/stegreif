@@ -301,7 +301,7 @@ select_transition_theme: bird
 aktuell: true
 select_type: education
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655945805
+updated_at: 1655988223
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 headline: '#BFREE ist ein Versuch der Headlines eine Message zu geben.'
@@ -372,7 +372,7 @@ details:
             type: text
             text: 'Robert Schaffersdoerffer'
     type: detail
-    enabled: true
+    enabled: false
   -
     headline: Ort
     description:
@@ -395,7 +395,7 @@ details:
             type: text
             text: Wiesbaden
     type: detail
-    enabled: true
+    enabled: false
   -
     headline: Preis
     description:
@@ -426,5 +426,5 @@ details:
         attrs:
           class: null
     type: detail
-    enabled: true
+    enabled: false
 ---

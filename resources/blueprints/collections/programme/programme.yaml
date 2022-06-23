@@ -24,6 +24,15 @@ sections:
       -
         import: section_detail
       -
+        handle: additional_sections
+        field:
+          display: 'Additional Sections'
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
         import: sections
   seo:
     display: SEO

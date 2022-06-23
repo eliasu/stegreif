@@ -1,4 +1,5 @@
-data: {  }
+data:
+  image_title: 'Stegreif bei der Probe'
 size: 709837
 last_modified: 1654813432
 width: 1280
