@@ -1,7 +1,7 @@
 ---
 id: a0726922-0e01-40f7-aff2-a12b0944e6aa
 blueprint: programme
-title: 'Feeling (Duplicated) (2)'
+title: 'Feeling  (2)'
 theme_selector_header: dark
 image: header_images/monk_600x600.jpg
 theme_selector: dark

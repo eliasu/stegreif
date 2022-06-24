@@ -1,7 +1,7 @@
 ---
 id: 63eefbb3-f0bf-4e40-878c-6c18c4774209
 blueprint: programme
-title: "#'Flying Lotus (Duplicated)"
+title: "#'Flying Lotus "
 header_theme_selector: dark
 theme_selector: dark
 article:

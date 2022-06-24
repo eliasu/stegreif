@@ -35,41 +35,50 @@
         {{# all dates #}}
         {{ collection:termine sort="date" show_past="true" }}
             
-            {{# dates card #}}
-            <a href="{{ url }}" class="relative flex flex-col items-start p-4 group">
+            {{# wrapper to get tags with links (not inside another a tag)  #}}
+            <div class="relative group">
                 
-                {{# time #}}
-                {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
-                {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-0 xs:mb-1" }} {{ /if }}
-                
-                {{# date #}}
-                {{ partial:typography/h3 content="{ date iso_format="DD.MM.YYYY" }" }}
-                
-                {{# square spacer for height #}}
-                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-4"></div>
-                
-                {{# tags  #}}
-                {{ partial:components/tags class="mb-4" }}
+                {{# tags and title #}}
+                <div class="absolute p-4 pointer-events-auto bottom-8 z-front">
+    
+                    {{# tags  #}}
+                    {{ partial:components/tags class="mb-4 z-front bottom-30" }}
 
-                {{# headline or title fallback #}}
-                {{ partial:typography/h4 content="{ title }" class="mb-6 hyphens group-hover:text-skin-primary" }}
-                
-                {{# link to detail view #}}
-                {{ partial:components/button button_type="card_lined_base" as="button" label="{ trans:strings.more }" }}
-
-                {{# media wrapper #}}
-                <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
-                
-                    {{# image #}}
-                    {{ if header_select == "image" }}
-                        {{ partial:components/picture nocaption="true" tint="dark" :image="header_image" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
-                    
-                    {{# video #}}
-                    {{ else }}
-                        {{ partial:components/video tint="dark" :youtube_url="header_video" }}
-                    {{ /if }} 
+                    {{# headline or title fallback #}}
+                    {{ partial:typography/h4 content="{ title }" class="mb-6 hyphens group-hover:text-skin-primary" }}
                 </div>
-            </a>
+
+                {{# dates card #}}
+                <a href="{{ url }}" class="relative flex flex-col items-start p-4">
+                    
+                    {{# time #}}
+                    {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" }}
+                    {{ else }} {{ partial:typography/p content={ time format="G.i a" } }} {{ /if }}
+                    
+                    {{# date #}}
+                    {{ partial:typography/h3 content="{ date iso_format="DD.MM.YYYY" }" }}
+                    
+                    {{# square spacer for height #}}
+                    <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-4"></div>
+
+                    {{# link to detail view #}}
+                    {{ partial:components/button button_type="card_lined_base" as="button" label="{ trans:strings.more }" }}
+
+                    {{# media wrapper #}}
+                    <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    
+                        {{# image #}}
+                        {{ if header_select == "image" }}
+                            {{ partial:components/picture nocaption="true" tint="dark" :image="header_image" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
+                        
+                        {{# video #}}
+                        {{ else }}
+                            {{ partial:components/video tint="dark" :youtube_url="header_video" }}
+                        {{ /if }} 
+                    </div>
+                </a>    
+            </div>
+            
         {{ /collection:termine }}
     </div>
 </div>

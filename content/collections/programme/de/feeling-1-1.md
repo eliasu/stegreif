@@ -1,7 +1,7 @@
 ---
 id: fcbaeb90-5869-4399-bb7b-1567d41d4773
 blueprint: programme
-title: 'Education III (Duplicated)'
+title: 'Education III '
 theme_selector_header: dark
 image: header_images/monk_600x600.jpg
 theme_selector: dark

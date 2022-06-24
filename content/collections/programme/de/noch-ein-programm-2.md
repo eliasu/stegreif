@@ -1,7 +1,7 @@
 ---
 id: 5c081f9e-9649-4cc7-9943-509cfe9043e3
 blueprint: programme
-title: 'Noch ein Programm (Duplicated) (2)'
+title: 'Noch ein Programm  (2)'
 header_theme_selector: dark
 theme_selector: dark
 article:

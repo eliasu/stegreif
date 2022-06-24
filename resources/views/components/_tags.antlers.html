@@ -10,20 +10,19 @@
 
 {{# tags #}}
 <div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
-    {{ partial:typography/tag  color="yellow" content="{ blueprint }" }}
     {{# if it is a production  #}}
     {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
         
         {{# if its a production and has a related collection #}}
         {{ select_content ? select_content.related_reihe : related_reihe }}
-            {{ partial:typography/tag class="" color="yellow" content="{ title }" }}
+            {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="yellow" content="{ title }" }}
         {{ /select_content ? select_content.related_reihe : related_reihe }}
 
         {{# production or education tag #}}
         {{ if { select_content ? select_content.select_type : select_type } == "programm" }}
-            {{ partial:typography/tag class="" color="green" content="{ trans:strings.production }" }}
+            {{ partial:typography/tag class="m-0" color="green" content="{ trans:strings.production }" }}
         {{ else }}
-            {{ partial:typography/tag class="" color="dark" content="{ trans:strings.education }" }}
+            {{ partial:typography/tag class="m-0" color="dark" content="{ trans:strings.education }" }}
         {{ endif }}
 
 
@@ -35,16 +34,16 @@
             
             {{# does the related production has related collection? #}}
             {{ select_content ? select_content.related_reihe : related_reihe }}
-                {{ partial:typography/tag class="" color="yellow" content="{ title }" }}
+                {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="yellow" content="{ title }" }}
             {{ /select_content ? select_content.related_reihe : related_reihe }}
             
-            {{ partial:typography/tag class="" color="green" content="{ title }" }}
+            {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="green" content="{ title }" }}
         {{ /select_content ? select_content.related_programm : related_programm }}
 
 
     {{# if it is a collection #}}
     {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
-        {{ partial:typography/tag class="" color="yellow" content="{ trans:strings.collection }" }}
+        {{ partial:typography/tag class="m-0" color="yellow" content="{ trans:strings.collection }" }}
         
         {{# show all related productions #}}
         {{ if show_related and related_programme }}
@@ -53,9 +52,9 @@
                 {{ related_programme }}
                     {{# production or education tag #}}
                     {{ if { select_type } == "programm" }}
-                        {{ partial:typography/tag class="" color="green" content="{ title }" }}
+                        {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="green" content="{ title }" }}
                     {{ else }}
-                        {{ partial:typography/tag class="" color="dark" content="{ title }" }}
+                        {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="dark" content="{ title }" }}
                     {{ endif }}
                 {{ /related_programme }}
             </div>
