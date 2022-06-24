@@ -39,13 +39,13 @@
             <div class="relative group">
                 
                 {{# tags and title #}}
-                <div class="absolute p-4 pointer-events-auto bottom-8 z-front">
+                <div class="absolute pointer-events-none left-4 right-4 bottom-20 z-front">
     
                     {{# tags  #}}
-                    {{ partial:components/tags class="mb-4 z-front bottom-30" }}
+                    {{ partial:components/tags class="mb-4 pointer-events-auto z-front" }}
 
                     {{# headline or title fallback #}}
-                    {{ partial:typography/h4 content="{ title }" class="mb-6 hyphens group-hover:text-skin-primary" }}
+                    {{ partial:typography/h4 content="{ title }" class="hyphens group-hover:text-skin-primary" }}
                 </div>
 
                 {{# dates card #}}
@@ -56,7 +56,7 @@
                     {{ else }} {{ partial:typography/p content={ time format="G.i a" } }} {{ /if }}
                     
                     {{# date #}}
-                    {{ partial:typography/h3 content="{ date iso_format="DD.MM.YYYY" }" }}
+                    {{ partial:typography/h3 class="pointer-events-auto" content="{ date iso_format="DD.MM.YYYY" }" }}
                     
                     {{# square spacer for height #}}
                     <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-4"></div>
