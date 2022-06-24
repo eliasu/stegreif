@@ -21,7 +21,7 @@ sitemap_priority: 0.5
 aktuell: true
 select_type: education
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655766832
+updated_at: 1656085523
 related_termine:
   - 18c74337-dd9e-44f3-b42a-a7f3b1d98afb
   - 620b1302-44e8-430a-beec-34b05e085a0e
@@ -31,4 +31,5 @@ select_transition_theme: bird-section
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_select: image
 header_image: header_images/monk_600x600.jpg
+template: single_page
 ---

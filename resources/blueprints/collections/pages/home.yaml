@@ -169,16 +169,6 @@ sections:
       -
         import: select_transition_theme
       -
-        handle: template
-        field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
         handle: parent
         field:
           type: entries
@@ -187,6 +177,13 @@ sections:
           max_items: 1
           listable: false
           localizable: true
-  new_section:
-    display: 'New Section'
-    fields: {  }
+      -
+        handle: template
+        field:
+          default: home
+          display: template
+          type: hidden
+          icon: hidden
+          listable: hidden
+          instructions_position: above
+          read_only: false

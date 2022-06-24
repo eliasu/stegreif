@@ -1,6 +1,6 @@
 ---
-id: bf69ff1c-e425-4ed3-a2ac-c08976694b0d
-blueprint: werwirsind
+id: 8f3d1e25-6ad8-4f1f-9a83-d1aec94ca3d2
+blueprint: who_we_are_page
 title: 'Wer wir sind'
 seo_noindex: false
 seo_nofollow: false
@@ -8,13 +8,12 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655769230
+updated_at: 1656088598
 header_theme_selector: dark
 header_select: image
 section_headline_orchestra: Orchester
 select_transition_theme: bird
-template: werwirsind
-header_image: header_images/favorit_orchester_1.-cinematic.jpg
+header_image: header_images/fronalpstock_big.jpg
 select_section_theme_intro: dark
 introduction_content:
   -
@@ -123,9 +122,14 @@ add_section:
         attrs:
           values:
             type: bard_partners
+            headline: 'Kleiner Test'
+            text: Kelamsdasd
+            entires:
+              - 7054737e-be39-4729-b8d4-b61632e4eff3
       -
         type: paragraph
         attrs:
           class: null
 select_section_theme_orchestra: yellow
+template: who_we_are_page
 ---

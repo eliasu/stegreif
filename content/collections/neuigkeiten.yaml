@@ -3,7 +3,7 @@ sites:
   - de
   - en
 propagate: true
-template: neuigkeiten/show
+template: page
 layout: layout
 mount: 6b15baac-a9f9-4f3a-bda8-b81ac77ef726
 revisions: false

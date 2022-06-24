@@ -10,7 +10,7 @@
 
 {{# tags #}}
 <div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
-    
+    {{ partial:typography/tag  color="yellow" content="{ blueprint }" }}
     {{# if it is a production  #}}
     {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
         

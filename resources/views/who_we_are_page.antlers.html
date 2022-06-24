@@ -1,0 +1,38 @@
+<!-- /who_we_are.antlers.html -->
+
+<main class="relative w-full" id="content"> 
+    {{# modal for orchestra #}}
+    {{ collection:personen limit="1" }}
+        {{ partial:components/orchestra_modal  }}
+    {{ /collection:personen }}
+
+    {{# Header #}}
+    {{ partial:components/header social_icons="true" }}
+
+    {{# Intro Section #}}
+    {{ partial:layout/section color="{ select_section_theme_intro }" }}
+        
+        {{# Introduction Content Bard #}}
+        {{ partial:components/bard handle="{ introduction_content }" }}
+
+    {{ /partial:layout/section }}
+
+    {{# Orchestra Section #}}
+    {{ partial:layout/section color="{ select_section_theme_orchestra }" }}
+        
+        {{# Orchestra list #}}
+        {{ partial:components/orchestra_block :headline="section_headline_orchestra" }}
+        
+    {{ /partial:layout/section }}
+    
+
+    {{# if there is additional content #}}
+    {{ add_section }}
+        {{ partial:layout/section color="{ theme_selector }" }}
+            {{ partial:components/bard handle="{ article }" }}
+        {{ /partial:layout/section }}
+    {{ /add_section }}
+    
+    {{ partial:components/button as="button" label="{ trans:strings.load_more }" }}
+</main>
+<!-- End: /who_we_are.antlers.html -->

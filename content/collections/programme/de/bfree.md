@@ -396,6 +396,9 @@ select_transition_theme: bird
 aktuell: true
 select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656072983
+updated_at: 1656087055
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
+related_termine:
+  - 0e3e42f9-bdbf-4e7f-a680-a690511a9b12
+template: single_page
 ---

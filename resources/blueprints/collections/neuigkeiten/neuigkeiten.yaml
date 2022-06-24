@@ -60,3 +60,13 @@ sections:
           display: Slug
           validate:
             - required
+      -
+        handle: template
+        field:
+          default: page
+          display: template
+          type: hidden
+          icon: hidden
+          listable: hidden
+          instructions_position: above
+          read_only: false

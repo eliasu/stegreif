@@ -92,6 +92,16 @@ sections:
           create: false
           collections:
             - programme
+      -
+        handle: template
+        field:
+          default: single_page
+          display: template
+          type: hidden
+          icon: hidden
+          listable: hidden
+          instructions_position: above
+          read_only: false
   seo:
     display: SEO
     fields:

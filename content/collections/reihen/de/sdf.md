@@ -25,7 +25,7 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 aktuell: true
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655993969
+updated_at: 1656085521
 theme_selector_header: dark
 theme_selector: dark
 header_theme_selector: dark
@@ -58,4 +58,5 @@ details:
             text: 'Hier kommt ein Ort für euch!'
     type: detail
     enabled: true
+template: single_page
 ---

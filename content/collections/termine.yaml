@@ -3,7 +3,7 @@ sites:
   - de
   - en
 propagate: true
-template: page_with_sidebar
+template: single_page
 layout: layout
 mount: 12b9e5fb-017c-4632-96df-5bdcde74f796
 revisions: false

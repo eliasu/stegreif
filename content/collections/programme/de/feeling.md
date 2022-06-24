@@ -115,7 +115,7 @@ select_type: education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655768089
+updated_at: 1656085528
 header_theme_selector: dark
 header_select: image
 related_termine:
@@ -125,4 +125,5 @@ related_termine:
 select_transition_theme: birds
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qud'
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
+template: single_page
 ---

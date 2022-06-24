@@ -1,0 +1,28 @@
+{{#
+	@name Neuigkeiten index
+	@desc The Neuigkeiten index template.
+#}}
+
+<!-- /single_list_page.antlers.html -->
+<main class="relative w-full" id="content"> 
+
+    {{# Header #}}
+    {{ partial:components/header social_icons="false" }}
+
+    {{# dates #}}
+    {{ partial:layout/section color="dark" }}
+       
+        {{# next dates block #}}
+        {{ partial:components/news_block }}
+    
+    {{ /partial:layout/section }}
+    
+    {{# if there is additional content #}}
+    {{ add_section }}
+        {{ partial:layout/section color="{ theme_selector }" }}
+            {{ partial:components/bard handle="{ article }" }}
+        {{ /partial:layout/section }}
+    {{ /add_section }}
+    
+</main>
+<!-- End: /single_list_page.antlers.html -->

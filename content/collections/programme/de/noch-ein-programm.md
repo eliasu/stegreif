@@ -21,7 +21,7 @@ sitemap_priority: 0.5
 aktuell: true
 select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655427544
+updated_at: 1656085525
 related_termine:
   - 18c74337-dd9e-44f3-b42a-a7f3b1d98afb
   - a8e8ee20-0ef9-46d3-b51b-b12b1f2f8ad5
@@ -30,4 +30,5 @@ teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean c
 select_transition_theme: bird-section
 header_select: image
 header_image: header_images/monk_600x600.jpg
+template: single_page
 ---

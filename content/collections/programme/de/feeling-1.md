@@ -115,7 +115,7 @@ select_type: education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655768439
+updated_at: 1656085529
 header_theme_selector: dark
 header_select: video
 related_termine:
@@ -127,4 +127,5 @@ select_transition_theme: bird
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quköhb'
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_video: 'https://youtu.be/Faow3SKIzq0'
+template: single_page
 ---

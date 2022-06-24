@@ -1,0 +1,75 @@
+<!-- /what_we_do.antlers.html -->
+<main class="relative w-full" id="content"> 
+
+    {{# Header #}}
+    {{ partial:components/header social_icons="true" }}
+
+    {{# Programme section #}}
+    {{ partial:layout/section color="{ theme_selector_programme }" }}
+        
+        {{# current productions block #}}
+        {{ partial:components/productions_block from="programme" filter="programm" show_header_all="true" :headline="section_headline_programme" }}
+    
+    {{ /partial:layout/section }}
+
+    {{# Reihen section #}}
+    {{ partial:layout/section color="{ theme_selector_reihen }" }}
+
+        {{# current collections block #}}
+        {{ partial:components/productions_block from="reihen" show_header_all="true" :headline="section_headline_reihen" }}
+            
+    {{ /partial:layout/section }}
+
+    {{# Education section #}}
+    {{ partial:layout/section color="{ theme_selector_education }" }}
+
+        {{# current education block #}}
+        {{ partial:components/productions_block from="programme" filter="education" show_header_all="true" :headline="section_headline_education" }}
+    
+    {{ /partial:layout/section }}
+
+    {{# if there is additional content #}}
+    {{ add_section }}
+        {{ partial:layout/section color="{ theme_selector }" }}
+            {{ partial:components/bard handle="{ article }" }}
+        {{ /partial:layout/section }}
+    {{ /add_section }}
+    
+    {{# {{ partial:components/button as="button" label="{ trans:strings.load_more }" }} #}}
+</main>
+<!-- End: /what_we_do.antlers.html -->
+
+{{# <script>
+    document.addEventListener('readystatechange', (event) => {
+        switch (document.readyState) {
+            case "complete":
+                var selects = document.querySelectorAll('select');
+
+                for (var i = 0; i < selects.length; i++) {
+                    selects[i].addEventListener('change', changeWidth);
+                }
+
+                function changeWidth (e) {
+                    var select = e.target;
+                    var o = select.options[select.selectedIndex];
+                    var s = document.createElement('span');
+                    
+                    s.textContent = o.textContent;
+                    
+                    var ostyles = getComputedStyle(o);
+                    s.style.fontFamily = ostyles.fontFamily;
+                    s.style.fontStyle = 'normal';
+                    s.style.fontWeight = '800';
+                    s.style.fontSize = ostyles.fontSize;
+                    s.style.width = "min-content";
+                    s.style.paddingLeft = "0.5rem";
+                    s.style.paddingRight = "2rem";
+                    
+                    document.body.appendChild(s);
+                    select.style.width = (s.offsetWidth + 24 + 32) + 'px';
+                    document.body.removeChild(s);
+                }
+                break;
+        }
+    });
+</script> #}}

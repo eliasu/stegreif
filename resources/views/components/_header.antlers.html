@@ -8,7 +8,9 @@
             {{# title and tag #}}
             <div class="flex flex-col gap-4">
                 {{# tags if needed #}}
-                {{ partial:components/tags }}
+                {{ if blueprint == "termine" || blueprint == "reihen" || blueprint == "programme" || blueprint == "neuigkeiten" }}
+                    {{ partial:components/tags }}
+                {{ /if }}
                 
                 {{# header headline #}}
                 {{ partial:typography/h1 content="{header_headline ?? title }" class="text-skin-primary"}}
