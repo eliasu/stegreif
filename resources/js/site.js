@@ -5,6 +5,8 @@ import focus from '@alpinejs/focus'
 import 'focus-visible'
 import YouTubeToHtml5 from '@thelevicole/youtube-to-html5-loader'
 
+require('fslightbox');
+
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
     return await fetch('/!/DynamicToken/refresh')

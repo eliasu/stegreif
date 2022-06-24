@@ -15,6 +15,9 @@
         
         {{ partial:snippets/seo }}
         {{ partial:snippets/browser_appearance }}
+        
+        {{# lightbox index defined globally to count how much lightboxes displayed on the page #}}
+        {{ lb_index = 0 }}
     </head>
     <body class="flex flex-col min-h-screen bg-light selection:bg-skin-accent">
         {{ partial:snippets/noscript }}

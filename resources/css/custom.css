@@ -71,10 +71,6 @@
 
 }   
 
-dialog::backdrop {
-    background-color: rgba( 2, 1, 34, .5);
-}
-
 .theme-dark {
     --color-base: var(--color-light);
     --color-inverted: var(--color-darkblue);
@@ -114,6 +110,20 @@ dialog::backdrop {
     --color-accent: var(--color-green);
 }
 
+/* style the lightbox */
+.fslightbox-slide-number-container {
+    @apply !hidden; 
+}
+
+.fslightbox-toolbar-button, .fslightbox-slide-btn {
+    @apply !bg-yellow !text-darkblue;
+}
+
+.fslightbox-toolbar-button > svg > path, .fslightbox-slide-btn > svg > path {
+    @apply fill-darkblue;
+}
+
+
 /* only image masks */
 .bird-mask, .bechange-mask {
     mask-size: 100% calc(100% - 30rem + 1px), auto 30rem;
@@ -121,8 +131,8 @@ dialog::backdrop {
     mask-repeat: repeat-x;
 }
 
-.bird-mask{ mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds1.png"); }
-.bechange-mask{ mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds1.png"); }
+.bird-mask{ mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds_3.png"); }
+.bechange-mask{ mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds_3.png"); }
 
  /* transition section */
 .bird-section:not(:last-of-type), .bechange-section:not(:last-of-type)
@@ -137,8 +147,8 @@ dialog::backdrop {
     padding-bottom: calc(30rem + 5rem);
 }
 
-.bird-section:not(:last-of-type) { mask-image: url("/site_assets/transition_birds/black.png"),url("/site_assets/transition_birds/birds1.png"); }
-.bechange-section:not(:last-of-type) { mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds1.png"); }
+.bird-section:not(:last-of-type) { mask-image: url("/site_assets/transition_birds/black.png"),url("/site_assets/transition_birds/birds_3.png"); }
+.bechange-section:not(:last-of-type) { mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds_3.png"); }
 
 /* last section */
 .bird-section:last-of-type, .bechange-section:last-of-type
@@ -149,15 +159,23 @@ dialog::backdrop {
     padding-bottom: 10rem; 
 }
 
+/* for filter buttons */
 .active > * {
     @apply text-skin-primary;
 }
 
+/* to hyphen specific elements like buttons */
 .hyphens {
     hyphens: auto;
 }
 
- /* set z-index according to order  */
+/* orchestra modal backdrop */
+dialog::backdrop {
+    background-color: rgba( 2, 1, 34, .5);
+}
+
+
+/* set z-index of sections according to order  */
 section:nth-of-type(2) { @apply z-90 }
 section:nth-of-type(3) { @apply z-80 }
 section:nth-of-type(4) { @apply z-70 }
