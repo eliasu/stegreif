@@ -19,25 +19,39 @@
     </button>
 
     <div
-        class="fixed inset-0 z-10 flex flex-col justify-end px-8 pt-8 pb-12 bg-white"
+        class="fixed inset-0 z-10 flex flex-col items-start justify-between p-4 bg-light"
         x-show="mobileNavOpen"
         x-trap.inert.noscroll="mobileNavOpen"
         x-cloak
-    >
-        <ul class="flex flex-col py-2 space-y-4 overflow-auto">
-            {{ nav:main max_depth="1" include_home="true" }}
-                <li
-                    class="leading-none"
+    >   
+
+        {{# language picker #}}
+        <div class="flex gap-2">
+            {{ locales all="true" self="true" current_first="false" }}
+                <a
+                    href="{{ permalink }}"
+                    aria-label="{{ locale:name }}"
+                    class="{{ is_current ?= "text-yellow" }}h-8 w-8 block text-base font-bold tracking-wide uppercase whitespace-nowrap hover:text-green"
                 >
-                    <a
-                        class="w-full py-2 flex items-center space-x-1 font-bold uppercase tracking-wide hover:text-primary {{ is_current || is_parent ? 'text-primary' : 'text-neutral' }} focus:outline-none focus-visible:ring-2 ring-primary"
-                        href="{{ url }}"
-                    >
-                        <span>{{ title }}</span>
-                    </a>
-                </li>
+                    {{ locale:short }}
+                </a>
+            {{ /locales }}
+        </div>
+
+        {{# nav links #}}
+        <ul class="flex flex-col items-start gap-4">
+            {{ nav:main max_depth="1" include_home="true" select="title|url|is_parent|is_current|button" }}
+            {{ !button ?= '<li>{ partial:components/button link_type="url" button_type="lined_dark" :url="url" label="{ title }" }</li>'  }}
             {{ /nav:main }}
         </ul>
+        
+        {{# cta #}}
+        {{ nav:main max_depth="1" include_home="true" select="title|url|is_parent|is_current|button" }}
+            {{ button ?= { partial:components/button link_type="url" button_type="background" :url="url" label="{ title }" }  }}
+        {{ /nav:main }}
+
+        
+
     </div>
 </nav>
 <!-- End: /navigation/_main_mobile.antlers.html -->

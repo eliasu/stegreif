@@ -26,6 +26,11 @@
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
         </div>
+
+    {{ elseif button_type == "background-home" }}
+        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-xl tracking-normal font-bold whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-light hover:bg-yellow mr-1">
+            {{ label }}
+        </div>
     
     {{# lined button with base color #}}
     {{ elseif button_type == "lined_base" }}

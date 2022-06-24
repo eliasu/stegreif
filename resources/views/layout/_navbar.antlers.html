@@ -1,0 +1,25 @@
+{{#
+	@name Header
+	@desc The sites header rendered on each page.
+#}}
+
+<!-- /layout/_navbar.antlers.html -->
+<header class="fixed w-full z-nav top-4 lg:top-20">
+    <div class="flex items-start justify-between fluid-container">
+        <div class="flex">
+            
+            {{# back lin gets displayed with single entries pages #}}
+            {{ if blueprint == "programme" || blueprint == "reihen" }}
+                {{ partial:components/button label="{{ trans:strings.back }}" url="{{ configuration:select_page:url }}" reverse="true" button_type="background" icon="arrow_left" link_type="url"}}
+            {{ elseif blueprint == "termine" || blueprint == "neuigkeiten" }}
+                {{ partial:components/button label="{{ trans:strings.back }}" url="{{ parent }}" reverse="true" button_type="background" icon="arrow_left" link_type="url"}}
+            {{ /if }}
+            
+            {{# home link "logo" #}}
+            {{ partial:components/logo }}
+        </div>
+        
+        {{ partial:navigation/main }}
+    </div>
+</header>
+<!-- End: /layout/_navbar.antlers.html -->

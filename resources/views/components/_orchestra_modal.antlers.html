@@ -13,8 +13,11 @@
         <div class="fixed p-4 lg:hidden md:p-8">
             {{ partial:components/button as="button" reverse="true" icon="arrow_left" button_type="lined_base" label="{ trans:strings.back }" }}
                 {{ slot:attributes }}
-                    onClick="document.querySelector('#orchestra-modal').close()"
-                {{ /slot:attributes }}    
+                    onClick='(function(){
+                        document.querySelector("body").classList.remove("overflow-hidden");
+                        document.querySelector("#orchestra-modal").close();
+                        })();'
+            {{ /slot:attributes }}    
             {{ /partial:components/button }}
         </div>
 
@@ -26,9 +29,12 @@
         {{# content wrapper #}}
         <div class="flex flex-col items-start justify-between h-full gap-20 p-4 md:p-8 bg-darkblue">
             {{# back button #}}
-            {{ partial:components/button class="hidden lg:block" as="button" reverse="true" icon="arrow_left" button_type="lined_base" label="{ trans:strings.back }" }}
+            {{ partial:components/button class="block lg:hidden" as="button" reverse="true" icon="arrow_left" button_type="lined_base" label="{ trans:strings.back }" }}
                 {{ slot:attributes }}
-                    onClick="document.querySelector('#orchestra-modal').close()"
+                    onClick='(function(){
+                        document.querySelector("body").classList.remove("overflow-hidden");
+                        document.querySelector("#orchestra-modal").close();
+                        })();'
                 {{ /slot:attributes }}    
             {{ /partial:components/button }}
 

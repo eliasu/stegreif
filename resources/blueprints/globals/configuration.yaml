@@ -83,9 +83,9 @@ sections:
         handle: privacy_statement_asset
         field: common.image
         config:
-          localizable: true
           listable: hidden
           display: 'Privacy statement (PDF)'
+          localizable: true
           width: 50
           if:
             privacy_statement_type: 'equals pdf'
@@ -103,3 +103,27 @@ sections:
             privacy_statement_type: 'equals entry'
           validate:
             - 'required_if:privacy_statement_type,entry'
+      -
+        handle: select_collection_page
+        field:
+          display: 'Select Collection Page'
+          type: section
+          icon: section
+          instructions: 'Select "What we do" Page'
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: select_page
+        field:
+          max_items: 1
+          mode: default
+          create: false
+          collections:
+            - pages
+          display: 'Select Page'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          read_only: false

@@ -2,6 +2,9 @@
 {{ if header_theme_selector != "disable" }}
     <section class="{{ header_theme_selector | ensure_left:"header-" }} overflow-hidden flex flex-col relative z-front h-header">
         
+        {{# logo #}}
+        {{# {{ svg src="logo_small" class="h-full select-none fill-current" alt="Stegreif Logo" aria-hidden="true" }} #}}
+
         {{# header content wrapper #}}
         <div class="flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
             

@@ -4,12 +4,21 @@
 #}}
 
 <!-- /components/_logo.antlers.html -->
-<a
+
+{{# <a class="flex items-center h-8 px-6 bg-light" href="{{ site:url }}" aria-label="Logo {{ config:app:name }}">
+	{{ title }}
+</a> #}}
+
+{{ partial:components/button link_type="url" url="{ site:url }" button_type="background-home" icon="none" label="Stegreif" }}
+
+{{# <a class="text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap {{ is_current ? 'text-green' : 'text-darkblue' }} "href="{{ url }}"></a> #}}
+
+{{# <a
 	class="z-20 flex items-center h-12 px-3 pb-2 pt-3 lg:h-8 lg:px-2 lg:py-1.5 focus:outline-none focus-visible:ring-2 ring-primary bg-light hover:bg-green hover:text-light motion-safe:transition"
 	aria-label="Logo {{ config:app:name }}"
 	href="{{ site:url }}"
 >
 	{{ svg src="logo_small" class="h-full select-none fill-current" alt="Stegreif Logo" aria-hidden="true" }}
-	{{# <img src="/visuals/statamic-peak-logo.svg" class="select-none {{ class }}" width="{{ width }}" alt="{{ config:app:name }}"/> #}}
-</a>
+</a> #}}
+{{# <img src="/visuals/statamic-peak-logo.svg" class="select-none {{ class }}" width="{{ width }}" alt="{{ config:app:name }}"/> #}}
 <!-- End: /components/_logo.antlers.html -->
