@@ -8,7 +8,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656085448
+updated_at: 1656090244
 header_theme_selector: dark
 header_select: image
 select_transition_theme: bird
@@ -16,4 +16,5 @@ theme_selector: dark
 theme_selector_dates: yellow
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 template: single_list_page
+select_collection: dates
 ---

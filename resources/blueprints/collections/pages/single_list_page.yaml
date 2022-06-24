@@ -71,3 +71,23 @@ sections:
           listable: hidden
           instructions_position: above
           read_only: false
+      -
+        handle: select_collection
+        field:
+          options:
+            dates: Termine
+            news: Neuigkeiten
+          multiple: false
+          max_items: 1
+          clearable: false
+          searchable: false
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Select Collection'
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          default: dates
