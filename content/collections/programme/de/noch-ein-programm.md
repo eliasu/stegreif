@@ -28,7 +28,6 @@ related_termine:
   - 620b1302-44e8-430a-beec-34b05e085a0e
 teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 select_transition_theme: bird-section
-related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_select: image
 header_image: header_images/monk_600x600.jpg
 ---

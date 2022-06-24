@@ -33,7 +33,7 @@
             {{# show bard field with sidebar #}}
             <div class="flex flex-col-reverse md:flex-row gap-y-20">
                 {{ partial:components/bard handle="{ article }" not_fluid="true" }}
-                {{ partial:components/sidebar }}
+                {{ partial:components/sidebar show_related="true" }}
             </div>
 
             {{# extended section with a second bard field (where large components are enabled) #}}

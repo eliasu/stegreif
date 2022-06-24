@@ -38,8 +38,20 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 aktuell: true
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655766663
+updated_at: 1655993647
 teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
-related_programme:
-  - 2f94c71d-bdb1-4b05-9173-410d49dfc125
+details:
+  -
+    headline: asd
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: asdasdfasdgfasdfgasfdg
+    type: detail
+    enabled: true
 ---

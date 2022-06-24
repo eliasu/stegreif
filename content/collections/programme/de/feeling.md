@@ -124,6 +124,5 @@ related_termine:
   - a12c12e1-a158-4a32-89e9-5bb9297cc8eb
 select_transition_theme: birds
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qud'
-related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 ---

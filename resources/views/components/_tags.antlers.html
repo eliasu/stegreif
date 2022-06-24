@@ -14,7 +14,7 @@
     {{# if it is a production  #}}
     {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
         
-        {{# if its a programm and has a related reihe #}}
+        {{# if its a production and has a related collection #}}
         {{ select_content ? select_content.related_reihe : related_reihe }}
             {{ partial:typography/tag class="" color="yellow" content="{ title }" }}
         {{ /select_content ? select_content.related_reihe : related_reihe }}
@@ -42,9 +42,24 @@
         {{ /select_content ? select_content.related_programm : related_programm }}
 
 
-    {{# if it is a reihe #}}
+    {{# if it is a collection #}}
     {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
-        {{ partial:typography/tag class="" color="green" content="{ trans:strings.collection }" }}
+        {{ partial:typography/tag class="" color="yellow" content="{ trans:strings.collection }" }}
+        
+        {{# show all related productions #}}
+        {{ if show_related and related_programme }}
+            <div class="flex flex-col items-start">
+                {{# if its a collection and has a related production #}}
+                {{ related_programme }}
+                    {{# production or education tag #}}
+                    {{ if { select_type } == "programm" }}
+                        {{ partial:typography/tag class="" color="green" content="{ title }" }}
+                    {{ else }}
+                        {{ partial:typography/tag class="" color="dark" content="{ title }" }}
+                    {{ endif }}
+                {{ /related_programme }}
+            </div>
+        {{ /if }}
     {{ /if }}
 </div>
 <!-- End: /components/_tags.antlers.html -->

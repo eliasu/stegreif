@@ -23,10 +23,13 @@
                 {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.past }" }}
             </div>
             
-            <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Digital" }}
-                {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Chamber" }}
-            </div>
+            {{# dont display this block if its collections because they have no "tags" #}}
+            {{ if from != "reihen"}}
+                <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Digital" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Chamber" }}
+                </div>
+            {{ /if }}
         </div>
     {{ /if }}
 
