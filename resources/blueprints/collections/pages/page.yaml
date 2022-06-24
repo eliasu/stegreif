@@ -20,6 +20,9 @@ sections:
       -
         import: header
       -
+        handle: theme_selector
+        field: common.theme_selector
+      -
         import: article
       -
         handle: additional_sections

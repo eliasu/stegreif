@@ -28,13 +28,13 @@
         @apply leading-s font-extrabold uppercase;
     }
 
-    p   { @apply text-base md:text-lg leading-l transition-colors; } 
-    h1  { @apply text-4xl xs:text-5xl md:text-7xl lg:text-8xl transition-colors; }
-    h2  { @apply text-3xl sm:text-4xl md:text-5xl xl:text-6xl transition-colors; }
-    h3  { @apply text-2xl md:text-3xl xl:text-4xl transition-colors; }
-    h4  { @apply text-lg md:text-2xl transition-colors; }
-    h5  { @apply text-base md:text-2xl leading-s font-bold transition-colors; }
-    h6  { @apply text-xs leading-s uppercase font-bold transition-colors; } 
+    p   { @apply text-base md:text-lg leading-l motion-safe:transition-colors; } 
+    h1  { @apply text-4xl xs:text-5xl md:text-7xl lg:text-8xl motion-safe:transition-colors; }
+    h2  { @apply text-3xl sm:text-4xl md:text-5xl xl:text-6xl motion-safe:transition-colors; }
+    h3  { @apply text-2xl md:text-3xl xl:text-4xl motion-safe:transition-colors; }
+    h4  { @apply text-lg md:text-2xl motion-safe:transition-colors; }
+    h5  { @apply text-base md:text-2xl leading-s font-bold motion-safe:transition-colors; }
+    h6  { @apply text-xs leading-s uppercase font-bold motion-safe:transition-colors; } 
 
     .prose > *:first-child { @apply !mt-0 }
     .prose > p   { @apply block-in-2 block-size-1; }
@@ -42,7 +42,7 @@
     .prose > h3  { @apply mt-10 block-in-1 block-size-2; } 
     .prose > h4  { @apply mt-4 block-in-1 block-size-2; } 
     .prose > h5  { @apply mt-4 block-in-2 block-size-1; }
-    p > a { @apply transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
+    p > a { @apply motion-safe:transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
     
     .prose > *:last-child {
         @apply mb-0;

@@ -44,10 +44,10 @@
                 <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
 
                 {{# read more #}}
-                {{ partial:typography/h6 content="{ trans:strings.more }" class="tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light transition-transform" }}
+                {{ partial:typography/h6 content="{ trans:strings.more }" class="tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform" }}
                 
                 {{# image #}}
-                <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
                     {{ partial:components/picture nocaption="true" :image="thumbnail" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
                 </div>
             </button>

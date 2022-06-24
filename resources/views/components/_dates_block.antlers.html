@@ -65,7 +65,7 @@
                     {{ partial:components/button button_type="card_lined_base" as="button" label="{ trans:strings.more }" }}
 
                     {{# media wrapper #}}
-                    <div class="absolute inset-0 overflow-hidden transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
                     
                         {{# image #}}
                         {{ if header_select == "image" }}

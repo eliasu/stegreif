@@ -1,6 +1,6 @@
 <!-- /components/_header.antlers.html -->
 {{ if header_theme_selector != "disable" }}
-    <section class="{{ header_theme_selector | ensure_left:"header-" }} flex flex-col relative z-front h-header">
+    <section class="{{ header_theme_selector | ensure_left:"header-" }} overflow-hidden flex flex-col relative z-front h-header">
         
         {{# header content wrapper #}}
         <div class="flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
@@ -49,6 +49,13 @@
             {{ /if }}
             
         </div>
+    </section>
+
+    {{# disabled header #}}
+{{ else }}
+    <section class="{{ theme_selector | ensure_left:"theme-" }} overflow-hidden w-full flex items-end relative z-front pt-60 mb-15 lg:pt-80 md:mb-20 bg-skin-inverted">
+        {{# header headline #}}
+        {{ partial:typography/h1 content="{header_headline ?? title }" class="text-skin-primary fluid-container"}}
     </section>
 {{ /if }}
 <!-- End: /components/_header.antlers.html -->
