@@ -73,6 +73,10 @@ module.exports = {
 				'header': 'calc(100vh + 15rem)',
 			},
 
+			transformOrigin: {
+				'center-left': 'left center',
+			},
+
 			transitionProperty: {
 				'right': 'right',
 				'left': 'left',
