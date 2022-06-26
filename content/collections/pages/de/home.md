@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656208361
+updated_at: 1656219148
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -112,7 +112,7 @@ select_section_theme_current_production: yellow
 all_dates_page: 12b9e5fb-017c-4632-96df-5bdcde74f796
 all_news_page: 6b15baac-a9f9-4f3a-bda8-b81ac77ef726
 all_productions_page: dfc7cad0-4b67-4668-aadf-3c270123de5c
-select_transition_theme: bird
+select_transition_theme: bechange
 header_image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
 headline_productions: 'Aktuelle Programme'
 template: home
