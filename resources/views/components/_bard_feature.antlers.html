@@ -27,15 +27,15 @@
             {{ if feature_type == "bird" }}
                 <div class="relative sm:w-[50%]">
                     {{# media wrapper #}}
-                    <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
+                    <div class="bottom-0 right-0 -left-20 w-[calc(100%+5rem)] h-[85vmax] sm:w-[calc(100%+5rem)] sm:h-[calc(100%+8.5rem)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
                     
                         {{# image #}}
                         {{ if select_media_feature == "image" }}
-                            {{ partial:components/picture :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
+                            {{ partial:components/picture nocaption="true" :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
                         
                         {{# video #}}
                         {{ elseif select_media_feature == "video" }}
-                            {{ partial:components/video :youtube_url="feature_video" cover="true" }}
+                            {{ partial:components/video nocaption="true" :youtube_url="feature_video" cover="true" }}
                         {{ /if }} 
                     </div> 
                 </div>  

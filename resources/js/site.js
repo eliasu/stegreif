@@ -4,6 +4,7 @@ import persist from '@alpinejs/persist'
 import focus from '@alpinejs/focus'
 import 'focus-visible'
 import YouTubeToHtml5 from '@thelevicole/youtube-to-html5-loader'
+import Plyr from 'plyr';
 
 require('fslightbox');
 
@@ -27,3 +28,4 @@ Alpine.plugin(focus)
 Alpine.start()
 
 new YouTubeToHtml5();
+const players = Plyr.setup('.video_sound');

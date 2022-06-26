@@ -15,7 +15,9 @@
     --color-base: var(--color-light);
     --color-inverted: var(--color-darkblue);
     --color-primary: var(--color-yellow);
-    --color-accent: var(--color-green); 
+    --color-accent: var(--color-green);
+    
+    --plyr-color-main: rgb(255, 189, 66);
 }
 
 
@@ -137,6 +139,13 @@
     @apply fill-darkblue;
 }
 
+/* style the videojs */
+.vjs-big-play-button {
+    @apply !bg-yellow !transition hover:!bg-green !w-12 !h-12 !border-none !rounded-none !top-[calc(50%-1rem)] !left-[calc(50%-2.5rem)];
+}
+.vjs-icon-placeholder::before {
+    @apply !flex justify-center items-center !text-light;
+}
 
 /* different masks */
 .bird-mask-0{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_0.png"); }
@@ -145,31 +154,26 @@
 .bird-mask-3{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_3.png"); }
 .bird-mask-4{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_4.png"); }
 .bird-mask-5{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_5.png"); }
-.bird-mask-6{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_6.png"); }
-.bird-mask-7{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_7.png"); }
-.bird-mask-8{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_8.png"); }
-.bird-mask-9{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_9.png"); }
-.bird-mask-10{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_10.png"); }
-.bird-mask-11{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_11.png"); }
 
-.bechange-mask-0{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_0.png"); }
-.bechange-mask-1{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_1.png"); }
-.bechange-mask-2{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_2.png"); }
-.bechange-mask-3{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_3.png"); }
-.bechange-mask-4{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_4.png"); }
-.bechange-mask-5{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_5.png"); }
-.bechange-mask-6{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_6.png"); }
-.bechange-mask-7{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_7.png"); }
-.bechange-mask-8{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_8.png"); }
-.bechange-mask-9{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_9.png"); }
-.bechange-mask-10{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_10.png"); }
-.bechange-mask-11{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_11.png"); }
+.bechange-mask-0{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/bechange_0.png"); }
+.bechange-mask-1{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/bechange_1.png"); }
+.bechange-mask-2{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/bechange_2.png"); }
+.bechange-mask-3{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/bechange_3.png"); }
+.bechange-mask-4{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/bechange_4.png"); }
+.bechange-mask-5{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/bechange_5.png"); }
 
 /* only image masks */
 .bird-mask, .bechange-mask {
     mask-size: 100% calc(100% - 30rem + 1px), auto 30rem;
     mask-position: center top, center bottom;
     mask-repeat: repeat-x;
+}
+
+.bird_image_mask { 
+    mask-image: url("/site_assets/transitions/birds_image.png"); 
+    mask-repeat: no-repeat;
+    /* mask-size: 100% 100&, auto 30rem; */
+    /* mask-position: center top, center bottom; */
 }
 
  /* transition section */

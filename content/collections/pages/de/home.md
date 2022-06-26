@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656197533
+updated_at: 1656208361
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -50,7 +50,7 @@ support_us_content:
         alignment: left
         feature_type: bird
         select_media_feature: image
-        feature_image: header_images/bild_roman_novitzky.-cinematic.jpg
+        feature_image: header_images/fronalpstock_big.jpg
         article:
           -
             type: heading
