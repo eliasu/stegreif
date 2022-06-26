@@ -115,14 +115,14 @@ select_type: education
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656085528
+updated_at: 1656287085
 header_theme_selector: dark
 header_select: image
 related_termine:
   - f8116011-b75e-4795-8b2f-71d972ff494e
   - dc8781a7-90b7-42f2-9af0-a608cc586c3a
   - a12c12e1-a158-4a32-89e9-5bb9297cc8eb
-select_transition_theme: birds
+select_transition_theme: bird
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qud'
 header_image: header_images/favorit_orchester_1.-cinematic.jpg
 template: single_page
