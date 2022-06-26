@@ -15,14 +15,14 @@
         
         {{ partial:snippets/seo }}
         {{ partial:snippets/browser_appearance }}
-        {{ partial:snippets/page_variables }}
-        
     </head>
-    <body class="flex flex-col min-h-screen bg-light selection:bg-skin-accent">
+    
+    <body class="flex flex-col min-h-screen bg-yellow selection:bg-skin-accent">
         {{ partial:snippets/noscript }}
         {{# {{ partial:navigation/skip_to_content }} #}}
         {{ partial:components/toolbar }}
         {{ yield:seo_body }}
+        {{ partial:snippets/page_variables }}
         
         {{ partial:layout/navbar }}
         {{ template_content }}

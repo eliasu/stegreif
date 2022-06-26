@@ -1,4 +1,8 @@
 <!-- /home.antlers.html -->
+{{# start counting the transitions #}}
+{{ transition_counter = 0 }} {{ start_number = ['0', '1', '2', '3', '4', '5'] }} 
+{{ start_number | shuffle }} {{ if index == 0 }} {{ transition_counter = value}} {{ /if }} {{ /start_number }}
+
 <main class="relative w-full" id="content"> 
 
     {{# Header #}}
@@ -32,7 +36,5 @@
         {{ partial:components/bard handle="{support_us_content}" }}
 
     {{ /partial:layout/section }}
-    
-    {{# {{ trans:strings.search }} #}}
 </main>
 <!-- End: /home.antlers.html -->

@@ -24,8 +24,12 @@
     </button>
 
     <div
-        class="fixed inset-0 z-10 flex flex-col items-start justify-between p-4 overflow-hidden translate-x-full bg-light motion-safe:transition"
-        :class="mobileNavOpen ? 'open-nav' : ''"
+        class="fixed inset-0 z-10 flex flex-col items-start justify-between p-4 overflow-hidden bg-light motion-safe:transition"
+        x-show="mobileNavOpen"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
         x-trap.inert.noscroll="mobileNavOpen"
         x-cloak
     >   

@@ -1,12 +1,18 @@
 <!-- /components/_header.antlers.html -->
+
+{{# start counting the transitions #}}
+{{ transition_counter = 0 }} {{ start_number = ['0', '1', '2', '3', '4', '5'] }} 
+{{ start_number | shuffle }} {{ if index == 0 }} {{ transition_counter = value}} {{ /if }} {{ /start_number }}
+
 {{ if header_theme_selector != "disable" }}
     <section class="{{ header_theme_selector | ensure_left:"header-" }} overflow-hidden flex flex-col relative z-front h-header">
         
-        {{# logo #}}
-        {{# {{ svg src="logo_small" class="h-full select-none fill-current" alt="Stegreif Logo" aria-hidden="true" }} #}}
-
+        
         {{# header content wrapper #}}
-        <div class="flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
+        <div class="relative flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
+            
+            {{# logo #}}
+            <img src="/site_assets/logos/logo_for_{{ header_theme_selector }}.png" class="absolute -top-6 left-4 lg:top-6 lg:left-20" alt="{{ config:app:name }}"/>
             
             {{# title and tag #}}
             <div class="flex flex-col gap-4">
@@ -40,7 +46,7 @@
         </div>
         
         {{# background media #}}
-        <div class="absolute inset-0 pointer-events-none {{ select_transition_theme | ensure_right:"-mask" }} z-behind">
+        <div class="absolute inset-0 pointer-events-none {{ select_transition_theme | ensure_right:"-mask" }} {{ select_transition_theme | ensure_right:"-mask-{ transition_counter }" }} z-behind">
             
             {{# background image #}}
             {{ if header_select == "image" }}
@@ -62,3 +68,4 @@
     </section>
 {{ /if }}
 <!-- End: /components/_header.antlers.html -->
+

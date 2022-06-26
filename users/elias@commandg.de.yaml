@@ -17,6 +17,7 @@ preferences:
         - title
         - date
         - time
+      after_save: continue_editing
     programme:
       columns:
         - title

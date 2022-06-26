@@ -31,4 +31,5 @@ select_transition_theme: bird-section
 header_select: image
 header_image: header_images/monk_600x600.jpg
 template: single_page
+related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 ---

@@ -84,12 +84,6 @@
     @apply -rotate-45 translate-x-[0.357rem] translate-y-[0.175rem] w-10;
 }
 
-/* mobile nav animation */
-.open-nav {
-    @apply !translate-x-0;
-}
-
-
 /* theming via css variables */
 .theme-dark {
     --color-base: var(--color-light);
@@ -144,15 +138,39 @@
 }
 
 
+/* different masks */
+.bird-mask-0{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_0.png"); }
+.bird-mask-1{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_1.png"); }
+.bird-mask-2{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_2.png"); }
+.bird-mask-3{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_3.png"); }
+.bird-mask-4{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_4.png"); }
+.bird-mask-5{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_5.png"); }
+.bird-mask-6{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_6.png"); }
+.bird-mask-7{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_7.png"); }
+.bird-mask-8{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_8.png"); }
+.bird-mask-9{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_9.png"); }
+.bird-mask-10{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_10.png"); }
+.bird-mask-11{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_11.png"); }
+
+.bechange-mask-0{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_0.png"); }
+.bechange-mask-1{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_1.png"); }
+.bechange-mask-2{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_2.png"); }
+.bechange-mask-3{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_3.png"); }
+.bechange-mask-4{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_4.png"); }
+.bechange-mask-5{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_5.png"); }
+.bechange-mask-6{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_6.png"); }
+.bechange-mask-7{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_7.png"); }
+.bechange-mask-8{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_8.png"); }
+.bechange-mask-9{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_9.png"); }
+.bechange-mask-10{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_10.png"); }
+.bechange-mask-11{ mask-image: url("/site_assets/transitions/ge/black.png"), url("/site_assets/transitions/ge/bechange_11.png"); }
+
 /* only image masks */
 .bird-mask, .bechange-mask {
     mask-size: 100% calc(100% - 30rem + 1px), auto 30rem;
     mask-position: center top, center bottom;
     mask-repeat: repeat-x;
 }
-
-.bird-mask{ mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds_3.png"); }
-.bechange-mask{ mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds_3.png"); }
 
  /* transition section */
 .bird-section:not(:last-of-type), .bechange-section:not(:last-of-type)
@@ -166,9 +184,6 @@
     padding-top: calc(30rem + 5rem);
     padding-bottom: calc(30rem + 5rem);
 }
-
-.bird-section:not(:last-of-type) { mask-image: url("/site_assets/transition_birds/black.png"),url("/site_assets/transition_birds/birds_3.png"); }
-.bechange-section:not(:last-of-type) { mask-image: url("/site_assets/transition_birds/black.png"), url("/site_assets/transition_birds/birds_3.png"); }
 
 /* last section */
 .bird-section:last-of-type, .bechange-section:last-of-type

@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656085416
+updated_at: 1656197533
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -48,9 +48,9 @@ support_us_content:
       values:
         type: bard_feature
         alignment: left
-        feature_type: big
+        feature_type: bird
         select_media_feature: image
-        feature_image: header_images/s_abeetz_190505_erfurt_stegreiforchester_5d3_9590.-cinematic.jpg
+        feature_image: header_images/bild_roman_novitzky.-cinematic.jpg
         article:
           -
             type: heading

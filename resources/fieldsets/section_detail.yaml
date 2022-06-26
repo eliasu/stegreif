@@ -23,20 +23,15 @@ fields:
       placeholder: 'Falls back to the title if left empty.'
   -
     handle: article
-    field: article_text.article_text
+    field: article_details.article_text
     config:
       buttons:
-        - bigger
-        - smaller
-        - h3
-        - h4
-        - h5
         - accent
         - removeformat
-        - anchor
         - bold
         - italic
         - underline
+        - anchor
   -
     handle: extend_section
     field:
