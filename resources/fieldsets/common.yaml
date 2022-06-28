@@ -111,7 +111,7 @@ fields:
       read_only: false
       localizable: true
   -
-    handle: team-tag
+    handle: team_tag
     field:
       mode: default
       create: true
@@ -124,7 +124,7 @@ fields:
       instructions_position: above
       read_only: false
   -
-    handle: tags
+    handle: related_tags
     field:
       mode: default
       create: true

@@ -5,8 +5,6 @@ sites:
 propagate: true
 template: single_page
 layout: layout
-taxonomies:
-  - tags
 revisions: false
 route: '/reihe/{slug}'
 sort_dir: asc

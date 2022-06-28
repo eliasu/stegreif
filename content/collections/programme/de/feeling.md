@@ -120,7 +120,6 @@ header_theme_selector: dark
 header_select: image
 related_termine:
   - f8116011-b75e-4795-8b2f-71d972ff494e
-  - 70c845f0-93a2-40ed-9d20-12e94f566542
 select_transition_theme: bird
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qud'
 header_image: header_images/favorit_orchester_1.-cinematic.jpg

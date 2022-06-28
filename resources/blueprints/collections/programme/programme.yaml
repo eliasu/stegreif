@@ -73,6 +73,10 @@ sections:
             - tags
           display: Tags
           mode: select
+          instructions_position: above
+          listable: hidden
+          read_only: false
+          create: true
       -
         handle: related_reihe
         field: common.entry

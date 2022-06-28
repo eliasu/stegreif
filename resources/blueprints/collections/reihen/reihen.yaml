@@ -58,6 +58,14 @@ sections:
         handle: aktuell
         field: common.aktuell
       -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
+      -
         handle: related_programme
         field: common.entry
         config:
@@ -67,14 +75,6 @@ sections:
           create: false
           collections:
             - programme
-      -
-        handle: tags
-        field:
-          type: terms
-          taxonomies:
-            - tags
-          display: Tags
-          mode: select
       -
         handle: template
         field:

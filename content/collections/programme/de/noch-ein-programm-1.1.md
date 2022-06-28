@@ -69,7 +69,7 @@ sitemap_priority: 0.5
 aktuell: false
 select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656429616
+updated_at: 1656433121
 teaser_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 select_transition_theme: bird
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
@@ -115,4 +115,6 @@ add_section:
             type: text
             text: jajajaja
 template: single_page
+tags:
+  - chamber
 ---

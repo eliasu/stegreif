@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656424432
+updated_at: 1656436581
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -95,22 +95,6 @@ support_us_content:
                     entry: 27a37f82-40fa-4767-99b2-f3f0903f6136
                     type: button
                     enabled: true
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: asads
-          -
-            type: paragraph
-            attrs:
-              class: null
-          -
-            type: paragraph
-            attrs:
-              class: null
         reference_content: false
   -
     type: set

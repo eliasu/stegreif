@@ -75,17 +75,13 @@ sections:
           validate:
             - required
       -
-        handle: related_tags
+        handle: tags
         field:
           type: terms
           taxonomies:
             - tags
-          display: 'Related Tags'
+          display: Tags
           mode: select
-          instructions_position: above
-          listable: hidden
-          read_only: false
-          create: true
       -
         handle: related_programm
         field: common.entry

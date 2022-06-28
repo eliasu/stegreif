@@ -87,9 +87,9 @@ module.exports = {
 			gridTemplateColumns: {
 				'content-l': '5rem, 2.5rem, 2.5rem, 1fr, 5rem',
 				'content-s': '1rem, 1rem, 1rem, 1fr, 3rem',
-				'pill-l': 'repeat(auto-fit, minmax(26rem,1fr))',
-				'pill-m': 'repeat(auto-fit, minmax(20rem,1fr))',
-				'pill-s': 'repeat(auto-fit, minmax(16rem,1fr))',
+				'pill-l': 'repeat(auto-fill, minmax(26rem,1fr))',
+				'pill-m': 'repeat(auto-fill, minmax(20rem,1fr))',
+				'pill-s': 'repeat(auto-fill, minmax(16rem,1fr))',
 			},
 
 			spacing: {
