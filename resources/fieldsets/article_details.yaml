@@ -41,18 +41,3 @@ fields:
           fields:
             -
               import: bard_buttons
-        bard_quotes:
-          display: Quote
-          fields:
-            -
-              import: bard_quotes
-        bard_gallery:
-          display: Gallery
-          fields:
-            -
-              import: bard_gallery_details
-        bard_media:
-          display: Media
-          fields:
-            -
-              import: bard_media_details

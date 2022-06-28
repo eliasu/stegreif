@@ -8,10 +8,9 @@
 
 <!-- /components/_tags.antlers.html -->
 
-{{# tags #}}
-<div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
-    {{# if it is a production  #}}
-    {{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
+{{# if it is a production  #}}
+{{ if { select_content ? select_content.blueprint : blueprint } == "programme" }}
+    <div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
         
         {{# if its a production and has a related collection #}}
         {{ select_content ? select_content.related_reihe : related_reihe }}
@@ -24,25 +23,32 @@
         {{ else }}
             {{ partial:typography/tag class="m-0" color="dark" content="{ trans:strings.education }" }}
         {{ endif }}
+    </div>
 
 
-    {{# if it is a date  #}}
-    {{ elseif { select_content ? select_content.blueprint : blueprint } == "termine" }}
-        
-        {{# if its a date and has a related production #}}
-        {{ select_content ? select_content.related_programm : related_programm }}
+{{# if it is a date  #}}
+{{ elseif { select_content ? select_content.blueprint : blueprint } == "termine" }}
+    
+    {{# dont show tag container if there no related items #}}
+    {{ if select_content.related_programm || related_programm }}
+        <div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
             
-            {{# does the related production has related collection? #}}
-            {{ select_content ? select_content.related_reihe : related_reihe }}
-                {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="yellow" content="{ title }" }}
-            {{ /select_content ? select_content.related_reihe : related_reihe }}
-            
-            {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="green" content="{ title }" }}
-        {{ /select_content ? select_content.related_programm : related_programm }}
+            {{# if its a date and has a related production #}}
+            {{ select_content ? select_content.related_programm : related_programm }}
+                
+                {{# does the related production has related collection? #}}
+                {{ select_content ? select_content.related_reihe : related_reihe }}
+                    {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="yellow" content="{ title }" }}
+                {{ /select_content ? select_content.related_reihe : related_reihe }}
+                
+                {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="green" content="{ title }" }}
+            {{ /select_content ? select_content.related_programm : related_programm }}
+        </div>
+    {{ /if }}
 
-
-    {{# if it is a collection #}}
-    {{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
+{{# if it is a collection #}}
+{{ elseif { select_content ? select_content.blueprint : blueprint } == "reihen" }}
+    <div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">
         {{ partial:typography/tag class="m-0" color="yellow" content="{ trans:strings.collection }" }}
         
         {{# show all related productions #}}
@@ -59,6 +65,6 @@
                 {{ /related_programme }}
             </div>
         {{ /if }}
-    {{ /if }}
-</div>
+    </div>
+{{ /if }}
 <!-- End: /components/_tags.antlers.html -->

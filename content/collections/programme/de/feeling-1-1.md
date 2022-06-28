@@ -121,8 +121,6 @@ header_select: image
 related_termine:
   - dc8781a7-90b7-42f2-9af0-a608cc586c3a
   - a12c12e1-a158-4a32-89e9-5bb9297cc8eb
-  - 3ce5d2a5-7c7c-4e16-a3f1-3328c9c34fe6
-  - 786c8d48-12e0-4ccc-93c6-24cfd0382746
 select_transition_theme: bird
 teaser_text: 'Teaser Text Feeling onsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu'
 header_image: header_images/monk_600x600.jpg

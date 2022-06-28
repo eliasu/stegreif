@@ -40,26 +40,29 @@ article:
     content:
       -
         type: text
-        text: 'Überall dieselbe alte Leier. Das '
+        text: 'Überall dieselbe alte Leier. Das'
       -
         type: text
         marks:
           -
             type: bts_span
             attrs:
-              class: text-skin-primary
-        text: 'Layout ist fertig'
+              class: null
+        text: "\_Layout ist fertig"
       -
         type: text
-        text: ', der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. '
+        text: ', der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden.'
   -
-    type: heading
+    type: paragraph
     attrs:
-      level: 4
+      class: null
     content:
       -
         type: text
-        text: 'Kurz dazwischen'
+        marks:
+          -
+            type: bold
+        text: 'KURZ DAZWISCHEN mehr'
   -
     type: paragraph
     attrs:
@@ -150,11 +153,8 @@ select_transition_theme: bird
 aktuell: false
 select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656385177
+updated_at: 1656429721
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
-related_termine:
-  - 0e3e42f9-bdbf-4e7f-a680-a690511a9b12
-  - 408bcb20-9189-4c3c-81c3-9cd45334cd84
 template: single_page
 header_video: 'https://youtu.be/5mpafLYHVd0'
 ---

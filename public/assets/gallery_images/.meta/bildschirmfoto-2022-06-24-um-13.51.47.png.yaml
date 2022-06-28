@@ -1,4 +1,5 @@
-data: {  }
+data:
+  image_title: 'Ein Titel'
 size: 41214
 last_modified: 1656071510
 width: 922
