@@ -1,11 +1,27 @@
 <!-- /who_we_are.antlers.html -->
 
-<main class="relative w-full" id="content"> 
-    {{# modal for orchestra #}}
-    {{ collection:personen limit="1" }}
-        {{ partial:components/orchestra_modal  }}
-    {{ /collection:personen }}
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('modal', {
+            open: false,
+            title: "Headline",
+            description: "Description …",
+            showFunFact: false,
+            funFact: "Hier ein Fun Fact aus dem Store",
+            showLinks: false,
+            links: [],
+            teamTags: [],
+            image: {},
+            tester: "blue",
+        })
+    });
+</script>
 
+
+<main x-data @keyup.escape="$store.modal.open = false" class="relative w-full" id="content"> 
+    
+    {{ partial:components/orchestra_modal  }}
+    
     {{# Header #}}
     {{ partial:components/header social_icons="true" }}
 
@@ -32,6 +48,12 @@
             {{ partial:components/bard handle="{ article }" }}
         {{ /partial:layout/section }}
     {{ /add_section }}
+
+    {{# modal for orchestra #}}
+    {{# {{ collection:personen limit="1" }} #}}
+    {{# {{ partial:components/orchestra_modal  }} #}}
+    {{# {{ /collection:personen }} #}}
+
     
 </main>
 <!-- End: /who_we_are.antlers.html -->

@@ -1,14 +1,12 @@
 {{#
 	@name orchestra block
 	@desc The orchestra block component.
-
     @ parameters 
         show => (int - limits the displayed items falls back to unlimited)
         start => if start is set to "right" collection will start right
 #}}
 
 <!-- /components/_orchestra_block.antlers.html -->
-
 <div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
     
     <div class="flex flex-col gap-8">
@@ -20,7 +18,7 @@
             {{ taxonomy:team_tags show="all" }}
                 {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ title }" }}
             {{ /taxonomy:team_tags }}
-        </div>
+        </div> 
     </div>
     
     {{# team cards grid wrapper #}}
@@ -30,12 +28,20 @@
         {{ collection:personen }}
             
             {{# team card #}}
-            <button onClick='(function(){
-                document.querySelector("body").classList.add("overflow-hidden");
-                document.querySelector("#orchestra-modal").showModal();
-                })();' 
-                class="relative flex flex-col items-start p-4 cursor-pointer group">
-                
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = '{{title}}', 
+                    $store.modal.image = { url : '{{ glide:image preset='lg' }}', extension : '{{image.extension}}', mime_type : '{{image.mime_type}}', alt : '{{image.alt}}', focus : '{{image.focus | background_position}}', width : '{{image.width}}', height : '{{image.height}}', },
+                    $store.modal.description = '{{description}}',
+                    $store.modal.showFunFact = {{ fun_fact ? 'true' : 'false'}},
+                    $store.modal.funFact = '{{ fun_fact }}',
+                    $store.modal.showLinks = {{ links ? 'true' : 'false'}},
+                    $store.modal.links = [ {{ links }} { title : '{{ label }}', url : '{{ url }}' }{{!last ?= ','}} {{ /links }} ],
+                    $store.modal.teamTags = [ {{ team_tags }} { content : '{{ title }}', color : '{{ team_tag_type }}' }{{!last ?= ','}} {{ /team_tags }} ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
                 {{# tags  #}}
                 <div class="flex flex-col items-start">
                     {{ partial:typography/tag color="yellow" content="{ title }" }}

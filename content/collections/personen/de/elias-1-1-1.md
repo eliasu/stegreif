@@ -3,14 +3,13 @@ id: a2d34685-f13e-41a3-8f89-cc42a9075328
 blueprint: personen
 title: 'Hannah Herbertsonn'
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655772330
+updated_at: 1656343308
 thumbnail: personen/Bartosz2.jpg
 image: personen/anne-willem2.jpg
 description: 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente'
 team_tags:
   - klarinette
   - kuenstlerischer-beirat
-fun_fact: "Twenty years ago, i used to sleep with my cello, until i realized – despite it's woman shape."
 links:
   -
     label: Soundcloud
@@ -20,4 +19,5 @@ links:
     url: google.de
     type: button
     enabled: true
+fun_fact: 'Hier ein Funfact'
 ---

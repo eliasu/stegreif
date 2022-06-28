@@ -67,6 +67,13 @@
     .block-inset-reset > .block-in-1, 
     .block-inset-reset > .block-in-2, 
     .block-inset-reset > .block-full { @apply px-0; }
+
+    .svg-hover-right {
+        @apply [&>svg]:hover:translate-x-0.5 [&>svg]:motion-safe:transition-transform;
+    }
+    .svg-hover-left {
+        @apply [&>svg]:hover:-translate-x-0.5 [&>svg]:motion-safe:transition-transform;
+    }
 }
 
 @layer utilities {
@@ -85,6 +92,8 @@
 .open-burger > div:nth-child(3) {
     @apply -rotate-45 translate-x-[0.357rem] translate-y-[0.175rem] w-10;
 }
+
+[x-cloak] { display: none; }
 
 /* theming via css variables */
 .theme-dark {

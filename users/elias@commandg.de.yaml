@@ -29,6 +29,8 @@ preferences:
       after_save: continue_editing
     neuigkeiten:
       after_save: continue_editing
+    personen:
+      after_save: continue_editing
   taxonomies:
     team_tags:
       after_save: continue_editing

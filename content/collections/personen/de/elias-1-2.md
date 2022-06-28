@@ -3,14 +3,13 @@ id: 2e15ce4e-921e-4087-9a60-020e43fb7711
 blueprint: personen
 title: 'Herbert Steriner'
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1655772302
+updated_at: 1656343343
 thumbnail: personen/Bartosz1.jpg
 image: personen/anne-willem2.jpg
 description: 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente'
 team_tags:
   - bass
   - education
-fun_fact: "Twenty years ago, i used to sleep with my cello, until i realized – despite it's woman shape."
 links:
   -
     label: Soundcloud
@@ -20,4 +19,5 @@ links:
     url: google.de
     type: button
     enabled: true
+fun_fact: 'Hier ein Funfact'
 ---
