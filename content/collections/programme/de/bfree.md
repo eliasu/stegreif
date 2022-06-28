@@ -147,10 +147,10 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: true
+aktuell: false
 select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656218263
+updated_at: 1656385177
 related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
 related_termine:
   - 0e3e42f9-bdbf-4e7f-a680-a690511a9b12

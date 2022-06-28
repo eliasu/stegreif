@@ -8,7 +8,9 @@
 #}}
 
 <!-- /components/_productions_block.antlers.html -->
-<div class="flex flex-col gap-8 fluid-container">
+<div class="flex flex-col gap-8 fluid-container"
+    x-data="{ actual_programme : true, past_programme : false, actual_education : true, past_education : false, actual_reihen : true, past_reihen : false, digital : true, chamber : true }"
+>
 
     {{# productions headline #}}
     {{ if show_header }}
@@ -19,15 +21,15 @@
         {{# filter bar #}}
         <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
             <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.current }" }}
-                {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ trans:strings.past }" }}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" modal="actual_programme"}}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" modal="past_programme" }}
             </div>
             
             {{# dont display this block if its collections because they have no "tags" #}}
             {{ if from != "reihen"}}
                 <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Digital" }}
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base" label="Chamber" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="Digital" modal="digital"}}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="Chamber" modal="chamber" }}
                 </div>
             {{ /if }}
         </div>
@@ -36,14 +38,14 @@
     {{# all productions #}}
     <div class="flex flex-col gap-y-8">
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-        
-            {{# feature block left right #}}
-            {{ if index | %:2  }}
-                {{ partial:components/bard_feature alignment="{start ? 'left' : 'right'}" reference_content="true" feature_type="big" }}
-            {{ else }}
-                {{ partial:components/bard_feature alignment="{start ? 'right' : 'left'}" reference_content="true" feature_type="big" }}
-            {{ /if }}
-            
+            <div x-show="{{aktuell ? "actual_programme" : "past_programme" }}" x-transition>
+                {{# feature block left right #}}
+                {{ if index | %:2  }}
+                    {{ partial:components/bard_feature alignment="{start ? 'left' : 'right'}" reference_content="true" feature_type="big" }}
+                {{ else }}
+                    {{ partial:components/bard_feature alignment="{start ? 'right' : 'left'}" reference_content="true" feature_type="big" }}
+                {{ /if }}
+            </div>
         {{ /collection }}
     </div>
 

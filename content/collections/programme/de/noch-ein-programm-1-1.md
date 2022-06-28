@@ -1,7 +1,7 @@
 ---
 id: 63eefbb3-f0bf-4e40-878c-6c18c4774209
 blueprint: programme
-title: "#'Flying Lotus "
+title: "#'Flying Lotus"
 header_theme_selector: dark
 theme_selector: dark
 article:
@@ -18,10 +18,10 @@ seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
-aktuell: true
+aktuell: false
 select_type: programm
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656085532
+updated_at: 1656385202
 related_termine:
   - 18c74337-dd9e-44f3-b42a-a7f3b1d98afb
   - c2fd6687-12cd-46aa-bc74-de290817142f

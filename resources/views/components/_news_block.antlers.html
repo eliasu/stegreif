@@ -22,7 +22,7 @@
     <div class="grid grid-cols-1 md:px-12 gap-x-12 xs:grid-cols-2 xl:grid-cols-3 gap-y-20 2xl:gap-x-20 lg:px-20">
         
         {{# all news #}}
-        {{ collection:neuigkeiten limit="{show}" }}
+        {{ collection:neuigkeiten limit="{show}" sort="date:desc" }}
             <div class="flex flex-col items-start">
 
                 {{# date tag #}}
