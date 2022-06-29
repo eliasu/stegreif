@@ -13,12 +13,14 @@
             digital: true,
             chamber: true,
             actual: true,
-            past: false,
+            past: true,
  
             toggle_digital() { if(this.chamber) this.digital = !this.digital; },
             toggle_chamber() { if(this.digital) this.chamber = !this.chamber; },
             toggle_actual() { this.actual = true; this.past = false },
             toggle_past() { this.past = true; this.actual = false },
+
+            is_current() { },
         }))
     })
 </script>
@@ -53,10 +55,9 @@
     {{ /if }}
 
     {{# all productions #}}
-    <div class="flex flex-col gap-y-8">
+    <div class="flex flex-col gap-y-8 tester">
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-            <div x-show="{{ if tags }}{{ tags }}{{slug}},{{ /tags }}{{ /if }}{{aktuell ? 'actual' : 'past'}}"
-            x-transition>
+            <div x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}" x-transition>
                 {{# feature block left right #}}
                 {{ if index | %:2  }}
                     {{ partial:components/bard_feature alignment="{start ? 'left' : 'right'}" reference_content="true" feature_type="big" }}
