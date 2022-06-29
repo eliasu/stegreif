@@ -1,7 +1,7 @@
 ---
 id: fcbaeb90-5869-4399-bb7b-1567d41d4773
 blueprint: programme
-title: 'Education III '
+title: 'Education III'
 theme_selector_header: dark
 image: header_images/monk_600x600.jpg
 theme_selector: dark
@@ -110,12 +110,12 @@ seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
-aktuell: true
+aktuell: false
 select_type: programm
 tags:
   - chamber
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656085530
+updated_at: 1656521936
 header_theme_selector: dark
 header_select: image
 related_termine:

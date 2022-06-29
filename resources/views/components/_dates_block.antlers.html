@@ -60,7 +60,7 @@
             
             {{# wrapper to get tags with links (not inside another a tag)  #}}
             <div class="relative group" 
-            {{ if tags }}x-show="{{ tags }}{{slug}}{{!last ?= ","}}{{ /tags }}" 
+            {{ if tags }}x-show="{{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }}" 
             x-transition {{ /if }} 
             >
 
