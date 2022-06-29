@@ -8,9 +8,9 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656217954
+updated_at: 1656515119
 header_theme_selector: dark
-header_select: video
+header_select: image
 theme_selector_programme: dark
 section_headline_programme: Programme
 theme_selector_reihen: yellow
@@ -39,5 +39,5 @@ add_section:
             type: text
             text: 'Hier ein Test'
 template: what_we_do_page
-header_video: 'https://youtu.be/HSsqzzuGTPo'
+header_image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
 ---

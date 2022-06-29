@@ -3,13 +3,15 @@ id: e7d336c4-28fd-4ef0-93f4-25d802bca648
 blueprint: personen
 title: 'Alexande Goelbock'
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656346038
+updated_at: 1656474973
 thumbnail: personen/Bartosz1.jpg
 image: personen/Bartosz2.jpg
 description: 'Das ein anderer Text'
 team_tags:
+  - bass
   - gitarre
   - vorstand
+  - education
 links:
   -
     label: asd

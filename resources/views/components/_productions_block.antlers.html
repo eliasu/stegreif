@@ -6,10 +6,27 @@
         show => (int - limits the displayed items falls back to unlimited)
         start => if start is set to "right" collection will start right
 #}}
+<!-- filter script helper -->
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('filter', () => ({
+            digital: true,
+            chamber: true,
+            actual: true,
+            past: false,
+ 
+            toggle_digital() { if(this.chamber) this.digital = !this.digital; },
+            toggle_chamber() { if(this.digital) this.chamber = !this.chamber; },
+            toggle_actual() { this.actual = true; this.past = false },
+            toggle_past() { this.past = true; this.actual = false },
+        }))
+    })
+</script>
+<!-- End: filter script helper -->
 
 <!-- /components/_productions_block.antlers.html -->
 <div class="flex flex-col gap-8 fluid-container"
-    x-data="{ actual : true, past : false, digital : true, chamber : true }"
+    x-data="filter"
 >
 
     {{# productions headline #}}
@@ -28,8 +45,8 @@
             {{# dont display this block if its collections because they have no "tags" #}}
             {{ if from != "reihen"}}
                 <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="Digital" modal="digital"}}
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="Chamber" modal="chamber" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" modal="digital"}}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" modal="chamber" }}
                 </div>
             {{ /if }}
         </div>

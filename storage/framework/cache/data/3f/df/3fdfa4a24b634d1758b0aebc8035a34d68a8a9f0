@@ -1,0 +1,2535 @@
+9999999999s:109284:"<!-- /layout.antlers.html -->
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="stylesheet" href="/css/site.css?id=d8eea48be6d33e44a1c41f991ec0e713">
+        <script src="/js/site.js?id=de4523321af9f0ae7b076f89475ae754" defer></script>
+        
+        <!-- /snippets/_seo.antlers.html -->
+
+<title>
+    
+    Wer wir sind
+     &#124; 
+    
+    Stegreif
+</title>
+
+
+
+
+
+
+    <meta name="robots" content="noindex, nofollow">
+
+
+
+
+    
+        
+            <link rel="alternate" hreflang="de-DE" href="http://stegreif.test/wer-wir-sind">
+        
+    
+
+
+
+
+    
+        <link rel="canonical" href="http://stegreif.test/wer-wir-sind">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="Stegreif">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+
+    <meta property="og:title" content="Wer wir sind">
+
+
+
+
+
+
+
+
+
+<!-- End: /snippets/_seo.antlers.html -->
+
+        <!-- /snippets/_browser_appearance.antlers.html -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- End: /snippets/_browser_appearance.antlers.html -->
+
+    </head>
+    
+    <body class="flex flex-col min-h-screen bg-yellow selection:bg-skin-accent">
+        <!-- /snippets/_noscript.antlers.html -->
+<noscript>
+    <style>
+        [x-cloak] {
+            display: revert !important;
+        }
+    </style>
+    <p class="relative z-50 py-3 px-4 bg-gray-100 border-b border-gray-200 text-center font-bold text-xs text-gray-600">This website requires Javascript for some parts to function properly. Your experience may vary.</p>
+</noscript>
+<!-- End: /snippets/_noscript.antlers.html -->
+
+        
+        <!-- /components/_toolbar.antlers.html -->
+
+    <aside
+        class="fixed flex text-xs divide-x shadow-sm theme-light z-nav top-1 right-1 divide-light divide-solid motion-safe:transition-opacity hover:opacity-100"
+        x-data="{ toolbarVisible: $persist(true).as('toolbarVisible') }"
+        x-ref="toolbar"
+        :class="{ 'opacity-100': toolbarVisible, 'opacity-0': !toolbarVisible }"
+        x-cloak
+    >
+        <span title="Current Tailwind breakpoint" class="flex items-center p-2 space-x-1 text-green bg-light">
+            <svg class="w-4 h-4 fill-current" alt="" aria-hidden="true" viewBox="0 0 496.8 496.8"><path d="M118 377.8l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4z"/><path d="M486 107.4l-96-96a39.7 39.7 0 00-54.4 0L10.8 334.6a39.6 39.6 0 000 54.4l96 96c8 8 17.6 11.2 27.2 11.2 9.6 0 19.2-3.2 25.6-11.2L486 161.8c14.4-16 14.4-40 0-54.4zm-24 30.4L137.2 462.6c-3.2 3.2-4.8 3.2-8 0l-96-96c-1.6-1.6-1.6-6.4 0-8L356.4 33.8c1.6-1.6 3.2-1.6 4.8-1.6 1.6 0 3.2 0 4.8 1.6l96 96c1.6 1.6 1.6 6.4 0 8z"/><path d="M258.8 237l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4zm-72 22.4l-40-38.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l40 38.4c3.2 3.2 6.4 4.8 11.2 4.8s9.6-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4zm-46.4 46.4L102 267.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l38.4 38.4c3.2 3.2 6.4 4.8 11.2 4.8 4.8 0 8-1.6 11.2-4.8 6.4-6.4 6.4-16 0-22.4zm187.2-187.2l-38.4-38.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l38.4 38.4c3.2 3.2 6.4 4.8 11.2 4.8 4.8 0 9.6-1.6 11.2-4.8 6.4-6.4 6.4-16 0-22.4zM281.2 165l-38.4-38.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l38.4 38.4c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4zm118.4-68.8l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8 4.8 0 8-1.6 11.2-4.8 6.4-6.4 6.4-16 0-22.4z"/></svg>
+            <span class="breakpoint"></span>
+        </span>
+
+        
+            <a href="http://stegreif.test/cp/collections/pages/entries/8f3d1e25-6ad8-4f1f-9a83-d1aec94ca3d2" title="Edit entry in CP" aria-label="Edit entry in CP" target="_blank" class="flex items-center p-2 space-x-1 text-dark bg-light hover:text-light hover:bg-green">
+                <svg class="w-4 h-4 fill-current" alt="" aria-hidden="true" viewBox="0 0 490.3 490.3"><path d="M313.5 152.4L82.7 383.3a17.2 17.2 0 0012.1 29.3c4.4 0 8.8-1.7 12.1-5l230.8-230.8a17.2 17.2 0 00-24.2-24.4zm117.6 39.5c4.4 0 8.8-1.7 12.1-5l25.2-25.2a74.5 74.5 0 000-105.4L434 21.9a74.4 74.4 0 00-105.4 0L303.4 47a17.2 17.2 0 000 24.3L419 187c3.3 3.2 7.7 4.9 12.1 4.9zM353 45.9a40 40 0 0157 0l34.4 34.5a40.3 40.3 0 010 56.9l-13.2 13.2L339.7 59 353 46z"/><path d="M162.8 467.2l243.5-243.5a17.2 17.2 0 00-24.3-24.3L142.7 438.9 37.1 453l14.2-105.6L280 118.9a17.2 17.2 0 00-24.3-24.3L23 327.4a17 17 0 00-4.9 9.8L.1 470.8a17.1 17.1 0 0017 19.4l2.3-.2L153 472a16 16 0 009.8-4.8z"/></svg>
+                <span>Edit</span>
+            </a>
+        
+        <button
+            @click="toolbarVisible = !toolbarVisible"
+            title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="flex items-center justify-center px-2 bg-light hover:text-light hover:bg-green"
+        >
+            <div x-show="!toolbarVisible">
+                <svg class="w-5 h-5 fill-current" alt="" aria-hidden="true" viewBox="0 0 152 88"><path d="M116.4 53.3l6.6 12.2a3.5 3.5 0 106.3-3.4l-6.6-12.2a3.6 3.6 0 10-6.3 3.4zM97 59.5l.8-.1c1.6 0 3 1 3.5 2.7l3.4 13.5a3.6 3.6 0 11-7 1.7l-3.3-13.5c-.5-1.9.7-3.8 2.6-4.3zm-51.8 7.8a3.6 3.6 0 117 1.7l-3.5 13.5a3.5 3.5 0 01-4.3 2.6c-2-.5-3-2.4-2.6-4.3l3.4-13.5zm27.5-.9c2 0 3.5 1.6 3.5 3.6v13.8a3.6 3.6 0 01-7 0V70c0-2 1.5-3.6 3.5-3.6zm77.6-25.1a3.6 3.6 0 01-2.5 6.1c-.9 0-1.7-.3-2.4-1-.2-.1-5.2-4.8-12.9-10.7-16.1 11.8-41.1 26.4-66 26.4C42 62.1 24.1 48.4 13 36.7c-4 5-6.4 8.8-6.5 9a3.6 3.6 0 01-4.8 1.2 3.5 3.5 0 01-1.3-4.8c.3-.6 3.1-5.1 7.8-10.9A94 94 0 01.5 20.4c-1-1.7-.4-3.9 1.3-4.8 1.7-1 3.8-.4 4.8 1.3.1 0 2.5 3.9 6.5 9C24.1 14 42.1.3 66.4.3c25 0 50 14.6 66.1 26.4A186 186 0 00145.4 16a3.6 3.6 0 015 0 3.6 3.6 0 01-.1 5.1c-.6.5-5 4.7-11.9 10 6.8 5.4 11.4 9.6 11.9 10zm-24-10c-15.4-11-38-23.8-59.9-23.8-21.8 0-38.4 13-48.5 23.8C28.1 42 44.6 55 66.4 55c22 0 44.5-12.8 60-23.7zM19 51.9a3.5 3.5 0 013-1.9 3.6 3.6 0 013.2 5.3l-6.6 12.2a3.6 3.6 0 01-6.2-3.4L19 52z"/></svg>
+            </div>
+            <div x-show="toolbarVisible">
+                <svg class="w-5 h-5 fill-current" alt="" aria-hidden="true" viewBox="0 0 152 87"><path d="M116.4 34.8l6.6-12.2a3.5 3.5 0 116.3 3.3l-6.6 12.3a3.6 3.6 0 11-6.3-3.4zM97 28.5l.8.2c1.6 0 3-1.1 3.5-2.7l3.4-13.5a3.6 3.6 0 10-7-1.8l-3.3 13.5c-.5 2 .7 3.9 2.6 4.3zm-51.8-7.7a3.6 3.6 0 107-1.8L48.6 5.5A3.5 3.5 0 0044.4 3c-2 .5-3 2.5-2.6 4.3l3.4 13.6zm27.5.8c2 0 3.5-1.6 3.5-3.5V4a3.6 3.6 0 00-7 0v14c0 2 1.5 3.5 3.5 3.5zM150.3 66a3.6 3.6 0 01-2.5 6.1c-.9 0-1.7-.3-2.4-1-.2-.1-5.2-4.8-12.9-10.6-16.1 11.7-41.1 26.4-66 26.4C42 86.8 24.1 73 13 61.3c-4 5-6.4 8.8-6.5 9a3.6 3.6 0 01-4.8 1.2 3.5 3.5 0 01-1.3-4.8c.3-.5 3.1-5 7.8-10.8A94 94 0 01.5 45c-1-1.7-.4-3.8 1.3-4.8 1.7-1 3.8-.4 4.8 1.3.1 0 2.5 4 6.5 9 11-11.8 29-25.5 53.3-25.5 25 0 50 14.6 66.1 26.4a186 186 0 0012.9-10.7 3.6 3.6 0 015 .1 3.6 3.6 0 01-.1 5c-.6.5-5 4.7-11.9 10 6.8 5.4 11.4 9.6 11.9 10.1zm-24-10C111 44.9 88.4 32 66.5 32S28 45 18 55.9c10.2 10.8 26.7 23.8 48.5 23.8 22 0 44.5-12.9 60-23.8zM19 36a3.5 3.5 0 003 1.9 3.6 3.6 0 003.2-5.3l-6.6-12.2a3.6 3.6 0 00-6.2 3.4L19 36.1zm31 20a18 18 0 1036 0 18 18 0 00-36 0z"/></svg>
+            </div>
+        </button>
+
+        <button
+            @click="$refs.toolbar.remove()"
+            title="Remove toolbar" aria-label="Remove toolbar" class="flex items-center justify-center px-2 bg-light hover:text-light hover:bg-green"
+        >
+            <svg class="w-4 h-4 text-yellow-800 stroke-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M100.625 122.5h-61.25a8.75 8.75 0 01-8.75-8.75V35h78.75v78.75a8.75 8.75 0 01-8.75 8.75zM56.875 96.25v-35M83.125 96.25v-35M13.125 35h113.75M83.125 17.5h-26.25a8.75 8.75 0 00-8.75 8.75V35h43.75v-8.75a8.75 8.75 0 00-8.75-8.75z" stroke-width="8.749995"/></g></svg>
+        </button>
+    </aside>
+
+<!-- End: /components/_toolbar.antlers.html -->
+
+        
+        
+        
+        <!-- /layout/_navbar.antlers.html -->
+<header class="fixed w-full z-nav top-4 lg:top-20">
+    <div class="flex items-start justify-between fluid-container">
+        <div class="flex">
+            
+            
+            
+            
+            
+            <!-- /components/_logo.antlers.html -->
+	<!-- /components/_button.antlers.html -->
+
+
+
+
+    <a 
+        class = "group flex "
+        
+        
+        href="/"
+
+title="Stegreif"
+aria-label="Stegreif"
+
+    >
+
+    
+    
+        <div class="flex items-center h-8 gap-4 px-4 text-xl 2xl:text-[1.4rem] tracking-normal font-bold whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-light hover:bg-yellow mr-1">
+            Stegreif
+        </div>
+    
+
+    
+    
+            
+    </a>
+
+<!-- End: /components/_button.antlers.html -->
+<!-- End: /components/_logo.antlers.html -->
+        </div>
+        
+        
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="justify-end hidden lg:flex lg:flex-wrap" aria-label="Haupt Navigation">
+    
+    <div class="flex items-center h-8 px-6 bg-light">
+        <ul class="flex items-center gap-[2vw] text-darkblue">
+            
+            
+            
+                
+                    <li class="relative">
+                        <a class="text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap text-darkblue "href="/termine">
+                            Termine
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="relative">
+                        <a class="text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap text-darkblue "href="/was-wir-tun">
+                            Was wir tun
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="relative">
+                        <a class="text-lg leading-s block font-extrabold uppercase hover:text-yellow focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap text-green "href="/wer-wir-sind">
+                            Wer wir sind
+                        </a>
+                    </li>
+                
+            
+                
+            
+        </ul>
+
+        
+        <div class="flex gap-2 ml-8">
+            
+                <a
+                    href="http://stegreif.test/wer-wir-sind"
+                    aria-label="Stegreif"
+                    class="text-yellow block px-1 py-2 -mx-1 text-xs font-bold tracking-wide uppercase whitespace-nowrap hover:text-green focus:outline-none focus-visible:ring-2 ring-primary"
+                >
+                    de
+                </a>
+            
+                <a
+                    href="http://stegreif.test/en"
+                    aria-label="Translations"
+                    class=" block px-1 py-2 -mx-1 text-xs font-bold tracking-wide uppercase whitespace-nowrap hover:text-green focus:outline-none focus-visible:ring-2 ring-primary"
+                >
+                    en
+                </a>
+            
+        </div>
+    </div>
+    
+    
+    
+        
+    
+        
+    
+        
+    
+        
+            <!-- /components/_button.antlers.html -->
+
+
+
+
+    <a 
+        class = "group flex "
+        
+        
+        href="/unterstuetzen"
+
+title="Unterstützen"
+aria-label="Unterstützen"
+
+    >
+
+    
+    
+        <div class="flex  items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base svg-hover-right">
+            Unterstützen
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M26.1706 8L21.5837 12.5869L22.9979 14.0011L28.5848 8.41423L28.5858 8.41525L30 7.00104L29.999 7.00002L30 6.99901L28.5858 5.58479L28.5848 5.5858L22.9979 -0.00105286L21.5837 1.41316L26.1705 6L2.38419e-07 6L0 8L26.1706 8Z"/> </svg>
+        </div>
+
+
+    
+    
+            
+    </a>
+
+<!-- End: /components/_button.antlers.html -->
+        
+    
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->
+
+
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    x-data="{ mobileNavOpen: false }"
+    class="flex h-12 lg:hidden"
+    aria-label="Haupt Navigation"
+>
+    <button
+        @click.prevent="mobileNavOpen = !mobileNavOpen"
+        class="relative z-20 w-12 h-12 px-2 py-3 text-darkblue bg-light focus-visible:ring-2 ring-primary ring-offset-2 hover:bg-green hover:text-light motion-safe:transition group"
+        :aria-label="mobileNavOpen ? 'Navigation schließen' : 'Navigation öffnen'"
+        :aria-expanded="mobileNavOpen"
+    >
+        
+        <div class="relative flex flex-col items-center justify-between w-full h-full origin-bottom-right rotate-0" :class="mobileNavOpen ? 'open-burger' : ''">
+            <div class="relative bg-darkblue h-[2px] w-full origin-center-left group-hover:bg-light motion-safe:transition" ></div>
+            <div class="relative bg-darkblue h-[2px] w-8 origin-center group-hover:bg-light motion-safe:transition-[width_background-color]" ></div>
+            <div class="relative bg-darkblue h-[2px] w-full origin-center-left group-hover:bg-light motion-safe:transition" ></div>
+        </div>
+    </button>
+
+    <div
+        class="fixed inset-0 z-10 flex flex-col items-start justify-between p-4 overflow-hidden bg-light motion-safe:transition"
+        x-show="mobileNavOpen"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+        x-trap.inert.noscroll="mobileNavOpen"
+        x-cloak
+    >   
+
+        
+        <div class="flex gap-1">
+            
+                <a
+                    href="http://stegreif.test/wer-wir-sind"
+                    aria-label="Stegreif"
+                    class="bg-yellow text-light h-12 w-12 flex justify-center items-center font-bold tracking-wide uppercase whitespace-nowrap hover:text-green"                >
+                    de
+                </a>
+            
+                <a
+                    href="http://stegreif.test/en"
+                    aria-label="Translations"
+                    class="bg-darkblue text-light h-12 w-12 flex justify-center items-center font-bold tracking-wide uppercase whitespace-nowrap hover:text-green"                >
+                    en
+                </a>
+            
+        </div>
+        
+        
+        <ul class="flex flex-col items-start gap-4">
+            
+                <a class="text-4xl font-normal hover:translate-x-4 hover:text-yellow focus:translate-x-4 focus:text-yellow motion-safe:transition" href="/" aria-label="Home">Home</a>
+            
+                <a class="text-4xl font-normal hover:translate-x-4 hover:text-yellow focus:translate-x-4 focus:text-yellow motion-safe:transition" href="/termine" aria-label="Termine">Termine</a>
+            
+                <a class="text-4xl font-normal hover:translate-x-4 hover:text-yellow focus:translate-x-4 focus:text-yellow motion-safe:transition" href="/was-wir-tun" aria-label="Was wir tun">Was wir tun</a>
+            
+                <a class="text-4xl font-normal hover:translate-x-4 hover:text-yellow focus:translate-x-4 focus:text-yellow motion-safe:transition" href="/wer-wir-sind" aria-label="Wer wir sind">Wer wir sind</a>
+            
+                <a class="text-4xl font-normal hover:translate-x-4 hover:text-yellow focus:translate-x-4 focus:text-yellow motion-safe:transition" href="/unterstuetzen" aria-label="Unterstützen">Unterstützen</a>
+            
+        </ul>
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->
+
+
+    </div>
+</header>
+<!-- End: /layout/_navbar.antlers.html -->
+
+        <!-- /who_we_are.antlers.html -->
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('modal', {
+            open: false,
+            title: "Headline",
+            description: "Description …",
+            showFunFact: false,
+            funFact: "Hier ein Fun Fact aus dem Store",
+            showLinks: false,
+            links: [],
+            teamTags: [],
+            image: {},
+            tester: "blue",
+        })
+    });
+</script>
+
+
+<main x-data @keyup.escape="$store.modal.open = false" class="relative w-full" id="content"> 
+    
+    <!-- /components/_orchestra_modal.antlers.html -->
+
+<div class="fixed inset-4 lg:inset-8 z-nav" x-data x-show="$store.modal.open" x-cloak x-transition :aria-expanded="$store.modal.open" x-trap.inert.noscroll="$store.modal.open" @click.outside="$store.modal.open = false" >
+        
+    <div class="relative grid w-full h-full overflow-y-auto theme-dark lg:grid-rows-1 lg:grid-cols-2 bg-darkblue">
+
+        
+        <div class="fixed p-4 lg:hidden md:p-8">
+            <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        @click.prevent="$store.modal.open = false"
+        
+
+title="Zurück"
+aria-label="Zurück"
+
+    >
+
+    
+    
+        <div class="flex-row-reverse relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-left">
+			Zurück
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M3.82947 6.00004L8.41635 1.41316L7.00214 -0.00105286L1.41525 5.58583L1.41421 5.58479L0 6.999L0.00103819 7.00004L4.50611e-05 7.00104L1.41426 8.41525L1.41525 8.41426L7.00209 14.0011L8.4163 12.5869L3.82947 8.00004L30 8.00005V6.00005L3.82947 6.00004Z"/> </svg>
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+        </div>
+
+        
+        <div class="h-full">
+            <img
+                class="object-cover w-full h-full max-h-[50vh] lg:max-h-screen"
+                :style="{ 'object-position': $store.modal.image.focus }"
+                :src="$store.modal.image.url"
+                :alt="$store.modal.image.alt"
+                :width="$store.modal.image.width"
+                :height="$store.modal.image.height"
+                loading="lazy">
+        </div>
+
+        
+        <div class="flex flex-col items-start justify-between h-full gap-20 p-4 md:p-8 bg-darkblue">
+            
+            
+            <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex hidden lg:block"
+        
+        @click.prevent="$store.modal.open = false"
+        
+
+title="Zurück"
+aria-label="Zurück"
+
+    >
+
+    
+    
+        <div class="flex-row-reverse relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-left">
+			Zurück
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M3.82947 6.00004L8.41635 1.41316L7.00214 -0.00105286L1.41525 5.58583L1.41421 5.58479L0 6.999L0.00103819 7.00004L4.50611e-05 7.00104L1.41426 8.41525L1.41525 8.41426L7.00209 14.0011L8.4163 12.5869L3.82947 8.00004L30 8.00005V6.00005L3.82947 6.00004Z"/> </svg>
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+
+            
+            <div class="flex flex-col items-start gap-6 md:gap-8">
+                
+                <div class="flex items-start">
+                    <template x-for="teamTag in $store.modal.teamTags">
+                        
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		
+		
+		"
+	x-text="teamTag.content"
+                            :class="{ 'bg-green text-light' : teamTag.color == 'green', 'bg-yellow text-darkblue' : teamTag.color == 'yellow', 'bg-darkblue text-light' : teamTag.color == 'dark' }"
+>Test</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    </template>
+                </div>
+
+                
+                <!-- /typography/_h3.antlers.html -->
+<h3  x-text="$store.modal.title"></h3>
+<!-- End: /typography/_h3.antlers.html -->
+                
+                
+                <!-- /typography/_p.antlers.html -->
+<p class="mt-0 last:mb-0 " x-text="$store.modal.description"></p>
+<!-- End: /typography/_p.antlers.html -->
+
+            </div>
+
+            
+            <div class="flex flex-col gap-8" x-show="$store.modal.showFunFact || $store.modal.showFunFact">
+                
+                
+                <div class="flex flex-col items-start" x-show="$store.modal.showFunFact">
+                    <!-- /typography/_h6.antlers.html -->
+<h6 class='mb-2 text-yellow' >Fun Fact</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                    <!-- /typography/_p.antlers.html -->
+<p class="mt-0 last:mb-0 mb-8" x-text="$store.modal.funFact"></p>
+<!-- End: /typography/_p.antlers.html -->
+
+                </div>
+                
+                
+                <div class="flex flex-col items-start" x-show="$store.modal.showLinks">
+                    
+                    
+                    <!-- /typography/_h6.antlers.html -->
+<h6 class='mb-2 text-yellow' >Appart from Stegreif</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                    
+                    
+                    <div class="flex gap-8">
+                        <template x-for="link in $store.modal.links">
+                            
+                            <!-- /components/_button.antlers.html -->
+
+
+
+
+    <a 
+        class = "group flex "
+        
+        :href="link.url"
+                                target="_blank"
+                                :title="link.title"
+                                :aria-label="link.title"
+        href="/wer-wir-sind"
+
+title="noLabel"
+aria-label="noLabel"
+
+    >
+
+    
+    
+        <div class="relative flex items-center h-8 gap-4 px-2 font-extrabold uppercase cursor-pointer pointer-events-auto text-md md:text-lg whitespace-nowrap text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			<span class="text-inherit" x-text="link.title"></span>
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M26.1706 8L21.5837 12.5869L22.9979 14.0011L28.5848 8.41423L28.5858 8.41525L30 7.00104L29.999 7.00002L30 6.99901L28.5858 5.58479L28.5848 5.5858L22.9979 -0.00105286L21.5837 1.41316L26.1705 6L2.38419e-07 6L0 8L26.1706 8Z"/> </svg>
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+        
+        
+    
+    
+            
+    </a>
+
+<!-- End: /components/_button.antlers.html -->
+                        </template>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: /components/_orchestra_modal.antlers.html -->
+    
+    
+    <!-- /components/_header.antlers.html -->
+
+
+  
+              
+
+
+    <section class="header-dark overflow-hidden flex flex-col relative z-front h-header">
+        
+        
+        
+        <div class="relative flex flex-col justify-end h-screen gap-10 py-4 lg:py-20 fluid-container">
+            
+            
+            <img src="/site_assets/logos/logo_for_dark.png" class="absolute -top-6 left-4 lg:top-6 lg:left-20" alt="Stegreif"/>
+            
+            
+            <div class="flex flex-col gap-4">
+                
+                
+                
+                
+                <!-- /typography/_h1.antlers.html -->
+<h1 class='text-skin-primary' >Wer wir sind</h1>
+<!-- End: /typography/_h1.antlers.html -->
+
+            </div>
+            
+            
+            <div class="flex flex-col flex-wrap md:flex-row-reverse md:justify-end gap-x-20 gap-y-10">
+                
+                
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                    <!-- /components/_button.antlers.html -->
+
+
+
+
+    <a 
+        class = "group flex "
+        
+        
+        href="google.de"
+
+title="Nächste Termine"
+aria-label="Nächste Termine"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent svg-hover-right">
+            Nächste Termine
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M26.1706 8L21.5837 12.5869L22.9979 14.0011L28.5848 8.41423L28.5858 8.41525L30 7.00104L29.999 7.00002L30 6.99901L28.5858 5.58479L28.5848 5.5858L22.9979 -0.00105286L21.5837 1.41316L26.1705 6L2.38419e-07 6L0 8L26.1706 8Z"/> </svg>
+            
+            
+            <div class="h-0.5 bg-skin-primary motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+    
+            
+    </a>
+
+<!-- End: /components/_button.antlers.html -->
+                    <!-- /components/_button.antlers.html -->
+
+
+
+
+    <a 
+        class = "group flex "
+        
+        
+        href="google.de"
+
+title="Aktuelle Programme"
+aria-label="Aktuelle Programme"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent svg-hover-right">
+            Aktuelle Programme
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M26.1706 8L21.5837 12.5869L22.9979 14.0011L28.5848 8.41423L28.5858 8.41525L30 7.00104L29.999 7.00002L30 6.99901L28.5858 5.58479L28.5848 5.5858L22.9979 -0.00105286L21.5837 1.41316L26.1705 6L2.38419e-07 6L0 8L26.1706 8Z"/> </svg>
+            
+            
+            <div class="h-0.5 bg-skin-primary motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+    
+            
+    </a>
+
+<!-- End: /components/_button.antlers.html -->
+                </div>
+
+                
+                
+                    <div class="flex gap-8">
+                        
+                            <a class="w-8 h-8 text-skin-base hover:text-skin-accent focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.facebook.com/tester" rel="noopener" aria-label="Stegreif on Facebook" target="_blank"><svg class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 32 32"> <path d="M32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 23.9859 5.85094 30.6053 13.5 31.8056V20.625H9.4375V16H13.5V12.475C13.5 8.465 15.8888 6.25 19.5434 6.25C21.2934 6.25 23.125 6.5625 23.125 6.5625V10.5H21.1075C19.12 10.5 18.5 11.7334 18.5 13V16H22.9375L22.2281 20.625H18.5V31.8056C26.1491 30.6053 32 23.9859 32 16Z"/> </svg></a>
+                        
+                            <a class="w-8 h-8 text-skin-base hover:text-skin-accent focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.instagram.com/test" rel="noopener" aria-label="Stegreif on Instagram" target="_blank"><svg class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 32 32"> <path d="M16 2.88125C20.275 2.88125 20.7812 2.9 22.4625 2.975C24.025 3.04375 24.8687 3.30625 25.4312 3.525C26.175 3.8125 26.7125 4.1625 27.2687 4.71875C27.8312 5.28125 28.175 5.8125 28.4625 6.55625C28.6812 7.11875 28.9438 7.96875 29.0125 9.525C29.0875 11.2125 29.1063 11.7188 29.1063 15.9875C29.1063 20.2625 29.0875 20.7688 29.0125 22.45C28.9438 24.0125 28.6812 24.8563 28.4625 25.4188C28.175 26.1625 27.825 26.7 27.2687 27.2563C26.7062 27.8188 26.175 28.1625 25.4312 28.45C24.8687 28.6688 24.0187 28.9313 22.4625 29C20.775 29.075 20.2688 29.0938 16 29.0938C11.725 29.0938 11.2188 29.075 9.5375 29C7.975 28.9313 7.13125 28.6688 6.56875 28.45C5.825 28.1625 5.2875 27.8125 4.73125 27.2563C4.16875 26.6938 3.825 26.1625 3.5375 25.4188C3.31875 24.8563 3.05625 24.0063 2.9875 22.45C2.9125 20.7625 2.89375 20.2563 2.89375 15.9875C2.89375 11.7125 2.9125 11.2063 2.9875 9.525C3.05625 7.9625 3.31875 7.11875 3.5375 6.55625C3.825 5.8125 4.175 5.275 4.73125 4.71875C5.29375 4.15625 5.825 3.8125 6.56875 3.525C7.13125 3.30625 7.98125 3.04375 9.5375 2.975C11.2188 2.9 11.725 2.88125 16 2.88125ZM16 0C11.6562 0 11.1125 0.01875 9.40625 0.09375C7.70625 0.16875 6.5375 0.44375 5.525 0.8375C4.46875 1.25 3.575 1.79375 2.6875 2.6875C1.79375 3.575 1.25 4.46875 0.8375 5.51875C0.44375 6.5375 0.16875 7.7 0.09375 9.4C0.01875 11.1125 0 11.6562 0 16C0 20.3438 0.01875 20.8875 0.09375 22.5938C0.16875 24.2938 0.44375 25.4625 0.8375 26.475C1.25 27.5313 1.79375 28.425 2.6875 29.3125C3.575 30.2 4.46875 30.75 5.51875 31.1562C6.5375 31.55 7.7 31.825 9.4 31.9C11.1062 31.975 11.65 31.9937 15.9937 31.9937C20.3375 31.9937 20.8813 31.975 22.5875 31.9C24.2875 31.825 25.4563 31.55 26.4688 31.1562C27.5188 30.75 28.4125 30.2 29.3 29.3125C30.1875 28.425 30.7375 27.5313 31.1437 26.4813C31.5375 25.4625 31.8125 24.3 31.8875 22.6C31.9625 20.8938 31.9813 20.35 31.9813 16.0063C31.9813 11.6625 31.9625 11.1188 31.8875 9.4125C31.8125 7.7125 31.5375 6.54375 31.1437 5.53125C30.75 4.46875 30.2063 3.575 29.3125 2.6875C28.425 1.8 27.5312 1.25 26.4813 0.84375C25.4625 0.45 24.3 0.175 22.6 0.1C20.8875 0.01875 20.3438 0 16 0Z"/> <path d="M16 7.78125C11.4625 7.78125 7.78125 11.4625 7.78125 16C7.78125 20.5375 11.4625 24.2188 16 24.2188C20.5375 24.2188 24.2188 20.5375 24.2188 16C24.2188 11.4625 20.5375 7.78125 16 7.78125ZM16 21.3312C13.0563 21.3312 10.6687 18.9438 10.6687 16C10.6687 13.0563 13.0563 10.6687 16 10.6687C18.9438 10.6687 21.3312 13.0563 21.3312 16C21.3312 18.9438 18.9438 21.3312 16 21.3312Z"/> <path d="M26.4625 7.45619C26.4625 8.51869 25.6 9.37495 24.5438 9.37495C23.4813 9.37495 22.625 8.51244 22.625 7.45619C22.625 6.39369 23.4875 5.53744 24.5438 5.53744C25.6 5.53744 26.4625 6.39994 26.4625 7.45619Z"/> </svg></a>
+                        
+                            <a class="w-8 h-8 text-skin-base hover:text-skin-accent focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.youtube.com/test" rel="noopener" aria-label="Stegreif on Youtube" target="_blank"><svg class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 32 32"> <path d="M31.6812 9.60006C31.6812 9.60006 31.3688 7.39381 30.4062 6.42506C29.1875 5.15006 27.825 5.14381 27.2 5.06881C22.725 4.74381 16.0063 4.74381 16.0063 4.74381H15.9937C15.9937 4.74381 9.275 4.74381 4.8 5.06881C4.175 5.14381 2.8125 5.15006 1.59375 6.42506C0.63125 7.39381 0.325 9.60006 0.325 9.60006C0.325 9.60006 0 12.1938 0 14.7813V17.2063C0 19.7938 0.31875 22.3876 0.31875 22.3876C0.31875 22.3876 0.63125 24.5938 1.5875 25.5626C2.80625 26.8376 4.40625 26.7938 5.11875 26.9313C7.68125 27.1751 16 27.2501 16 27.2501C16 27.2501 22.725 27.2376 27.2 26.9188C27.825 26.8438 29.1875 26.8376 30.4062 25.5626C31.3688 24.5938 31.6812 22.3876 31.6812 22.3876C31.6812 22.3876 32 19.8001 32 17.2063V14.7813C32 12.1938 31.6812 9.60006 31.6812 9.60006ZM12.6938 20.1501V11.1563L21.3375 15.6688L12.6938 20.1501Z"/> </svg></a>
+                        
+                    </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="absolute inset-0 pointer-events-none bird-mask bird-mask-5 z-behind">
+            
+            
+            
+                <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/5e74e7dde99d48d3020293ac5b08e7c5.webp 320w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/fae352c9ab0031651cf621aea1cac8e9.webp 480w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/7f9e50d7022afc5daadbf75a1a2bd580.webp 768w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/d1a4ec6ab268a52f4aea5e11b923ad63.webp 1280w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/39ce3a603a8b80c6837db4563992ad8a.webp 1440w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/448ee91e6a6135e157433cb3b8a024a0.webp 1680w"
+                    sizes="(min-width: 768px) 100vw, 100vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/70516f5260e5205da64b7ae8f9c0f8cc.jpg 320w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/6a4d56a42e6ebd63cdde4fb6a67325fd.jpg 480w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/19a3fd3f224b65db0b94ed7be91f76c1.jpg 768w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/94d4be78b814a5cf09c6234dbe36c7f1.jpg 1280w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/726cbfb8bd2a0c54e1cf1d277db5d259.jpg 1440w,
+                        /img/containers/assets/header_images/fronalpstock_big.jpg/81f0fe6391f63837a21842ba7d26e441.jpg 1680w"
+                    sizes="(min-width: 768px) 100vw, 100vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/header_images/fronalpstock_big.jpg/94d4be78b814a5cf09c6234dbe36c7f1.jpg"
+                    alt=""
+                    width="2560"
+                    height="1150"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+    <div class="pointer-events-none absolute inset-0 bg-darkblue mix-blend-color "></div>
+    <div class="pointer-events-none absolute inset-0 bg-green mix-blend-multiply "></div>
+    <div class="pointer-events-none absolute inset-0 bg-darkblue mix-blend-lighten "></div>
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+            
+            
+            
+            
+        </div>
+    </section>
+
+    
+
+<!-- End: /components/_header.antlers.html -->
+
+
+
+    
+    
+ 
+ 
+
+<!-- /layout/_section.antlers.html -->
+<section class="theme-dark overflow-hidden relative flex flex-col gap-80 bird-section bird-mask-0">
+    <!-- /components/_bard.antlers.html -->
+<article class="prose flex flex-col gap-y-4 sm:gap-y-8 prose-pre:whitespace-pre-wrap fluid-container ">
+    
+        <!-- /components/_text.antlers.html -->
+<h2>Lorem ipsum </h2><p>dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p><p><br></p>
+<!-- End: /components/_text.antlers.html -->
+
+    
+</article>
+<!-- End: /components/_bard.antlers.html -->
+</section>
+<!-- End: /layout/_section.antlers.html -->
+
+    
+    
+ 
+ 
+
+<!-- /layout/_section.antlers.html -->
+<section class="theme-yellow overflow-hidden relative flex flex-col gap-80 bird-section bird-mask-1">
+    <!-- /components/_orchestra_block.antlers.html -->
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
+    
+    <div class="flex flex-col gap-8">
+        
+        <!-- /typography/_h2.antlers.html -->
+<h2  >Orchester</h2>
+<!-- End: /typography/_h2.antlers.html -->
+
+
+        
+        <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Bass"
+aria-label="Bass"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Bass
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Education"
+aria-label="Education"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Education
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Gitarre"
+aria-label="Gitarre"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Gitarre
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Klarinette"
+aria-label="Klarinette"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Klarinette
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Künstlerischer Beirat"
+aria-label="Künstlerischer Beirat"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Künstlerischer Beirat
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Produktion"
+aria-label="Produktion"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Produktion
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Schlagzeug"
+aria-label="Schlagzeug"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Schlagzeug
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Viola"
+aria-label="Viola"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Viola
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Violine"
+aria-label="Violine"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Violine
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Vorstand"
+aria-label="Vorstand"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Vorstand
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex "
+        
+        
+        
+
+title="Vorstandsvorsitz"
+aria-label="Vorstandsvorsitz"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary svg-hover-right">
+			Vorstandsvorsitz
+            
+            
+            
+            <div class="h-0.5 bg-skin-base motion-safe:transition-all group-hover:bg-skin-primary absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+    
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+            
+        </div> 
+    </div>
+    
+    
+    <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">
+            
+        
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Alexande Goelbock', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/Bartosz2.jpg/6b58c943a3e509efd5990c94b16f0453.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '5222', height : '3482', },
+                    $store.modal.description = 'Das ein anderer Text',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'asd',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'asd', url : 'https://google.de' },  { title : 'Zweiter Links', url : 'googlebest.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Bass', color : 'green' },  { content : 'Gitarre', color : 'green' },  { content : 'Vorstand', color : 'dark' },  { content : 'Education', color : 'dark' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Alexande Goelbock</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Bass</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Gitarre</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-darkblue text-light
+		
+		"
+	
+>Vorstand</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-darkblue text-light
+		
+		"
+	
+>Education</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz1.jpg/78ec90228ac94d7f1ec0c30f5a83705f.webp 320w,
+                        /img/containers/assets/personen/Bartosz1.jpg/3f2a25799deaaf4f57acbfc71c0f7189.webp 480w,
+                        /img/containers/assets/personen/Bartosz1.jpg/cb9e6a43c9db7da1425371c21c780741.webp 768w,
+                        /img/containers/assets/personen/Bartosz1.jpg/68a6a3ace56d5331ea887c893daab5c9.webp 1280w,
+                        /img/containers/assets/personen/Bartosz1.jpg/1032e47b7588d37ffcecb60be85def6e.webp 1440w,
+                        /img/containers/assets/personen/Bartosz1.jpg/d2aae720e0d0a05a599d0e07f0e7f9a8.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz1.jpg/3c9ab50aa385cf91f5b0483ceadecb6a.jpg 320w,
+                        /img/containers/assets/personen/Bartosz1.jpg/c80a70a058dda126b426a2ded3fd74ee.jpg 480w,
+                        /img/containers/assets/personen/Bartosz1.jpg/0da9136f0117c086698e76cf435c4318.jpg 768w,
+                        /img/containers/assets/personen/Bartosz1.jpg/6f21f5dd45c8752d390b3b05aa109dfe.jpg 1280w,
+                        /img/containers/assets/personen/Bartosz1.jpg/a590d224f94dab8ca6837edc874580cb.jpg 1440w,
+                        /img/containers/assets/personen/Bartosz1.jpg/7ad8b4dabf90945dbc2b74f591c7ae65.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/Bartosz1.jpg/6f21f5dd45c8752d390b3b05aa109dfe.jpg"
+                    alt=""
+                    width="5760"
+                    height="3840"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Anneliese Schmidt', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem1.jpg/b6b3d34dd9282ad1d5513a9b89a7987a.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '2798', height : '3755', },
+                    $store.modal.description = 'Naja gut hier gibts eine Beschreibung :) Naja gut hier gibts eine Beschreibung :)',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'asd',
+                    $store.modal.showLinks = false,
+                    $store.modal.links = [  ],
+                    $store.modal.teamTags = [  { content : 'Bass', color : 'green' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Anneliese Schmidt</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Bass</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem2.jpg/41b92931ec9128657b09205b587de9ac.webp 320w,
+                        /img/containers/assets/personen/anne-willem2.jpg/128b88959a9e4b531147954c02ea8c8a.webp 480w,
+                        /img/containers/assets/personen/anne-willem2.jpg/9e0c80cdda212221e06665dcbef71d59.webp 768w,
+                        /img/containers/assets/personen/anne-willem2.jpg/ca2069c9e36138bbd9d4c77f4f006434.webp 1280w,
+                        /img/containers/assets/personen/anne-willem2.jpg/3dc229265cdb092f1e6c84ff6b8da27d.webp 1440w,
+                        /img/containers/assets/personen/anne-willem2.jpg/f91c1869e184a3165691d5fb19d0e285.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem2.jpg/d6545fce82cb03778a35cf8c8f02db5b.jpg 320w,
+                        /img/containers/assets/personen/anne-willem2.jpg/6dcacb7010eb11ce2438326e959b7b48.jpg 480w,
+                        /img/containers/assets/personen/anne-willem2.jpg/1491fe727f86e55374542f24bf784d02.jpg 768w,
+                        /img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg 1280w,
+                        /img/containers/assets/personen/anne-willem2.jpg/fb4b09d6e6ad2e92288bf1c25c12c85d.jpg 1440w,
+                        /img/containers/assets/personen/anne-willem2.jpg/feffbbd817839ae263f683a325e92e2d.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg"
+                    alt=""
+                    width="4608"
+                    height="3456"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Antonio Rivero', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '4608', height : '3456', },
+                    $store.modal.description = 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'Hier ein Funfact',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'Soundcloud', url : 'google.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Violine', color : 'green' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Antonio Rivero</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Violine</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem1.jpg/a56e4ded5daf69a99c8fc65c426507fc.webp 320w,
+                        /img/containers/assets/personen/anne-willem1.jpg/d2c446f2b20b67c2993f75622cd952f0.webp 480w,
+                        /img/containers/assets/personen/anne-willem1.jpg/5a08255a8ee383959fc7ef049ee7cd5e.webp 768w,
+                        /img/containers/assets/personen/anne-willem1.jpg/6649a1824aee3ed04c515148317285f2.webp 1280w,
+                        /img/containers/assets/personen/anne-willem1.jpg/66a99918db5ea537a70f93c4e5f6e6a3.webp 1440w,
+                        /img/containers/assets/personen/anne-willem1.jpg/bb5a47c53c420b8d5aa2863ab6a75c9c.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem1.jpg/a07613606a9247861f99cb8c852241b2.jpg 320w,
+                        /img/containers/assets/personen/anne-willem1.jpg/a18d7b792c5d0b99358a72cf4114ca9d.jpg 480w,
+                        /img/containers/assets/personen/anne-willem1.jpg/5d298a4c13cc2d555bd3c4b618fd8364.jpg 768w,
+                        /img/containers/assets/personen/anne-willem1.jpg/b6b3d34dd9282ad1d5513a9b89a7987a.jpg 1280w,
+                        /img/containers/assets/personen/anne-willem1.jpg/805bea0172e1b64b0b445566eecda9af.jpg 1440w,
+                        /img/containers/assets/personen/anne-willem1.jpg/a874b117a79b64886a4e4770bdd3303e.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/anne-willem1.jpg/b6b3d34dd9282ad1d5513a9b89a7987a.jpg"
+                    alt=""
+                    width="2798"
+                    height="3755"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Gustav Riveriesas', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '4608', height : '3456', },
+                    $store.modal.description = 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'Hier ein Funfact',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'Soundcloud', url : 'google.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Violine', color : 'green' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Gustav Riveriesas</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Violine</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem1.jpg/a56e4ded5daf69a99c8fc65c426507fc.webp 320w,
+                        /img/containers/assets/personen/anne-willem1.jpg/d2c446f2b20b67c2993f75622cd952f0.webp 480w,
+                        /img/containers/assets/personen/anne-willem1.jpg/5a08255a8ee383959fc7ef049ee7cd5e.webp 768w,
+                        /img/containers/assets/personen/anne-willem1.jpg/6649a1824aee3ed04c515148317285f2.webp 1280w,
+                        /img/containers/assets/personen/anne-willem1.jpg/66a99918db5ea537a70f93c4e5f6e6a3.webp 1440w,
+                        /img/containers/assets/personen/anne-willem1.jpg/bb5a47c53c420b8d5aa2863ab6a75c9c.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem1.jpg/a07613606a9247861f99cb8c852241b2.jpg 320w,
+                        /img/containers/assets/personen/anne-willem1.jpg/a18d7b792c5d0b99358a72cf4114ca9d.jpg 480w,
+                        /img/containers/assets/personen/anne-willem1.jpg/5d298a4c13cc2d555bd3c4b618fd8364.jpg 768w,
+                        /img/containers/assets/personen/anne-willem1.jpg/b6b3d34dd9282ad1d5513a9b89a7987a.jpg 1280w,
+                        /img/containers/assets/personen/anne-willem1.jpg/805bea0172e1b64b0b445566eecda9af.jpg 1440w,
+                        /img/containers/assets/personen/anne-willem1.jpg/a874b117a79b64886a4e4770bdd3303e.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/anne-willem1.jpg/b6b3d34dd9282ad1d5513a9b89a7987a.jpg"
+                    alt=""
+                    width="2798"
+                    height="3755"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Hannah Herbertsonn', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '4608', height : '3456', },
+                    $store.modal.description = 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'Hier ein Funfact',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'Soundcloud', url : 'google.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Klarinette', color : 'green' },  { content : 'Künstlerischer Beirat', color : 'dark' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Hannah Herbertsonn</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Klarinette</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-darkblue text-light
+		
+		"
+	
+>Künstlerischer Beirat</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz2.jpg/ce53bc1ef264a7cd2b39e5a29276fa08.webp 320w,
+                        /img/containers/assets/personen/Bartosz2.jpg/49e1552844e2d78368c9f05cf5adefb7.webp 480w,
+                        /img/containers/assets/personen/Bartosz2.jpg/126068ee8994ebaac87cbe7ff64978fa.webp 768w,
+                        /img/containers/assets/personen/Bartosz2.jpg/380be4e917c122691f76cc37e10980ac.webp 1280w,
+                        /img/containers/assets/personen/Bartosz2.jpg/d6b837ff74a931bcb621e6243333c46e.webp 1440w,
+                        /img/containers/assets/personen/Bartosz2.jpg/7b1aabdfd96af8db447e610dfea1f4fb.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz2.jpg/ef0e4e44675ba2420535cebea5623ff1.jpg 320w,
+                        /img/containers/assets/personen/Bartosz2.jpg/9cebb2ed4e8cea60bb2901ace4f998dc.jpg 480w,
+                        /img/containers/assets/personen/Bartosz2.jpg/b14eadaff70d65ee343121d34a59d78c.jpg 768w,
+                        /img/containers/assets/personen/Bartosz2.jpg/6b58c943a3e509efd5990c94b16f0453.jpg 1280w,
+                        /img/containers/assets/personen/Bartosz2.jpg/7ffe51a7252b815df0d87cb485447970.jpg 1440w,
+                        /img/containers/assets/personen/Bartosz2.jpg/9c181323bbe1170d97e65ea9d03124aa.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/Bartosz2.jpg/6b58c943a3e509efd5990c94b16f0453.jpg"
+                    alt=""
+                    width="5222"
+                    height="3482"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Herbert Steriner', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '4608', height : '3456', },
+                    $store.modal.description = 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'Hier ein Funfact',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'Soundcloud', url : 'google.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Bass', color : 'green' },  { content : 'Education', color : 'dark' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Herbert Steriner</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Bass</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-darkblue text-light
+		
+		"
+	
+>Education</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz1.jpg/78ec90228ac94d7f1ec0c30f5a83705f.webp 320w,
+                        /img/containers/assets/personen/Bartosz1.jpg/3f2a25799deaaf4f57acbfc71c0f7189.webp 480w,
+                        /img/containers/assets/personen/Bartosz1.jpg/cb9e6a43c9db7da1425371c21c780741.webp 768w,
+                        /img/containers/assets/personen/Bartosz1.jpg/68a6a3ace56d5331ea887c893daab5c9.webp 1280w,
+                        /img/containers/assets/personen/Bartosz1.jpg/1032e47b7588d37ffcecb60be85def6e.webp 1440w,
+                        /img/containers/assets/personen/Bartosz1.jpg/d2aae720e0d0a05a599d0e07f0e7f9a8.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz1.jpg/3c9ab50aa385cf91f5b0483ceadecb6a.jpg 320w,
+                        /img/containers/assets/personen/Bartosz1.jpg/c80a70a058dda126b426a2ded3fd74ee.jpg 480w,
+                        /img/containers/assets/personen/Bartosz1.jpg/0da9136f0117c086698e76cf435c4318.jpg 768w,
+                        /img/containers/assets/personen/Bartosz1.jpg/6f21f5dd45c8752d390b3b05aa109dfe.jpg 1280w,
+                        /img/containers/assets/personen/Bartosz1.jpg/a590d224f94dab8ca6837edc874580cb.jpg 1440w,
+                        /img/containers/assets/personen/Bartosz1.jpg/7ad8b4dabf90945dbc2b74f591c7ae65.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/Bartosz1.jpg/6f21f5dd45c8752d390b3b05aa109dfe.jpg"
+                    alt=""
+                    width="5760"
+                    height="3840"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Mensch Meier', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '4608', height : '3456', },
+                    $store.modal.description = 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'Hier ein Funfact',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'Soundcloud', url : 'google.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Gitarre', color : 'green' },  { content : 'Vorstand', color : 'dark' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Mensch Meier</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Gitarre</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-darkblue text-light
+		
+		"
+	
+>Vorstand</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem2.jpg/41b92931ec9128657b09205b587de9ac.webp 320w,
+                        /img/containers/assets/personen/anne-willem2.jpg/128b88959a9e4b531147954c02ea8c8a.webp 480w,
+                        /img/containers/assets/personen/anne-willem2.jpg/9e0c80cdda212221e06665dcbef71d59.webp 768w,
+                        /img/containers/assets/personen/anne-willem2.jpg/ca2069c9e36138bbd9d4c77f4f006434.webp 1280w,
+                        /img/containers/assets/personen/anne-willem2.jpg/3dc229265cdb092f1e6c84ff6b8da27d.webp 1440w,
+                        /img/containers/assets/personen/anne-willem2.jpg/f91c1869e184a3165691d5fb19d0e285.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/anne-willem2.jpg/d6545fce82cb03778a35cf8c8f02db5b.jpg 320w,
+                        /img/containers/assets/personen/anne-willem2.jpg/6dcacb7010eb11ce2438326e959b7b48.jpg 480w,
+                        /img/containers/assets/personen/anne-willem2.jpg/1491fe727f86e55374542f24bf784d02.jpg 768w,
+                        /img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg 1280w,
+                        /img/containers/assets/personen/anne-willem2.jpg/fb4b09d6e6ad2e92288bf1c25c12c85d.jpg 1440w,
+                        /img/containers/assets/personen/anne-willem2.jpg/feffbbd817839ae263f683a325e92e2d.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg"
+                    alt=""
+                    width="4608"
+                    height="3456"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+            
+            
+            <button 
+                x-data
+                @click.prevent="
+                    $store.modal.open = true,
+                    $store.modal.title = 'Robert bauer', 
+                    $store.modal.image = { url : '/img/containers/assets/personen/anne-willem2.jpg/dc95dca55fcd70fc666bb659e7b70c51.jpg', extension : 'jpg', mime_type : 'image/jpeg', alt : '', focus : '50% 50%', width : '4608', height : '3456', },
+                    $store.modal.description = 'Antonio Rivero lässt sich von Musik in alle Richtungen mitnehmen und verbindet das gerne mit viel Reisen. Neben Stegreif ist er beim Filmorchester tätig, singt und spielt gerne andere Instrumente',
+                    $store.modal.showFunFact = true,
+                    $store.modal.funFact = 'Hier ein Funfact',
+                    $store.modal.showLinks = true,
+                    $store.modal.links = [  { title : 'Soundcloud', url : 'google.de' }  ],
+                    $store.modal.teamTags = [  { content : 'Klarinette', color : 'green' },  { content : 'Künstlerischer Beirat', color : 'dark' }  ] "
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+
+                
+                <div class="flex flex-col items-start">
+                    <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-yellow text-darkblue
+		
+		"
+	
+>Robert bauer</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-green text-light
+		
+		"
+	
+>Klarinette</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                        <!-- /typography/_tag.antlers.html -->
+<div 
+	
+	class="px-2 py-1 text-xs xs:text-sm uppercase leading-100 
+		
+		 bg-darkblue text-light
+		
+		"
+	
+>Künstlerischer Beirat</div>
+<!-- End: /typography/_tag.antlers.html -->
+
+                    
+                </div>
+
+                
+                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
+
+                
+                <!-- /typography/_h6.antlers.html -->
+<h6 class='tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform' >Mehr Infos</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+                
+                
+                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
+                    <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz2.jpg/ce53bc1ef264a7cd2b39e5a29276fa08.webp 320w,
+                        /img/containers/assets/personen/Bartosz2.jpg/49e1552844e2d78368c9f05cf5adefb7.webp 480w,
+                        /img/containers/assets/personen/Bartosz2.jpg/126068ee8994ebaac87cbe7ff64978fa.webp 768w,
+                        /img/containers/assets/personen/Bartosz2.jpg/380be4e917c122691f76cc37e10980ac.webp 1280w,
+                        /img/containers/assets/personen/Bartosz2.jpg/d6b837ff74a931bcb621e6243333c46e.webp 1440w,
+                        /img/containers/assets/personen/Bartosz2.jpg/7b1aabdfd96af8db447e610dfea1f4fb.webp 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/personen/Bartosz2.jpg/ef0e4e44675ba2420535cebea5623ff1.jpg 320w,
+                        /img/containers/assets/personen/Bartosz2.jpg/9cebb2ed4e8cea60bb2901ace4f998dc.jpg 480w,
+                        /img/containers/assets/personen/Bartosz2.jpg/b14eadaff70d65ee343121d34a59d78c.jpg 768w,
+                        /img/containers/assets/personen/Bartosz2.jpg/6b58c943a3e509efd5990c94b16f0453.jpg 1280w,
+                        /img/containers/assets/personen/Bartosz2.jpg/7ffe51a7252b815df0d87cb485447970.jpg 1440w,
+                        /img/containers/assets/personen/Bartosz2.jpg/9c181323bbe1170d97e65ea9d03124aa.jpg 1680w"
+                    sizes="(min-width: 768px) 35vw, 90vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-cover w-full h-full "
+                        style="object-position: 50% 50%"
+                    
+                    src="/img/containers/assets/personen/Bartosz2.jpg/6b58c943a3e509efd5990c94b16f0453.jpg"
+                    alt=""
+                    width="5222"
+                    height="3482"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+                </div>
+            </button>
+        
+    </div>
+</div>
+<!-- End: /components/_orchestra_block.antlers.html -->
+</section>
+<!-- End: /layout/_section.antlers.html -->
+    
+
+    
+    
+        
+ 
+ 
+
+<!-- /layout/_section.antlers.html -->
+<section class="theme-dark overflow-hidden relative flex flex-col gap-80 bird-section bird-mask-2">
+    <!-- /components/_bard.antlers.html -->
+<article class="prose flex flex-col gap-y-4 sm:gap-y-8 prose-pre:whitespace-pre-wrap fluid-container ">
+    
+        <!-- /components/_text.antlers.html -->
+<h2>Unsere<br><span class="text-skin-primary">Geschichte</span></h2><p>Ohne Noten - Ohne Dirigent*in - Ohne Stühle: Stegreif zeigt neue Wege, wie ein zeitgenössisches Orchester heute aussehen kann. Die internationalen Musiker*innen verbinden in radikalen Rekompositionen sinfonische Musik mit Improvisation und Einflüssen anderer Genres und binden das Publikum in originelle Raumkonzepte ein. Mit diesen innovativen Konzertformaten begeistert das junge Ensemble ein wachsendes Publikum unterschiedlicher Zielgruppen.</p><h3>Die Gründung</h3><p><span>Seit der Gründung des Orchesters im Jahre 2015 wurde jedes Jahr mindestens ein neues Konzertprogramm erarbeitet:#freebeethoven,</span><span class="text-skin-primary"> #freeschubert</span><span>, #freebrahms [LINK], #free∃roica, #bfree, #freemahler, #explore_mozart, #explorefreischütz [LINK]. Zudem wurden Koproduktionen u.a. mit der Neuköllner Oper (GIOVANNI. Eine Passion, MOON MUSIC), dem PODIUM Esslingen (#bfree, #freebrahms), sowie dem Deutschen Symphonie-Orchester Berlin und der jungen norddeutschen Philharmonie (TRIKESTRA) realisiert. STEGREIF spielte dabei Konzerte auf renommierten Bühnen wie der Berliner Philharmonie, dem Konzerthaus Berlin, der Elbphilharmonie Hamburg, der Alten Oper Frankfurt, dem Brucknerhaus Linz, dem Radialsystem Berlin, dem Beethovenfest Bonn oder dem Prinzregententheater München sowie bei alternativen Festivals wie z. B. der FUSION, dem Detect Classic, PODIUM Esslingen, dem Düsseldorf Festival oder dem Oranjewoud Festival (NL).</span></p>
+<!-- End: /components/_text.antlers.html -->
+
+    
+</article>
+<!-- End: /components/_bard.antlers.html -->
+</section>
+<!-- End: /layout/_section.antlers.html -->
+    
+        
+ 
+ 
+
+<!-- /layout/_section.antlers.html -->
+<section class="theme-light overflow-hidden relative flex flex-col gap-80 bird-section bird-mask-3">
+    <!-- /components/_bard.antlers.html -->
+<article class="prose flex flex-col gap-y-4 sm:gap-y-8 prose-pre:whitespace-pre-wrap fluid-container ">
+    
+        <!-- /components/_text.antlers.html -->
+<p>Hier ein text</p>
+<!-- End: /components/_text.antlers.html -->
+
+    
+        <!-- /components/_bard_partners.antlers.html -->
+<div class="flex flex-col gap-8 mx-0 my-20 lg:gap-12 lg:mx-20 not-prose col-span-full">
+    
+    
+     <!-- /typography/_h4.antlers.html -->
+<h4 class="text-center" >Kleiner Test</h4>
+<!-- End: /typography/_h4.antlers.html -->
+ 
+                    
+    
+     <!-- /typography/_p.antlers.html -->
+<p class="mt-0 last:mb-0 mb-8 text-center" >Kelamsdasd</p>
+<!-- End: /typography/_p.antlers.html -->
+ 
+
+    
+    <div class="flex flex-row flex-wrap items-center justify-center gap-16">
+        
+            <div class="w-full max-w-[8rem]">
+                <!-- /components/_picture.antlers.html -->
+
+    <picture>       
+        
+            
+                <source
+                    srcset="
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/6112ed3b69508c411ff2ba2fb6a8601c.webp 320w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/62077f93714ef8c06aa0aa5d29265f53.webp 480w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/cf79b1b8ee1c005d326adacfbbad5b96.webp 768w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/d42f4f91a6d94af9b06fad077ebc60d9.webp 1280w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/9472c04c2061be17cdbd264e80cc4b02.webp 1440w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/8893df1e2e7308fee5b9640109c35f40.webp 1680w"
+                    sizes="(min-width: 768px) 50vw, 20vw"
+                    type="image/webp"
+                >
+                <source
+                    srcset="
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/b8e14afb45de1c277b57dfd8d26f4b6e.jpg 320w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/5a08caa3c8cb98adf9a7ceaa26101f17.jpg 480w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/7cfe09ca3939f459cdbda3f1cd27212b.jpg 768w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/df7a5216e59e25b3dbfadb3618c968b8.jpg 1280w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/cb775e8ba51965e3673e4fa84459096e.jpg 1440w,
+                        /img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/a46cb1de970a53c9dac39445e4926366.jpg 1680w"
+                    sizes="(min-width: 768px) 50vw, 20vw"
+                    type="image/jpeg"
+                >
+                <img
+                    
+                        class="object-contain w-full h-full mix-blend-multiply"
+                    
+                    src="/img/containers/assets/partner_innen/BKM_Neustart_Kultur_Wortmarke_pos_RGB_RZ.jpg/df7a5216e59e25b3dbfadb3618c968b8.jpg"
+                    alt=""
+                    width="1323"
+                    height="1295"
+                    loading="lazy"
+                >
+            
+        
+        
+        
+        
+        
+        
+        <!-- /snippets/_image_tint.antlers.html -->
+
+<!-- End: /snippets/_image_tint.antlers.html -->
+
+    </picture>
+
+<!-- End: /components/_picture.antlers.html -->
+
+            </div>
+        
+    </div>
+
+</div>
+<!-- End: /components/_bard_partners.antlers.html -->
+
+    
+        <!-- /components/_text.antlers.html -->
+<p></p>
+<!-- End: /components/_text.antlers.html -->
+
+    
+</article>
+<!-- End: /components/_bard.antlers.html -->
+</section>
+<!-- End: /layout/_section.antlers.html -->
+    
+
+    
+    
+    
+    
+
+    
+</main>
+<!-- End: /who_we_are.antlers.html -->
+        <!-- /layout/_footer.antlers.html -->
+<footer class="w-full py-8 border-t-8 lg:py-20 bg-yellow border-darkblue">
+    
+    
+    <div class="flex flex-row flex-wrap items-center justify-between lg:flex-nowrap gap-x-20 gap-y-20 2xl:px-40 fluid-container">
+        
+        
+        <!-- /page_builder/_form.antlers.html -->
+<script src="/vendor/statamic/frontend/js/helpers.js"></script>
+<div class="flex flex-wrap flex-col w-full max-w-lg xs:min-w-[20rem] gap-6">
+    
+    
+    <!-- /typography/_h6.antlers.html -->
+<h6 class='text-sm font-normal text-darkblue' >In den Newsletter eintragen</h6>
+<!-- End: /typography/_h6.antlers.html -->
+
+    
+    
+    <div x-data="sending" x-cloak>
+        <form method="POST" action="http://stegreif.test/!/forms/contact" x-data="{&quot;dynamic_form&quot;:{&quot;name&quot;:null,&quot;email&quot;:null}}" id="form-form" x-ref="form" @submit.prevent="sendForm()">
+            <div class="flex flex-col gap-6">
+                
+                <div class="hidden">
+                    <label class="font-bold" for="fax">Fax <sup class="text-yellow-400">*</sup></label>
+                    <input class="w-full form-input" id="fax" type="text" name="fax" tabindex="-1" autocomplete="off"/>
+                </div>
+                
+                
+                <div class="flex flex-col gap-2">
+                    
+                        <input class="text-sm uppercase transition border-none rounded-none placeholder:text-yellow placeholder:transition focus:placeholder:text-yellow/50 focus:text-light text-yellow bg-darkblue leading-100 focus-visible:border-none focus-visible:ring-0" type="text" required id="name" name="name" placeholder="Name" :aria-invalid="errors.hasOwnProperty('name')">
+                    
+                        <input class="text-sm uppercase transition border-none rounded-none placeholder:text-yellow placeholder:transition focus:placeholder:text-yellow/50 focus:text-light text-yellow bg-darkblue leading-100 focus-visible:border-none focus-visible:ring-0" type="email" required id="email" name="email" placeholder="Email" :aria-invalid="errors.hasOwnProperty('name')">
+                    
+                </div>
+                
+                
+                <!-- /components/_button.antlers.html -->
+
+
+
+
+    <button 
+        class = "group flex self-start"
+        :disabled="sending" :class="{ 'opacity-25 cursor-default': sending }"
+        
+        
+
+title="Absenden"
+aria-label="Absenden"
+
+    >
+
+    
+    
+        <div class=" relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-green svg-hover-right">
+            Absenden
+            <svg class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" viewBox="0 0 30 14"> <path d="M26.1706 8L21.5837 12.5869L22.9979 14.0011L28.5848 8.41423L28.5858 8.41525L30 7.00104L29.999 7.00002L30 6.99901L28.5858 5.58479L28.5848 5.5858L22.9979 -0.00105286L21.5837 1.41316L26.1705 6L2.38419e-07 6L0 8L26.1706 8Z"/> </svg>
+            
+            
+            <div class="h-0.5 bg-darkblue motion-safe:transition-all group-hover:bg-green absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+        </div>
+
+		
+	
+    
+            
+    </button>
+
+<!-- End: /components/_button.antlers.html -->
+
+                <template x-if="success">
+                    <!-- /components/_notification.antlers.html -->
+<div
+    class="
+        rounded border p-4
+        bg-green-100 border-green-600
+        md:col-span-12
+    "
+>
+    <div class="flex">
+        <div class="shrink-0">
+            <svg alt="" aria-hidden="true" class="
+                    h-5 w-5 fill-current motion-safe:transition-colors
+                    text-green-800
+                " viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="ml-3">
+            <h3
+                class="
+                    text-sm leading-5 font-bold
+                    text-green-800
+                "
+                
+            >
+                Thank you, we received your message and will contact you as soon as possible.
+            </h3>
+        </div>
+    </div>
+</div>
+<!-- End: /components/_notification.antlers.html -->
+
+                </template>
+            </div>
+        </form>
+    </div>
+    
+        <script>
+        document.addEventListener('alpine:initializing', () => {
+            Alpine.data('sending', () => {
+                return {
+                    error: false,
+                    errors: [],
+                    sending: false,
+                    success: false,
+                    sendForm: async function() {
+                        this.sending = true
+                        // Post the form.
+                        fetch(this.$refs.form.action, {
+                            headers: {
+                                'X-Requested-With' : 'XMLHttpRequest',
+                                'X-CSRF-Token' : await getToken()
+                            },
+                            method: 'POST',
+                            body: new FormData(this.$refs.form)})
+                        .then(res => res.json())
+                        .then(json => {
+                            if (json['success']) {
+                                this.errors = []
+                                this.success = true
+                                this.error = false
+                                this.sending = false
+                                this.$refs.form.reset()
+                                setTimeout(function(){
+                                    this.success = false
+                                }, 4500)
+                            }
+                            if (json['error']) {
+                                this.sending = false
+                                this.error = true
+                                this.success = false
+                                this.errors = json['error']
+                            }
+                        })
+                        .catch(err => {
+                            err.text().then( errorMessage => {
+                                this.sending = false
+                            })
+                        })
+                    }
+                }
+            })
+        })
+    </script>
+</div>
+<!-- End: /page_builder/_form.antlers.html -->
+
+        <div class="flex flex-row flex-wrap xl:flex-nowrap gap-y-8 gap-x-8">
+            
+            <ul class="flex gap-8 text-darkblue">
+                
+                    
+                        <li class="relative block">
+                            <a class="w-8 h-8 text-darkblue hover:text-green focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.facebook.com/tester" rel="noopener" aria-label="Stegreif on Facebook" target="_blank"><svg class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 32 32"> <path d="M32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 23.9859 5.85094 30.6053 13.5 31.8056V20.625H9.4375V16H13.5V12.475C13.5 8.465 15.8888 6.25 19.5434 6.25C21.2934 6.25 23.125 6.5625 23.125 6.5625V10.5H21.1075C19.12 10.5 18.5 11.7334 18.5 13V16H22.9375L22.2281 20.625H18.5V31.8056C26.1491 30.6053 32 23.9859 32 16Z"/> </svg></a>
+                        </li>
+                    
+                        <li class="relative block">
+                            <a class="w-8 h-8 text-darkblue hover:text-green focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.instagram.com/test" rel="noopener" aria-label="Stegreif on Instagram" target="_blank"><svg class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 32 32"> <path d="M16 2.88125C20.275 2.88125 20.7812 2.9 22.4625 2.975C24.025 3.04375 24.8687 3.30625 25.4312 3.525C26.175 3.8125 26.7125 4.1625 27.2687 4.71875C27.8312 5.28125 28.175 5.8125 28.4625 6.55625C28.6812 7.11875 28.9438 7.96875 29.0125 9.525C29.0875 11.2125 29.1063 11.7188 29.1063 15.9875C29.1063 20.2625 29.0875 20.7688 29.0125 22.45C28.9438 24.0125 28.6812 24.8563 28.4625 25.4188C28.175 26.1625 27.825 26.7 27.2687 27.2563C26.7062 27.8188 26.175 28.1625 25.4312 28.45C24.8687 28.6688 24.0187 28.9313 22.4625 29C20.775 29.075 20.2688 29.0938 16 29.0938C11.725 29.0938 11.2188 29.075 9.5375 29C7.975 28.9313 7.13125 28.6688 6.56875 28.45C5.825 28.1625 5.2875 27.8125 4.73125 27.2563C4.16875 26.6938 3.825 26.1625 3.5375 25.4188C3.31875 24.8563 3.05625 24.0063 2.9875 22.45C2.9125 20.7625 2.89375 20.2563 2.89375 15.9875C2.89375 11.7125 2.9125 11.2063 2.9875 9.525C3.05625 7.9625 3.31875 7.11875 3.5375 6.55625C3.825 5.8125 4.175 5.275 4.73125 4.71875C5.29375 4.15625 5.825 3.8125 6.56875 3.525C7.13125 3.30625 7.98125 3.04375 9.5375 2.975C11.2188 2.9 11.725 2.88125 16 2.88125ZM16 0C11.6562 0 11.1125 0.01875 9.40625 0.09375C7.70625 0.16875 6.5375 0.44375 5.525 0.8375C4.46875 1.25 3.575 1.79375 2.6875 2.6875C1.79375 3.575 1.25 4.46875 0.8375 5.51875C0.44375 6.5375 0.16875 7.7 0.09375 9.4C0.01875 11.1125 0 11.6562 0 16C0 20.3438 0.01875 20.8875 0.09375 22.5938C0.16875 24.2938 0.44375 25.4625 0.8375 26.475C1.25 27.5313 1.79375 28.425 2.6875 29.3125C3.575 30.2 4.46875 30.75 5.51875 31.1562C6.5375 31.55 7.7 31.825 9.4 31.9C11.1062 31.975 11.65 31.9937 15.9937 31.9937C20.3375 31.9937 20.8813 31.975 22.5875 31.9C24.2875 31.825 25.4563 31.55 26.4688 31.1562C27.5188 30.75 28.4125 30.2 29.3 29.3125C30.1875 28.425 30.7375 27.5313 31.1437 26.4813C31.5375 25.4625 31.8125 24.3 31.8875 22.6C31.9625 20.8938 31.9813 20.35 31.9813 16.0063C31.9813 11.6625 31.9625 11.1188 31.8875 9.4125C31.8125 7.7125 31.5375 6.54375 31.1437 5.53125C30.75 4.46875 30.2063 3.575 29.3125 2.6875C28.425 1.8 27.5312 1.25 26.4813 0.84375C25.4625 0.45 24.3 0.175 22.6 0.1C20.8875 0.01875 20.3438 0 16 0Z"/> <path d="M16 7.78125C11.4625 7.78125 7.78125 11.4625 7.78125 16C7.78125 20.5375 11.4625 24.2188 16 24.2188C20.5375 24.2188 24.2188 20.5375 24.2188 16C24.2188 11.4625 20.5375 7.78125 16 7.78125ZM16 21.3312C13.0563 21.3312 10.6687 18.9438 10.6687 16C10.6687 13.0563 13.0563 10.6687 16 10.6687C18.9438 10.6687 21.3312 13.0563 21.3312 16C21.3312 18.9438 18.9438 21.3312 16 21.3312Z"/> <path d="M26.4625 7.45619C26.4625 8.51869 25.6 9.37495 24.5438 9.37495C23.4813 9.37495 22.625 8.51244 22.625 7.45619C22.625 6.39369 23.4875 5.53744 24.5438 5.53744C25.6 5.53744 26.4625 6.39994 26.4625 7.45619Z"/> </svg></a>
+                        </li>
+                    
+                        <li class="relative block">
+                            <a class="w-8 h-8 text-darkblue hover:text-green focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.youtube.com/test" rel="noopener" aria-label="Stegreif on Youtube" target="_blank"><svg class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 32 32"> <path d="M31.6812 9.60006C31.6812 9.60006 31.3688 7.39381 30.4062 6.42506C29.1875 5.15006 27.825 5.14381 27.2 5.06881C22.725 4.74381 16.0063 4.74381 16.0063 4.74381H15.9937C15.9937 4.74381 9.275 4.74381 4.8 5.06881C4.175 5.14381 2.8125 5.15006 1.59375 6.42506C0.63125 7.39381 0.325 9.60006 0.325 9.60006C0.325 9.60006 0 12.1938 0 14.7813V17.2063C0 19.7938 0.31875 22.3876 0.31875 22.3876C0.31875 22.3876 0.63125 24.5938 1.5875 25.5626C2.80625 26.8376 4.40625 26.7938 5.11875 26.9313C7.68125 27.1751 16 27.2501 16 27.2501C16 27.2501 22.725 27.2376 27.2 26.9188C27.825 26.8438 29.1875 26.8376 30.4062 25.5626C31.3688 24.5938 31.6812 22.3876 31.6812 22.3876C31.6812 22.3876 32 19.8001 32 17.2063V14.7813C32 12.1938 31.6812 9.60006 31.6812 9.60006ZM12.6938 20.1501V11.1563L21.3375 15.6688L12.6938 20.1501Z"/> </svg></a>
+                        </li>
+                    
+                
+            </ul>
+            
+            
+            <ul class="flex flex-row flex-wrap items-center md:flex-nowrap gap-x-8 gap-y-2 text-darkblue">
+                
+                    <li class="relative block">
+                        <a class="block text-lg font-extrabold uppercase leading-s hover:text-green focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap" href="/presse">
+                            Presse
+                        </a>
+                    </li>
+                
+                    <li class="relative block">
+                        <a class="block text-lg font-extrabold uppercase leading-s hover:text-green focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap" href="/kontakt">
+                            Kontakt
+                        </a>
+                    </li>
+                
+                    <li class="relative block">
+                        <a class="block text-lg font-extrabold uppercase leading-s hover:text-green focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap" href="/impressum">
+                            Impressum
+                        </a>
+                    </li>
+                
+                    <li class="relative block">
+                        <a class="block text-lg font-extrabold uppercase leading-s hover:text-green focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap" href="/datenschutz">
+                            Datenschutz
+                        </a>
+                    </li>
+                
+
+                
+                
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- End: /layout/_footer.antlers.html -->
+
+
+    </body>
+</html>
+<!-- End: /layout.antlers.html -->";
