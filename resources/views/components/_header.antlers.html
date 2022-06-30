@@ -63,8 +63,13 @@
     {{# disabled header #}}
 {{ else }}
     <section class="{{ theme_selector | ensure_left:"theme-" }} overflow-hidden w-full flex items-end relative z-front pt-60 mb-15 lg:pt-80 md:mb-20 bg-skin-inverted">
-        {{# header headline #}}
-        {{ partial:typography/h1 content="{header_headline ?? title }" class="text-skin-primary fluid-container"}}
+            
+            {{# logo #}}
+            <div class="absolute inset-0 pointer-events-none fluid-container">
+                <img src="/site_assets/logos/logo_for_{{ theme_selector }}.png" class="absolute -top-6 left-4 lg:top-6 lg:left-20" alt="{{ config:app:name }}"/>
+            </div> 
+            {{# header headline #}}
+            {{ partial:typography/h1 content="{header_headline ?? title }" class="text-skin-primary fluid-container"}}
     </section>
 {{ /if }}
 <!-- End: /components/_header.antlers.html -->

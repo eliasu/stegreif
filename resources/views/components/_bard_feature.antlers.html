@@ -4,8 +4,7 @@
 #}}
 
 <!-- /components/_bard_feature.antlers.html -->
-<div
-    class="flex gap-8 my-20 {{ if feature_type == "big" }}block-full{{ /if }}">   
+<div class="flex gap-8 my-8 md:my-20 {{ if feature_type == "big" }}block-full{{ /if }}">   
         
     {{# block wrapper #}}
     <div class="flex flex-col-reverse gap-8 lg:gap-20 {{ if alignment == "right" }}sm:flex-row-reverse{{else}}sm:flex-row{{ /if }}">
@@ -58,7 +57,14 @@
                 </div>
             {{ /if }}
         
+
+
+
+
+        {{# –––––––––––––––––– #}}
         {{# referenced content #}}
+        {{# –––––––––––––––––– #}}
+        
         {{ else }}
             
             {{# content wrap #}}

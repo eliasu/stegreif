@@ -65,7 +65,7 @@ sections:
           taxonomies:
             - team_tags
           display: 'Team Tags'
-          mode: select
+          mode: default
           instructions_position: above
           listable: hidden
           read_only: false
