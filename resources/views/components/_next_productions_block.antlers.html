@@ -11,14 +11,16 @@
 
     {{# all productions #}}
     <div class="flex flex-col gap-y-8">
-        {{ collection from="programme" sort="updated_at:desc" limit="2" }}
+        {{# left right variable #}}
+        {{ alternating = true }}
+        
+        {{ related_productions }}
+        
             {{# feature block left right #}}
-            {{ if index | %:2  }}
-                {{ partial:components/bard_feature alignment="left" reference_content="true" feature_type="big" }}
-            {{ else }}
-                {{ partial:components/bard_feature alignment="right" reference_content="true" feature_type="big" }}
-            {{ /if }}
-        {{ /collection }}
+            {{ partial:components/bard_feature right="{alternating}" reference_content="true" feature_type="big" }}
+            {{ alternating = !alternating }}
+
+        {{ /related_productions }}
     </div>
 
     {{# link to detail view #}}

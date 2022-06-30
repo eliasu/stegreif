@@ -34,7 +34,7 @@ return [
             'type'   => 'paragraph',
             'name'   => 'Smaller',
             'ident'  => 'S',
-            'class'  => 'text-base leading-l',
+            'class'  => 'text-sm leading-l',
             'cp_css' => 'font-size: 0.85em;',
         ],
 
