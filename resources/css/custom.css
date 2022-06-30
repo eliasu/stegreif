@@ -111,12 +111,16 @@
 
 
 /* feature left and right */
-.feature-left {
+.feature-left > div {
     @apply flex-col-reverse sm:flex-row;
 }
 
-.feature-right {
+.feature-right > div {
     @apply flex-col-reverse sm:flex-row-reverse;
+}
+
+.alternating:nth-child(odd) > div {
+    @apply bg-yellow;
 }
 
 /* theming via css variables */

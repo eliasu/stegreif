@@ -52,21 +52,13 @@
 
     {{# all productions #}}
     <div class="flex flex-col gap-y-8">
+        {{ alternating = true }}
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
             <div x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
                 x-transition>
-                {{# feature block left right #}}
-                {{# {{ if index | %:2  }}
-                    {{ partial:components/bard_feature alignment="left" reference_content="true" feature_type="big" }}
-                {{ else }}
-                    {{ partial:components/bard_feature alignment="right" reference_content="true" feature_type="big" }}
-                {{ /if }} #}}
                 
-                {{ if index | %:2  }}
-                    {{ partial:components/bard_feature_copy reference_content="true" feature_type="big" }}
-                {{ else }}
-                    {{ partial:components/bard_feature_copy reverse="true" reference_content="true" feature_type="big" }}
-                {{ /if }}
+                {{ partial:components/bard_feature right="{alternating}" reference_content="true" feature_type="big" }}
+                {{ alternating = !alternating }}
             </div>
         {{ /collection }}
     </div>

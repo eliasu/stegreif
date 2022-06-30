@@ -98,6 +98,20 @@ sections:
       -
         handle: select_section_theme_current_production
         field: section.theme_selector
+        config:
+          width: 50
+      -
+        handle: related_productions
+        field: common.entry
+        config:
+          max_items: 6
+          localizable: false
+          display: 'Related Productions'
+          create: false
+          collections:
+            - programme
+            - reihen
+          width: 50
       -
         handle: headline_productions
         field: common.text_single

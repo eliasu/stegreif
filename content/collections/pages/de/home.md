@@ -33,6 +33,10 @@ introduction_content:
         type: text
         text: 'Wir sind ein Kollektiv von 30 internationalen Musiker*innen. Das geschätzte Erbe klassischer Kompositionen mit freien Improvisationen zu verbinden ist unsere Leidenschaft. Unsere Konzerte finden ohne Dirigent*in, ohne Noten oder Stühle statt, so gewinnen wir mehr Freiheit für Bewegung und Interaktion.'
   -
+    type: paragraph
+    attrs:
+      class: null
+  -
     type: set
     attrs:
       values:
@@ -121,10 +125,13 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656608550
+updated_at: 1656609242
 all_dates_page: f971080c-39a4-482d-a8ea-7e9bf7829075
 all_news_page: e1bace27-af9e-454e-a661-fe249340ae1d
 all_productions_page: c72b457f-66a2-4aa7-a7f2-1fc5a5df50a7
 og_image: home-og-1656608751.png
 twitter_image: home-twitter-1656608751.png
+related_productions:
+  - 664ef359-555e-43dc-81f1-7c6bbabe2cd6
+  - 23252b04-6ab9-4546-a826-b64eabdd2f0a
 ---
