@@ -9,6 +9,22 @@ header_image: header_images/favorit_orchester_1.-cinematic.jpg
 select_section_theme_intro: dark
 introduction_content:
   -
+    type: heading
+    attrs:
+      level: 5
+    content:
+      -
+        type: text
+        text: 'Das ist '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: Stegreif.
+  -
     type: paragraph
     attrs:
       class: 'text-2xl leading-l'
@@ -105,7 +121,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: home
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656551926
+updated_at: 1656589252
 all_dates_page: f971080c-39a4-482d-a8ea-7e9bf7829075
 all_news_page: e1bace27-af9e-454e-a661-fe249340ae1d
 all_productions_page: c72b457f-66a2-4aa7-a7f2-1fc5a5df50a7
