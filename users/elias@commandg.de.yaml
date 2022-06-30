@@ -32,6 +32,10 @@ preferences:
       after_save: continue_editing
     neuigkeiten:
       after_save: continue_editing
+      columns:
+        - title
+        - site
+        - date
     personen:
       after_save: create_another
   taxonomies:
