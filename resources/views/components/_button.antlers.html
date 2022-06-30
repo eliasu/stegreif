@@ -24,7 +24,7 @@
 
     {{# background button #}}
     {{ if button_type == "background" }}
-        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-md md:text font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-2 md:gap-4 px-4 text-base md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
         </div>
@@ -32,14 +32,14 @@
 
     {{# home button  #}}
     {{ elseif button_type == "background-home" }}
-        <div class="flex items-center h-8 gap-4 px-4 text-xl 2xl:text-[1.4rem] tracking-normal font-bold whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-light hover:bg-yellow mr-1">
+        <div class="flex items-center h-8 gap-2 md:gap-4 px-4 text-xl 2xl:text-[1.4rem] tracking-normal font-bold whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-light hover:bg-yellow mr-1">
             {{ label }}
         </div>
     
 
     {{# lined button with base color #}}
     {{ elseif button_type == "lined_base" }}
-        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-2 md:gap-4 px-2 text-base md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
 			{{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
@@ -49,7 +49,7 @@
 
     {{# lined button for orchestra modal #}}
     {{ elseif button_type == "lined_base_modal" }}
-        <div class="relative flex items-center h-8 gap-4 px-2 font-extrabold uppercase cursor-pointer pointer-events-auto text-md md:text-lg whitespace-nowrap text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="relative flex items-center h-8 gap-2 md:gap-4 px-2 font-extrabold uppercase cursor-pointer pointer-events-auto text-base md:text-lg whitespace-nowrap text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-primary {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
 			<span class="text-inherit" x-text="link.title"></span>
             {{ svg src="{{ "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
@@ -62,7 +62,7 @@
     {{ elseif button_type == "lined_base_filter" }}
         <div :class="{{modal}} ? 'text-skin-primary' : 'text-skin-base' " 
             @click.prevent="toggle_{{modal}}()"
-            class="relative flex items-center h-8 gap-4 px-2 font-extrabold uppercase cursor-pointer pointer-events-auto text-md md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent">
+            class="relative flex items-center h-8 gap-2 px-2 text-base font-extrabold uppercase cursor-pointer pointer-events-auto md:gap-4 md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent">
             {{ label }}
             
             {{# underline #}}
@@ -72,7 +72,7 @@
         {{# {{ elseif button_type == "lined_base_filter" }}
         <div :class="{{modal}} ? 'text-skin-primary' : 'text-skin-base' " 
             @click.prevent="{{modal}} = !{{modal}}"
-            class="relative flex items-center h-8 gap-4 px-2 font-extrabold uppercase cursor-pointer pointer-events-auto text-md md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent">
+            class="relative flex items-center h-8 gap-2 px-2 text-base font-extrabold uppercase cursor-pointer pointer-events-auto md:gap-4 md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent">
 			{{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
@@ -82,7 +82,7 @@
     
     {{# lined button with darkblue color #}}
     {{ elseif button_type == "lined_dark" }}
-        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-green {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-2 md:gap-4 px-2 text-base md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-darkblue motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-green {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
@@ -93,7 +93,7 @@
 		
 	{{# lined button with base color for card (the button is not the actual link) #}}
     {{ elseif button_type == "card_lined_base" }}
-        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-md md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary group-hover:text-skin-primary {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-2 md:gap-4 px-2 text-base md:text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-base motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary group-hover:text-skin-primary {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
 			{{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             
@@ -104,7 +104,7 @@
 
     {{# lined button #}}
     {{ else }}
-        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="{{ reverse ?= "flex-row-reverse" }} relative flex items-center h-8 gap-2 md:gap-4 px-2 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-primary motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-primary hover:text-skin-accent {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
             

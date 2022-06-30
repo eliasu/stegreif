@@ -234,7 +234,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656608736
+updated_at: 1656613415
 header_headline: 'Unterstützen für den Stegreif e.V.'
 add_section:
   -
@@ -254,7 +254,7 @@ add_section:
           values:
             type: bard_feature
             alignment: right
-            feature_type: big
+            feature_type: small
             select_media_feature: image
             feature_image: header_images/(c)-sophia-hegewald---alternativ.jpg
             article:
@@ -294,6 +294,7 @@ add_section:
                         type: button
                         enabled: true
             reference_content: false
+            alternate: false
       -
         type: set
         attrs:
@@ -345,6 +346,7 @@ add_section:
                         type: button
                         enabled: true
             reference_content: false
+            alternate: true
       -
         type: set
         attrs:
@@ -358,7 +360,7 @@ add_section:
               -
                 type: heading
                 attrs:
-                  level: 2
+                  level: 3
                 content:
                   -
                     type: text
@@ -399,6 +401,7 @@ add_section:
                         type: button
                         enabled: true
             reference_content: false
+            alternate: false
 og_image: unterstutzen-og-1656608784.png
 twitter_image: unterstutzen-twitter-1656608784.png
 ---

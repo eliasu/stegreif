@@ -57,7 +57,7 @@
             <div x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
                 x-transition>
                 
-                {{ partial:components/bard_feature right="{alternating}" reference_content="true" feature_type="big" }}
+                {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
                 {{ alternating = !alternating }}
             </div>
         {{ /collection }}
