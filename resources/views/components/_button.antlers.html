@@ -60,25 +60,18 @@
         
     {{# lined button with base color for filtering #}}
     {{ elseif button_type == "lined_base_filter" }}
-        <div :class="{{modal}} ? 'text-skin-primary' : 'text-skin-base' " 
-            @click.prevent="toggle_{{modal}}()"
+        <div :class="{{store}} ? 'text-skin-primary' : 'text-skin-base' " 
+        {{# <div  #}}
+            {{ function ?= '@click.prevent={{ function }}' }}
+            data-filter="{{store}}"
             class="relative flex items-center h-8 gap-2 px-2 text-base font-extrabold uppercase cursor-pointer pointer-events-auto md:gap-4 md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent">
             {{ label }}
             
             {{# underline #}}
-            <div :class="{{modal}} ? '!right-0 bg-skin-primary' : 'bg-skin-base'" class="h-0.5 motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+            {{# <div class="h-0.5 motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div> #}}
+            <div :class="{{store}} ? '!right-0 bg-skin-primary' : 'bg-skin-base'" class="h-0.5 motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
         </div>
 
-        {{# {{ elseif button_type == "lined_base_filter" }}
-        <div :class="{{modal}} ? 'text-skin-primary' : 'text-skin-base' " 
-            @click.prevent="{{modal}} = !{{modal}}"
-            class="relative flex items-center h-8 gap-2 px-2 text-base font-extrabold uppercase cursor-pointer pointer-events-auto md:gap-4 md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent">
-			{{ label }}
-            {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
-            
-            <div :class="{{modal}} ? '!right-0 bg-skin-primary' : 'bg-skin-base'" class="h-0.5 motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
-        </div>
-     #}}
     
     {{# lined button with darkblue color #}}
     {{ elseif button_type == "lined_dark" }}

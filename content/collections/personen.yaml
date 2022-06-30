@@ -7,7 +7,6 @@ template: default
 layout: layout
 taxonomies:
   - team_tags
-  - team_filters
 revisions: false
 sort_dir: asc
 date_behavior:

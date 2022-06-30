@@ -17,10 +17,27 @@
             titles: [],
         })
     });
+
+    function setup() {
+        var allButtons = document.querySelectorAll('[data-filter]');
+        var allFilters = [];
+
+        for (let index = 0; index < allButtons.length; index++) {
+            var temp = allButtons[index].innerText;
+            allFilters.push( temp.toLowerCase() );
+        }
+        
+        return allFilters;
+    }
+
+    function toggle(buttonid) {
+        console.log( buttonid )
+    }
 </script>
 
 
-<main x-data @keyup.escape="$store.modal.open = false" class="relative w-full" id="content"> 
+{{# lade alle angezeigten filter values in den Alpine Store #}}
+<main x-data x-init="$store.filters.titles = setup()" @keyup.escape="$store.modal.open = false" class="relative w-full" id="content"> 
     
     {{ partial:components/orchestra_modal  }}
     
@@ -50,12 +67,6 @@
             {{ partial:components/bard handle="{ article }" }}
         {{ /partial:layout/section }}
     {{ /add_section }}
-
-    {{# modal for orchestra #}}
-    {{# {{ collection:personen limit="1" }} #}}
-    {{# {{ partial:components/orchestra_modal  }} #}}
-    {{# {{ /collection:personen }} #}}
-
     
 </main>
 <!-- End: /who_we_are.antlers.html -->

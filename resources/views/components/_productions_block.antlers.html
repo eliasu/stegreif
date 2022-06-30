@@ -36,15 +36,15 @@
         {{# filter bar #}}
         <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
             <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" modal="actual"}}
-                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" modal="past" }}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" store="actual" function="toggle_actual()" }}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" store="past" function="toggle_past()" }}
             </div>
             
             {{# dont display this block if its collections because they have no "tags" #}}
             {{ if from != "reihen"}}
                 <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" modal="digital"}}
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" modal="chamber" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital()" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber()" }}
                 </div>
             {{ /if }}
         </div>

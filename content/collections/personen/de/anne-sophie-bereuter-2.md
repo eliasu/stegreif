@@ -9,5 +9,5 @@ fun_fact: 'Begann seine musikalische Reise auf einem 1/16 Cello - im Alter von 3
 team_tags:
   - geschaftsfuhrung
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656541373
+updated_at: 1656617836
 ---
