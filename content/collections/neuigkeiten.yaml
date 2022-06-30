@@ -5,7 +5,7 @@ sites:
 propagate: true
 template: page
 layout: layout
-mount: 6b15baac-a9f9-4f3a-bda8-b81ac77ef726
+mount: e1bace27-af9e-454e-a661-fe249340ae1d
 revisions: false
 route: '/{mount}/{slug}'
 date: true
