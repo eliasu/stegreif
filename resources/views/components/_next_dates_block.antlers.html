@@ -8,7 +8,7 @@
 #}}
 
 <!-- /components/_next_dates_block.antlers.html -->
-<div class="flex flex-col fluid-container">
+<div class="relative flex flex-col fluid-container">
             
     {{# block header with link to all dates #}}
     <div class="flex flex-row flex-wrap items-center justify-between mb-20 md:px-12 gap-y-4 gap-x-8 lg:px-20">
@@ -44,6 +44,14 @@
                 
             </div>
         {{ /collection:termine }}
+
+        {{# background media #}}
+        <div class="absolute inset-x-0 opacity-50 pointer-events-none -inset-y-40 z-behind rad-mask-2">
+            
+            {{# background image #}}
+            {{ partial:components/picture nocaption="true" image="/site_assets/bg/download.jpg" tint="dark" cover="true" sizes="(min-width: 768px) 100vw, 100vw" }}
+            {{# <img src="/site_assets/logos/logo_for_{{ header_theme_selector }}.png" class="absolute -top-6 left-4 lg:top-6 lg:left-20" alt="{{ config:app:name }}"/> #}}
+        </div>
     </div>
 </div>
 <!-- End: /components/_next_dates_block.antlers.html -->
