@@ -13,6 +13,8 @@ select_transition_theme: bird
 template: single_list_page
 select_collection: dates
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656604064
+updated_at: 1656608735
 header_image: header_images/(c)-sophia-hegewald---alternativ.jpg
+og_image: termine-og-1656608780.png
+twitter_image: termine-twitter-1656608780.png
 ---

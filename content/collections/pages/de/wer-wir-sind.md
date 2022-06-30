@@ -138,7 +138,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: who_we_are_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656589336
+updated_at: 1656608738
 section_headline_orchestra: Orchester
 add_section:
   -
@@ -325,4 +325,6 @@ add_section:
               - 90cc8a9e-1837-46bb-88f3-1bda9a49c29e
               - f3744684-a1fd-4225-baaa-a6613df71d40
               - e847a09e-87f8-4092-8c0e-457f64129ecb
+og_image: wer-wir-sind-og-1656608794.png
+twitter_image: wer-wir-sind-twitter-1656608794.png
 ---

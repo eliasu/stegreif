@@ -234,7 +234,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656551801
+updated_at: 1656608736
 header_headline: 'Unterstützen für den Stegreif e.V.'
 add_section:
   -
@@ -399,4 +399,6 @@ add_section:
                         type: button
                         enabled: true
             reference_content: false
+og_image: unterstutzen-og-1656608784.png
+twitter_image: unterstutzen-twitter-1656608784.png
 ---

@@ -35,7 +35,9 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656431687
+updated_at: 1656608734
 theme_selector: dark
 header_headline: 'Seite nicht gefunden'
+og_image: seite-nicht-gefunden-og-1656608775.png
+twitter_image: seite-nicht-gefunden-twitter-1656608775.png
 ---
