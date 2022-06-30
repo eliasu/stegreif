@@ -79,7 +79,7 @@ return [
     'place'                             => 'Place',
     'back'                              => 'Back',
     'fun_fact'                          => 'Fun Fact',
-    'further_links'                     => 'Appart from Stegreif',
+    'further_links'                     => 'Apart from Stegreif',
 
     // Pagination
     'next'                              => 'next',
