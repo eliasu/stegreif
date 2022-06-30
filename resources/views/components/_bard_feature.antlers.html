@@ -89,7 +89,7 @@
 
             {{# media #}}
             {{ if feature_type == 'small' }} <div class="relative w-full sm:w-[50%]">
-            {{ elseif feature_type == 'big' }} <div class="relative w-full sm:w-[60%]"> {{ /if }}
+            {{ elseif feature_type == 'big' || feature_type == 'bird' }} <div class="relative w-full sm:w-[60%]"> {{ /if }}
                 
                 {{# media wrapper #}}
                 <div class="sm:absolute sm:inset-0 aspect-w-3 aspect-h-2 sm:aspect-none">
