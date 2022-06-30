@@ -187,5 +187,4 @@ related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
 related_termine:
   - ee351bf6-74a9-49c4-9a72-1bcac5790a54
   - 2edf54e3-8fb5-453f-8e76-eb8df9772cda
-  - 5316684e-17f4-4417-98fc-a6e8f3708fcf
 ---
