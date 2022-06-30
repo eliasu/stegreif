@@ -17,7 +17,7 @@
 
             {{# content wrap #}}
             <div class="flex flex-col items-start py-8 sm:py-20 w-full px-4 lg:px-20
-                {{ if feature_type == "small" }} sm:w-[50%] {{ else }} sm:w-[40%] {{ /if }}">
+                {{ if feature_type == "small" || feature_type == "bird" }} sm:w-[50%] {{ else }} sm:w-[40%] {{ /if }}">
                 
                 {{# article content #}}
                 {{ partial:components/bard handle="{ article }" not_fluid="true" style="block-inset-reset" }}
@@ -25,6 +25,7 @@
 
             {{# bird image/video #}}
             {{ if feature_type == "bird" }}
+                <div class="relative sm:w-[50%]">
                     {{# media wrapper #}}
                     <div class="bottom-0 right-0 -left-20 w-[calc(100%+5rem)] h-[85vmax] sm:w-[calc(100%+5rem)] sm:h-[calc(100%+8.5rem)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
                     
@@ -69,7 +70,7 @@
             
             {{# content wrap #}}
             <div class="flex flex-col items-start py-8 sm:py-20 w-full px-4 lg:px-20
-                {{ if feature_type == "small" }} sm:w-[50%] {{ else }} sm:w-[40%] {{ /if }}">
+                {{ if feature_type == "small" || feature_type == "bird" }} sm:w-[50%] {{ else }} sm:w-[40%] {{ /if }}">
 
                 {{# tags #}}
                 {{ partial:components/tags class="mb-4" }}

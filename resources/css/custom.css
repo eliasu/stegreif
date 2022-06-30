@@ -36,7 +36,7 @@
     p   { @apply text-base md:text-lg leading-l motion-safe:transition-colors; } 
     h1  { @apply text-4xl xs:text-5xl md:text-7xl lg:text-8xl motion-safe:transition-colors; }
     h2  { @apply text-3xl sm:text-4xl md:text-5xl xl:text-6xl motion-safe:transition-colors; hyphens: auto;}
-    h3  { @apply text-2xl md:text-3xl xl:text-4xl motion-safe:transition-colors; }
+    h3  { @apply text-2xl md:text-3xl xl:text-4xl motion-safe:transition-colors; hyphens: auto;}
     h4  { @apply text-lg md:text-2xl motion-safe:transition-colors; }
     h5  { @apply text-base md:text-2xl leading-s font-bold motion-safe:transition-colors; }
     h6  { @apply text-xs leading-s uppercase font-bold motion-safe:transition-colors; } 
@@ -233,8 +233,8 @@
 .bird_image_mask { 
     mask-image: url("/site_assets/transitions/birds_image.png"); 
     mask-repeat: no-repeat;
-    /* mask-size: 100% 100&, auto 22rem; */
-    /* mask-position: center top, center bottom; */
+    mask-size: 100% 100%, auto 22rem;
+    mask-position: center top, center bottom;
 }
 
  /* transition section */

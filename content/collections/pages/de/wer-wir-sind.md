@@ -29,9 +29,9 @@ introduction_content:
       values:
         type: bard_feature
         alignment: left
-        feature_type: big
+        feature_type: small
         select_media_feature: image
-        feature_image: header_images/favorit_orchester_1.-cinematic.jpg
+        feature_image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
         article:
           -
             type: heading
@@ -57,16 +57,24 @@ introduction_content:
               -
                 type: text
                 text: 'Wir sind ein improvisierendes Sinfonieorchester von 30 jungen internationalen Musikerinnen, die sich selbst und dem Publikum neue Wege zur klassischen Musik eröffnen. Mit unseren Rekompositionen klassischer Werke möchten wir das geschätzte musikalische Erbe durch zeitgenössische Strömungen erweitern. Wir spielen stets ohne Dirigentin, ohne Noten, oder Stühle und nutzen die so gewonnene Freiheit für Improvisation und Bewegung. '
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: 'Musikalische Spontanität und performative Intensität bieten dem Publikum ein neuartiges, nahbares Konzerterlebnis. Dabei gestaltet das Publikum freibeweglich den Raum mit – der Konzertsaal, der Zuschauerraum, die Ränge, alles wird zur Bühne. Das Material der klassischen Kompositionen wird bereichert durch die verschiedenen musikalischen Einflüsse und Herkünfte unser Musiker*innen und es entsteht ein lebendiger Ansatz miteinander zu musizieren und Musik für das Publikum erlebbar zu machen.'
         reference_content: false
         alternate: false
+  -
+    type: heading
+    attrs:
+      level: 5
+    content:
+      -
+        type: text
+        text: 'Alles wird zur Bühne'
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
+      -
+        type: text
+        text: 'Musikalische Spontanität und performative Intensität bieten dem Publikum ein neuartiges, nahbares Konzerterlebnis. Dabei gestaltet das Publikum freibeweglich den Raum mit – der Konzertsaal, der Zuschauerraum, die Ränge, alles wird zur Bühne. Das Material der klassischen Kompositionen wird bereichert durch die verschiedenen musikalischen Einflüsse und Herkünfte unser Musiker*innen und es entsteht ein lebendiger Ansatz miteinander zu musizieren und Musik für das Publikum erlebbar zu machen.'
   -
     type: set
     attrs:
@@ -139,7 +147,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: who_we_are_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656613034
+updated_at: 1656614758
 section_headline_orchestra: Orchester
 add_section:
   -
