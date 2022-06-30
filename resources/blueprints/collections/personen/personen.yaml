@@ -44,7 +44,7 @@ sections:
         handle: links
         field: buttons.buttons
         config:
-          display: 'Appart from Stegreif'
+          display: 'Apart from Stegreif'
   sidebar:
     display: Sidebar
     fields:
@@ -70,3 +70,11 @@ sections:
           listable: hidden
           read_only: false
           create: true
+      -
+        handle: team_filters
+        field:
+          type: terms
+          taxonomies:
+            - team_filters
+          display: 'Team Filters'
+          mode: select
