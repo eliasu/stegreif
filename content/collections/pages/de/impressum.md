@@ -22,5 +22,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656547393
+updated_at: 1656608730
+og_image: impressum-og-1656608755.png
+twitter_image: impressum-twitter-1656608755.png
 ---

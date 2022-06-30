@@ -14,5 +14,7 @@ select_transition_theme: bird
 template: single_list_page
 select_collection: news
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656547245
+updated_at: 1656608706
+og_image: neuigkeiten-og-1656608765.png
+twitter_image: neuigkeiten-twitter-1656608765.png
 ---

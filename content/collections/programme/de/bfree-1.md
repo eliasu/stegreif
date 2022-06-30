@@ -165,7 +165,7 @@ tags:
   - chamber
 template: single_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656543216
+updated_at: 1656607519
 header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -
