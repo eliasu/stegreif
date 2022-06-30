@@ -4,9 +4,9 @@
 #}}
 
 <!-- /layout/_navbar.antlers.html -->
-<header class="fixed w-full z-nav top-4 lg:top-20">
+<header class="fixed w-full pointer-events-none z-nav top-4 lg:top-20">
     <div class="flex items-start justify-between fluid-container">
-        <div class="flex">
+        <div class="flex pointer-events-auto">
             
             {{# back lin gets displayed with single entries pages #}}
             {{ if blueprint == "programme" || blueprint == "reihen" }}

@@ -12,6 +12,10 @@ preferences:
       after_save: continue_editing
     reihen:
       after_save: continue_editing
+      columns:
+        - title
+        - site
+        - tags
     termine:
       columns:
         - title
@@ -29,7 +33,7 @@ preferences:
     neuigkeiten:
       after_save: continue_editing
     personen:
-      after_save: continue_editing
+      after_save: create_another
   taxonomies:
     team_tags:
       after_save: continue_editing

@@ -1,14 +1,14 @@
 ---
-id: 6b639e8b-e268-4cc6-a5fa-961d4cb72f40
+id: 664ef359-555e-43dc-81f1-7c6bbabe2cd6
 blueprint: programme
 title: '#bfree'
-header_headline: '#bfree – Eine Reise durch die Freiheit'
 header_theme_selector: dark
-header_select: video
-teaser_text: 'ltricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.'
+header_select: image
+header_image: header_images/(c)-sophia-hegewald.jpg
+teaser_text: 'Die Grenzen sind offen – ob zwischen den Ländern oder den Genres, zwischen den Sprachen oder den Instrumenten, zwischen den Alleinstellungsmerkmalen und den Gemeinsamkeiten.'
 details:
   -
-    headline: 'Ein Detail'
+    headline: Team
     description:
       -
         type: paragraph
@@ -17,21 +17,82 @@ details:
         content:
           -
             type: text
-            text: 'Adresse 344'
+            marks:
+              -
+                type: bold
+            text: 'Künstlerische Leitung'
           -
             type: hard_break
           -
             type: text
-            text: '1223 Gerstenbach'
+            text: 'Juri de Marco'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: Rekomposition/Arrangement
           -
             type: hard_break
           -
             type: text
-            text: Berlin
+            text: 'Uri Caine, Juri de Marco, Alistair Duncan, Bertram Burkert'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'Regie, Choreographie'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'David Fernandez'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: Lichtdesign
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Andreas Harder'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: Kostüm
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Sophie Schliemann'
     type: detail
     enabled: true
 theme_selector: dark
-headline: '#bfree – Eine Reise durch die Freiheit in der wir erkunden was wir wollen.'
 article:
   -
     type: paragraph
@@ -40,37 +101,72 @@ article:
     content:
       -
         type: text
-        text: 'Überall dieselbe alte Leier. Das'
+        text: 'Die Grenzen sind offen – ob zwischen den Ländern oder den Genres, zwischen den Sprachen oder den Instrumenten, zwischen den Alleinstellungsmerkmalen und den Gemeinsamkeiten. Inspiriert von Ludwig van Beethovens 9. Sinfonie, der „Europa-Sinfonie“, kombiniert das STEGREIF.orchester Volkslieder aus Europa mit Elementen aus Beethovens Monumentalwerk und lässt Europa in einer Sinfonie zu einem farbenfrohen Land zusammenwachsen, das aus dem Herzen der Menschen erzählt. Auch mit diesem Konzertprojekt hat es sich das STEGREIF.orchester wieder auf die Fahne geschrieben, dem Publikum neue Herangehensweisen an klassische Musik zu eröffnen. Klassische Musik verwoben mit verschiedenster „folk music“ aus den Herkunftsländern der Musiker*innen, gespielt von einem jungen Orchester ohne Noten, ohne Dirigat und ohne Stühle. Dies schafft Freiheit und Raum für Improvisation.'
+  -
+    type: set
+    attrs:
+      values:
+        type: bard_quotes
+        size: small
+        quote: 'Höchst geistreich und originell, [...] eine ganz neue Sicht auf Beethovens genialen Opus'
+        author: 'Bietigheimer Zeitung, 04.10.2021'
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
       -
         type: text
         marks:
           -
             type: bts_span
             attrs:
-              class: null
-        text: "\_Layout ist fertig"
+              class: text-skin-primary
+        text: '#bfree'
       -
         type: text
-        text: ', der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden.'
-  -
-    type: paragraph
-    attrs:
-      class: null
-    content:
+        text: ' entstand im Rahmen des Projekts '
       -
         type: text
         marks:
           -
-            type: bold
-        text: 'KURZ DAZWISCHEN mehr'
-  -
-    type: paragraph
-    attrs:
-      class: null
-    content:
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: '#bebeethoven'
       -
         type: text
-        text: 'Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS, JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben. Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei versch'
+        text: ' als Beitrag zum Beethovenjahr 2020. #bfree wuchs in der Krise. Es ist eine andere Produktion geworden, als ursprünglich geplant. Nicht nur der Prozess, sondern auch das Ergebnis sind durch Corona geprägt: durch Auflagen und Abstand, wo STEGREIF sonst Nähe und Bewegung sucht. Die Aktionsmöglichkeiten auf der Bühne sind eingeschränkt, direkter Kontakt mit dem Publikum unmöglich. Und doch ist es ein Stück über Freiheit geworden, über die Sehnsucht nach Nähe und Miteinander, über das Fliegen, über alle Grenzen hinweg.'
+add_section:
+  -
+    theme_selector: light
+    article:
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_partners
+            headline: 'UNSERE PARTNER UND KOOPERATIONEN'
+            text: 'Ein Kooperationsprojekt von STEGREIF und PODIUM Esslingen im Rahmen von #bebeethoven – gefördert durch die KULTURSTIFTUNG des BUNDES und das Land Baden-Württemberg – und außerdem gefördert durch die Karl-Schlecht-Stiftung.'
+            entires:
+              - d0e4ef90-45fd-483d-842a-1d597388850b
+              - 90cc8a9e-1837-46bb-88f3-1bda9a49c29e
+              - f3744684-a1fd-4225-baaa-a6613df71d40
+              - e847a09e-87f8-4092-8c0e-457f64129ecb
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+select_transition_theme: bird
+aktuell: true
+select_type: programm
+tags:
+  - chamber
+template: single_page
+updated_by: 7d709850-5c35-4065-be68-b627c348051d
+updated_at: 1656543223
+header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -
     article:
@@ -78,83 +174,18 @@ extend_section:
         type: set
         attrs:
           values:
-            type: bard_media
+            type: bard_gallery
             size: big
-            select_type: image
-            image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
-add_section:
-  -
-    theme_selector: yellow
-    article:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: bts_span
-                attrs:
-                  class: null
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,'
-  -
-    theme_selector: dark
-    article:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: bts_span
-                attrs:
-                  class: null
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,'
-      -
-        type: set
-        attrs:
-          values:
-            type: bard_media
-            size: medium
-            select_type: video
-            video: 'https://youtu.be/VbDbVlDBi9E'
-            media_caption: 'Fat Freddies Drop'
-      -
-        type: paragraph
-        attrs:
-          class: null
-  -
-    theme_selector: light
-    article:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: bts_span
-                attrs:
-                  class: null
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,'
-seo_noindex: false
-seo_nofollow: false
-seo_canonical_type: entry
-sitemap_change_frequency: weekly
-sitemap_priority: 0.5
-select_transition_theme: bird
-aktuell: false
-select_type: programm
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656429721
-related_reihe: 25698410-a795-4c19-84ba-c9cb1fed500a
-template: single_page
-header_video: 'https://youtu.be/5mpafLYHVd0'
+            gallery_title: Impressionen
+            images:
+              - header_images/(c)-navina-neuschl.jpg
+              - header_images/(c)-sophia-hegewald---alternativ.jpg
+              - header_images/(c)-sophia-hegewald.jpg
+              - header_images/bild_roman_novitzky.-cinematic.jpg
+              - header_images/c_navina_neuschl_02.-cinematic.jpg
+related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
+related_termine:
+  - ee351bf6-74a9-49c4-9a72-1bcac5790a54
+  - 2edf54e3-8fb5-453f-8e76-eb8df9772cda
+  - 5316684e-17f4-4417-98fc-a6e8f3708fcf
 ---

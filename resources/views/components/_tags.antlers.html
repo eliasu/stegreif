@@ -66,5 +66,13 @@
             </div>
         {{ /if }}
     </div>
+
+{{# if it is a news  #}}
+{{ elseif { select_content ? select_content.blueprint : blueprint } == "neuigkeiten" }}
+    
+    <div class="{{ vertical ?= "flex-col" }} flex justify-start items-start flex-wrap {{ class }}">            
+        {{ partial:typography/tag color="light" content={ date iso_format="DD.MM.YYYY" } class="mb-0" }}
+    </div>
+
 {{ /if }}
 <!-- End: /components/_tags.antlers.html -->

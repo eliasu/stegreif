@@ -1,14 +1,7 @@
 ---
-id: 5ee49051-9493-4e3f-a459-4c1d765e797d
-origin: 27a37f82-40fa-4767-99b2-f3f0903f6136
+id: f19898e4-affb-4e88-8f0c-13124f7384f3
+origin: a8d81bc7-b246-4ce2-93c7-09d8bd8e4346
 title: 'Support Us'
-article:
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: as
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1654778661
+updated_at: 1656547355
 ---
