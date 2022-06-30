@@ -15,8 +15,10 @@
 
         {{# filter bar #}}
         <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
-            {{ taxonomy:team_tags show="all" }}
-                {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ title }" }}
+            {{ taxonomy:team_tags }}
+                {{# {{ partial:components/button as="button" icon="none" button_type="lined_base" label="{ title }" }} #}}
+                {{ partial:components/button as="button" button_type="lined_base_filter" label="{ title }" modal="$store.filters.titles.{ title | underscored }" }}
+                {{# <div x-show="$store.test.open" class="w-20 h-20 bg-darkblue"></div> #}}
             {{ /taxonomy:team_tags }}
         </div> 
     </div>
