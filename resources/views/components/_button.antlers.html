@@ -24,7 +24,7 @@
 
     {{# background button #}}
     {{ if button_type == "background" }}
-        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-lg font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
+        <div class="flex {{ reverse ?= "flex-row-reverse" }} items-center h-8 gap-4 px-4 text-md md:text font-extrabold uppercase whitespace-nowrap cursor-pointer pointer-events-auto text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base {{ reverse ? 'svg-hover-left' : 'svg-hover-right' }}">
             {{ label }}
             {{ svg src="{{ icon ?? "arrow_right" }}" class="w-6 h-4 fill-current md:w-8 md:h-6" alt="" }}
         </div>

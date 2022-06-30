@@ -14,15 +14,15 @@ introduction_content:
     content:
       -
         type: text
-        text: 'STEGREIF '
-      -
-        type: text
         marks:
           -
             type: bts_span
             attrs:
               class: text-skin-primary
-        text: 'The Improvising Symphony Orchestra'
+        text: STEGREIF
+      -
+        type: text
+        text: ' The Improvising Symphony Orchestra'
   -
     type: set
     attrs:
@@ -138,7 +138,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: who_we_are_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656547090
+updated_at: 1656589336
 section_headline_orchestra: Orchester
 add_section:
   -

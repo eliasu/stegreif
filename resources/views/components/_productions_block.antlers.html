@@ -55,7 +55,7 @@
     {{# all productions #}}
     <div class="flex flex-col gap-y-8 leftright">
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-            <div x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}" 
+            <div x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
                 x-transition>
                 {{# feature block left right #}}
                 {{ if index | %:2  }}
