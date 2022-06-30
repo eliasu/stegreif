@@ -30,6 +30,20 @@ sections:
           listable: hidden
           instructions_position: above
           read_only: false
+      -
+        handle: filter_category
+        field:
+          mode: select
+          create: true
+          taxonomies:
+            - team_filters
+          display: 'Filter Category'
+          type: terms
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          max_items: 1
   sidebar:
     display: Sidebar
     fields:

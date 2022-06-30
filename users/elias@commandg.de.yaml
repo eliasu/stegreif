@@ -45,6 +45,9 @@ preferences:
         - title
         - slug
         - team_tag_type
+        - filter_category
+    team_filters:
+      after_save: create_another
   forms:
     contact:
       columns:

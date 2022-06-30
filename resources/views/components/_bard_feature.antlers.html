@@ -4,7 +4,7 @@
 #}}
 
 <!-- /components/_bard_feature.antlers.html -->
-<div class="flex gap-8 my-8 md:my-20 {{ right ? 'feature-right' : 'feature-left' }} {{ if feature_type == "big" }}block-full{{ /if }}">   
+<div class="flex gap-8 my-8 md:my-20 {{ alternate ? 'feature-right' : 'feature-left' }} {{ if feature_type == "big" }}block-full{{ /if }}">   
 
     {{# block wrapper #}}
     <div class="flex gap-4">
@@ -20,12 +20,11 @@
                 {{ if feature_type == "small" }} sm:w-[50%] {{ else }} sm:w-[40%] {{ /if }}">
                 
                 {{# article content #}}
-                {{ partial:components/bard handle="{ article }" not_fluid="true" }}
+                {{ partial:components/bard handle="{ article }" not_fluid="true" style="block-inset-reset" }}
             </div>
 
             {{# bird image/video #}}
             {{ if feature_type == "bird" }}
-                <div class="relative w-full sm:w-[50%]">
                     {{# media wrapper #}}
                     <div class="bottom-0 right-0 -left-20 w-[calc(100%+5rem)] h-[85vmax] sm:w-[calc(100%+5rem)] sm:h-[calc(100%+8.5rem)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
                     

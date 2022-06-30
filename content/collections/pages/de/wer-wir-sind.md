@@ -29,7 +29,7 @@ introduction_content:
       values:
         type: bard_feature
         alignment: left
-        feature_type: small
+        feature_type: big
         select_media_feature: image
         feature_image: header_images/favorit_orchester_1.-cinematic.jpg
         article:
@@ -66,6 +66,7 @@ introduction_content:
                 type: text
                 text: 'Musikalische Spontanität und performative Intensität bieten dem Publikum ein neuartiges, nahbares Konzerterlebnis. Dabei gestaltet das Publikum freibeweglich den Raum mit – der Konzertsaal, der Zuschauerraum, die Ränge, alles wird zur Bühne. Das Material der klassischen Kompositionen wird bereichert durch die verschiedenen musikalischen Einflüsse und Herkünfte unser Musiker*innen und es entsteht ein lebendiger Ansatz miteinander zu musizieren und Musik für das Publikum erlebbar zu machen.'
         reference_content: false
+        alternate: false
   -
     type: set
     attrs:
@@ -138,7 +139,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: who_we_are_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656608738
+updated_at: 1656613034
 section_headline_orchestra: Orchester
 add_section:
   -
@@ -297,6 +298,7 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: 664ef359-555e-43dc-81f1-7c6bbabe2cd6
+            alternate: false
       -
         type: paragraph
         attrs:

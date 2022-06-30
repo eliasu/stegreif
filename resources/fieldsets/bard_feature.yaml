@@ -1,10 +1,17 @@
 title: bard_feature
 fields:
   -
-    handle: alignment
-    field: common.alignment
-    config:
+    handle: alternate
+    field:
+      inline_label: 'Right Side'
+      default: false
+      display: Alternate
+      type: toggle
+      icon: toggle
       width: 50
+      listable: hidden
+      instructions_position: above
+      read_only: false
   -
     handle: feature_type
     field: common.size
@@ -28,10 +35,10 @@ fields:
     field: header.header_video
     config:
       display: 'Feature Video'
-      default: 'https://youtu.be/VbDbVlDBi9E'
       if:
         select_media_feature: 'equals video'
         reference_content: 'equals false'
+      default: 'https://youtu.be/VbDbVlDBi9E'
   -
     handle: feature_image
     field: header.header_image

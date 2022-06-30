@@ -4,7 +4,7 @@ blueprint: programme
 title: '#bfree'
 header_theme_selector: dark
 header_select: image
-header_image: header_images/(c)-sophia-hegewald.jpg
+header_image: header_images/bild_roman_novitzky.-cinematic.jpg
 teaser_text: 'Die Grenzen sind offen – ob zwischen den Ländern oder den Genres, zwischen den Sprachen oder den Instrumenten, zwischen den Alleinstellungsmerkmalen und den Gemeinsamkeiten.'
 details:
   -
@@ -165,7 +165,7 @@ tags:
   - chamber
 template: single_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656543223
+updated_at: 1656613466
 header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -
