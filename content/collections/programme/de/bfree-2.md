@@ -166,7 +166,7 @@ tags:
   - chamber
 template: single_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656543249
+updated_at: 1656615846
 header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -
@@ -185,4 +185,6 @@ extend_section:
               - header_images/bild_roman_novitzky.-cinematic.jpg
               - header_images/c_navina_neuschl_02.-cinematic.jpg
 related_reihe: 09b7a50f-b2c0-413a-b623-a2d7e74c83ac
+related_termine:
+  - 5316684e-17f4-4417-98fc-a6e8f3708fcf
 ---

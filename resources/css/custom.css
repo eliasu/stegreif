@@ -247,7 +247,7 @@
     
     margin-top: -22rem;
     padding-top: calc(22rem + 5rem);
-    padding-bottom: calc(22rem + 5rem);
+    padding-bottom: calc(22rem + 10rem);
 }
 
 /* last section */
@@ -256,7 +256,7 @@
     @apply bg-skin-inverted;
     margin-top: -22rem;
     padding-top: calc(22rem + 5rem);
-    padding-bottom: 10rem; 
+    padding-bottom: 15rem; 
 }
 
 /* for filter buttons */

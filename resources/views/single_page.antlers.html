@@ -40,7 +40,17 @@
             {{ extend_section }}
                 {{ partial:components/bard handle="{ article }" not_fluid="true" }}
             {{ /extend_section }}
+
         </div>
+ 
+        
+        {{ if related_termine }}
+            <div class="flex flex-col gap-y-8 fluid-container">
+                {{# next dates block #}}
+                {{ partial:components/related_dates_block rel_id="{id}" }}
+            </div>
+        {{ /if }}
+        
     {{ /partial:layout/section }}
 
     {{# if there are additional sections #}}

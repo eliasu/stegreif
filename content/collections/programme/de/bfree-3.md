@@ -184,6 +184,4 @@ extend_section:
               - header_images/bild_roman_novitzky.-cinematic.jpg
               - header_images/c_navina_neuschl_02.-cinematic.jpg
 related_reihe: 09b7a50f-b2c0-413a-b623-a2d7e74c83ac
-related_termine:
-  - 67275990-be72-4dc8-81bb-1b0c6baca7c9
 ---
