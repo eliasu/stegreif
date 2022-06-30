@@ -162,11 +162,10 @@ select_transition_theme: bird
 aktuell: true
 select_type: programm
 tags:
-  - digital
   - chamber
 template: single_page
 updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656543282
+updated_at: 1656622903
 header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -

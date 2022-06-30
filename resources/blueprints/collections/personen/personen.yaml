@@ -70,11 +70,3 @@ sections:
           listable: hidden
           read_only: false
           create: true
-      -
-        handle: team_filters
-        field:
-          type: terms
-          taxonomies:
-            - team_filters
-          display: 'Team Filters'
-          mode: select
