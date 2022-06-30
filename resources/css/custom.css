@@ -53,7 +53,6 @@
     
     /* link coloring */
     p > a, p > a > * { @apply motion-safe:transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
-    
 }   
 
 
@@ -85,8 +84,12 @@
 }
 
 @layer utilities {
-
+   
 }
+
+
+
+
 
 /* burger menu animation */
 .open-burger > div:nth-child(1) {
@@ -101,7 +104,20 @@
     @apply -rotate-45 translate-x-[0.357rem] translate-y-[0.175rem] w-10;
 }
 
+
+
+/*  nedded for alpine.js */
 [x-cloak] { display: none; }
+
+
+/* feature left and right */
+.feature-left {
+    @apply flex-col-reverse sm:flex-row;
+}
+
+.feature-right {
+    @apply flex-col-reverse sm:flex-row-reverse;
+}
 
 /* theming via css variables */
 .theme-dark {
@@ -143,6 +159,10 @@
     --color-accent: var(--color-green);
 }
 
+
+
+
+
 /* style the lightbox */
 .fslightbox-slide-number-container {
     @apply !hidden; 
@@ -156,27 +176,35 @@
     @apply fill-darkblue;
 }
 
+
+
+
 /* style the videojs */
 .vjs-big-play-button {
     @apply !bg-yellow !transition hover:!bg-green !w-12 !h-12 !border-none !rounded-none !top-[calc(50%-1rem)] !left-[calc(50%-2.5rem)];
 }
 .vjs-icon-placeholder::before {
     @apply !flex justify-center items-center !text-light;
+
+
+
 }
 
-/* bg image mask */
+/* bg image mask for background images */
 .rad-mask {
     mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 0%, transparent 50%);
-    @apply translate-x-[20%];
+    @apply translate-x-[20%] opacity-60;
 }
 
 .rad-mask-2 {
     mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 0%, transparent 50%);
-    @apply -translate-x-[20%];
+    @apply -translate-x-[20%] opacity-60;
 }
 
 
-/* different masks */
+
+
+/* all section transition related styles including bird masks  */
 .bird-mask-0{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_0.png"); }
 .bird-mask-1{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_1.png"); }
 .bird-mask-2{ mask-image: url("/site_assets/transitions/black.png"), url("/site_assets/transitions/birds_2.png"); }
@@ -237,6 +265,9 @@
     hyphens: auto;
 }
 
+
+
+
 /* set z-index of sections according to order  */
 section:nth-of-type(2) { @apply z-90 }
 section:nth-of-type(3) { @apply z-80 }
@@ -247,6 +278,8 @@ section:nth-of-type(7) { @apply z-40 }
 section:nth-of-type(8) { @apply z-30 }
 section:nth-of-type(9) { @apply z-20 }
 section:nth-of-type(10) { @apply z-10 }
+
+
 
 
 /* Regular */

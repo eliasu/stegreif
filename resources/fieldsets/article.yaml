@@ -16,7 +16,6 @@ fields:
         - bold
         - italic
         - underline
-        - codeblock
       save_html: false
       toolbar_mode: fixed
       link_noopener: false
@@ -80,3 +79,4 @@ fields:
           fields:
             -
               import: bard_code
+      instructions: 'Use Shift + Enter for a line-break without spacing.'
