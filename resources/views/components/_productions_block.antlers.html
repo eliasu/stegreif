@@ -15,47 +15,71 @@
             actual: true,
             past: false,
  
-            toggle_digital() { 
+            toggle_digital() {
+                this.getVars() 
                 if(this.chamber) this.digital = !this.digital;
-                this.flipFlopVisible(); 
+                //this.flipFlopVisible(); 
+                this.getVars()
             },
             toggle_chamber() { 
+                this.getVars()
                 if(this.digital) this.chamber = !this.chamber; 
-                this.flipFlopVisible(); 
+                //this.flipFlopVisible(); 
+                 this.getVars()
             },
             toggle_actual() { 
+                this.getVars()
                 this.actual = true; 
                 this.past = false; 
-                this.flipFlopVisible(); 
+                //this.flipFlopVisible(); 
+                 this.getVars()
+                
             },
             toggle_past() { 
+                this.getVars()
                 this.past = true; 
                 this.actual = false;
-                this.flipFlopVisible();  
+                //this.flipFlopVisible();  
+                 this.getVars()
+            },
+            getVars(){
+                console.log("digital:" +this.digital, "chamber:" +this.chamber, "actual:" +this.actual, "past:" +this.past);
+                this.logList();
+            },
+            logList() {
+                setTimeout(function(){
+                const items = document.querySelectorAll(".filter-item-wrapper");
+                for (let i = 0; i < items.length; i++) {
+                    let item = items[i];
+                    console.log(item.getAttribute('style'));
+                    console.log(item._x_isShown);
+                }
+                console.log("-------");
+            },0);
+                
             },
             flipFlopVisible() {
-                console.log("flipflopping");
-                const filterItems = document.querySelectorAll(".filter-item-wrapper");
-                //console.log(filterItems);
-                let prevFeatureRight = false;
-                //debugger
-                for (let i = 0; i < filterItems.length; i++) {
-                    let item = filterItems[i];
-                    if(item._x_isShown) {
-                        
-                        //console.log(prevFeatureRight);
-                        //console.log(item.children[0].className);
+                setTimeout(function(){
+                    console.log("flipflopping");
+                    const filterItems = Array.from(document.querySelectorAll(".filter-item-wrapper"));
+                    const visibleItems = filterItems.filter(el=> el._x_isShown);
+                    console.log(filterItems);
+                    console.log(visibleItems);
+                    let prevFeatureRight = false;
+                    //debugger
+                    for (let i = 0; i < visibleItems.length; i++) {
+                        let item = visibleItems[i];
                         item.children[0].classList.remove('feature-right', 'feature-left');
-                        if(prevFeatureRight) {
-                            item.children[0].classList.add('feature-left');
-                            prevFeatureRight = false;
-                        } else {
-                            item.children[0].classList.add('feature-right');
-                            prevFeatureRight = true;
-                        }
 
+
+                        if(i % 2) {
+                            item.children[0].classList.add('feature-right');
+                        } else {
+                            item.children[0].classList.add('feature-left');
+                        }
+                    
                     }
-                }
+                }, 0);
             },
         }))
     })
@@ -95,7 +119,8 @@
         {{ alternating = true }}
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
             <div class="filter-item-wrapper" x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
-                x-transition>
+                {{# x-transition #}}
+                >
                 
                 {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
                 {{ alternating = !alternating }}
