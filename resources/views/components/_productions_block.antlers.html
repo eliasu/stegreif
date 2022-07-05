@@ -21,12 +21,38 @@
             toggle_past() { this.past = true; this.actual = false },
             test_func() {
                 console.log("hello world");
-                const filterItems = Array.from(document.querySelectorAll(".filter-item-wrapper"));
-                const visibleItems = filterItems.filter(el => {
-                    return el._x_isShown
-                })
+                const filterItems = document.querySelectorAll(".filter-item-wrapper");
                 console.log(filterItems);
-                console.log(visibleItems);
+                let prevFeatureRight = false;
+                
+                debugger
+                for (let i = 0; i < filterItems.length; i++) {
+                    let item = filterItems[i];
+                    if(item._x_isShown) {
+
+                        /*if(prevFeatureRight == undefined) {
+                            prevFeatureRight = (item.children[0].className.includes('feature-right')) ? true : false;
+                        }*/
+
+                        console.log(prevFeatureRight);
+                        console.log(item.children[0].className);
+                        item.children[0].classList.remove('feature-right', 'feature-left');
+
+                        if(prevFeatureRight) {
+                           
+                                   
+                                    item.children[0].classList.add('feature-left');
+                                    prevFeatureRight = false;
+                        } else {
+                                item.children[0].classList.add('feature-right');
+                                prevFeatureRight = true;
+
+                        }
+
+                    }
+
+                }
+               
 
             },
         }))
