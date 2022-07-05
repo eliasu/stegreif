@@ -15,45 +15,47 @@
             actual: true,
             past: false,
  
-            toggle_digital() { if(this.chamber) this.digital = !this.digital; },
-            toggle_chamber() { if(this.digital) this.chamber = !this.chamber; },
-            toggle_actual() { this.actual = true; this.past = false },
-            toggle_past() { this.past = true; this.actual = false },
-            test_func() {
-                console.log("hello world");
+            toggle_digital() { 
+                if(this.chamber) this.digital = !this.digital;
+                this.flipFlopVisible(); 
+            },
+            toggle_chamber() { 
+                if(this.digital) this.chamber = !this.chamber; 
+                this.flipFlopVisible(); 
+            },
+            toggle_actual() { 
+                this.actual = true; 
+                this.past = false; 
+                this.flipFlopVisible(); 
+            },
+            toggle_past() { 
+                this.past = true; 
+                this.actual = false;
+                this.flipFlopVisible();  
+            },
+            flipFlopVisible() {
+                console.log("flipflopping");
                 const filterItems = document.querySelectorAll(".filter-item-wrapper");
-                console.log(filterItems);
+                //console.log(filterItems);
                 let prevFeatureRight = false;
-                
-                debugger
+                //debugger
                 for (let i = 0; i < filterItems.length; i++) {
                     let item = filterItems[i];
                     if(item._x_isShown) {
-
-                        /*if(prevFeatureRight == undefined) {
-                            prevFeatureRight = (item.children[0].className.includes('feature-right')) ? true : false;
-                        }*/
-
-                        console.log(prevFeatureRight);
-                        console.log(item.children[0].className);
+                        
+                        //console.log(prevFeatureRight);
+                        //console.log(item.children[0].className);
                         item.children[0].classList.remove('feature-right', 'feature-left');
-
                         if(prevFeatureRight) {
-                           
-                                   
-                                    item.children[0].classList.add('feature-left');
-                                    prevFeatureRight = false;
+                            item.children[0].classList.add('feature-left');
+                            prevFeatureRight = false;
                         } else {
-                                item.children[0].classList.add('feature-right');
-                                prevFeatureRight = true;
-
+                            item.children[0].classList.add('feature-right');
+                            prevFeatureRight = true;
                         }
 
                     }
-
                 }
-               
-
             },
         }))
     })
