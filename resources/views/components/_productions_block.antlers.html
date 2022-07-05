@@ -19,6 +19,16 @@
             toggle_chamber() { if(this.digital) this.chamber = !this.chamber; },
             toggle_actual() { this.actual = true; this.past = false },
             toggle_past() { this.past = true; this.actual = false },
+            test_func() {
+                console.log("hello world");
+                const filterItems = Array.from(document.querySelectorAll(".filter-item-wrapper"));
+                const visibleItems = filterItems.filter(el => {
+                    return el._x_isShown
+                })
+                console.log(filterItems);
+                console.log(visibleItems);
+
+            },
         }))
     })
 </script>
@@ -45,6 +55,8 @@
                 <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
                     {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital()" }}
                     {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber()" }}
+
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="test" store="digital" function="test_func()" }}
                 </div>
             {{ /if }}
         </div>
@@ -54,7 +66,7 @@
     <div class="flex flex-col gap-y-8">
         {{ alternating = true }}
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-            <div x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
+            <div class="filter-item-wrapper" x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
                 x-transition>
                 
                 {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
