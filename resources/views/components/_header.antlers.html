@@ -24,25 +24,10 @@
                 {{# header headline #}}
                 {{ partial:typography/h1 content="{header_headline ?? title }" class="text-skin-primary"}}
             </div>
-            
-            {{# social icons and quick links wrapper #}}
-            <div class="flex flex-col flex-wrap md:flex-row-reverse md:justify-end gap-x-20 gap-y-10">
-                
-                {{# quick links #}}
-                <div class="flex flex-wrap gap-x-8 gap-y-4">
-                    {{ partial:components/button label="Nächste Termine" link_type="url" url="google.de" }}
-                    {{ partial:components/button label="Aktuelle Programme" link_type="url" url="google.de" }}
-                </div>
 
-                {{# social icons #}}
-                {{ if social_media:social_media && social_icons }}
-                    <div class="flex gap-8">
-                        {{ social_media:social_media }}
-                            <a class="w-8 h-8 text-skin-base hover:text-skin-accent focus:outline-none focus-visible:ring-2 ring-primary" href="{{ prefix }}{{ handle }}" rel="noopener" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src='type' class="w-8 h-8 overflow-visible fill-current" alt="" aria-hidden="true" }}</a>
-                        {{ /social_media:social_media }}
-                    </div>
-                {{ /if }}
-            </div>
+            {{# quicklinks_section component #}}
+            {{ partial:components/quicklinks_section }}
+            
         </div>
         
         {{# background media #}}

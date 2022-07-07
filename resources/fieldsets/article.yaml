@@ -79,4 +79,9 @@ fields:
           fields:
             -
               import: bard_code
+        anchor:
+          display: Anchor
+          fields:
+            -
+              import: anchor
       instructions: 'Use Shift + Enter for a line-break without spacing.'
