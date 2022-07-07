@@ -15,39 +15,28 @@
             actual: true,
             past: false,
  
-            toggle_digital() {
-                this.getVars() 
+            toggle_digital() { 
                 if(this.chamber) this.digital = !this.digital;
                 this.flipFlopVisible(); 
-                this.getVars()
             },
             toggle_chamber() { 
-                this.getVars()
                 if(this.digital) this.chamber = !this.chamber; 
                 this.flipFlopVisible(); 
-                 this.getVars()
             },
             toggle_actual() { 
-                this.getVars()
                 this.actual = true; 
                 this.past = false; 
                 this.flipFlopVisible(); 
-                 this.getVars()
-                
             },
             toggle_past() { 
-                this.getVars()
                 this.past = true; 
                 this.actual = false;
                 this.flipFlopVisible();  
-                 this.getVars()
             },
             getVars(){
                 console.log("digital:" +this.digital, "chamber:" +this.chamber, "actual:" +this.actual, "past:" +this.past);
-                this.logList();
             },
             logList() {
-             //   setTimeout(function(){
                 const items = Array.from(document.querySelectorAll(".filter-item-wrapper"));
                 /*for (let i = 0; i < items.length; i++) {
                     let item = items[i];
@@ -57,33 +46,29 @@
                 console.log("shown: "+items.filter(el=>el._x_isShown).length);
                 console.log("style: "+items.filter(el=>el.getAttribute('style')).length);
                 console.log("-------");
-           // },0)
-                
             },
             flipFlopVisible() {
+                /*
+                its f*cking ugly but halfway working
+                problem is that the only way to get a list of the right elements is when alpine is setting its values, therefore its jumping
+
+                it should be
+                - fadeout
+                - setting left right classes
+                - fade in
+                */ 
+
                 const prodContainers = document.querySelectorAll(".prod-container");
                 for (let i = 0; i < prodContainers.length; i++) {
                     let item = prodContainers[i];
                     item.classList.add("custom-hidden");
                   }
  
-                setTimeout(function(){
-                    //debugger
+                setTimeout(function(){ //lets the elements fade out
                     console.log("flipflopping");
                     const filterItems = Array.from(document.querySelectorAll(".filter-item-wrapper"));
                     const visibleItems = filterItems.filter(el=> el._x_isShown);
-                    //const visibleItems = filterItems.filter(el=> !(el.getAttribute('style')));
-
-                   // console.log(filterItems);
-                   // console.log(visibleItems);
-
                   
-
-                 
-
-                  //setTimeout(function(){
-
-                    //debugger
                     for (let i = 0; i < visibleItems.length; i++) {
                         let item = visibleItems[i];
                         item.children[0].classList.remove('feature-right', 'feature-left');
@@ -97,9 +82,7 @@
                     for (let i = 0; i < prodContainers.length; i++) {
                         let item = prodContainers[i];
                         item.classList.remove("custom-hidden");
-                      }
-                    //}, 1700);
-    
+                      }    
                 }, 500);
             },
         }))
