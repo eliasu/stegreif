@@ -30,7 +30,7 @@
                         {{ glide:image preset='xl' }} 1440w,
                         {{ glide:image preset='2xl' }} 1680w"
                     sizes="{{ sizes }}"
-                    type="{{ image.mime_type }}"
+                    type="{{ image.mime_type ?? mime_type }}"
                 >
                 <img
                     {{ if cover }}
@@ -43,8 +43,8 @@
                     {{ /if }}
                     src="{{ glide:image preset='lg' }}"
                     alt="{{ media_caption ?? alt ensure_right='.' ?? image_title }}"
-                    width="{{ image.width }}"
-                    height="{{ image.height }}"
+                    width="{{ image.width ?? width }}"
+                    height="{{ image.height ?? height }}"
                     loading="lazy"
                 >
             {{ /if }}
