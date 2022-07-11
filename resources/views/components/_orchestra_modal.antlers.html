@@ -53,7 +53,7 @@
                 {{ partial:typography/h3 }} x-text="$store.modal.title" {{ /partial:typography/h3 }}
                 
                 {{# text #}}
-                {{ partial:typography/p }} x-text="$store.modal.description" {{ /partial:typography/p }}
+                {{ partial:typography/p }} x-html="$store.modal.description" {{ /partial:typography/p }}
             </div>
 
             {{# display extras only if set #}}
@@ -63,7 +63,7 @@
                 <div class="flex flex-col items-start" x-show="$store.modal.showFunFact">
                     {{ partial:typography/h6 content="{ trans:strings.fun_fact }" class="mb-2 text-yellow" }}
                     {{ partial:typography/p class="mb-8"}}
-                        x-text="$store.modal.funFact"
+                        x-html="$store.modal.funFact"
                     {{ /partial:typography/p }}
                 </div>
                 
