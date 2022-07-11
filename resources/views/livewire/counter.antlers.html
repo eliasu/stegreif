@@ -11,10 +11,10 @@
 
 
     <div x-data="{ open: {{ livewire:entangle property='showDropdown' }} }">
+    {{# <div x-data="{ open: @entangle('showDropdown') }"> #}}
 
     {{# </div> #}}
 
-    {{# <div x-data="{ open: @entangle('showDropdown') }"> #}}
         <button @click="open = true">Show More...</button>
      
         <ul x-show="open" @click.outside="open = false">
@@ -22,6 +22,17 @@
             <li><button wire:click="delete">Delete</button></li>
         </ul>
     </div>
+
+
+
+    <div x-data>
+        <h1 x-text="$wire.count"></h1>
+ 
+        <button x-on:click="$wire.increment()">Increment</button>
+    </div>
+
+
+    
 
 
 
