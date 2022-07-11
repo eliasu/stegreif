@@ -17,7 +17,7 @@
         {{ /if }}
 
         {{# limit to 9 pictures in lightbox there will be mor available #}}
-        {{ images limit="9" }}
+        {{ images }}
 
             {{# define image flow and tint based on image count #}}
             {{ if images | count == 1 }}"
@@ -35,29 +35,42 @@
             {{ elseif images | count <= 8 }}
                 {{ img_flow = "h-1/4 xs:h-1/3 basis-1/2 xs:basis-1/3" }}
                 {{ if index == 2 || index == 6 || index == 7 }} {{ temp_tint = "yellow" }} {{ else }} {{ temp_tint = "dark" }} {{ /if }}
-            {{ elseif images | count <= 9 }}
+            {{ elseif images | count >= 9 }}
                 {{ img_flow = "h-1/5 xs:h-1/3 basis-1/2 xs:basis-1/3" }}
                 {{ if index == 0 || index == 5 || index == 7 }} {{ temp_tint = "yellow" }} {{ else }} {{ temp_tint = "dark" }} {{ /if }}
             {{ /if }}
 
-            {{# image container #}}
-            <div class="w-full {{ img_flow }} grow relative group cursor-pointer">
+
+
+            {{# show max 9 images, but make more available within lightbox #}}
+            {{ if index >= 9 }}
                 
-                {{# lightbox link #}}
-                <a href="{{url}}" data-fslightbox="lb-{{ lb_index }}">
-                    
-                    {{# opening arrows on hover #}}
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-skin-accent">
-                        <div class="rotate-45">
-                            {{ svg src="arrow_up" class="w-6 opacity-0 pointer-events-none fill-current motion-safe:transition group-hover:-translate-y-2 group-hover:opacity-100" }}
-                            {{ svg src="arrow_down" class="w-6 opacity-0 pointer-events-none fill-current motion-safe:transition group-hover:translate-y-2 group-hover:opacity-100" }}
+                {{# hidden links to be available for lightbox #}}
+                <a href="{{url}}" data-fslightbox="lb-{{ lb_index }}" class="hidden"> Not Shwon </a>
+            
+            {{# show max 9 images in grid #}}
+            {{ else }}
+
+                {{# image container #}}
+                <div class="w-full {{ img_flow }} grow relative group cursor-pointer">
+
+                    {{# lightbox link #}}
+                    <a href="{{url}}" data-fslightbox="lb-{{ lb_index }}">
+                        
+                        {{# opening arrows on hover #}}
+                        <div class="absolute inset-0 flex flex-col items-center justify-center text-skin-accent">
+                            <div class="rotate-45">
+                                {{ svg src="arrow_up" class="w-6 opacity-0 pointer-events-none fill-current motion-safe:transition group-hover:-translate-y-2 group-hover:opacity-100" }}
+                                {{ svg src="arrow_down" class="w-6 opacity-0 pointer-events-none fill-current motion-safe:transition group-hover:translate-y-2 group-hover:opacity-100" }}
+                            </div>
                         </div>
-                    </div>
-                    
-                    {{# image #}}
-                    {{ partial:components/picture cover="true" tint="{temp_tint}" tint_hover="true" :image="url" sizes="(min-width: 768px) 25vw, 25vw" }}
-                </a>
-            </div>
+                        
+                        {{# image #}}
+                        {{ partial:components/picture cover="true" tint="{temp_tint}" tint_hover="true" :image="url" sizes="(min-width: 768px) 25vw, 25vw" }}
+                    </a>
+
+                </div>
+            {{ /if }}
         {{ /images }}
         
         {{# add on the lightbox index variable after the images loop – this archieves different lightbox instances for "data-fslightbox" #}}
