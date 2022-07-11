@@ -36,9 +36,9 @@
                     $store.modal.open = true,
                     $store.modal.title = '{{title}}', 
                     $store.modal.image = { url : '{{ glide:image preset='lg' }}', extension : '{{image.extension}}', mime_type : '{{image.mime_type}}', alt : '{{image.alt}}', focus : '{{image.focus | background_position}}', width : '{{image.width}}', height : '{{image.height}}', },
-                    $store.modal.description = '{{description}}',
+                    $store.modal.description = '{{ description regex_replace="\n|<br>" }}',
                     $store.modal.showFunFact = {{ fun_fact ? 'true' : 'false'}},
-                    $store.modal.funFact = '{{ fun_fact }}',
+                    $store.modal.funFact = '{{ fun_fact regex_replace="\n|<br>" }}',
                     $store.modal.showLinks = {{ links ? 'true' : 'false'}},
                     $store.modal.links = [ {{ links }} { title : '{{ label }}', url : '{{ url }}' }{{!last ?= ','}} {{ /links }} ],
                     $store.modal.teamTags = [ {{ team_tags }} { content : '{{ title }}', color : '{{ team_tag_type }}' }{{!last ?= ','}} {{ /team_tags }} ] "

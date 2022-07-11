@@ -27,7 +27,7 @@
             {{ if feature_type == "bird" }}
                 <div class="relative sm:w-[50%]">
                     {{# media wrapper #}}
-                    <div class="bottom-0 right-0 -left-20 w-[calc(100%+5rem)] h-[85vmax] sm:w-[calc(100%+5rem)] sm:h-[calc(100%+8.5rem)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
+                    <div class="bottom-0 right-0 left-0 -ml-[14.4%] h-[50vmax] sm:h-[calc(100%+19%)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
                     
                         {{# image #}}
                         {{ if select_media_feature == "image" }}
@@ -91,18 +91,19 @@
             {{ if feature_type == "bird" }}
                 <div class="relative w-full h-full sm:w-[50%]">
                     {{# media wrapper #}}
-                    <div class="bottom-0 right-0 -left-20 w-[calc(100%+5rem)] h-[85vmax] sm:w-[calc(100%+5rem)] sm:h-[calc(100%+8.5rem)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
+                    <div class="bottom-0 right-0 left-0 -ml-[14.4%] h-[50vmax] sm:h-[calc(100%+19%)] sm:absolute aspect-w-3 aspect-h-2 sm:aspect-none bird_image_mask">
                     
                         {{# image #}}
-                        {{ if select_media_feature == "image" }}
+                        {{ if header_select == "image" }}
                             {{ partial:components/picture nocaption="true" :image="select_content.header_image ?? header_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
                         
                         {{# video #}}
-                        {{ elseif select_media_feature == "video" }}
+                        {{ elseif header_select == "video" }}
                             {{ partial:components/video nocaption="true" youtube_url="{select_content.header_video ?? header_video}" cover="true" }}
                         {{ /if }} 
                     </div> 
                 </div>
+
             
             {{# normal image/video #}}
             {{ else }}
