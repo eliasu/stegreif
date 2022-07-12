@@ -25,13 +25,13 @@
 
     {{# filter bar #}}
     <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
-        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+        <div class="flex flex-row gap-6 gap-y-2">
             {{ partial:components/button as="button" button_type="lined_base_filter" label="digital" modal="digital" }}
             {{ partial:components/button as="button" button_type="lined_base_filter" label="chamber" modal="chamber" }}
         </div>
         
         {{# dropdowns #}}
-        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+        <div class="flex flex-row gap-6 gap-y-2">
             {{ partial:components/select label="{ trans:strings.date }" model="range" }}
                 
                 {{# add select options #}}
