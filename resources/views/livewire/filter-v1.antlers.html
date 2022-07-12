@@ -1,17 +1,42 @@
 
 <div>
+
+
+    {{# <div x-data="{ color: {{ livewire:entangle property='filter' }} }"></div> #}}
+
+    <div class="" x-data="{ color: {{ livewire:entangle property='filter' }} }">
+        <select x-model="color">
+            <option value="" disabled>Select A Color</option>
+            <option>Moon</option>
+            <option>Be</option>
+            {{# <option>Yellow</option> #}}
+        </select>
+        
+        Color: <span x-text="color"></span>
+    </div>
+
+
+    <input type="text" x-model="message">
+ 
+    <span x-text="message"></span>
+
+
     {{ type = "programme" }}
 
-    {{# {{ items = {collection:products sort="rating:desc" limit="5"} }} #}}
-
-    {{ items = {collection:{type}} }}
-            {{title}}
+    
+    {{ items = {collection:{type} title:starts_with="{{ $filter }}"}  }}
+    <div class="">{{title}}</div>
     {{/items}}
-
-
-
-
- {{# {{collection:programme}}
-        {{title}}
- {{collection:programme}} #}}
+    
+  
+  
+    {{# -------------  
+    {{ collection:programme title:starts_with="moon" }}
+    <div class="">{{title}}</div>
+    {{/collection:programme }} #}}
+    
+    
+    
 </div>
+
+{{# {{ items = {collection:products sort="rating:desc" limit="5"} }} #}}
