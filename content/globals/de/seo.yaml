@@ -22,13 +22,15 @@ og_image: social-image.jpg
 twitter_image: twitter-image.jpg
 sitemap_collections:
   - pages
-trackers_local: false
+trackers_local: true
 trackers_staging: false
 trackers_production: true
 use_google_site_verification: false
 use_fathom: false
 fathom_use_custom_domain: false
 use_cloudflare_web_analytics: false
-tracker_type: none
+tracker_type: gtag
+google_analytics: '123'
 anonymize_ip: false
-use_cookie_banner: false
+use_cookie_banner: true
+display_style: right

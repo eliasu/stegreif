@@ -20,14 +20,14 @@ return [
     'cookie_functional'                 => 'Functional',
     'cookie_functional_explanation'     => 'First party cookies needed for the website to function. These can\'t be turned off.',
     'cookie_analytics'                  => 'Analytics',
-    'cookie_analytics_explanation'      => 'Third party cookies, not needed if we cared.',
+    'cookie_analytics_explanation'      => 'Analytics-Services are used to get pseudonymised data about the site visitor. The data will be used to optimize the website.',
     'cookie_ads'                        => 'Ads & tracking',
     'cookie_ads_explanation'            => 'Third party cookies absolutely terrible for privacy, but we don\'t give a sh*t.',
     'cookie_accept'                     => 'Accept',
     'cookie_ignore'                     => 'Ignore',
     'cookie_explanation'                => 'This site uses cookies that need consent.',
-    'cookie_learn_more'                 => 'Learn more',
-    'cookie_reset_consent'              => 'Reset cookie consent',
+    'cookie_learn_more'                 => 'Privacy',
+    'cookie_reset_consent'              => 'cookies',
 
     // Dark mode
     'theme_toggle_dark'                 => 'Use dark theme.',

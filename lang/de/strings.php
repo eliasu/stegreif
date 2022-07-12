@@ -18,16 +18,16 @@ return [
     // Cookie banner
     'cookie_title'                      => 'Cookies',
     'cookie_functional'                 => 'Funktional',
-    'cookie_functional_explanation'     => 'First party cookies needed for the website to function. These can\'t be turned off.',
+    'cookie_functional_explanation'     => 'Funktionale Cookies sind für die grundlegende Funktionalität der Website erforderlich. Diesen Services kann nicht widersprochen werden.',
     'cookie_analytics'                  => 'Analytics',
-    'cookie_analytics_explanation'      => 'Third party cookies, not needed if we cared.',
+    'cookie_analytics_explanation'      => 'Analytics-Services werden benötigt, um pseudonymisierte Daten über die Besucher der Website zu sammeln. Die Daten ermöglichen es uns, das Benutzerverhalten besser zu verstehen.',
     'cookie_ads'                        => 'Ads & tracking',
     'cookie_ads_explanation'            => 'Third party cookies absolutely terrible for privacy, but we don\'t give a sh*t.',
     'cookie_accept'                     => 'Akzeptieren',
     'cookie_ignore'                     => 'Ignorieren',
     'cookie_explanation'                => 'Wir verwenden auf dieser Seite Cookies. Wenn Sie auf akzeptieren klicken, sind Sie mit der Nutzung von Cookies einverstanden.',
-    'cookie_learn_more'                 => 'Datenschutzerklärung',
-    'cookie_reset_consent'              => 'Cookies zurücksetzen',
+    'cookie_learn_more'                 => 'Datenschutz',
+    'cookie_reset_consent'              => 'Cookies',
 
     // Dark mode
     'theme_toggle_dark'                 => 'Use dark theme.',
