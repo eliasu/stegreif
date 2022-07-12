@@ -5,6 +5,7 @@
 /public/img/
 /public/static/
 /storage/*.key
+/storage
 /vendor
 .env
 .env.backup
@@ -18,3 +19,4 @@ yarn-error.log
 /public/js/
 /public/css/
 /public/mix-manifest.json
+.DS_Stor??
