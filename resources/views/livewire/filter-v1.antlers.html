@@ -4,30 +4,34 @@
 
     <div class="" x-data="{ filter: {{ livewire:entangle property='filter' }} }">
         <select x-model="filter">
-            <option value="" disabled>Select start of title</option>
-            <option>#bfree</option>
-            <option>Be</option>
+            <option value="">All</option>
+            <option>#</option>
+            <option value="(m || g)">test</option>
         </select>
     
         Title start: <span x-text="filter"></span>
     </div>
 
-    {{# {{ type = "programme" }}
-    {{ items = {collection:{type} title:starts_with="{{ $filter }}"}  }}
-        <div class="">{{title}}</div>
-    {{/items}} #}}
+    <div class="flex mb-20 gap-11">
+        {{ type = "programme" }}
+        {{# {{ items = {collection:{type} title:starts_with="{{ $filter }}"}  }} #}}
+        {{ items = {collection:{type}}   }}
+            <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
+                {{title}}
+            </div>
+        {{/items}}
+    </div>
 
 
-    {{# getting all the data #}}
-    {{ items = {collection:programme} }}
-    {{# {{ items = items where ( title == "#bfree") }} #}}
-    {{ items = items where ( title == { $filter }) }}
-    {{# {{ items = items where title:starts_with="moon" }} #}}
+    <div class="flex gap-11">
+        {{results}}
+            <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
+                {{title}}
+            </div>
+        {{/results}}
+    </div>
 
-    {{# only altering what is displayed – no server requests? #}}
-    {{ items }}
-        <div class="">{{title}}</div>
-    {{ /items }}
+
     
         
 </div>
