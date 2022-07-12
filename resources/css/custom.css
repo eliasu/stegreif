@@ -136,12 +136,24 @@
     --color-primary: var(--color-green);
     --color-accent: var(--color-light);
 }
+section.theme-yellow {
+    background-image: url(/site_assets/bg/bg_section_birds.svg);
+    background-repeat: repeat;
+    background-size: 85rem;
+}
+
 .theme-light {
     --color-base: var(--color-darkblue);
     --color-inverted: var(--color-light);
     --color-primary: var(--color-green);
     --color-accent: var(--color-yellow);
 }
+section.theme-light {
+    background-image: url(/site_assets/bg/bg_section_birds.svg);
+    background-repeat: repeat;
+    background-size: 85rem;
+}
+
 
 /* Themes Header */
 .header-dark {
