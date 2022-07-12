@@ -82,7 +82,8 @@
                 {{ partial:typography/p content="{select_content.teaser_text ?? teaser_text}" class="mb-8" }}
                 
                 {{# link to detail view #}}
-                {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" entry="{ url }" }}
+                {{ select_content:url }}
+                {{ partial:components/button button_type="lined_base" label="{ trans:strings.more }" link_type="url" url="{ select_content:url ?? url }" }}
             </div>
 
 
