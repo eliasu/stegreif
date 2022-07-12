@@ -16,7 +16,7 @@ return [
     'form_success'                      => 'Thank you, we received your message and will contact you as soon as possible.',
 
     // Cookie banner
-    'cookie_title'                      => 'Cookies 🍪',
+    'cookie_title'                      => 'Cookies',
     'cookie_functional'                 => 'Functional',
     'cookie_functional_explanation'     => 'First party cookies needed for the website to function. These can\'t be turned off.',
     'cookie_analytics'                  => 'Analytics',
