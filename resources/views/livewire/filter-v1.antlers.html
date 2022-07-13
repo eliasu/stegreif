@@ -8,36 +8,41 @@
         {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
         <div class="" x-data="{ filter: {{ livewire:entangle property='selection' }} }">
             <select x-model="filter">
+
                 <option value="">All</option>
 
                 {{ taxonomy:{ $filterTax } }}
                     <option value="{{slug}}">{{title}}</option>
                 {{ /taxonomy:{ $filterTax } }}
 
-    
-
             </select>
         
             Filtering for: <span x-text="filter"></span>
         </div>
 
-        <button wire:click="incr">hallo</button>
-        {{ $testcounter }}
+        <div class="" x-data="{show: ''}">
+            <input type="checkbox" id="checkbox" x-model="show">
+            <label for="checkbox" x-text="show"></label>
+        </div>
 
-       
+        {{# <div class="" x-data="{colors: []}"> #}}
+        <div class="" x-data="{ colors: {{ livewire:entangle property='test' }} }">
+            <input type="checkbox" value="red" x-model="colors">
+            <input type="checkbox" value="orange" x-model="colors">
+            <input type="checkbox" value="yellow" x-model="colors">
+            Colors: <span x-text="colors"></span>
+        </div>
+ 
 
         <div class="flex gap-11">
             {{# custom tag "lifewire results" from life wire component #}}
             {{lwResults}}
+            {{# here goes the result partial #}}
                 <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
                     {{title}}
                 </div>
             {{/lwResults}}
         </div>
 
-   
-
-    
-        
 </div>
 

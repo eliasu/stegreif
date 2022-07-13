@@ -13,7 +13,8 @@ class FilterV1 extends Component
     // this one fucking needs to be private to work with alpine lifewire entagnle
     public $selection = "";
     public $lwResults;
-    public $testcounter = 0;
+
+    public $test= [];
 
     public $collectionType;
     public $filterTax;
@@ -27,10 +28,7 @@ class FilterV1 extends Component
         $this->currentLocale = $config["currLocale"];
     }
 
-    public function incr() {
-        $this->testcounter++;
-    }
-
+  
     // protected $queryString = [
     //     'tag'
     // ];
@@ -53,7 +51,6 @@ class FilterV1 extends Component
 
         debug($query->get());
         debug("selection", $this->selection);
-        debug("counter", $this->testcounter);
 
         // Filter on tag
         // if (! empty($this->tag)) {
