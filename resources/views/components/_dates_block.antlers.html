@@ -24,33 +24,7 @@
 <div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40" x-data="filter">
 
     {{# filter bar #}}
-    <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
-        <div class="flex flex-row gap-6 gap-y-2">
-            {{ partial:components/button as="button" button_type="lined_base_filter" label="digital" modal="digital" }}
-            {{ partial:components/button as="button" button_type="lined_base_filter" label="chamber" modal="chamber" }}
-        </div>
-        
-        {{# dropdowns #}}
-        <div class="flex flex-row gap-6 gap-y-2">
-            {{ partial:components/select label="{ trans:strings.date }" model="range" }}
-                
-                {{# add select options #}}
-                <option value="Volvo">Volvo</option>
-                <option value="Bauernhausen">Bauernhauses</option>
-                <option value="kleinertest">kleinertest</option>
-                <option value="test">test</option>
-
-            {{ /partial:components/select }}
-
-            {{ partial:components/select label="{ trans:strings.place }" model="place" }}
-
-                {{# add select options #}}
-                <option value="Volvo">Volvo</option>
-                <option value="test">test</option>
-                    
-            {{ /partial:components/select }}
-        </div>
-    </div>
+  
     
     {{# date cards grid wrapper #}}
     <div class="grid items-start w-full grid-cols-pill-s lg:grid-cols-pill-m 2xl:grid-cols-pill-l gap-x-8 gap-y-20">

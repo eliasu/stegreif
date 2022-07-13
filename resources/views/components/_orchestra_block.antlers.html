@@ -14,12 +14,12 @@
         {{ partial:typography/h2 :content="headline" }}
 
         {{# filter bar #}}
-        <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
+        {{# <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
             {{ taxonomy:team_filters }}
                 {{ temp_store = "$store.filters.titles.{ title | underscored }" }}
                 {{ partial:components/button as="button" button_type="lined_base_filter" label="{ title }" :store="temp_store" function="toggle(this)" }}
             {{ /taxonomy:team_filters }}
-        </div> 
+        </div>  #}}
     </div>
     
     {{# team cards grid wrapper #}}
