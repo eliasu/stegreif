@@ -8,7 +8,16 @@
     <picture>       
         {{ asset :url="image" }}
             {{ if extension == 'svg' || extension == 'gif' }}
-                <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" />
+                <img 
+                    {{ if cover }}
+                        class="object-cover w-full h-full {{ class }}"
+                        style="object-position: {{ focus | background_position }}"
+                    {{ elseif contain }}
+                        class="object-contain w-full h-full {{ class }}"
+                    {{ else }}
+                        class="{{ class }}"
+                    {{ /if }} 
+                    src="{{ url }}" alt="{{ alt }}" />
             {{ else }}
                 <source
                     srcset="
