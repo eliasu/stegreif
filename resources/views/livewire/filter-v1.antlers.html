@@ -3,20 +3,11 @@
 
 {{# lifewire need outer div wrapper #}}
 <div>
-
-    {{ $config.collectionType }}
-    {{ $config.tax }}
-
-    {{ site:short_locale }}
-
-   
-    tax is set
-   
   
     {{# chechs if any tax filter is set – by now max 1 #}}
     {{ if $config.tax }}
         {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
-        <div class="" x-data="{ filter: {{ livewire:entangle property='filter' }} }">
+        <div class="" x-data="{ filter: {{ livewire:entangle property='selection' }} }">
             <select x-model="filter">
                 <option value="">All</option>
 
@@ -26,7 +17,7 @@
 
             </select>
         
-            Title start: <span x-text="filter"></span>
+            Filtering for: <span x-text="filter"></span>
         </div>
     {{ /if}}
 
@@ -34,18 +25,13 @@
 
 
     <div class="flex gap-11">
-        {{results}}
+        {{# custom tag "lifewire results" from life wire component #}}
+        {{lwResults}}
             <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
                 {{title}}
             </div>
-        {{/results}}
+        {{/lwResults}}
     </div>
-
-
-    {{ taxonomy:bundeslaender }}
-    <a href="{{ url }}">{{ title }}</a>
-   {{ /taxonomy:bundeslaender }}
-
 
     
         
