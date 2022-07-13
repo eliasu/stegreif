@@ -17,7 +17,7 @@
         </div>
 
         {{# image wrapper #}}
-        <div class="h-full">
+        <div class="relative h-full">
             <img
                 class="object-cover w-full h-full max-h-[50vh] lg:max-h-screen"
                 :style="{ 'object-position': $store.modal.image.focus }"
@@ -26,6 +26,10 @@
                 :width="$store.modal.image.width"
                 :height="$store.modal.image.height"
                 loading="lazy">
+            
+            <template x-if="$store.modal.image.caption">
+                    <div x-text="$store.modal.image.caption" class="absolute self-start px-2 py-1 text-xs uppercase left-4 bottom-4 z-front xs:text-sm leading-100 bg-light text-darkblue"></div>
+            </template>
         </div>
 
         {{# content wrapper #}}

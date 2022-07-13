@@ -35,7 +35,7 @@
                 @click.prevent="
                     $store.modal.open = true,
                     $store.modal.title = '{{title}}', 
-                    $store.modal.image = { url : '{{ glide:image preset='lg' }}', extension : '{{image.extension}}', mime_type : '{{image.mime_type}}', alt : '{{image.alt}}', focus : '{{image.focus | background_position}}', width : '{{image.width}}', height : '{{image.height}}', },
+                    $store.modal.image = { url : '{{ glide:image preset='lg' }}', extension : '{{image.extension}}', mime_type : '{{image.mime_type}}', alt : '{{image.alt}}', focus : '{{image.focus | background_position}}', width : '{{image.width}}', height : '{{image.height}}', caption : '{{image.image_title}}' },
                     $store.modal.description = `{{ description | smartypants | nl2br }}`,
                     $store.modal.showFunFact = {{ fun_fact ? 'true' : 'false'}},
                     $store.modal.funFact = `{{ fun_fact | smartypants | nl2br }}`,
