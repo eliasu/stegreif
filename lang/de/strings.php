@@ -2,12 +2,12 @@
 return [
     // Contact form
     'form_honeypot'                     => 'Fax',
-    'form_mail_body_owner'              => 'A contact form has been sent.',
-    'form_mail_body_sender'             => 'Thanks for your message. We will contact you as soon as possible.',
+    'form_mail_body_owner'              => 'Eine Newsletter Anmeldung wurde versendet.',
+    'form_mail_body_sender'             => 'Danke, dass du dich bei unserem Newsletter angemeldet hast.',
     'form_mail_closing'                 => 'Beste Grüße',
     'form_mail_from'                    => config('app.name'),
     'form_mail_greeting'                => 'Hallo',
-    'form_mail_logo'                    => 'https://cdn.studio1902.nl/assets/statamic-peak/statamic-peak-logo.png',
+    'form_mail_logo'                    => config('app.url').'/site_assets/logos/logo_dark.png',
     'form_mail_submitted'               => 'Abgesendet',
     'form_mail_title'                   => 'Kontakt Formular',
     'form_mail_url'                     => config('app.url'),
