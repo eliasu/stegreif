@@ -5,6 +5,4 @@
   {{ livewire:scripts }}
 {{ /section:body }}
 
-
-{{# {{ livewire:counter  }} #}}
-{{ livewire:filter-v1  }}
+{{ livewire:filter-v1 :config='["collectionType" => "programme", "tax" => "bundeslaender", "currLocale" => site:short_locale ]'  }}

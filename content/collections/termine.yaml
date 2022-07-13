@@ -8,6 +8,7 @@ layout: layout
 mount: f971080c-39a4-482d-a8ea-7e9bf7829075
 taxonomies:
   - tags
+  - bundeslaender
 revisions: false
 route: '/{mount}/{slug}'
 date: true

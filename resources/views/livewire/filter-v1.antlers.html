@@ -1,26 +1,36 @@
 
 {{# /livewire/filter.antlers.html #}}
+
+{{# lifewire need outer div wrapper #}}
 <div>
 
-    <div class="" x-data="{ filter: {{ livewire:entangle property='filter' }} }">
-        <select x-model="filter">
-            <option value="">All</option>
-            <option>#</option>
-            <option value="(m || g)">test</option>
-        </select>
-    
-        Title start: <span x-text="filter"></span>
-    </div>
+    {{ $config.collectionType }}
+    {{ $config.tax }}
 
-    <div class="flex mb-20 gap-11">
-        {{ type = "programme" }}
-        {{# {{ items = {collection:{type} title:starts_with="{{ $filter }}"}  }} #}}
-        {{ items = {collection:{type}}   }}
-            <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
-                {{title}}
-            </div>
-        {{/items}}
-    </div>
+    {{ site:short_locale }}
+
+   
+    tax is set
+   
+  
+    {{# chechs if any tax filter is set – by now max 1 #}}
+    {{ if $config.tax }}
+        {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
+        <div class="" x-data="{ filter: {{ livewire:entangle property='filter' }} }">
+            <select x-model="filter">
+                <option value="">All</option>
+
+                {{ taxonomy:{ $config.tax } }}
+                    <option value="{{slug}}">{{title}}</option>
+                {{ /taxonomy:{ $config.tax } }}
+
+            </select>
+        
+            Title start: <span x-text="filter"></span>
+        </div>
+    {{ /if}}
+
+
 
 
     <div class="flex gap-11">
@@ -30,6 +40,11 @@
             </div>
         {{/results}}
     </div>
+
+
+    {{ taxonomy:bundeslaender }}
+    <a href="{{ url }}">{{ title }}</a>
+   {{ /taxonomy:bundeslaender }}
 
 
     

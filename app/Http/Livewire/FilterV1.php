@@ -11,12 +11,23 @@ class FilterV1 extends Component
 {
 
     public $filter = "";
-    public $results;
-    public $tag;
+    public $lwResults;
+    public $config;
 
-    protected $queryString = [
-        'tag'
-    ];
+    // public $test;
+   
+
+    public function mount($config)
+    {
+        debug("test");
+        debug($config);
+        $this->config = $config;
+        // $this->email = $contact->email;
+    }
+
+    // protected $queryString = [
+    //     'tag'
+    // ];
 
     public function render()
     {
@@ -28,10 +39,11 @@ class FilterV1 extends Component
         ->where('status', 'published')
 
         //TODO: locale should be dynamic
-        ->where('locale', 'de')
+        ->where('locale', '$config->currLocale')
 
         // ->where('title', 'like' ,'p%');
-        ->where('title', '=', '#freebrahms');
+        // ->where('title', '=', '#freebrahms')
+        ;
 
         // debug($page->locale());
         debug($query->get());
@@ -42,7 +54,7 @@ class FilterV1 extends Component
     //     $query->whereTaxonomyIn(["tags::{$this->tag}"]);
     // }
 
-    $this->results = $query
+    $this->lwResults = $query
         ->orderBy('date', 'desc')
         ->get();
 
