@@ -5,34 +5,39 @@
 <div>
   
     {{# chechs if any tax filter is set – by now max 1 #}}
-    {{ if $config.tax }}
         {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
         <div class="" x-data="{ filter: {{ livewire:entangle property='selection' }} }">
             <select x-model="filter">
                 <option value="">All</option>
 
-                {{ taxonomy:{ $config.tax } }}
+                {{ taxonomy:{ $filterTax } }}
                     <option value="{{slug}}">{{title}}</option>
-                {{ /taxonomy:{ $config.tax } }}
+                {{ /taxonomy:{ $filterTax } }}
+
+    
 
             </select>
         
             Filtering for: <span x-text="filter"></span>
         </div>
-    {{ /if}}
 
+        <button wire:click="incr">hallo</button>
+        {{ $testcounter }}
 
+       
 
+        <div class="flex gap-11">
+            {{# custom tag "lifewire results" from life wire component #}}
+            {{lwResults}}
+                <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
+                    {{title}}
+                </div>
+            {{/lwResults}}
+        </div>
 
-    <div class="flex gap-11">
-        {{# custom tag "lifewire results" from life wire component #}}
-        {{lwResults}}
-            <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
-                {{title}}
-            </div>
-        {{/lwResults}}
-    </div>
+   
 
     
         
 </div>
+

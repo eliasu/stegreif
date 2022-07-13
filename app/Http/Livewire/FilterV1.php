@@ -10,16 +10,25 @@ use Barryvdh\Debugbar\Facades\Debugbar;
 class FilterV1 extends Component
 {
 
+    // this one fucking needs to be private to work with alpine lifewire entagnle
     public $selection = "";
     public $lwResults;
-    public $config;
-    // ["collectionType" => "programme", "tax" => "", "currLocale" => site:short_locale ]
+    public $testcounter = 0;
+
+    public $collectionType;
+    public $filterTax;
+    public $currentLocale;
 
     public function mount($config)
     {
         debug($config);
-        $this->config = $config;
-        // $this->email = $contact->email;
+        $this->collectionType = $config["collectionType"];
+        $this->filterTax = $config["tax"];
+        $this->currentLocale = $config["currLocale"];
+    }
+
+    public function incr() {
+        $this->testcounter++;
     }
 
     // protected $queryString = [
@@ -32,11 +41,19 @@ class FilterV1 extends Component
         // @property Ent
 
         $query = Entry::query()
-            ->where('collection', $this->config["collectionType"])
+            ->where('collection', $this->collectionType)
             ->where('status', 'published')
-            ->where('locale', $this->config["currLocale"]);
+            ->where('locale', $this->currentLocale)
+            // ->where('tags', 'de')
+
+            // ->whereIn($this->selection, ["hallo", "berlin", "test"])
+            // ->whereIn($this->selection, ["hallo", "berlin", "test"])
+            // ->whereIn('locale', ["s", "berlin", "test"])
+            ;
 
         debug($query->get());
+        debug("selection", $this->selection);
+        debug("counter", $this->testcounter);
 
         // Filter on tag
         // if (! empty($this->tag)) {
@@ -44,8 +61,23 @@ class FilterV1 extends Component
         // }
 
         $this->lwResults = $query
-            ->orderBy('date', 'desc')
-            ->get();
+            ->get()
+            ->filter(function ($el, $key) {
+                return in_array($this->selection, $el->get('tags'));
+            })
+            // ->all()
+            ;
+            // ->orderBy('date', 'desc')
+
+        $query
+        ->get()
+        ->filter(function ($el, $key) {
+        //    debug($el->get('tags'));
+        //    debug("selection:", $this->selection);
+        //    debug(in_array($this->selection, $el->get('tags')));
+
+        //    debug($key);
+        });
 
         // return view('view');
         return view('livewire.filter-v1');
