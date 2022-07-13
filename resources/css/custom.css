@@ -22,6 +22,9 @@
 
 
 @layer base {
+
+   
+
     /* coloring */
     p, h1, h2, h3, h4, h5, h6, strong, em, span, u  {
         @apply text-skin-base decoration-skin-primary;
@@ -365,4 +368,8 @@ font-display: swap;
 .custom-hidden {
     opacity: 0;
     transition: opacity 20ms;
+}
+
+html {
+    scroll-behavior: smooth;
 }
