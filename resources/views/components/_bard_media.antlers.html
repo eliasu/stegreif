@@ -14,7 +14,12 @@
     {{# image #}}
     {{ if select_type == "image" }}
         <div class="w-full aspect-w-4 aspect-h-3">
-            {{ partial:components/picture cover="true" :image="image" sizes="(min-width: 768px) 70vw, 95vw" }}
+            
+            {{# is it cover or contain (set in assets settings) #}}
+            {{ image.no_trim ? 
+                { partial:components/picture contain="true" :image="image" sizes="(min-width: 768px) 70vw, 95vw" } :
+                { partial:components/picture cover="true" :image="image" sizes="(min-width: 768px) 70vw, 95vw" }
+            }}
         </div>
 
     {{# video #}}

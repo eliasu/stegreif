@@ -48,8 +48,10 @@
                     
                         {{# image #}}
                         {{ if select_media_feature == "image" }}
-                            {{ partial:components/picture :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
-                        
+                            {{ feature_image.no_trim ? 
+                                { partial:components/picture :image="feature_image" contain="true" sizes="(min-width: 768px) 50vw, 100vw" } :
+                                { partial:components/picture :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }
+                            }}
                         {{# video #}}
                         {{ elseif select_media_feature == "video" }}
                             {{ partial:components/video :youtube_url="feature_video" cover="true" }}
