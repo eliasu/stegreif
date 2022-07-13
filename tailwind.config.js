@@ -26,6 +26,9 @@ module.exports = {
   safelist: [
     'sm:flex-row',
     'sm:flex-row-reverse',
+    'text-2xl',
+    'leading-l',
+    'text-skin-primary',
     {
       pattern: /text-.+/,
       pattern: /decoration-.+/,
