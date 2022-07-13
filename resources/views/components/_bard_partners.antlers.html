@@ -16,7 +16,7 @@
     {{# show supporter logos  #}}
     <div class="flex flex-row flex-wrap items-stretch justify-center gap-12">
         {{ entires }}
-            <a href="{{link_field}}" class="w-full p-2 max-w-[12rem] hover:bg-yellow cursor-pointer motion-safe:transition">
+            <a href="{{link_field}}" target="_blank" class="w-full p-2 max-w-[12rem] hover:bg-yellow cursor-pointer motion-safe:transition">
                 {{ partial:components/picture nocaption="true" :image="logo" class="mix-blend-multiply" contain="true" sizes="(min-width: 768px) 50vw, 20vw" }}
             </a>
         {{ /entires }}
