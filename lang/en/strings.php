@@ -13,7 +13,7 @@ return [
     'form_mail_url'                     => config('app.url'),
     'form_send'                         => 'Submit',
     'form_sending'                      => 'Sending',
-    'form_success'                      => 'Thank you, we received your message and will contact you as soon as possible.',
+    'form_success'                      => 'Thanks for your signup to our newsletter.',
 
     // Cookie banner
     'cookie_title'                      => 'Cookies',
