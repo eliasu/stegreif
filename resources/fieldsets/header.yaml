@@ -52,7 +52,6 @@ fields:
     handle: header_image
     field: common.image
     config:
-      restrict: true
       display: 'Header Image'
       width: 50
       folder: header_images
@@ -66,3 +65,5 @@ fields:
       width: 50
       if:
         header_select: 'equals video'
+  -
+    import: quicklinks

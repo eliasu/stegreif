@@ -29,7 +29,7 @@
     
     /* coloring plus */
     h1, h2, h3, h4  {
-        @apply leading-s font-extrabold uppercase;
+        @apply font-extrabold uppercase leading-s;
     }
     
     /* text sizes responsive */
@@ -38,21 +38,21 @@
     h2  { @apply text-3xl sm:text-4xl md:text-5xl xl:text-6xl motion-safe:transition-colors; hyphens: auto;}
     h3  { @apply text-2xl md:text-3xl xl:text-4xl motion-safe:transition-colors; hyphens: auto;}
     h4  { @apply text-lg md:text-2xl motion-safe:transition-colors; }
-    h5  { @apply text-base md:text-2xl leading-s font-bold motion-safe:transition-colors; }
-    h6  { @apply text-xs leading-s uppercase font-bold motion-safe:transition-colors; } 
+    h5  { @apply text-base font-bold md:text-2xl leading-s motion-safe:transition-colors; }
+    h6  { @apply text-xs font-bold uppercase leading-s motion-safe:transition-colors; } 
     
     .prose > *:first-child { @apply !mt-0 }
     .prose > *:last-child { @apply mb-0; }
     
     /* prose spacing */
     .prose > p   { @apply block-in-2 block-size-1; }
-    .prose > h2  { @apply mt-8 md:mt-16 mb-4 md:mb-6 block-in-0 block-size-0; } 
+    .prose > h2  { @apply mt-8 mb-4 md:mt-16 md:mb-6 block-in-0 block-size-0; } 
     .prose > h3  { @apply mt-10 block-in-1 block-size-2; } 
     .prose > h4  { @apply mt-4 block-in-1 block-size-2; } 
     .prose > h5  { @apply mt-4 block-in-2 block-size-1; }
     
     /* link coloring */
-    p > a, p > a > * { @apply motion-safe:transition underline text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
+    p > a, p > a > * { @apply underline motion-safe:transition text-skin-primary decoration-skin-primary hover:text-skin-accent hover:decoration-skin-accent focus:prose-a:outline-none focus-visible:prose-a:ring focus-visible:prose-a:ring-skin-primary focus-visible:prose-a:rounded-sm;}
 }   
 
 
@@ -360,3 +360,9 @@ font-display: swap;
 
 
 
+/* hannes custom */
+
+.custom-hidden {
+    opacity: 0;
+    transition: opacity 20ms;
+}

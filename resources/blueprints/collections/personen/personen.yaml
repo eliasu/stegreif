@@ -17,7 +17,6 @@ sections:
         handle: thumbnail
         field: common.image
         config:
-          restrict: true
           display: Thumbnail
           localizable: false
           folder: personen
@@ -26,7 +25,6 @@ sections:
         handle: image
         field: common.image
         config:
-          restrict: true
           localizable: false
           folder: personen
           width: 50
