@@ -14,58 +14,30 @@
             chamber: false,
             actual: true,
             past: false,
- 
+
             toggle_digital(el) { 
-                if(this.chamber) this.digital = !this.digital;
+                this.digital = !this.digital;
                 this.flipFlopVisible(el); 
             },
             toggle_chamber(el) { 
-                if(this.digital) this.chamber = !this.chamber; 
+                this.chamber = !this.chamber; 
                 this.flipFlopVisible(el); 
             },
             toggle_actual(el) { 
+                if(!this.actual) this.flipFlopVisible(el); 
                 this.actual = true; 
                 this.past = false; 
-                this.flipFlopVisible(el); 
             },
             toggle_past(el) { 
+                if(!this.past) this.flipFlopVisible(el);  
                 this.past = true; 
                 this.actual = false;
-                this.flipFlopVisible(el);  
-            },
-            getVars(what){
-                console.log(what);
-                console.log("digital:" +this.digital, "chamber:" +this.chamber, "actual:" +this.actual, "past:" +this.past);
-            },
-            logList() {
-                const items = Array.from(document.querySelectorAll(".filter-item-wrapper"));
-                /*for (let i = 0; i < items.length; i++) {
-                    let item = items[i];
-                    console.log(item.getAttribute('style'));
-                    console.log(item._x_isShown);
-                }*/
-                console.log("shown: "+items.filter(el=>el._x_isShown).length);
-                console.log("style: "+items.filter(el=>el.getAttribute('style')).length);
-                console.log("-------");
             },
             flipFlopVisible(el) {
-                /*
-                its f*cking ugly but halfway working
-                problem is that the only way to get a list of the right elements is when alpine is setting its values, therefore its jumping
-
-                it should be
-                - fadeout
-                - setting left right classes
-                - fade in
-                */ 
-
-                //console.log("root", el);
 
                 const resultsContainer = el.closest('.fluid-container').querySelector('.prod-container');
                 resultsContainer.classList.add("custom-hidden");
 
-               
- 
                 setTimeout(function(){ //lets the elements fade out
                     console.log("flipflopping");
                     const filterItems = Array.from(document.querySelectorAll(".filter-item-wrapper"));
@@ -94,38 +66,38 @@
 <div class="flex flex-col gap-8 fluid-container" x-data="filter">
 
     {{# productions headline #}}
-    {{ if show_header }}
-        {{ partial:typography/h2 :content="headline_productions" }}
-    {{ elseif show_header_all }}
-        {{ partial:typography/h2 :content="headline" }}
+    {{ partial:typography/h2 :content="headline" }}
 
-        {{# filter bar #}}
-        <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
-            <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" store="actual" function="toggle_actual($el)" }}
-                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" store="past" function="toggle_past($el)" }}
-            </div>
-            
-            {{# dont display this block if its collections because they have no "tags" #}}
-            {{# {{ if from != "reihen"}} #}}
-                <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital($el)" }}
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber($el)" }}
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="test" store="chamber" function="getVars($el)" }}
-                </div>
-            {{# {{ /if }} #}}
+    {{# filter bar #}}
+    <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
+        
+        {{# current/past filter #}}
+        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" store="actual" function="toggle_actual($el)" }}
+            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" store="past" function="toggle_past($el)" }}
         </div>
-    {{ /if }}
+        
+        {{# digital/chamber filter #}}
+        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital($el)" }}
+            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber($el)" }}
+        </div>
+    </div>
 
-    {{# all productions #}}
+    {{# production list wrapper #}}
     <div class="flex flex-col transition-opacity duration-500 ease-in-out prod-container gap-y-8">
+        
+        {{# set antlers variable to use modulo for left/right blocks #}}
         {{ alternating = true }}
+
+        {{# get collection (fallback:programme) with a filter (f.Ex. Education) #}}
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-            <div class="filter-item-wrapper" x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}"  
-                {{# x-transition.duration.500ms #}}
-                >
+            <div class="filter-item-wrapper" x-init="flipFlopVisible($el)" x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}">
                 
+                {{# the actual content block #}}
                 {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
+
+                {{# change alternating variable with every block to get left/right #}}
                 {{ alternating = !alternating }}
             </div>
         {{ /collection }}
@@ -133,6 +105,5 @@
 
     {{# link to detail view #}}
     {{ link_all ?= { partial:components/button label="{ trans:strings.all_productions }" class="self-center" button_type="background" link_type="entry" :entry="all_productions_page" } }}
-    
 </div>
 <!-- End: /components/_productions_block.antlers.html --> 
