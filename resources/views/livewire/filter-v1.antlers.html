@@ -45,6 +45,19 @@
             <input type="checkbox" value="yellow" x-model="colors">
             Colors: <span x-text="colors"></span>
         </div>
+
+        <div x-data="{ placeholder: 'Type here...' }">
+            <input type="text" x-bind:placeholder="placeholder">
+        </div>    
+
+        <div x-data="{ active: false }">
+            <button x-on:click="active = ! active" :class="active ? 'bg-green' : 'bg-light'">
+                Toggle Dropdown
+            </button>
+        </div>
+
+        
+        <div class="bg-green bg-light"></div>
  
 
         <div class="flex gap-11">
