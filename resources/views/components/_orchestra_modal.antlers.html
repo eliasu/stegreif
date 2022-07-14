@@ -10,7 +10,7 @@
     <div class="relative grid w-full h-full overflow-y-auto theme-dark lg:grid-rows-1 lg:grid-cols-2 bg-darkblue">
 
         {{# back button for mobile #}}
-        <div class="fixed p-4 lg:hidden md:p-8">
+        <div class="fixed p-4 z-nav lg:hidden md:p-8">
             {{ partial:components/button as="button" reverse="true" icon="arrow_left" button_type="lined_base" label="{ trans:strings.back }" }}
                     @click.prevent="$store.modal.open = false"
             {{ /partial:components/button }}
