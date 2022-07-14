@@ -25,11 +25,19 @@
             <label for="checkbox" x-text="show"></label>
         </div>
 
+        this is a button
+        <input type="button" value="test">
+
         {{# <div class="" x-data="{colors: []}"> #}}
         <div class="" x-data="{ colors: {{ livewire:entangle property='test' }} }">
-            <input type="checkbox" value="red" x-model="colors">
+
+            {{ taxonomy:{ $filterTax } }}
+            <input type="button" value="{{slug}}" x-model="colors">
+            {{ /taxonomy:{ $filterTax } }}
+
+            {{# <input type="checkbox" value="red" x-model="colors">
             <input type="checkbox" value="orange" x-model="colors">
-            <input type="checkbox" value="yellow" x-model="colors">
+            <input type="checkbox" value="yellow" x-model="colors"> #}}
             Colors: <span x-text="colors"></span>
         </div>
  
