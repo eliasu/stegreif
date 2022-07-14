@@ -364,12 +364,7 @@ font-display: swap;
 
 
 /* hannes custom */
-
 .custom-hidden {
     opacity: 0;
     transition: opacity 0ms !important;
-}
-
-html {
-    scroll-behavior: smooth;
 }
