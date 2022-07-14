@@ -367,7 +367,7 @@ font-display: swap;
 
 .custom-hidden {
     opacity: 0;
-    transition: opacity 20ms;
+    transition: opacity 0ms !important;
 }
 
 html {

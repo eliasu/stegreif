@@ -15,25 +15,26 @@
             actual: true,
             past: false,
  
-            toggle_digital() { 
+            toggle_digital(el) { 
                 if(this.chamber) this.digital = !this.digital;
-                this.flipFlopVisible(); 
+                this.flipFlopVisible(el); 
             },
-            toggle_chamber() { 
+            toggle_chamber(el) { 
                 if(this.digital) this.chamber = !this.chamber; 
-                this.flipFlopVisible(); 
+                this.flipFlopVisible(el); 
             },
-            toggle_actual() { 
+            toggle_actual(el) { 
                 this.actual = true; 
                 this.past = false; 
-                this.flipFlopVisible(); 
+                this.flipFlopVisible(el); 
             },
-            toggle_past() { 
+            toggle_past(el) { 
                 this.past = true; 
                 this.actual = false;
-                this.flipFlopVisible();  
+                this.flipFlopVisible(el);  
             },
-            getVars(){
+            getVars(what){
+                console.log(what);
                 console.log("digital:" +this.digital, "chamber:" +this.chamber, "actual:" +this.actual, "past:" +this.past);
             },
             logList() {
@@ -47,7 +48,7 @@
                 console.log("style: "+items.filter(el=>el.getAttribute('style')).length);
                 console.log("-------");
             },
-            flipFlopVisible() {
+            flipFlopVisible(el) {
                 /*
                 its f*cking ugly but halfway working
                 problem is that the only way to get a list of the right elements is when alpine is setting its values, therefore its jumping
@@ -58,11 +59,12 @@
                 - fade in
                 */ 
 
-                const prodContainers = document.querySelectorAll(".prod-container");
-                for (let i = 0; i < prodContainers.length; i++) {
-                    let item = prodContainers[i];
-                    item.classList.add("custom-hidden");
-                  }
+                //console.log("root", el);
+
+                const resultsContainer = el.closest('.fluid-container').querySelector('.prod-container');
+                resultsContainer.classList.add("custom-hidden");
+
+               
  
                 setTimeout(function(){ //lets the elements fade out
                     console.log("flipflopping");
@@ -78,11 +80,9 @@
                             item.children[0].classList.add('feature-left');
                         }
                     }
+
+                    resultsContainer.classList.remove("custom-hidden");
                   
-                    for (let i = 0; i < prodContainers.length; i++) {
-                        let item = prodContainers[i];
-                        item.classList.remove("custom-hidden");
-                      }    
                 }, 500);
             },
         }))
@@ -102,17 +102,18 @@
         {{# filter bar #}}
         <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
             <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" store="actual" function="toggle_actual()" }}
-                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" store="past" function="toggle_past()" }}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" store="actual" function="toggle_actual($el)" }}
+                {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" store="past" function="toggle_past($el)" }}
             </div>
             
             {{# dont display this block if its collections because they have no "tags" #}}
-            {{ if from != "reihen"}}
+            {{# {{ if from != "reihen"}} #}}
                 <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital()" }}
-                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber()" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital($el)" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber($el)" }}
+                    {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="test" store="chamber" function="getVars($el)" }}
                 </div>
-            {{ /if }}
+            {{# {{ /if }} #}}
         </div>
     {{ /if }}
 
