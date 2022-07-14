@@ -78,10 +78,10 @@
         </div>
         
         {{# digital/chamber filter #}}
-        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+        {{# <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
             {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital($el)" }}
             {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber($el)" }}
-        </div>
+        </div> #}}
     </div>
 
     {{# production list wrapper #}}
@@ -92,7 +92,8 @@
 
         {{# get collection (fallback:programme) with a filter (f.Ex. Education) #}}
         {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-            <div class="filter-item-wrapper" x-init="flipFlopVisible($el)" x-show="{{aktuell ? 'actual' : 'past'}} {{ if tags }} && ( {{ tags }}{{slug}}{{!last ?= " || "}}{{ /tags }} ) {{ /if }}">
+
+            <div class="filter-item-wrapper" x-init="flipFlopVisible($el)" x-show="{{aktuell ? 'actual' : 'past'}}">
                 
                 {{# the actual content block #}}
                 {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
