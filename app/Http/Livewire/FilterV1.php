@@ -14,6 +14,9 @@ class FilterV1 extends Component
     public $selection = "";
     public $lwResults;
 
+    // looks like this need to be defined in php to be able to pass properties in antlers
+    public $nice;
+
     public $test= [];
 
     public $collectionType;

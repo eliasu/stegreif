@@ -3,7 +3,8 @@
 
 {{# lifewire need outer div wrapper #}}
 <div>
-  
+    test
+  {{nice}}
     {{# chechs if any tax filter is set – by now max 1 #}}
         {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
         <div class="" x-data="{ filter: {{ livewire:entangle property='selection' }} }">
@@ -20,24 +21,28 @@
             Filtering for: <span x-text="filter"></span>
         </div>
 
+        <div wire:loading.delay.shortest>
+            Processing Payment...
+        </div>
+
         <div class="" x-data="{show: ''}">
             <input type="checkbox" id="checkbox" x-model="show">
             <label for="checkbox" x-text="show"></label>
         </div>
 
         this is a button
-        <input type="button" value="test">
+        <input type="button" value="supernice">
 
         {{# <div class="" x-data="{colors: []}"> #}}
         <div class="" x-data="{ colors: {{ livewire:entangle property='test' }} }">
 
-            {{ taxonomy:{ $filterTax } }}
+            {{# {{ taxonomy:{ $filterTax } }}
             <input type="button" value="{{slug}}" x-model="colors">
-            {{ /taxonomy:{ $filterTax } }}
+            {{ /taxonomy:{ $filterTax } }} #}}
 
-            {{# <input type="checkbox" value="red" x-model="colors">
+            <input type="checkbox" value="red" x-model="colors">
             <input type="checkbox" value="orange" x-model="colors">
-            <input type="checkbox" value="yellow" x-model="colors"> #}}
+            <input type="checkbox" value="yellow" x-model="colors">
             Colors: <span x-text="colors"></span>
         </div>
  
