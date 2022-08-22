@@ -36,8 +36,17 @@ class FilterV1 extends Component
         $results = $query
             ->get()
             ->filter(function ($el) {
-                // if string == '' treat as is no filter, return always true
-                return strlen($this->selection) > 0 ? in_array($this->selection, $el->get('tags')) : true;
+                // return true is like continue
+                // if nothing selected just give all items
+                if (strlen($this->selection) == 0) return true;
+
+                $taxoTerms = $el->get($this->filterTax);
+                // return true is like break
+                // if element has no terms break
+                if (!$taxoTerms) return false;
+                
+                // filter elements
+                return in_array($this->selection, $taxoTerms);
             })
             // ->orderBy('date', 'desc')
         ;
