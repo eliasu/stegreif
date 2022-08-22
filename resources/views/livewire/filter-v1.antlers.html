@@ -9,7 +9,7 @@
         <div class="" x-data="{ filter: {{ livewire:entangle property='selection' }} }">
             <select x-model="filter">
 
-                <option value="">All</option>
+                <option value=''>All</option>
 
                 {{ taxonomy:{ $filterTax } }}
                     <option value="{{slug}}">{{title}}</option>
