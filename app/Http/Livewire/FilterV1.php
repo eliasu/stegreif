@@ -10,8 +10,11 @@ use Barryvdh\Debugbar\Facades\Debugbar;
 class FilterV1 extends Component
 {
 
+    public $past = true;
+
     // this one fucking needs to be private to work with alpine lifewire entagnle
-    public $selection = "";
+    // public $selection = "";
+    public $selection;
     public $lwResults;
 
     // looks like this need to be defined in php to be able to pass properties in antlers
@@ -55,6 +58,8 @@ class FilterV1 extends Component
         debug($query->get());
         debug("selection", $this->selection);
 
+       
+
         // Filter on tag
         // if (! empty($this->tag)) {
         //     $query->whereTaxonomyIn(["tags::{$this->tag}"]);
@@ -63,7 +68,14 @@ class FilterV1 extends Component
         $this->lwResults = $query
             ->get()
             ->filter(function ($el, $key) {
-                return in_array($this->selection, $el->get('tags'));
+                // return (strlen($this->selection)>0) ? in_array($this->selection, $el->get('tags')) : true;
+                // debug("this is the return");
+                // debug(is_string($this->selection) ? in_array($this->selection, $el->get('tags')) : true);
+                // debug(in_array($this->selection, $el->get('tags')));
+
+                return is_string($this->selection) ? in_array($this->selection, $el->get('tags')) : true;
+                // return true;
+                //  return in_array($this->selection, $el->get('tags'));
             })
             // ->all()
             ;
