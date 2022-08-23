@@ -35,8 +35,9 @@
             
 
         <div x-data="{
+            select: {{ livewire:entangle property='selection' }},
              {{# this is the initial active set of buttons  #}}
-            select: ['chamber'],
+            {{# select: ['chamber'], #}}
             toggle(value) {
                 if (this.select.includes(value)) {
                     this.select = this.select.filter(item => item !== value)

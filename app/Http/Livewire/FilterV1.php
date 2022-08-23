@@ -11,7 +11,7 @@ class FilterV1 extends Component
     public $nice;
 
     public $past = false;
-    public $selection;
+    public $selection = ['chamber'];
 
     public $collectionType;
     public $filterTax;
@@ -62,20 +62,26 @@ class FilterV1 extends Component
 
         
 
-      
-
-        $results = $query
+        if(count($this->selection) > 0) {
+            $results = $query
             ->get()
             ->filter(function ($el) {
                 // $testSelect = ['chamber'];
-        $testSelect = ['chamber', 'digital'];
-                $taxoTerms = $el->get('tags');
-                return $this->checkHayStackForAllElements($testSelect, $taxoTerms);
+        // $testSelect = ['chamber', 'digital'];
+                $taxoTerms = $el->get($this->filterTax);
+                return $this->checkHayStackForAllElements($this->selection, $taxoTerms);
 
               
             })
             // ->orderBy('date', 'desc')
         ;
+
+        } else {
+            $results = $query->get();
+        }
+      
+
+       
 
 
         debug($query->get());
