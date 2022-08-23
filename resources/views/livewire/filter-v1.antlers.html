@@ -29,24 +29,41 @@
     
 
 
-        {{# {{ tax = {taxonomy:{ $filterTax } } }}
+        {{ tax = {taxonomy:{ $filterTax } } }}
         this is lenght  {{ tax }}
                
             
 
         <div x-data="{
              {{# this is the initial active set of buttons  #}}
-            select: [true, false],
-            toggle(key, status) { this.select[key] = status },
-            getStatus(key) {console.log(key)}
+            select: ['chamber'],
+            toggle(value) {
+                if (this.select.includes(value)) {
+                    this.select = this.select.filter(item => item !== value)
+                } else { 
+                    this.select.push(value)
+                }
+            },
+            getStatus(value) {
+                console.log(this.select.includes(value));
+               return this.select.includes(value);
+            }
+
+            {{# print(value) {console.log(value)} #}}
         }">
        
             {{ taxonomy:{ $filterTax } }}
-                <button class="m-6" value={{slug}} @click="toggle({{index}},!select[{{index}}])" :class="getStatus( {{index}} ) ? 'bg-green' : 'bg-light'>
+                {{# <button class="m-6" value={{slug}} @click="print($el.value)">
+                    {{title}} {{index}}
+                </button> #}}
+                {{# <button class="m-6" value={{slug}} @click="toggle({$el.value})" :class="getStatus({$el.value}) ? 'bg-green' : 'bg-light'>
+                    {{title}} {{index}}
+                </button> #}}
+                <button class="m-6" value={{slug}} @click="toggle($el.value)"" :class="getStatus($el.value) ? 'bg-green' : 'bg-light'">
                     {{title}} {{index}}
                 </button>
             {{ /taxonomy:{ $filterTax } }}
-        </div> #}}
+        </div>
 
 
 
@@ -77,5 +94,8 @@
             {{/lwResults}}
         </div>
 
+        <label for="test">supergeil</label>
+        <input class="hidden" type="checkbox" id="test">
+            
 </div>
 
