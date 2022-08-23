@@ -1,0 +1,51 @@
+{{# /livewire/filter.antlers.html #}}
+
+{{# lifewire need outer div wrapper #}}
+<div>
+    <div wire:loading.delay.shortest>
+        Processing Payment...
+    </div>
+
+    <div x-data="{
+        {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
+        select: {{ livewire:entangle property='selection' }},
+        toggle(value) {
+            if (this.select.includes(value)) {
+                this.select = this.select.filter(item => item !== value)
+            } else { 
+                this.select.push(value)
+            }
+        },
+        getStatus(value) {
+            return this.select.includes(value);
+        }
+    }">
+    
+        {{ taxonomy:{ $filterTax } }}
+            <button class="m-6" value={{slug}} @click="toggle($el.value)"" :class="getStatus($el.value) ? 'bg-green' : 'bg-light'">
+                {{title}}
+            </button>
+        {{ /taxonomy:{ $filterTax } }}
+    </div>
+
+
+
+    <div x-data="{ active: {{ livewire:entangle property='aktuell' }} }">
+        <button x-on:click="active = ! active" :class="active ?  'bg-light' : 'bg-green'">
+            Vergangene Termine
+        </button>
+    </div>
+    
+
+    <div class="flex gap-11">
+        {{# custom tag "lifewire results" from life wire component #}}
+        {{lwResults}}
+        {{# here goes the result partial #}}
+            <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
+                {{title}}
+            </div>
+        {{/lwResults}}
+    </div>
+            
+</div>
+

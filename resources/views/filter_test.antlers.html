@@ -5,16 +5,20 @@
   {{ livewire:scripts }}
 {{ /section:body }}
 
-{{ livewire:filter-v1 
+
+<div class="m-20">
+{{ livewire:programm-filter
+  :config='["collectionType" => "programme", "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["chamber"] ]'  
+}}
+</div>
+
+
+<div class="m-20">
+{{ livewire:termin-filter
   :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale, "preselection" => ["berlin"] ]'  
 }}
-{{# {{ livewire:filter-v1 
-  :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale ]'  
-}} #}}
+</div>
 
-{{# {{ livewire:filter-v1 
-  :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale]'  
-}} #}}
 
 
 
