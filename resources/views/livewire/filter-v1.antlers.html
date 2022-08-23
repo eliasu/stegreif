@@ -4,7 +4,7 @@
 {{# lifewire need outer div wrapper #}}
 <div>
     This is the nice var: {{nice}}
-    {{# chechs if any tax filter is set – by now max 1 #}}
+  
         {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
         <div class="" x-data="{ filter: {{ livewire:entangle property='selection' }} }">
             <select x-model="filter">
@@ -24,30 +24,34 @@
             Processing Payment...
         </div>
 
-        {{# <div class="" x-data="{show: ''}">
-            <input type="checkbox" id="checkbox" x-model="show">
-            <label for="checkbox" x-text="show"></label>
-        </div> #}}
-
-        {{# this is a button
-        <input type="button" value="supernice"> #}}
-
-        {{# <div class="" x-data="{colors: []}"> #}}
+      
+        <div class="" x-data="{colors: []}">
         {{# <div class="" x-data="{ colors: {{ livewire:entangle property='test' }} }"> #}}
 
-            {{# {{ taxonomy:{ $filterTax } }}
-            <input type="button" value="{{slug}}" x-model="colors">
-            {{ /taxonomy:{ $filterTax } }} #}}
-
-            {{# <input type="checkbox" value="red" x-model="colors">
+            <input type="checkbox" value="red" x-model="colors">
             <input type="checkbox" value="orange" x-model="colors">
             <input type="checkbox" value="yellow" x-model="colors">
             Colors: <span x-text="colors"></span>
-        </div> #}}
+        </div>
 
-        {{# <div x-data="{ placeholder: 'Type here...' }">
-            <input type="text" x-bind:placeholder="placeholder">
-        </div>     #}}
+
+        <div x-data="{ 
+            first: 0,
+            sec: 1
+        }">
+            <div x-data="{ count: 0 }" x-modelable="count" x-model="first">
+                <button @click="count++">Increment</button>
+            </div>
+            <div x-data="{ count: 0 }" x-modelable="count" x-model="sec">
+                <button @click="count++">Increment</button>
+            </div>
+            {{# <div x-data="{ count: 1 }" x-modelable="count" x-model="number.two">
+                <button @click="count++">Increment</button>
+            </div> #}}
+         
+            {{# Number: <span x-text="number"></span> #}}
+        </div>
+
 
         <div x-data="{ active: {{ livewire:entangle property='past' }} }">
             <button x-on:click="active = ! active" :class="active ? 'bg-green' : 'bg-light'">
@@ -55,9 +59,16 @@
             </button>
         </div>
 
+
+
+        {{# <div x-data="{ active:[false, false, false] }">
+            <button x-on:click="active = ! active" :class="active ? 'bg-green' : 'bg-light'">
+                1
+            </button>
+        </div> #}}
+
         
-        {{# <div class="bg-green bg-light"></div> #}}
- 
+       
 
         <div class="flex gap-11">
             {{# custom tag "lifewire results" from life wire component #}}
