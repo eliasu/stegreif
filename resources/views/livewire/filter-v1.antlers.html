@@ -31,8 +31,8 @@
 
 
 
-    <div x-data="{ active: {{ livewire:entangle property='past' }} }">
-        <button x-on:click="active = ! active" :class="active ? 'bg-green' : 'bg-light'">
+    <div x-data="{ active: {{ livewire:entangle property='aktuell' }} }">
+        <button x-on:click="active = ! active" :class="active ?  'bg-light' : 'bg-green'">
             Vergangene Termine
         </button>
     </div>

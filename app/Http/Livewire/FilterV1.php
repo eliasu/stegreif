@@ -7,7 +7,7 @@ use Statamic\Facades\Entry;
 
 class FilterV1 extends Component
 {
-    public $past = false;
+    public $aktuell = true;
 
     public $selection;
     public $collectionType;
@@ -36,20 +36,30 @@ class FilterV1 extends Component
     public function render()
     {
 
+        // debug(Entry::query()
+        // ->where('collection', $this->collectionType)
+        // ->where('status', 'published'));
+        debug(Entry::query()
+        ->where('collection', $this->collectionType)
+        ->where('status', 'published')
+        ->where('locale', $this->currentLocale)
+        ->where('aktuell', false)
+        ->get());
+
         $query = Entry::query()
             ->where('collection', $this->collectionType)
             ->where('status', 'published')
-            ->where('locale', $this->currentLocale);
+            ->where('locale', $this->currentLocale)
+            ->where('aktuell', $this->aktuell);
+
+        $results = $query->get();
 
         if (count($this->selection) > 0) {
-            $results = $query
-                ->get()
+            $results = $results
                 ->filter(function ($el) {
                     $taxoTerms = $el->get($this->filterTax);
                     return $this->checkHayStackForAllElements($this->selection, $taxoTerms);
                 });
-        } else {
-            $results = $query->get();
         }
 
         debug($query->get());

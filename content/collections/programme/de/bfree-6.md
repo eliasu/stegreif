@@ -159,14 +159,14 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: true
+aktuell: false
 select_type: programm
 tags:
   - digital
   - chamber
 template: single_page
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656544492
+updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
+updated_at: 1661273755
 header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -
@@ -187,4 +187,6 @@ extend_section:
 related_reihe: 3ab638ce-3bfb-4ec9-85b7-5c8e8685294a
 related_termine:
   - 755e7ce6-74ef-4915-8791-f310bb2562a1
+quicklinks_enabled: false
+show_social: false
 ---
