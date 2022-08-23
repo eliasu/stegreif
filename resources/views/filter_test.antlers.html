@@ -6,8 +6,17 @@
 {{ /section:body }}
 
 {{ livewire:filter-v1 
-  :config='["collectionType" => "programme", "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["digital"] ]'  
+  :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale, "preselection" => ["berlin"] ]'  
 }}
+{{# {{ livewire:filter-v1 
+  :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale ]'  
+}} #}}
+
+{{# {{ livewire:filter-v1 
+  :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale]'  
+}} #}}
 
 
 
+{{# when programme selection type (education,programme,reihen) #}}
+{{# when termine nach richtigem datum #}}

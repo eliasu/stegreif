@@ -4,12 +4,13 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Statamic\Facades\Entry;
+use Illuminate\Support\Carbon;
 
 class FilterV1 extends Component
 {
     public $aktuell = true;
 
-    public $selection;
+    public $selection = [];
     public $collectionType;
     public $filterTax;
     public $currentLocale;
@@ -20,7 +21,10 @@ class FilterV1 extends Component
         $this->collectionType = $config["collectionType"];
         $this->filterTax = $config["tax"];
         $this->currentLocale = $config["currLocale"];
-        $this->selection = $config["preselection"];
+
+        if(isset($config["preselection"])) {
+            $this->selection = $config["preselection"];
+        }
     }
 
     public function checkHayStackForAllElements($needleArray, $hayStack)
@@ -39,18 +43,20 @@ class FilterV1 extends Component
         // debug(Entry::query()
         // ->where('collection', $this->collectionType)
         // ->where('status', 'published'));
-        debug(Entry::query()
-        ->where('collection', $this->collectionType)
-        ->where('status', 'published')
-        ->where('locale', $this->currentLocale)
-        ->where('aktuell', false)
-        ->get());
+        // debug(Entry::query()
+        // ->where('collection', $this->collectionType)
+        // ->where('status', 'published')
+        // ->where('locale', $this->currentLocale)
+        // ->where('aktuell', false)
+        // ->get());
 
         $query = Entry::query()
             ->where('collection', $this->collectionType)
             ->where('status', 'published')
             ->where('locale', $this->currentLocale)
-            ->where('aktuell', $this->aktuell);
+            
+            ->whereDate('date', '>=', Carbon::parse('today'));
+            // ->where('aktuell', $this->aktuell);
 
         $results = $query->get();
 
