@@ -7,12 +7,9 @@ use Statamic\Facades\Entry;
 
 class FilterV1 extends Component
 {
-    // looks like this need to be defined in php to be able to pass properties in antlers
-    public $nice;
-
     public $past = false;
-    public $selection = ['chamber'];
 
+    public $selection;
     public $collectionType;
     public $filterTax;
     public $currentLocale;
@@ -23,10 +20,12 @@ class FilterV1 extends Component
         $this->collectionType = $config["collectionType"];
         $this->filterTax = $config["tax"];
         $this->currentLocale = $config["currLocale"];
+        $this->selection = $config["preselection"];
     }
 
-    public function checkHayStackForAllElements($needleArray, $hayStack) {
-        if(!($needleArray && $hayStack)) return;
+    public function checkHayStackForAllElements($needleArray, $hayStack)
+    {
+        if (!($needleArray && $hayStack)) return;
 
         $needleLength = count($needleArray);
         $intersectLength = count(array_intersect($needleArray, $hayStack));
@@ -42,47 +41,16 @@ class FilterV1 extends Component
             ->where('status', 'published')
             ->where('locale', $this->currentLocale);
 
-        // $results = $query
-        //     ->get()
-        //     ->filter(function ($el) {
-        //         // return true is like continue
-        //         // if nothing selected just give all items
-        //         if (strlen($this->selection) == 0) return true;
-
-        //         $taxoTerms = $el->get($this->filterTax);
-        //         // return true is like break
-        //         // if element has no terms break
-        //         if (!$taxoTerms) return false;
-                
-        //         // filter elements
-        //         return in_array($this->selection, $taxoTerms);
-        //     })
-        //     // ->orderBy('date', 'desc')
-        // ;
-
-        
-
-        if(count($this->selection) > 0) {
+        if (count($this->selection) > 0) {
             $results = $query
-            ->get()
-            ->filter(function ($el) {
-                // $testSelect = ['chamber'];
-        // $testSelect = ['chamber', 'digital'];
-                $taxoTerms = $el->get($this->filterTax);
-                return $this->checkHayStackForAllElements($this->selection, $taxoTerms);
-
-              
-            })
-            // ->orderBy('date', 'desc')
-        ;
-
+                ->get()
+                ->filter(function ($el) {
+                    $taxoTerms = $el->get($this->filterTax);
+                    return $this->checkHayStackForAllElements($this->selection, $taxoTerms);
+                });
         } else {
             $results = $query->get();
         }
-      
-
-       
-
 
         debug($query->get());
         debug($results);
