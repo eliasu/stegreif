@@ -36,20 +36,21 @@
 
 
         <div x-data="{ 
-            first: 0,
-            sec: 1
+            customCheckBox: new Array(3),
+            toggle(key, status) { this.number[key] = status },
+            print(text) {console.log(text)}
         }">
-            <div x-data="{ count: 0 }" x-modelable="count" x-model="first">
-                <button @click="count++">Increment</button>
-            </div>
-            <div x-data="{ count: 0 }" x-modelable="count" x-model="sec">
-                <button @click="count++">Increment</button>
-            </div>
+                <button @click="toggle(0,!number[0])">Button 1</button>
+                <button value="supergeil" @click="print($el.value)">super Geil</button>
+                {{# <button @click="toggle(1,!number[1])">Button 2</button>
+                <button @click="toggle(2,!number[2])">Button 3</button> #}}
             {{# <div x-data="{ count: 1 }" x-modelable="count" x-model="number.two">
                 <button @click="count++">Increment</button>
             </div> #}}
          
-            {{# Number: <span x-text="number"></span> #}}
+            {{# Number: <span x-text="number[0]"></span>
+            Number: <span x-text="number[1]"></span>
+            Number: <span x-text="number[2]"></span> #}}
         </div>
 
 
