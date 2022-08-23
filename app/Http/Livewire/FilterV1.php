@@ -25,6 +25,15 @@ class FilterV1 extends Component
         $this->currentLocale = $config["currLocale"];
     }
 
+    public function checkHayStackForAllElements($needleArray, $hayStack) {
+        if(!($needleArray && $hayStack)) return;
+
+        $needleLength = count($needleArray);
+        $intersectLength = count(array_intersect($needleArray, $hayStack));
+
+        if ($needleLength == $intersectLength) return true;
+    }
+
     public function render()
     {
 
@@ -33,20 +42,37 @@ class FilterV1 extends Component
             ->where('status', 'published')
             ->where('locale', $this->currentLocale);
 
+        // $results = $query
+        //     ->get()
+        //     ->filter(function ($el) {
+        //         // return true is like continue
+        //         // if nothing selected just give all items
+        //         if (strlen($this->selection) == 0) return true;
+
+        //         $taxoTerms = $el->get($this->filterTax);
+        //         // return true is like break
+        //         // if element has no terms break
+        //         if (!$taxoTerms) return false;
+                
+        //         // filter elements
+        //         return in_array($this->selection, $taxoTerms);
+        //     })
+        //     // ->orderBy('date', 'desc')
+        // ;
+
+        
+
+      
+
         $results = $query
             ->get()
             ->filter(function ($el) {
-                // return true is like continue
-                // if nothing selected just give all items
-                if (strlen($this->selection) == 0) return true;
+                // $testSelect = ['chamber'];
+        $testSelect = ['chamber', 'digital'];
+                $taxoTerms = $el->get('tags');
+                return $this->checkHayStackForAllElements($testSelect, $taxoTerms);
 
-                $taxoTerms = $el->get($this->filterTax);
-                // return true is like break
-                // if element has no terms break
-                if (!$taxoTerms) return false;
-                
-                // filter elements
-                return in_array($this->selection, $taxoTerms);
+              
             })
             // ->orderBy('date', 'desc')
         ;
