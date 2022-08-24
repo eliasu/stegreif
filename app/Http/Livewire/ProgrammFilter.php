@@ -56,17 +56,17 @@ class ProgrammFilter extends Component
                 break;
             case 'programm':
                 $query = $query
-                ->where('collection', 'prgramme')
-                ->where('select_type', 'prgramm');
+                ->where('collection', 'programme')
+                ->where('select_type', 'programm');
                 break;
             case 'education':
                 $query = $query  
-                ->where('collection', 'prgramme')
+                ->where('collection', 'programme')
                 ->where('select_type', 'education');
                 break;
             
             default:
-                $query = $query->where('collection', 'prgramme');
+                $query = $query->where('collection', 'programme');
                 break;
         }
 

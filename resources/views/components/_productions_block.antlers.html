@@ -7,6 +7,8 @@
         start => if start is set to "right" collection will start right
 #}}
 
+
+{{# wichtig für livewire #}}
 {{ section:head }}
   {{ livewire:styles }}
 {{ /section:head }}
@@ -23,14 +25,18 @@
     {{ elseif show_header_all }}
         {{ partial:typography/h2 :content="headline" }}
 
-        {{ dump }}
-        
-
         {{ livewire:programm-filter
-            :config='["type" => "programme", "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["chamber"] ]'  
+            {{# type wird aus dem page_template what_we_do gespeist #}}
+            :config='["type" => type, "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["chamber"] ]'  
         }}
 
     {{ /if}}
+
+
+ 
+    {{# link to detail view #}}
+    {{ link_all ?= { partial:components/button label="{ trans:strings.all_productions }" class="self-center" button_type="background" link_type="entry" :entry="all_productions_page" } }}
+
 
      
 </div>

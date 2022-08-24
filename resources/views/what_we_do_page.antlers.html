@@ -8,7 +8,7 @@
     {{ partial:layout/section color="{ theme_selector_programme }" }}
         
         {{# current productions block #}}
-        {{ partial:components/productions_block from="programme" filter="programm" show_header_all="true" :headline="section_headline_programme" }}
+        {{ partial:components/productions_block type="programme" filter="programm" show_header_all="true" :headline="section_headline_programme" }}
     
     {{ /partial:layout/section }}
 
@@ -16,7 +16,7 @@
     {{ partial:layout/section color="{ theme_selector_reihen }" }}
 
         {{# current collections block #}}
-        {{ partial:components/productions_block from="reihen" show_header_all="true" :headline="section_headline_reihen" }}
+        {{ partial:components/productions_block type="reihen" show_header_all="true" :headline="section_headline_reihen" }}
             
     {{ /partial:layout/section }}
 
@@ -24,7 +24,7 @@
     {{ partial:layout/section color="{ theme_selector_education }" }}
 
         {{# current education block #}}
-        {{ partial:components/productions_block from="programme" filter="education" show_header_all="true" :headline="section_headline_education" }}
+        {{ partial:components/productions_block type="education" filter="education" show_header_all="true" :headline="section_headline_education" }}
     
     {{ /partial:layout/section }}
 

@@ -1,13 +1,9 @@
-{{# /livewire/filter.antlers.html #}}
-
 {{# lifewire need outer div wrapper #}}
 <div>
-    {{# <div wire:loading.delay.shortest>
-        Processing Payment...
-    </div> #}}
-
+    
     <div x-data="{
-        {{# connects/syncs alpine var with php lifewire var $filer in http/lifewire/filename.php #}}
+        {{# here ist die gesamte logik drin #}}
+        {{# connects/syncs alpine var with php lifewire var $select in http/lifewire/filename.php #}}
         select: {{ livewire:entangle property='selection' }},
         toggle(value) {
             if (this.select.includes(value)) {
@@ -21,31 +17,61 @@
         }
     }">
     
+        {{# geht durch die taxonomien und generiert buttons, wichtig ist, dass der button ein value hat, da darüber die logik funzt #}}
         {{ taxonomy:{ $filterTax } }}
-            <button class="m-6" value={{slug}} @click="toggle($el.value)"" :class="getStatus($el.value) ? 'bg-green' : 'bg-light'">
+            <button class="p-2 m-6 border-b-2" value={{slug}} @click="toggle($el.value)"" :class="getStatus($el.value) ? 'bg-green' : 'bg-light'">
                 {{title}}
             </button>
         {{ /taxonomy:{ $filterTax } }}
+
+
+        {{# alternativ kann es auch ein drop down sein. Ist gerade noch nicht technisch angebunden, aber schonmal für dich zum stylen #}}
+        <div class="">
+            <select>
+
+                <option value=''>All</option>
+
+                {{ taxonomy:{ $filterTax } }}
+                    <option value="{{slug}}">{{title}}</option>
+                {{ /taxonomy:{ $filterTax } }}
+
+            </select>
+        
+        </div>
+        
     </div>
 
-
-
+    {{# ein button um vergangene anzuzeigen, wieder mit der livewire var aktuell gesynct #}}
     <div x-data="{ active: {{ livewire:entangle property='aktuell' }} }">
-        <button x-on:click="active = ! active" :class="active ?  'bg-light' : 'bg-green'">
+        <button class="p-2 m-6 border-b-2" x-on:click="active = ! active" :class="active ?  'bg-light' : 'bg-green'">
             Vergangene Termine
         </button>
     </div>
-    
 
-    <div class="flex gap-11">
-        {{# custom tag "lifewire results" from life wire component #}}
-        {{lwResults}}
-        {{# here goes the result partial #}}
-            <div class="w-32 text-white h-11 {{ (index % 2) ? 'bg-blue' : '' }}">
-                {{title}}
+    {{# production list wrapper #}}
+    <div class="flex flex-col transition-opacity duration-500 ease-in-out prod-container gap-y-8">
+    
+        {{ lwResults }}
+            {{ alternating = (index % 2) }}
+    
+            <div class="filter-item-wrapper">
+
+                {{# zum testen und zeigt auch das wechselne modulo #}}
+                <div class="p-3 bg-green">
+                  {{alternating}} -> {{title}}
+                </div>
+                
+                {{# versteh nicht, warum alternate da nicht get #}}
+                {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
+
             </div>
-        {{/lwResults}}
+        {{ /lwResults }}
+    
     </div>
-            
+
+    <div wire:loading.delay.shortest>
+        Processing Payment...
+    </div>
+
 </div>
 
