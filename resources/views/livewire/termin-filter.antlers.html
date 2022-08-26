@@ -23,7 +23,7 @@
         <div x-data="{ select: {{ livewire:entangle property='selection' }} }" class="flex flex-col gap-6 gap-y-2 xs:flex-row">
         
             {{# dropdown #}}
-            {{ partial:components/select label="{ trans:strings.date }" model="select" }}
+            {{ partial:components/select label="{ trans:strings.area }" model="select" }}
 
                 {{# add select options #}}
                 {{ taxonomy:{ $filterTax } }}

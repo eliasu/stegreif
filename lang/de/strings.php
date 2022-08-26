@@ -80,6 +80,7 @@ return [
     'back'                              => 'Zurück',
     'fun_fact'                          => 'Fun Fact',
     'further_links'                     => 'Apart from Stegreif',
+    'area'                              => 'Bundesland',
 
 
     // Pagination

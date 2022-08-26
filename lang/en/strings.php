@@ -80,6 +80,7 @@ return [
     'back'                              => 'Back',
     'fun_fact'                          => 'Fun Fact',
     'further_links'                     => 'Apart from Stegreif',
+    'area'                              => 'States',
 
     // Pagination
     'next'                              => 'next',
