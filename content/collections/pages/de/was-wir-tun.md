@@ -19,23 +19,21 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: what_we_do_page
 updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
-updated_at: 1657210526
+updated_at: 1661511227
 og_image: was-wir-tun-og-1656608789.png
 twitter_image: was-wir-tun-twitter-1656608789.png
 show_social: false
 quick_links:
   -
     text_single: test
-    anchor_id: hallo
-    anchor_name: 'Das ist ein test -> hallo'
+    anchor_id: programme
+    anchor_name: 'Programme Test'
   -
-    text_single: hallo
-    anchor_id: test
-    anchor_name: 'super geil -> test'
+    anchor_name: Reihen
+    anchor_id: reihen
   -
-    text_single: welt
-    anchor_id: super
-    anchor_name: 'nur super'
+    anchor_name: education
+    anchor_id: education
 quicklinks_enabled: true
 add_section:
   -
