@@ -8,18 +8,24 @@ use Illuminate\Support\Carbon;
 
 class TerminFilter extends Component
 {
-    public $aktuell = true;
+    public bool $aktuell = true;
 
-    public $selection = [];
-    public $collectionType;
-    public $filterTax;
-    public $currentLocale;
+    public string $selection = "";
+    public string $type;
+    public string $filterTax;
+    public string $currentLocale;
 
-    public function mount($config)
+    public function mount(array $config):void 
     {
         debug($config);
-        $this->collectionType = $config["collectionType"];
+
+        if(!isset($config["type"])) return;
+        $this->type = $config["type"];
+
+        if(!isset($config["tax"])) return;
         $this->filterTax = $config["tax"];
+
+        if(!isset($config["currLocale"])) return;
         $this->currentLocale = $config["currLocale"];
 
         if(isset($config["preselection"])) {
@@ -27,8 +33,9 @@ class TerminFilter extends Component
         }
     }
 
-    public function checkHayStackForAllElements($needleArray, $hayStack)
+    public function checkHayStackForAllElements(array $needleArray, $hayStack)
     {
+       
         if (!($needleArray && $hayStack)) return;
 
         $needleLength = count($needleArray);
@@ -39,19 +46,8 @@ class TerminFilter extends Component
 
     public function render()
     {
-
-        // debug(Entry::query()
-        // ->where('collection', $this->collectionType)
-        // ->where('status', 'published'));
-        // debug(Entry::query()
-        // ->where('collection', $this->collectionType)
-        // ->where('status', 'published')
-        // ->where('locale', $this->currentLocale)
-        // ->where('aktuell', false)
-        // ->get());
-
         $query = Entry::query()
-            ->where('collection', $this->collectionType)
+            ->where('collection', $this->type)
             ->where('status', 'published')
             ->where('locale', $this->currentLocale);
 
@@ -63,11 +59,11 @@ class TerminFilter extends Component
             
         $results = $query->get();
 
-        if (count($this->selection) > 0) {
+        if (strlen($this->selection) > 0) {
             $results = $results
                 ->filter(function ($el) {
                     $taxoTerms = $el->get($this->filterTax);
-                    return $this->checkHayStackForAllElements($this->selection, $taxoTerms);
+                    return $this->checkHayStackForAllElements([$this->selection], $taxoTerms);
                 });
         }
 
@@ -75,7 +71,7 @@ class TerminFilter extends Component
         debug($results);
         debug("selection", $this->selection);
 
-        return view('livewire.filter-v1',  ['lwResults' => $results]);
+        return view('livewire.termin-filter',  ['lwResults' => $results]);
     }
 }
 
