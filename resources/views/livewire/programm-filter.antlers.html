@@ -4,22 +4,24 @@
     <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
 
         {{# button group wrapper: current/past #}}
+        {{# single button past #}}
         <div x-data="{ active: {{ livewire:entangle property='aktuell' }} }" class="flex flex-col gap-6 gap-y-2 xs:flex-row">
             
-            <button class="relative flex items-center h-8 gap-2 px-2 text-base font-extrabold uppercase cursor-pointer pointer-events-auto group md:gap-4 md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent" value={{slug}} title="{{ title }}" aria-label="{{ title }}"
-                    :class="active ? 'text-skin-primary' : 'text-skin-base'"
+            <button class="relative flex items-center h-8 gap-2 px-2 text-base font-extrabold uppercase cursor-pointer pointer-events-auto group md:gap-4 md:text-lg whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary hover:text-skin-accent" title="{{ title }}" aria-label="{{ title }}"
+                    :class="active ? 'text-skin-base' : 'text-skin-primary'"
                     @click="active = ! active" >
                 
                 {{# button label #}}
                 {{ trans:strings.past }}
 
                 {{# underline #}}
-                <div :class="active ? '!right-0 bg-skin-primary' : 'bg-skin-base'" class="h-0.5 motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
+                <div :class="active ? 'bg-skin-base' : '!right-0 bg-skin-primary'" class="h-0.5 motion-safe:transition-all group-hover:bg-skin-accent absolute left-0 bottom-0 right-[60%] group-hover:right-[50%]"></div>
             </button>
         </div>
 
 
         {{# button group wrapper: tags #}}
+        {{# multi buttons taxo #}}
         <div x-data="{
             {{# here ist die gesamte logik drin #}}
             {{# connects/syncs alpine var with php lifewire var $select in http/lifewire/filename.php #}}
@@ -55,7 +57,7 @@
         
     
         {{# button group wrapper: dropdown #}}
-        <div x-data="{ select: false }" class="flex flex-col gap-6 gap-y-2 xs:flex-row">
+        {{# <div x-data="{ select: false }" class="flex flex-col gap-6 gap-y-2 xs:flex-row">
         
             {{# dropdown #}}
             {{ partial:components/select label="{ trans:strings.date }" model="select" }}
@@ -66,7 +68,7 @@
                 {{ /taxonomy:{ $filterTax } }}
 
             {{ /partial:components/select }}
-        </div>
+        </div> #}}
             
     </div>
 
@@ -75,15 +77,11 @@
     
         {{ lwResults }}
             {{ alternating = (index % 2) }}
+            {{ index | type_of | console_log }}
+            {{ (index % 2) | type_of | console_log }}
     
             <div class="filter-item-wrapper">
 
-                {{# zum testen und zeigt auch das wechselne modulo #}}
-                <div class="p-3 bg-green">
-                  {{alternating}} -> {{title}}
-                </div>
-                
-                {{# versteh nicht, warum alternate da nicht get #}}
                 {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
 
             </div>

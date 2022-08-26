@@ -25,9 +25,13 @@
     {{ elseif show_header_all }}
         {{ partial:typography/h2 :content="headline" }}
 
-        {{# type wird aus dem page_template what_we_do gespeist #}}
+        {{# type wird aus dem page_template what_we_do gespeist, can have a preselection "preselection" => ["chamber"]
+        WTF it looks like there must be a space between the last item and parentecse otherwise dont work site:short_locale" "] <-- important
+        #}}
         {{ livewire:programm-filter
-            :config='["type" => type, "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["chamber"] ]'  
+            :config='[ "type" => type, "tax" => "tags", "currLocale" => site:short_locale
+            {{# , "preselection" => filterActive  #}}
+            ]'  
         }}
 
     {{ /if}}
