@@ -55,20 +55,6 @@
             {{ /taxonomy:{ $filterTax } }}
         </div>
         
-    
-        {{# button group wrapper: dropdown #}}
-        {{# <div x-data="{ select: false }" class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-        
-            {{# dropdown #}}
-            {{ partial:components/select label="{ trans:strings.date }" model="select" }}
-
-                {{# add select options #}}
-                {{ taxonomy:{ $filterTax } }}
-                    <option value="{{slug}}">{{title}}</option>
-                {{ /taxonomy:{ $filterTax } }}
-
-            {{ /partial:components/select }}
-        </div> #}}
             
     </div>
 
@@ -77,8 +63,8 @@
     
         {{ lwResults }}
             {{ alternating = (index % 2) }}
-            {{ index | type_of | console_log }}
-            {{ (index % 2) | type_of | console_log }}
+            {{# {{ index | type_of | console_log }}
+            {{ (index % 2) | type_of | console_log }} #}}
     
             <div class="filter-item-wrapper">
 
