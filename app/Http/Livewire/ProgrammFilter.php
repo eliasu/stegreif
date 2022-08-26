@@ -48,13 +48,14 @@ class ProgrammFilter extends Component
             // ->where('collection', $this->collectionType)
             ->where('status', 'published')
             ->where('locale', $this->currentLocale)
-            ->where('aktuell', $this->aktuell);
+            ->where('aktuell', $this->aktuell)
+            ->orderBy('title', 'asc');
 
         switch ($this->type) {
-            case 'reihe':
+            case 'reihen':
                 $query = $query->where('collection', 'reihen');
                 break;
-            case 'programm':
+            case 'programme':
                 $query = $query
                 ->where('collection', 'programme')
                 ->where('select_type', 'programm');
