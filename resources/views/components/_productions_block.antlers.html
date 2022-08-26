@@ -6,105 +6,39 @@
         show => (int - limits the displayed items falls back to unlimited)
         start => if start is set to "right" collection will start right
 #}}
-<!-- filter script helper -->
-<script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('filter', () => ({
-            digital: false,
-            chamber: false,
-            actual: true,
-            past: false,
 
-            toggle_digital(el) { 
-                this.digital = !this.digital;
-                this.flipFlopVisible(el); 
-            },
-            toggle_chamber(el) { 
-                this.chamber = !this.chamber; 
-                this.flipFlopVisible(el); 
-            },
-            toggle_actual(el) { 
-                if(!this.actual) this.flipFlopVisible(el); 
-                this.actual = true; 
-                this.past = false; 
-            },
-            toggle_past(el) { 
-                if(!this.past) this.flipFlopVisible(el);  
-                this.past = true; 
-                this.actual = false;
-            },
-            flipFlopVisible(el) {
 
-                const resultsContainer = el.closest('.fluid-container').querySelector('.prod-container');
-                resultsContainer.classList.add("custom-hidden");
-
-                setTimeout(function(){ //lets the elements fade out
-                    console.log("flipflopping");
-                    const filterItems = Array.from(document.querySelectorAll(".filter-item-wrapper"));
-                    const visibleItems = filterItems.filter(el=> el._x_isShown);
-                  
-                    for (let i = 0; i < visibleItems.length; i++) {
-                        let item = visibleItems[i];
-                        item.children[0].classList.remove('feature-right', 'feature-left');
-                        if(i % 2) {
-                            item.children[0].classList.add('feature-right');
-                        } else {
-                            item.children[0].classList.add('feature-left');
-                        }
-                    }
-
-                    resultsContainer.classList.remove("custom-hidden");
-                  
-                }, 500);
-            },
-        }))
-    })
-</script>
-<!-- End: filter script helper -->
+{{# wichtig für livewire #}}
+{{ section:head }}
+  {{ livewire:styles }}
+{{ /section:head }}
+{{ section:body }}
+  {{ livewire:scripts }}
+{{ /section:body }}
 
 <!-- /components/_productions_block.antlers.html -->
-<div class="flex flex-col gap-8 fluid-container" x-data="filter">
+<div class="flex flex-col gap-8 fluid-container">
 
     {{# productions headline #}}
-    {{ partial:typography/h2 :content="headline" }}
+    {{ if show_header }}
+        {{ partial:typography/h2 :content="headline_productions" }}
+    {{ elseif show_header_all }}
+        {{ partial:typography/h2 :content="headline" }}
 
-    {{# filter bar #}}
-    <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
-        
-        {{# current/past filter #}}
-        <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.current }" store="actual" function="toggle_actual($el)" }}
-            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="{ trans:strings.past }" store="past" function="toggle_past($el)" }}
-        </div>
-        
-        {{# digital/chamber filter #}}
-        {{# <div class="flex flex-col gap-6 gap-y-2 xs:flex-row">
-            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="digital" store="digital" function="toggle_digital($el)" }}
-            {{ partial:components/button as="button" icon="none" button_type="lined_base_filter" label="chamber" store="chamber" function="toggle_chamber($el)" }}
-        </div> #}}
-    </div>
+        {{# type wird aus dem page_template what_we_do gespeist, can have a preselection "preselection" => ["chamber"]
+        WTF it looks like there must be a space between the last item and parentecse otherwise dont work site:short_locale" "] <-- important
+        #}}
+        {{ livewire:programm-filter
+            :config='[ "type" => type, "tax" => "tags", "currLocale" => site:short_locale
+            {{# , "preselection" => filterActive  #}}
+            ]'  
+        }}
 
-    {{# production list wrapper #}}
-    <div class="flex flex-col transition-opacity duration-500 ease-in-out prod-container gap-y-8">
-        
-        {{# set antlers variable to use modulo for left/right blocks #}}
-        {{ alternating = true }}
+    {{ /if}}
 
-        {{# get collection (fallback:programme) with a filter (f.Ex. Education) #}}
-        {{ collection from="{from ?? "programme"}" select_type:is="{filter}" sort="{sort}" limit="{show}" }}
-
-            <div class="filter-item-wrapper" x-init="flipFlopVisible($el)" x-show="{{aktuell ? 'actual' : 'past'}}">
-                
-                {{# the actual content block #}}
-                {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
-
-                {{# change alternating variable with every block to get left/right #}}
-                {{ alternating = !alternating }}
-            </div>
-        {{ /collection }}
-    </div>
-
+ 
     {{# link to detail view #}}
     {{ link_all ?= { partial:components/button label="{ trans:strings.all_productions }" class="self-center" button_type="background" link_type="entry" :entry="all_productions_page" } }}
+     
 </div>
 <!-- End: /components/_productions_block.antlers.html --> 

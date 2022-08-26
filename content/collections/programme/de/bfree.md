@@ -226,14 +226,14 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: true
+aktuell: false
 select_type: programm
 tags:
   - chamber
 template: single_page
-updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657732148
-header_headline: '#bfree'
+updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
+updated_at: 1661275373
+header_headline: '#bfree – eine Neuinterpretation der Headline'
 extend_section:
   -
     article:
@@ -243,10 +243,17 @@ extend_section:
           values:
             type: bard_media
             size: big
-            select_type: video
-            video: 'https://www.youtube.com/watch?v=AQdFwDfleeY'
-            media_caption: '#befree Teaser | YouTube-Kanal von Stegreif'
+            gallery_title: Impressionen
+            images:
+              - header_images/(c)-navina-neuschl.jpg
+              - header_images/(c)-sophia-hegewald---alternativ.jpg
+              - header_images/(c)-sophia-hegewald.jpg
+              - header_images/bild_roman_novitzky.-cinematic.jpg
+              - header_images/c_navina_neuschl_02.-cinematic.jpg
+related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
+related_termine:
+  - ee351bf6-74a9-49c4-9a72-1bcac5790a54
+  - 2edf54e3-8fb5-453f-8e76-eb8df9772cda
 quicklinks_enabled: false
 show_social: false
-headline: 'Connecting European cultures through Beethoven‘s 9th Symphony'
 ---

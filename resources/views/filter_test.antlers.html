@@ -1,19 +1,29 @@
-{{ collection from="programme" as="posts" }}
-  {{ mydata =  (posts | to_json) }}
-  <script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('thedata', () => ({
-          posts:{{ mydata }}
-        }))
-    })
-  </script>
-
-{{ /collection  }}
-
-<div class="" x-data="thedata">
-  
-  {{# data is available here #}}
-
-</div>
+{{ section:head }}
+  {{ livewire:styles }}
+{{ /section:head }}
+{{ section:body }}
+  {{ livewire:scripts }}
+{{ /section:body }}
 
 
+{{ livewire:programm-filter
+  :config='["collectionType" => "programme", "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["chamber"] ]'  
+}}
+{{ livewire:programm-filter
+  :config='["collectionType" => "programme", "tax" => "tags", "currLocale" => site:short_locale, "preselection" => ["chamber"] ]'  
+}}
+
+
+{{# <div class="m-20">
+{{ livewire:termin-filter
+  :config='["collectionType" => "termine", "tax" => "bundeslaender", "currLocale" => site:short_locale, "preselection" => ["berlin"] ]'  
+}}
+</div> #}}
+
+
+
+
+
+
+{{# when programme selection type (education,programme,reihen) #}}
+{{# when termine nach richtigem datum #}}

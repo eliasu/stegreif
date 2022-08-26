@@ -1,0 +1,42 @@
+<div class="">
+    {{# <div>
+       hallo counter
+    </div>
+    
+    
+    <div class="text-3xl">
+        <button wire:click="increment" class="z-40">this is huge click me</button>
+        <h1>{{ $count }}</h1>
+    </div> #}}
+
+
+    <div x-data="{ open: {{ livewire:entangle property='showDropdown' }} }">
+    {{# <div x-data="{ open: @entangle('showDropdown') }"> #}}
+
+    {{# </div> #}}
+
+        <button @click="open = true">Show More...</button>
+     
+        <ul x-show="open" @click.outside="open = false">
+            <li><button wire:click="archive">Archive</button></li>
+            <li><button wire:click="delete">Delete</button></li>
+        </ul>
+    </div>
+
+
+
+    <div x-data>
+        <h1 x-text="$wire.count"></h1>
+ 
+        <button x-on:click="$wire.increment()">Increment</button>
+    </div>
+
+
+    
+
+
+
+</div>
+
+
+{{# <div x-data="{ open: {{ livewire:entangle property='showDropdown' }} }"></div> #}}
