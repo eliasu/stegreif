@@ -23,15 +23,15 @@
     <div class="grid grid-cols-1 md:px-12 gap-x-12 xs:grid-cols-2 xl:grid-cols-3 gap-y-20 2xl:gap-x-20 lg:px-20">
         
         {{# all dates #}}
-        {{ collection:termine limit="{show}" sort="date" show_past="false" }}
+        {{ collection:termine limit="{show}" sort="date_field" show_past="false" }}
             <div class="flex flex-col items-start">
 
                 {{# time #}}
                 {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
-                {{ else }} {{ partial:typography/p content={ time format="G.i a" } class="mb-0 xs:mb-1" }} {{ /if }}
+                {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
                 
                 {{# date #}}
-                {{ partial:typography/h3 content={ date iso_format="DD.MM.YYYY" } class="mb-4 sm:mb-6" }}
+                {{ partial:typography/h3 content={ date_field iso_format="DD.MM.YYYY" } class="mb-4 sm:mb-6" }}
                 
                 {{# tags  #}}
                 {{ partial:components/tags class="mb-4" }}
