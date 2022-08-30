@@ -42,14 +42,13 @@
             {{ /extend_section }}
 
         </div>
- 
         
-        {{ if related_termine }}
-            <div class="flex flex-col gap-y-8 fluid-container">
-                {{# next dates block #}}
-                {{ partial:components/related_dates_block rel_id="{id}" }}
-            </div>
-        {{ /if }}
+        {{# id: {{ id }}
+        origin: {{ origin }}
+     #}}
+        
+        {{# show related dates => put in the current id to get related programm #}}
+        {{ partial:components/related_dates_block }}
         
     {{ /partial:layout/section }}
 
