@@ -23,7 +23,7 @@
     <div class="grid grid-cols-1 md:px-12 gap-x-12 xs:grid-cols-2 xl:grid-cols-3 gap-y-20 2xl:gap-x-20 lg:px-20">
         
         {{# all dates #}}
-        {{ collection:termine limit="{show}" sort="date_field" show_past="false" }}
+        {{ collection:termine limit="{show}" sort="date_field" date_field:is_past="false" }}
             <div class="flex flex-col items-start">
 
                 {{# time #}}
