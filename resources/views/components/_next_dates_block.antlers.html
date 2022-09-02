@@ -27,8 +27,10 @@
             <div class="flex flex-col items-start">
 
                 {{# time #}}
-                {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
-                {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
+                {{ locales self="false" }}
+                    {{ if current == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
+                    {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
+                {{ /locales  }}
                 
                 {{# date #}}
                 {{ partial:typography/h3 content={ date_field iso_format="DD.MM.YYYY" } class="mb-4 sm:mb-6" }}

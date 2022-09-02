@@ -19,8 +19,10 @@
             {{ if blueprint == "termine" }}
                 <div class="mb-4 block-in-1 block-size-2">
                     {{# time #}}
-                    {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
-                    {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
+                    {{ locales self="false" }}
+                        {{ if current == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
+                        {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
+                    {{ /locales  }}
                     
                     {{# date #}}
                     {{ partial:typography/h3 content="{ date_field iso_format="DD.MM.YYYY" }" }}
