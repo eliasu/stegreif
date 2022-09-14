@@ -71,8 +71,8 @@ class TerminFilter extends Component
                 });
         }
 
-        debug($query->get());
-        debug($results);
+        // debug($query->get());
+        debug("lwresults", $results);
         debug("selection", $this->selection);
 
         return view('livewire.termin-filter',  ['lwResults' => $results]);

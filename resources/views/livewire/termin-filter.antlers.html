@@ -40,6 +40,8 @@
         
         {{# all dates #}}
         {{ lwResults }}
+
+       
             
             {{# wrapper to get tags with links (not inside another a tag)  #}}
             <div class="relative group">
@@ -52,6 +54,34 @@
                     
                     {{# headline or title fallback #}}
                     {{ partial:typography/h4 content="{ title }" class="hyphens group-hover:text-skin-primary" }}
+                   <div class="text-white">{{ time }}
+                    {{# <div class="">
+                       {{ time format="G.i a"}}
+                    </div>
+                    <div class="">
+                       {{ time format="H.i" }}
+                    </div>
+                    <div class="">
+                        {{site:short_locale}}
+                    </div> #}}
+                    <div class="">
+                        {{ locales self="false"  }}
+                        {{ current}}
+                        {{ /locales  }}
+                    </div>
+                    <div class="">
+                       hallo  {{ locales current_first=true limit=1   }}
+                       {{index}}
+                       {{ locale:name}} 
+                       {{ current}}
+                       {{ /locales}}
+                    </div>
+                    <div class="">
+                       hi  {{ locales | console_log }}
+                    </div>
+                   
+                   </div>
+                  
                 </div>
 
                 {{# dates card #}}

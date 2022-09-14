@@ -28,11 +28,13 @@
         {{# type wird aus dem page_template what_we_do gespeist, can have a preselection "preselection" => ["chamber"]
         WTF it looks like there must be a space between the last item and parentecse otherwise dont work site:short_locale" "] <-- important
         #}}
-        {{ livewire:programm-filter
-            :config='[ "type" => type, "tax" => "tags", "currLocale" => site:short_locale
-            {{# , "preselection" => filterActive  #}}
-            ]'  
-        }}
+        {{ nocache }} 
+            {{ livewire:programm-filter
+                :config='[ "type" => type, "tax" => "tags", "currLocale" => site:short_locale
+                {{# , "preselection" => filterActive  #}}
+                ]'  
+            }}
+        {{ /nocache }} 
 
     {{ /if}}
 
