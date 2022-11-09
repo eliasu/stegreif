@@ -4,10 +4,62 @@ blueprint: reihen
 title: '#bechange'
 header_theme_selector: dark
 header_select: image
-header_image: header_images/fronalpstock_big.jpg
-teaser_text: 'Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet. »Wie ein Hund!« sagte er, es war, als sollte die Scham ihn überleben. Als Gregor Samsa ein'
+header_image: 04_was-wir-tun/reihen-und-programme/bechange_reihenseite/ludwig-nikulski-stegreif-orchester--bechange-ludwigsburg--8.jpg
+teaser_text: '16 Workshops - 4 Premieren - 1 symphony of change. In Beschäftigung mit den 17 Nachhaltigkeitszielen und vier Komponistinnen erarbeitet Stegreif gemeinsam mit Menschen aus allen Bundesländern eine Sinfonie des Wandels.'
 theme_selector: dark
 article:
+  -
+    type: paragraph
+    attrs:
+      class: 'text-2xl leading-l'
+    content:
+      -
+        type: text
+        text: '#bechange ist ein neues Kapitel, eine Ermutigung an alle '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: Neugierigen
+      -
+        type: text
+        text: ', ein Hauch von Zuversicht in einer Welt in Schieflage. Und vor allem eins: Eine musikalische Aufforderung sich einzubringen und Neues zu '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: denken
+      -
+        type: text
+        text: ', zu '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'fühlen '
+      -
+        type: text
+        text: 'und zu '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: erschaffen
+      -
+        type: text
+        text: '. '
   -
     type: paragraph
     attrs:
@@ -15,15 +67,34 @@ article:
     content:
       -
         type: text
-        text: 'Die Grenzen sind offen – ob zwischen den Ländern oder den Genres, zwischen den Sprachen oder den Instrumenten, zwischen den Alleinstellungsmerkmalen und den Gemeinsamkeiten. Inspiriert von Ludwig van Beethovens 9. Sinfonie, der „Europa-Sinfonie“, kombiniert das STEGREIF.orchester Volkslieder aus Europa mit Elementen aus Beethovens Monumentalwerk und lässt Europa in einer Sinfonie zu einem farbenfrohen Land zusammenwachsen, das aus dem Herzen der Menschen erzählt. Auch mit diesem Konzertprojekt hat es sich das STEGREIF.orchester wieder auf die Fahne geschrieben, dem Publikum neue Herangehensweisen an klassische Musik zu eröffnen. Klassische Musik verwoben mit verschiedenster „folk music“ aus den Herkunftsländern der Musiker*innen, gespielt von einem jungen Orchester ohne Noten, ohne Dirigat und ohne Stühle. Dies schafft Freiheit und Raum für Improvisation.'
+        text: '#bechange fragt nach der Veränderung in jedem und jeder von uns und lädt Musiker*innen und Publikum ein, ihrem Blickwinkel auf die Fragen unserer Zeit Raum zu geben. Laute wie leise Stimmen erklingen so in einer offenen Auseinandersetzung mit Hoffnung, Schuld und Verantwortlichkeit im Angesicht der globalen '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'ökologischen Krise'
+      -
+        type: text
+        text: '. '
   -
     type: set
     attrs:
       values:
         type: bard_quotes
         size: small
-        quote: 'Höchst geistreich und originell, [...] eine ganz neue Sicht auf Beethovens genialen Opus'
-        author: 'Bietigheimer Zeitung, 04.10.2021'
+        quote: 'Musik und Szene werden eins, Auskomponiertes wechselt mit Improvisation. [...] Ein bewegender Abend.'
+        author: 'Reutlinger General-Anzeiger, 17.05.2022'
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: 'Vier Komponist*innen'
   -
     type: paragraph
     attrs:
@@ -31,15 +102,7 @@ article:
     content:
       -
         type: text
-        marks:
-          -
-            type: bts_span
-            attrs:
-              class: text-skin-primary
-        text: '#bfree'
-      -
-        type: text
-        text: ' entstand im Rahmen des Projekts '
+        text: 'Mit #bechange nähert sich Stegreif dem Themenfeld '
       -
         type: text
         marks:
@@ -47,10 +110,73 @@ article:
             type: bts_span
             attrs:
               class: text-skin-primary
-        text: '#bebeethoven'
+        text: 'Nachhaltigkeit '
       -
         type: text
-        text: ' als Beitrag zum Beethovenjahr 2020. #bfree wuchs in der Krise. Es ist eine andere Produktion geworden, als ursprünglich geplant. Nicht nur der Prozess, sondern auch das Ergebnis sind durch Corona geprägt: durch Auflagen und Abstand, wo STEGREIF sonst Nähe und Bewegung sucht. Die Aktionsmöglichkeiten auf der Bühne sind eingeschränkt, direkter Kontakt mit dem Publikum unmöglich. Und doch ist es ein Stück über Freiheit geworden, über die Sehnsucht nach Nähe und Miteinander, über das Fliegen, über alle Grenzen hinweg.'
+        text: 'aus den unterschiedlichsten Perspektiven. In Auseinandersetzung mit den '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: '17 Zielen für nachhaltige Entwicklung'
+      -
+        type: text
+        text: ' der UN werden vier Premierenprogramme entwickelt, die sich mit vier historischen Komponistinnen beschäftigen. Bestehend aus den Werken von Wilhelmine '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'von Bayreuth'
+      -
+        type: text
+        text: ', Hildegard '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'von Bingen'
+      -
+        type: text
+        text: ', Clara '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Schumann '
+      -
+        type: text
+        text: 'und Emilie '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Mayer '
+      -
+        type: text
+        text: 'erwachsen vier musikalisch-szenische Produktionen, die von Rekomponistinnen des Stegreif Orchesters arrangiert werden.'
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
+      -
+        type: text
+        text: 'Foto (C) Ludwig Nikulski'
 extend_section:
   -
     article:
@@ -61,8 +187,69 @@ extend_section:
             type: bard_media
             size: big
             select_type: video
-            video: 'https://www.youtube.com/watch?v=AQdFwDfleeY'
+            video: 'https://youtu.be/tlZwDV61Piw'
+            media_caption: 'Trailer #bechange: Awakeining | Youtubekanal des Stegreif Orchesters'
+      -
+        type: paragraph
+        attrs:
+          class: null
 add_section:
+  -
+    theme_selector: yellow
+    article:
+      -
+        type: heading
+        attrs:
+          level: 3
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_quotes
+            size: small
+            quote: 'Die hochspannende, szenisch choreographierte Performance, mit der das STEGREIF.orchester nicht nur die ganze Bühne, sondern den gesamten Saal bespielte, wurde mit stehenden Ovationen gefeiert.'
+            author: 'nmz, 6/2022'
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: 'Symphony of change'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die vielschichtigen musikalischen, szenischen und gesellschaftlichen Erfahrungen aus den #bechange-Programmen und den '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: 'statamic://entry::745a9b70-74cd-4ff6-b32d-7e93959b04e6'
+                  rel: null
+                  target: null
+                  title: null
+            text: '#bechange-Workshops'
+          -
+            type: text
+            text: ' fließen schlussendlich in der '
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'symphony of change'
+          -
+            type: text
+            text: ' zusammen.'
   -
     theme_selector: light
     article:
@@ -71,26 +258,82 @@ add_section:
         attrs:
           values:
             type: bard_partners
-            headline: 'UNSERE PARTNER UND KOOPERATIONEN'
-            text: 'Ein Kooperationsprojekt von STEGREIF und PODIUM Esslingen im Rahmen von #bebeethoven – gefördert durch die KULTURSTIFTUNG des BUNDES und das Land Baden-Württemberg – und außerdem gefördert durch die Karl-Schlecht-Stiftung.'
+            headline: 'Förder*innen'
+            text: 'Gefördert von: Die Beauftragte der Bundesregierung für Kultur und Medien'
             entires:
-              - d0e4ef90-45fd-483d-842a-1d597388850b
-              - 90cc8a9e-1837-46bb-88f3-1bda9a49c29e
-              - f3744684-a1fd-4225-baaa-a6613df71d40
-              - e847a09e-87f8-4092-8c0e-457f64129ecb
+              - 530d7673-e742-4ee9-be5d-3750c4220019
+  -
+    theme_selector: yellow
+    article:
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_feature
+            alternate: false
+            feature_type: bird
+            reference_content: true
+            select_content: c01db2b0-eb69-40e6-829c-64f24b4851cf
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
-select_transition_theme: bird
+select_transition_theme: bechange
 aktuell: true
-tags:
-  - chamber
 template: single_page
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656543116
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1667388598
 details:
+  -
+    headline: Infoheft
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: BEHIND
+          -
+            type: text
+            text: ' '
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: '#bechange'
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: Awakening
+                target_blank: true
+                button_type: background
+                link_type: asset
+                asset: 07_downloads/infoheft_behind_bechange_awakening.pdf
+                type: button
+                enabled: true
+              -
+                label: Feeling
+                target_blank: true
+                button_type: background
+                link_type: asset
+                asset: 07_downloads/infoheft_behind_bechange_feeling.pdf
+                type: button
+                enabled: true
+    type: detail
+    enabled: true
   -
     headline: Team
     description:
@@ -103,13 +346,15 @@ details:
             type: text
             marks:
               -
-                type: bold
-            text: 'Künstlerische Leitung'
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Künstlerische Leitung'
           -
             type: hard_break
           -
             type: text
-            text: 'Juri de Marco'
+            text: 'Juri de Marco/Lorenz Blaumer'
       -
         type: paragraph
         attrs:
@@ -119,13 +364,15 @@ details:
             type: text
             marks:
               -
-                type: bold
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: Rekomposition/Arrangement
           -
             type: hard_break
           -
             type: text
-            text: 'Uri Caine, Juri de Marco, Alistair Duncan, Bertram Burkert'
+            text: 'Nina Kazourian, Tabea Schrenk, Julia Biłat, Helena Weinstock-Montag, Franziska Aller'
       -
         type: paragraph
         attrs:
@@ -135,13 +382,33 @@ details:
             type: text
             marks:
               -
-                type: bold
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Nikola Djurica'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: 'Regie, Choreographie'
           -
             type: hard_break
           -
             type: text
-            text: 'David Fernandez'
+            text: 'David Fernández'
       -
         type: paragraph
         attrs:
@@ -151,13 +418,15 @@ details:
             type: text
             marks:
               -
-                type: bold
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: Lichtdesign
           -
             type: hard_break
           -
             type: text
-            text: 'Andreas Harder'
+            text: 'Vito Walter'
       -
         type: paragraph
         attrs:
@@ -167,16 +436,113 @@ details:
             type: text
             marks:
               -
-                type: bold
-            text: Kostüm
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: Projektleitung
           -
             type: hard_break
           -
             type: text
-            text: 'Sophie Schliemann'
+            text: 'Immanuel de Gilde'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Ko-Künstlerische Leitung Komposition'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Alistair Duncan'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: Workshopleitung
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Viola Schmitzer, Bartosz Nowak'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Choreographische Mitarbeit'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Lea Hladka'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Projektassistenz & dramaturgische Unterstützung'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Catriona Fadke'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: Tourassistenz
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Paula Reiz'
     type: detail
     enabled: true
 related_programme:
   - 88878791-0d1f-46ce-94eb-f646bb7aa50c
-  - 664ef359-555e-43dc-81f1-7c6bbabe2cd6
+  - c01db2b0-eb69-40e6-829c-64f24b4851cf
+  - 745a9b70-74cd-4ff6-b32d-7e93959b04e6
+  - dfdfb3b5-0e09-4346-854e-e825d2782acb
+quicklinks_enabled: false
+show_social: false
+headline: '16 Workshops - 4 Premieren - 1 symphony of change'
 ---

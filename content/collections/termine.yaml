@@ -11,5 +11,4 @@ taxonomies:
   - bundeslaender
 revisions: false
 route: '/{mount}/{slug}'
-date: true
 sort_dir: asc

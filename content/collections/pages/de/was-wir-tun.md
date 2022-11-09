@@ -4,7 +4,7 @@ blueprint: what_we_do_page
 title: 'Was wir tun'
 header_theme_selector: dark
 header_select: image
-header_image: header_images/(c)-sophia-hegewald---alternativ.jpg
+header_image: 04_was-wir-tun/header_(c)-philipp-muller.jpg
 theme_selector_programme: dark
 section_headline_programme: Programme
 theme_selector_reihen: yellow
@@ -18,71 +18,20 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
 template: what_we_do_page
-updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
-updated_at: 1661511227
+updated_by: b2289f97-86f1-43f6-a7ec-892776a8a980
+updated_at: 1661511509
 og_image: was-wir-tun-og-1656608789.png
 twitter_image: was-wir-tun-twitter-1656608789.png
+quicklinks_enabled: true
 show_social: false
 quick_links:
   -
-    text_single: test
+    anchor_name: Programme
     anchor_id: programme
-    anchor_name: 'Programme Test'
   -
     anchor_name: Reihen
     anchor_id: reihen
   -
-    anchor_name: education
+    anchor_name: Education
     anchor_id: education
-quicklinks_enabled: true
-add_section:
-  -
-    theme_selector: dark
-    article:
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'das ist mein super test'
-      -
-        type: set
-        attrs:
-          values:
-            type: anchor
-            anchor: hallo
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'das 9st auch super'
-      -
-        type: set
-        attrs:
-          values:
-            type: anchor
-            anchor: test
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'geil hallo'
-      -
-        type: set
-        attrs:
-          values:
-            type: anchor
-            anchor: super
-      -
-        type: paragraph
-        attrs:
-          class: null
 ---

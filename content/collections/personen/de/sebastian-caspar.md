@@ -2,22 +2,16 @@
 id: faad7b68-ee63-4b1b-b5bc-7997057c9aed
 blueprint: personen
 title: 'Sebastian Caspar'
-thumbnail: personen/anne-willem1.jpg
-image: personen/anne-willem2.jpg
-description: '… kam den ganzen Weg aus Neuseeland nach Europa und liebt es, Teil dieser diversen Kultur- und Musiklandschaft sein zu können. Edward interessiert sich vor allem für Projekte, die neue Perspektiven auf Musiktraditionen eröffnen, und beschäftigt sich gerne mit einem breiten Spektrum an Musik: Alte Musik, zeitgenössische Musik, Weltmusik, Kammermusik, elektronische Musik, improvisierte Musik, neu arrangierte Musik und neu komponierte Musik.'
-fun_fact: 'Begann seine musikalische Reise auf einem 1/16 Cello - im Alter von 3 Jahren'
-links:
-  -
-    label: Soundcloud
-    target_blank: true
-    button_type: lined
-    link_type: url
-    url: google.de
-    type: button
-    enabled: true
+thumbnail: 03_wer-wir-sind/personenbilder/sebastian-caspar2_(c)_elisabeth-hardenberg_lowres.jpg
+image: 03_wer-wir-sind/personenbilder/sebastian-caspar1_(c)_elisabeth-hardenberg_lowres.jpg
+description: '...ist unser Hendrix an der Violine. Wenn er nicht gerade in Berlin über das ehemalige Flugfeld kited, fliegt er mit seiner Geige über Folk bis hin zu elektronischen Beats.'
+fun_fact: |-
+  Kann gut massieren.
+
+  Foto: Elisabeth Hardenberg
 team_tags:
   - violine
   - kuenstlerischer-beirat
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656617834
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1657806946
 ---

@@ -1,7 +1,8 @@
 data:
-  image_title: 'Das ist ein Titel des Bilds'
+  image_title: '(C) Ludwig Nikulski'
+  no_trim: false
 size: 778325
-last_modified: 1654810895
+last_modified: 1656927833
 width: 1280
 height: 720
 mime_type: image/jpeg
