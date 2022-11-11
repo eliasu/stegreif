@@ -14,11 +14,11 @@
     {{ if text }} {{ partial:typography/p content="{ text }" class="mb-8 text-center" }} {{ /if }}
 
     {{# show supporter logos  #}}
-    <div class="flex flex-row flex-wrap items-center justify-center gap-16">
+    <div class="flex flex-row flex-wrap items-stretch justify-center gap-12">
         {{ entires }}
-            <div class="w-full max-w-[8rem]">
+            <a href="{{link_field}}" target="_blank" class="w-full p-2 max-w-[12rem] hover:bg-yellow cursor-pointer motion-safe:transition">
                 {{ partial:components/picture nocaption="true" :image="logo" class="mix-blend-multiply" contain="true" sizes="(min-width: 768px) 50vw, 20vw" }}
-            </div>
+            </a>
         {{ /entires }}
     </div>
 

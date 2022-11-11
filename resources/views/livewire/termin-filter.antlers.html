@@ -1,6 +1,6 @@
 <div>
     {{# filter bar #}}
-    <div class="flex flex-col flex-wrap items-start w-full xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
+    <div class="flex flex-col flex-wrap items-start w-full mb-20 xl:mb-30 xs:flex-row gap-x-16 gap-y-8 xs:gap-y-6">
 
         {{# button group wrapper: current/past #}}
         {{# single button past #}}
@@ -40,8 +40,6 @@
         
         {{# all dates #}}
         {{ lwResults }}
-
-       
             
             {{# wrapper to get tags with links (not inside another a tag)  #}}
             <div class="relative group">
@@ -54,45 +52,19 @@
                     
                     {{# headline or title fallback #}}
                     {{ partial:typography/h4 content="{ title }" class="hyphens group-hover:text-skin-primary" }}
-                   <div class="text-white">{{ time }}
-                    {{# <div class="">
-                       {{ time format="G.i a"}}
-                    </div>
-                    <div class="">
-                       {{ time format="H.i" }}
-                    </div>
-                    <div class="">
-                        {{site:short_locale}}
-                    </div> #}}
-                    <div class="">
-                        {{ locales self="false"  }}
-                        {{ current}}
-                        {{ /locales  }}
-                    </div>
-                    <div class="">
-                       hallo  {{ locales current_first=true limit=1   }}
-                       {{index}}
-                       {{ locale:name}} 
-                       {{ current}}
-                       {{ /locales}}
-                    </div>
-                    <div class="">
-                       hi  {{ locales | console_log }}
-                    </div>
-                   
-                   </div>
-                  
                 </div>
 
                 {{# dates card #}}
                 <a href="{{ url }}" class="relative flex flex-col items-start p-4">
-                    
+
                     {{# time #}}
-                    {{ if site:short_locale == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" }}
-                    {{ else }} {{ partial:typography/p content={ time format="G.i a" } }} {{ /if }}
+                    {{ locales self="false" }}
+                        {{ if current == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
+                        {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
+                    {{ /locales  }}
                     
                     {{# date #}}
-                    {{ partial:typography/h3 class="pointer-events-auto" content="{ date iso_format="DD.MM.YYYY" }" }}
+                    {{ partial:typography/h3 class="pointer-events-auto" content="{ date_field iso_format="DD.MM.YYYY" }" }}
                     
                     {{# square spacer for height #}}
                     <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-5"></div>
@@ -119,7 +91,7 @@
     </div>
 
 
-    <div wire:loading.delay.shortest>
+    <div class="my-20 text-xl font-bold uppercase text-skin-primary" wire:loading.delay.shortest>
         loading …
     </div>
             

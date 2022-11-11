@@ -19,7 +19,7 @@
     {{# Persist null as untouched banner state. #}}
     x-data="{
         cookieConsentDate: $persist(null).as('cookieBannerConsentDate'),
-        analyticsStorage: $persist(false).as('cookieBannerAnalyticsStorage'),
+        analyticsStorage: $persist(true).as('cookieBannerAnalyticsStorage'),
         adStorage: $persist(false).as('cookieBannerAdStorage'),
     }"
     {{# Update gtag on state change. #}}
@@ -39,61 +39,60 @@
     x-show="$store.cookieBanner.consent === null"
     x-transition
     class="
-        fixed z-50 inset-x-[1rem] bottom-[1rem] md:bottom-[2rem] md:w-80 flex flex-col p-6 space-y-4 bg-white border border-neutral/10 rounded shadow-lg
+        fixed z-[501] inset-x-[1rem] bottom-[1rem] md:bottom-[2rem] md:w-min md:min-w-[20rem] flex flex-col p-6 gap-y-4 bg-light shadow-lg
         {{ seo:display_style == 'left' ?= 'md:right-auto md:left-[2rem]' }}
         {{ seo:display_style == 'right' ?= 'md:left-auto md:right-[2rem]' }}
     "
     x-cloak
 >
-    <h2 class="text-2xl font-bold">{{ trans:strings.cookie_title }}</h2>
-    <p class="text-sm font-bold text-neutral">
-        {{ trans:strings.cookie_explanation }}
-        {{ if configuration:privacy_statement_type == 'entry' }}
-            <a class="px-1 -m-1 underline rounded hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="{{ configuration:privacy_statement_entry:url }}">{{ trans:strings.cookie_learn_more }}</a>
-        {{ elseif configuration:privacy_statement_type == 'pdf' }}
-            <a class="px-1 -m-1 underline rounded hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="{{ configuration:privacy_statement_asset }}" target="_blank">{{ trans:strings.cookie_learn_more }}</a>
-        {{ /if }}
-    </p>
+    <h4 class="text-darkblue">{{ trans:strings.cookie_title }}</h4>
+    <p class="w-full text-darkblue">{{ trans:strings.cookie_explanation }}</p>
+    
+    {{ if configuration:privacy_statement_type == 'entry' }}
+        {{ partial:components/button label="{ trans:strings.cookie_learn_more }" link_type="url" url="{ configuration:privacy_statement_entry:url }" }}
+    {{ elseif configuration:privacy_statement_type == 'pdf' }}
+        {{ partial:components/button label="{ trans:strings.cookie_learn_more }" link_type="url" url="{ configuration:privacy_statement_asset }" }}    
+    {{ /if }}
 
-    <div class="mt-4 flex flex-col space-y-2">
+    <div class="flex flex-col my-8 gap-y-4">
         {{# Functional cookies are always on. #}}
         <label class="inline-flex items-center">
-            <input class="mr-3 w-5 h-5 rounded border-neutral text-primary focus:outline-none focus-visible:ring focus-visible:ring-primary motion-safe:transition opacity-50" type="checkbox" name="functional" checked disabled>
+            <input class="w-5 h-5 mr-3 rounded opacity-50 border-neutral text-darkblue focus:outline-none focus-visible:ring focus-visible:ring-primary motion-safe:transition" type="checkbox" name="functional" checked disabled>
             <span class="flex flex-col">
-                <span class="font-bold text-xs">{{ trans:strings.cookie_functional }}</span>
-                <span class="text-xs text-neutral/75">{{ trans:strings.cookie_functional_explanation }}</span>
+                <span class="text-xs font-bold text-darkblue">{{ trans:strings.cookie_functional }}</span>
+                <span class="text-xs text-darkblue">{{ trans:strings.cookie_functional_explanation }}</span>
             </span>
         </label>
 
         {{# x-model analyticsStorage checkbox. #}}
         <label class="inline-flex items-center">
-            <input class="mr-3 w-5 h-5 rounded border-neutral text-primary focus:outline-none focus-visible:ring focus-visible:ring-primary motion-safe:transition" type="checkbox" name="analytics_storage" x-model="analyticsStorage">
+            <input class="w-5 h-5 mr-3 rounded border-neutral text-darkblue focus:outline-none focus-visible:ring focus-visible:ring-primary motion-safe:transition" type="checkbox" name="analytics_storage" checked x-model="analyticsStorage">
             <span class="flex flex-col">
-                <span class="font-bold text-xs">{{ trans:strings.cookie_analytics }}</span>
-                <span class="text-xs text-neutral/75">{{ trans:strings.cookie_analytics_explanation }}</span>
+                <span class="text-xs font-bold text-darkblue">{{ trans:strings.cookie_analytics }}</span>
+                <span class="text-xs text-darkblue">{{ trans:strings.cookie_analytics_explanation }}</span>
             </span>
         </label>
 
         {{# x-model adStorage checkbox only when GTM is being used. #}}
-        {{ if seo:tracker_type == 'gtm' }}
+        {{# {{ if seo:tracker_type == 'gtm' }}
             <label class="inline-flex items-center">
-                <input class="mr-3 w-5 h-5 rounded border-neutral text-primary focus:outline-none focus-visible:ring focus-visible:ring-primary motion-safe:transition" type="checkbox" name="ad_storage" x-model="adStorage">
+                <input class="w-5 h-5 mr-3 rounded border-neutral text-primary focus:outline-none focus-visible:ring focus-visible:ring-primary motion-safe:transition" type="checkbox" name="ad_storage" x-model="adStorage">
                 <span class="flex flex-col">
-                    <span class="font-bold text-xs">{{ trans:strings.cookie_ads }}</span>
+                    <span class="text-xs font-bold">{{ trans:strings.cookie_ads }}</span>
                     <span class="text-xs text-neutral/75">{{ trans:strings.cookie_ads_explanation }}</span>
                 </span>
             </label>
-        {{ /if }}
+        {{ /if }} #}}
     </div>
 
-    <div class="flex space-x-4">
+    <div class="flex flex-wrap justify-center gap-x-4 gap-y-4 md:flex-nowrap">
         {{# Accept cookies and set current date. #}}
         <button
             @click="
                 $store.cookieBanner.set(true),
                 cookieConsentDate = '{{ now format="Y-m-d" }}'"
             type="button"
-            class="px-4 py-2 bg-primary rounded text-sm font-bold text-white focus:outline-none focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary motion-safe:transition"
+            class="flex items-center h-8 px-4 text-base font-extrabold uppercase cursor-pointer pointer-events-auto md:text-lg whitespace-nowrap text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-skin-primary hover:bg-skin-accent hover:text-skin-base"
             >
             {{ trans:strings.cookie_accept }}
         </button>
@@ -102,7 +101,7 @@
         <button
             @click="$store.cookieBanner.set(false)"
             type="button"
-            class="px-1 py-2 rounded text-sm font-bold text-neutral focus:outline-none focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary motion-safe:transition"
+            class="flex items-center h-8 px-4 text-base cursor-pointer pointer-events-auto md:text-lg whitespace-nowrap text-skin-inverted motion-safe:transition leading-s focus:outline-none focus-visible:ring-2 ring-skin-primary bg-light hover:bg-skin-accent hover:text-skin-base"
         >
             {{ trans:strings.cookie_ignore }}
         </button>
@@ -115,11 +114,17 @@
     <!-- /components/_cookie_banner.antlers.html -->
     {{ if seo:use_cookie_banner }}
         {{# Read out global store consent status and display a reset consent link by saving the initial state. #}}
-        <span x-data x-cloak>
+        {{# <span x-data x-cloak>
             <span x-show="$store.cookieBanner.consent !== null">
                 <a @click.prevent="$store.cookieBanner.set(null)" class="px-1 -mx-1 underline rounded hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary motion-safe:transition-colors" href="#">{{ trans:strings.cookie_reset_consent }}</a>
             </span>
-        </span>
+        </span> #}}
+
+        <li x-data x-cloak x-show="$store.cookieBanner.consent !== null" class="relative block">
+            <a @click.prevent="$store.cookieBanner.set(null)" class="block text-lg font-extrabold uppercase leading-s hover:text-green focus:outline-none focus-visible:ring-2 ring-primary whitespace-nowrap" href="#">
+                {{ trans:strings.cookie_reset_consent }}
+            </a>
+        </li>
     {{ /if }}
     <!-- End: /components/_cookie_banner.antlers.html -->
 {{ /section:reset_cookie_consent }}
