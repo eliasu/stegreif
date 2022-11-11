@@ -50,15 +50,16 @@ class TerminFilter extends Component
             ->where('collection', $this->type)
             ->where('status', 'published')
             ->where('locale', $this->currentLocale)
-           ;
+            ;
 
         if($this->aktuell) {
             $query = $query
-            ->whereDate('date', '>=', Carbon::parse('today'))
-            ->orderBy('date', 'asc');
+            ->whereDate('date_field', '>=', Carbon::parse('today'))
+            ->orderBy('date_field', 'asc');
         } else {
-            $query = $query->whereDate('date', '<=', Carbon::parse('today'))
-            ->orderBy('date', 'desc');;
+            $query = $query
+            ->whereDate('date_field', '<=', Carbon::parse('today'))
+            ->orderBy('date_field', 'desc');
         }
             
         $results = $query->get();
@@ -71,8 +72,8 @@ class TerminFilter extends Component
                 });
         }
 
-        // debug($query->get());
-        debug("lwresults", $results);
+        debug($query->get());
+        debug($results);
         debug("selection", $this->selection);
 
         return view('livewire.termin-filter',  ['lwResults' => $results]);
