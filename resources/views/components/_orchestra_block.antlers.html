@@ -14,7 +14,7 @@
         team_filter: '',
         test: 'hallo',
         testing(el) {
-            console.log(el);
+            console.log(typeof el);
             this.test = 'super';
             if(el.includes(this.team_tag)) return true;
         }
@@ -43,7 +43,8 @@
 
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
-            <div class="min-h-[200px] border-2" x-show="testing('{{{team_tags pluck ('slug')} | list}}')">
+            <div class="min-h-[200px] border-2" 
+            x-show="testing('{{{team_tags pluck ('slug')}}}')">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -55,8 +56,9 @@
                 </div>
                 <div class="">
                     test
-                    {{check = {team_tags pluck ('slug')} | list}}
-                    {{# {{ check | dump }} #}}
+                    {{check = {team_tags pluck ('slug')}}}
+                    {{ check | console_log}}
+                    {{ check | dump }}
                     {{ check }}
                     
                 
