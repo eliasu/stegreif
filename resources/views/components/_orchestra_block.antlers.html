@@ -14,13 +14,54 @@
         {{ partial:typography/h2 :content="headline" }}
 
         {{# filter bar #}}
-        {{# <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
+
+        <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <select name="test" id="test">
+            <option value="volvo">test</option>
+            <option value="saab">test1</option>
+        </select>
+
+
+        <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
             {{ taxonomy:team_filters }}
                 {{ temp_store = "$store.filters.titles.{ title | underscored }" }}
                 {{ partial:components/button as="button" button_type="lined_base_filter" label="{ title }" :store="temp_store" function="toggle(this)" }}
             {{ /taxonomy:team_filters }}
-        </div>  #}}
+        </div> 
     </div>
+
+
+    <div class="flex flex-wrap gap-2">
+        {{ collection:personen }}
+            <div class="min-h-[200px] border-2">
+                <div class="bg-green">
+                    {{title}}
+                </div>
+                <div class="">
+                    {{team_tags}}
+                        {{ title }},
+                    {{/team_tags}}
+                
+                </div>
+                <div class="bg-light">
+                    {{if team_filters}}
+                    {{team_filters}}
+                        {{ title }},
+                    {{/team_filters}}
+                    {{/if}}
+                
+                </div>
+            </div>
+        {{ /collection:personen }}
+    </div>
+
+
     
     {{# team cards grid wrapper #}}
     <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">

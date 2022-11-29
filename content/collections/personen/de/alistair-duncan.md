@@ -12,8 +12,8 @@ fun_fact: |-
 team_tags:
   - posaune
   - kuenstlerischer-beirat
-updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657808702
+updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
+updated_at: 1669734048
 links:
   -
     target_blank: true
@@ -23,4 +23,6 @@ links:
     type: button
     enabled: true
     label: Website
+team_filters:
+  - education
 ---
