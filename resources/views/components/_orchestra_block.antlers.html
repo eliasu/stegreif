@@ -16,6 +16,7 @@
         testing(el) {
             console.log(el);
             this.test = 'super';
+            if(el.includes(this.team_tag)) return true;
         }
     }
     ">
@@ -28,12 +29,12 @@
 
         <select name="team-filters" id="team-fil" class="max-w-min" x-model="team_tag">
             {{ taxonomy:team_filters}}
-                <option value="{{title}}">{{title}}</option>
+                <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_filters}}
         </select>
         <select name="team-tags" id="team-tags" class="max-w-min" x-model="team_filter">
             {{ taxonomy:team_tags}}
-                <option value="{{title}}">{{title}}</option>
+                <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_tags}}
         </select>
 
