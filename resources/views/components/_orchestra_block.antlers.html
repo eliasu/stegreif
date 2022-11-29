@@ -7,7 +7,18 @@
 #}}
 
 <!-- /components/_orchestra_block.antlers.html -->
-<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40"
+    x-data="
+    {
+        team_tag: '',
+        team_filter: '',
+        test: 'hallo',
+        testing(el) {
+            console.log(el);
+            this.test = 'super'
+        }
+    }
+    ">
     
     <div class="flex flex-col gap-8">
         {{# orchestra headline #}}
@@ -15,31 +26,23 @@
 
         {{# filter bar #}}
 
-        <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+        <select name="team-filters" id="team-fil" class="max-w-min" x-model="team_tag">
+            {{ taxonomy:team_filters}}
+                <option value="{{title}}">{{title}}</option>
+            {{/taxonomy:team_filters}}
+        </select>
+        <select name="team-tags" id="team-tags" class="max-w-min" x-model="team_filter">
+            {{ taxonomy:team_tags}}
+                <option value="{{title}}">{{title}}</option>
+            {{/taxonomy:team_tags}}
         </select>
 
-        <select name="test" id="test">
-            <option value="volvo">test</option>
-            <option value="saab">test1</option>
-        </select>
-
-
-        <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
-            {{ taxonomy:team_filters }}
-                {{ temp_store = "$store.filters.titles.{ title | underscored }" }}
-                {{ partial:components/button as="button" button_type="lined_base_filter" label="{ title }" :store="temp_store" function="toggle(this)" }}
-            {{ /taxonomy:team_filters }}
-        </div> 
     </div>
 
 
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
-            <div class="min-h-[200px] border-2">
+            <div class="min-h-[200px] border-2" x-show="test == 'hallo'">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -63,48 +66,6 @@
 
 
     
-    {{# team cards grid wrapper #}}
-    <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">
-            
-        <div x-show="$store.filters.titles.rhythmusinstrumente" class="fixed w-40 h-40"></div>
-        
-        {{# all team #}}
-        {{ collection:personen }}
- 
-            {{# team card #}}
-            <button 
-                @click.prevent="
-                    $store.modal.open = true,
-                    $store.modal.title = '{{title}}', 
-                    $store.modal.image = { url : '{{ glide:image preset='lg' }}', extension : '{{image.extension}}', mime_type : '{{image.mime_type}}', alt : '{{image.alt}}', focus : '{{image.focus | background_position}}', width : '{{image.width}}', height : '{{image.height}}', caption : '{{image.image_title}}' },
-                    $store.modal.description = `{{ description | smartypants | nl2br }}`,
-                    $store.modal.showFunFact = {{ fun_fact ? 'true' : 'false'}},
-                    $store.modal.funFact = `{{ fun_fact | smartypants | nl2br }}`,
-                    $store.modal.showLinks = {{ links ? 'true' : 'false'}},
-                    $store.modal.links = [ {{ links }} { title : '{{ label }}', url : '{{ url }}' }{{!last ?= ','}} {{ /links }} ],
-                    $store.modal.teamTags = [ {{ team_tags }} { content : '{{ title }}', color : '{{ team_tag_type }}' }{{!last ?= ','}} {{ /team_tags }} ] "
-                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
-
-                {{# tags  #}}
-                <div class="flex flex-col items-start">
-                    {{ partial:typography/tag color="yellow" content="{ title }" }}
-                    {{ team_tags }}
-                        {{ partial:typography/tag color="{team_tag_type}" content="{ title }" }}
-                    {{ /team_tags }}
-                </div>
-
-                {{# square spacer for height #}}
-                <div class="flex flex-col w-full h-full pointer-events-none aspect-w-4 aspect-h-6"></div>
-
-                {{# read more #}}
-                {{ partial:typography/h6 content="{ trans:strings.more }" class="tracking-wider absolute inset-x-0 text-center bottom-[50%] text-transparent scale-90 group-hover:scale-100 group-hover:text-light motion-safe:transition-transform" }}
-                
-                {{# image #}}
-                <div class="absolute inset-0 overflow-hidden motion-safe:transition-[inset_opacity] rounded-full group-hover:inset-2 group-hover:opacity-60 z-behind">
-                    {{ partial:components/picture nocaption="true" :image="thumbnail" cover="true" sizes="(min-width: 768px) 35vw, 90vw" }}
-                </div>
-            </button>
-        {{ /collection:personen }}
-    </div>
+   
 </div>
 <!-- End: /components/_orchestra_block.antlers.html --> 
