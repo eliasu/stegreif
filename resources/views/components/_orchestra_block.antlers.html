@@ -15,7 +15,7 @@
         test: 'hallo',
         testing(el) {
             console.log(el);
-            this.test = 'super'
+            this.test = 'super';
         }
     }
     ">
@@ -42,7 +42,7 @@
 
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
-            <div class="min-h-[200px] border-2" x-show="test == 'hallo'">
+            <div class="min-h-[200px] border-2" x-show="true">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -50,6 +50,14 @@
                     {{team_tags}}
                         {{ title }},
                     {{/team_tags}}
+                
+                </div>
+                <div class="">
+                    test
+                    {{check = {team_tags pluck ('title')} | list}}
+                    {{# {{ check | dump }} #}}
+                    {{ check }}
+                    
                 
                 </div>
                 <div class="bg-light">
