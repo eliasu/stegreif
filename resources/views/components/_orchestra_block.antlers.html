@@ -7,19 +7,7 @@
 #}}
 
 <!-- /components/_orchestra_block.antlers.html -->
-<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40"
-    x-data="
-    {
-        team_tag: '',
-        team_filter: '',
-        test: 'hallo',
-        testing(el) {
-            console.log(typeof el);
-            this.test = 'super';
-            if(el.includes(this.team_tag)) return true;
-        }
-    }
-    ">
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40" x-data="myfilter">
     
     <div class="flex flex-col gap-8">
         {{# orchestra headline #}}
@@ -44,7 +32,7 @@
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
             <div class="min-h-[200px] border-2" 
-            x-show="testing('{{{team_tags pluck ('slug')}}}')">
+            x-show="testing('{{ {team_tags pluck ('slug')} | list}}')">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -57,8 +45,8 @@
                 <div class="">
                     test
                     {{check = {team_tags pluck ('slug')}}}
-                    {{ check | console_log}}
-                    {{ check | dump }}
+                    {{# {{ check | console_log}} #}}
+                    {{# {{ check | dump }} #}}
                     {{ check }}
                     
                 
@@ -80,3 +68,24 @@
    
 </div>
 <!-- End: /components/_orchestra_block.antlers.html --> 
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('myfilter', () => ({
+            team_tag: '',
+            team_filter: '',
+            test: 'hallo',
+            testing(el) {
+                this.test = 'super';
+                console.log(el.includes(this.team_tag));
+
+                if(el.includes(this.team_tag)) {
+                    return true;
+                }
+               
+               
+            },
+            
+        }))
+    })
+</script>
