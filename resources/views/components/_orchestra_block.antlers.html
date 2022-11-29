@@ -42,7 +42,7 @@
 
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
-            <div class="min-h-[200px] border-2" x-show="true">
+            <div class="min-h-[200px] border-2" x-show="testing('{{{team_tags pluck ('slug')} | list}}')">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="">
                     test
-                    {{check = {team_tags pluck ('title')} | list}}
+                    {{check = {team_tags pluck ('slug')} | list}}
                     {{# {{ check | dump }} #}}
                     {{ check }}
                     
