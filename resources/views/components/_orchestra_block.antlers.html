@@ -35,12 +35,14 @@
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
 
-            {{
-                t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true;
-                {{# t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true; #}}
-            }}
+            {{ t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true; }}
+            {{ t_tags | console_log}}
+               
+            {{ t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true}}
+            {{ t_filter | console_log}}
+            
             <div class="min-h-[200px] border-2" 
-            x-show="shouldShow('{{t_tags}}','[]')">
+            x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
                 <div class="bg-green">
                     {{title}}
                 </div>
