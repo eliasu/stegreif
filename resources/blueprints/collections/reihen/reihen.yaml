@@ -58,6 +58,16 @@ sections:
         handle: aktuell
         field: common.aktuell
       -
+        handle: featured
+        field:
+          default: false
+          display: Featured
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
         handle: tags
         field:
           type: terms

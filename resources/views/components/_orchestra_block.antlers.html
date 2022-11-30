@@ -35,7 +35,7 @@
         {{# filter bar #}}
 
 
-    <div class="flex gap-6 gap-y-2 xs:flex-row">
+    <div class="flex flex-wrap max-w-full gap-6 gap-y-2 xs:flex-row ">
         {{partial:components/select  label="Team Tags" model="selected_team_tag"}}
             {{ taxonomy:team_tags}}
                 <option value="{{slug}}">{{title}}</option>

@@ -119,12 +119,12 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: false
+aktuell: true
 tags:
   - digital
 template: single_page
-updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657730529
+updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
+updated_at: 1669843114
 details:
   -
     headline: Team
@@ -192,4 +192,5 @@ quicklinks_enabled: false
 show_social: false
 header_headline: '#made-to-measure'
 headline: 'Aus Krisen kann neue Kreativität entstehen'
+featured: true
 ---

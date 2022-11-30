@@ -16,7 +16,7 @@ class ProgrammFilter extends Component
 
     public function mount($config)
     {
-        debug($config);
+        // debug($config);
 
         if(!isset($config["type"])) return;
         $this->type = $config["type"];
@@ -81,11 +81,17 @@ class ProgrammFilter extends Component
                 });
         }
 
-        debug($query->get());
-        debug($results);
-        debug("selection", $this->selection);
+        $featueSortedResults = $results->sortByDesc('featured');
 
-        return view('livewire.programm-filter',  ['lwResults' => $results]);
+        // debug($query->get());
+        // debug("resuts");
+        // debug($results->pluck('title'));
+
+        // debug("sorted featured");
+        // debug($featueSortedResults->pluck('title'));
+        // debug("selection", $this->selection);
+
+        return view('livewire.programm-filter',  ['lwResults' => $featueSortedResults]);
     }
 }
 

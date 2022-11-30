@@ -336,19 +336,17 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: 1f3370c5-58eb-405e-aec1-3768947dc1aa
-            select_media_feature: image
-            feature_video: 'https://youtu.be/VbDbVlDBi9E'
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: false
+aktuell: true
 select_type: programm
 template: single_page
-updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657810077
+updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
+updated_at: 1669842752
 header_headline: 'GIOVANNI. Eine Passion'
 extend_section:
   -
@@ -366,4 +364,5 @@ quicklinks_enabled: false
 show_social: false
 teaser_text: 'In GIOVANNI spielen das Stegreif Orchester und die Neuköllner Oper erstmals zusammen und suchen verschiedene Blickwinkel auf Mozarts Oper. Die Grenze zwischen Instrumentalist*innen und Sänger*innen verschwimmt.'
 headline: 'Neue Blickwinkel auf Mozarts Oper'
+featured: true
 ---

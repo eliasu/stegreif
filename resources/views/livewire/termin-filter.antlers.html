@@ -59,8 +59,11 @@
 
                     {{# time #}}
                     {{ locales self="false" }}
-                        {{ if current == "de" }} {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
-                        {{ else }} {{ partial:typography/p content="{ time format="G.i a" }" class="mb-0 xs:mb-1" }} {{ /if }}
+                        {{ if current == "de" }} 
+                            {{ partial:typography/p content="Ab { time format="H.i" } Uhr" class="mb-0 sm:mb-1" }}
+                        {{ else }} 
+                                {{ partial:typography/p content="{ time format="g.i a" }" class="mb-0 xs:mb-1" }} 
+                        {{ /if }}
                     {{ /locales  }}
                     
                     {{# date #}}

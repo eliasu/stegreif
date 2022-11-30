@@ -1,6 +1,6 @@
 <!-- /components/_select.antlers.html -->
 {{ if label }}
-    <div :class="{{model}} ? 'text-skin-primary' : 'text-skin-base'" class="relative flex items-center gap-4 cursor-pointer pointer-events-auto hover:text-skin-accent group">
+    <div :class="{{model}} ? 'text-skin-primary' : 'text-skin-base'" class="relative flex items-center max-w-full gap-4 cursor-pointer pointer-events-auto hover:text-skin-accent group">
         
         <select x-model="{{model}}" class="h-8 py-0 pl-2 pr-10 m-0 text-base font-extrabold uppercase bg-transparent border-none cursor-pointer pointer-events-auto md:text-lg md:text bg-none whitespace-nowrap motion-safe:transition leading-s focus:outline-none focus-visible:outline-none focus:ring-0"
             {{ !faux ?= { partial:snippets/button_attributes } }}
