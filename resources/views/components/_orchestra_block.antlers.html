@@ -6,14 +6,49 @@
         start => if start is set to "right" collection will start right
 #}}
 
+<script>
+    /*
+        Here is the logic fot the filter bar
+    */ 
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('orchester_filter', () => ({
+            selected_team_tag: '',
+            selected_team_filter: '',
+            shouldShow(teamtag, teamfilter) {
+                if(this.selected_team_filter=='' && this.selected_team_tag=='') return true;
+                const tt = JSON.parse(teamtag);
+                const tf = JSON.parse(teamfilter);
+                if(tt.includes(this.selected_team_tag) || tf.includes(this.selected_team_filter)) return true;
+            },
+            
+        }))
+    })
+</script>
+
 <!-- /components/_orchestra_block.antlers.html -->
-<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40">
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40" x-data="orchester_filter">
     
     <div class="flex flex-col gap-8">
         {{# orchestra headline #}}
         {{ partial:typography/h2 :content="headline" }}
 
         {{# filter bar #}}
+
+        <select name="team-tags" id="team-tags" class="max-w-min" x-model="selected_team_tag">
+            {{# <option value="" selected disabled hidden>Kein filter</option> #}}
+            <option value="" selected>Kein filter</option>
+            {{ taxonomy:team_tags}}
+                <option value="{{slug}}">{{title}}</option>
+            {{/taxonomy:team_tags}}
+        </select>
+        <select name="team-filters" id="team-fil" class="max-w-min" x-model="selected_team_filter">
+            <option value="" selected>Kein filter</option>
+            {{ taxonomy:team_filters}}
+                <option value="{{slug}}">{{title}}</option>
+            {{/taxonomy:team_filters}}
+        </select>
+
+
         {{# <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
             {{ taxonomy:team_filters }}
                 {{ temp_store = "$store.filters.titles.{ title | underscored }" }}
@@ -25,10 +60,22 @@
     {{# team cards grid wrapper #}}
     <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">
             
-        <div x-show="$store.filters.titles.rhythmusinstrumente" class="fixed w-40 h-40"></div>
+        <div class="fixed w-40 h-40"></div>
         
         {{# all team #}}
         {{ collection:personen }}
+            {{ if team_tags}}
+                {{ t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true; }}
+            {{else}}
+                {{ t_tags = "[]" }}
+            {{ /if }}
+            {{ if team_filters}}
+                {{ t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true}}
+            {{else}}
+                {{ t_filter = "[]" }}
+            {{ /if }}
+        
+        
  
             {{# team card #}}
             <button 
@@ -42,7 +89,8 @@
                     $store.modal.showLinks = {{ links ? 'true' : 'false'}},
                     $store.modal.links = [ {{ links }} { title : '{{ label }}', url : '{{ url }}' }{{!last ?= ','}} {{ /links }} ],
                     $store.modal.teamTags = [ {{ team_tags }} { content : '{{ title }}', color : '{{ team_tag_type }}' }{{!last ?= ','}} {{ /team_tags }} ] "
-                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none ">
+                    class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none"
+                    x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
 
                 {{# tags  #}}
                 <div class="flex flex-col items-start">
