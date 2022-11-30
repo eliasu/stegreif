@@ -6,21 +6,42 @@
         start => if start is set to "right" collection will start right
 #}}
 
+<script>
+    /*
+        Here is the logic fot the filter bar
+    */ 
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('orchester_filter', () => ({
+            selected_team_tag: '',
+            selected_team_filter: '',
+            shouldShow(teamtag, teamfilter) {
+                if(this.selected_team_filter=='' && this.selected_team_tag=='') return true;
+                const tt = JSON.parse(teamtag);
+                const tf = JSON.parse(teamfilter);
+                if(tt.includes(this.selected_team_tag) || tf.includes(this.selected_team_filter)) return true;
+            },
+            
+        }))
+    })
+</script>
+
 <!-- /components/_orchestra_block.antlers.html -->
-<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40" x-data="myfilter">
+<div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40" x-data="orchester_filter">
     
     <div class="flex flex-col gap-8">
         {{# orchestra headline #}}
         {{ partial:typography/h2 :content="headline" }}
 
         {{# filter bar #}}
-
-        <select name="team-tags" id="team-tags" class="max-w-min" x-model="team_tag">
+        <select name="team-tags" id="team-tags" class="max-w-min" x-model="selected_team_tag">
+            {{# <option value="" selected disabled hidden>Kein filter</option> #}}
+            <option value="" selected>Kein filter</option>
             {{ taxonomy:team_tags}}
                 <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_tags}}
         </select>
-        <select name="team-filters" id="team-fil" class="max-w-min" x-model="team_filter">
+        <select name="team-filters" id="team-fil" class="max-w-min" x-model="selected_team_filter">
+            <option value="" selected>Kein filter</option>
             {{ taxonomy:team_filters}}
                 <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_filters}}
@@ -29,20 +50,15 @@
     </div>
 
 
-    {{# shouldShow('{{ {team_tags pluck ('slug')} | list}}',
-    '{{ {team_filters pluck ('slug')} | list}}')"> #}}
-
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
 
+            {{# this storing the data converted to json without '"' to feed it later to the function #}}
             {{ t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true; }}
-            {{# {{ t_tags | console_log}} #}}
-               
             {{ t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true}}
-            {{# {{ t_filter | console_log}} #}}
             
-            <div class="min-h-[200px] border-2" 
-            x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
+            {{# here the elements attributs are being passed to check if visible/filtered or not #}}
+            <div class="min-h-[200px] border-2" x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -52,24 +68,12 @@
                     {{/team_tags}}
                 
                 </div>
-                <div class="">
-                    test
-                    {{# {{check = {team_tags pluck ('slug')} | to_json | sanitize:true }}
-                    {{ check  | console_log}}
-                    {{check = {team_tags pluck ('slug')} | to_json }}
-                    {{ check  | console_log}} #}}
-                    {{# {{ check | console_log}} #}}
-                    {{# {{ check | dump }} #}}
-                    
-                
-                </div>
                 <div class="bg-light">
                     {{if team_filters}}
                     {{team_filters}}
                         {{ title }},
                     {{/team_filters}}
                     {{/if}}
-                
                 </div>
             </div>
         {{ /collection:personen }}
@@ -81,31 +85,3 @@
 </div>
 <!-- End: /components/_orchestra_block.antlers.html --> 
 
-<script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('myfilter', () => ({
-            team_tag: '',
-            team_filter: '',
-            shouldShow(teamtag, teamfilter) {
-                const tt = JSON.parse(teamtag);
-                const tf = JSON.parse(teamfilter);
-                //console.log(typeof tt, "####", tt);
-                //console.log(typeof tf, "####", tf);
-                //console.log(tt.includes(this.team_tag));
-                //console.log(tt, this.team_tag);
-                //console.log(this.team_tag);
-
-                if(tt.includes(this.team_tag) || tf.includes(this.team_filter)) {
-                    return true;
-                }
-
-              
-                
-               
-               
-               
-            },
-            
-        }))
-    })
-</script>
