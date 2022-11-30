@@ -40,7 +40,7 @@
                 {{# t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true; #}}
             }}
             <div class="min-h-[200px] border-2" 
-            x-show="shouldShow('{{t_tags}}')">
+            x-show="shouldShow('{{t_tags}}','[]')">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -85,9 +85,10 @@
             team_tag: '',
             team_filter: '',
             shouldShow(teamtag, teamfilter) {
-                const test = JSON.parse(teamtag);
-                console.log(typeof teamtag, "####", teamtag);
-                console.log(typeof test, "####", test);
+                const tt = JSON.parse(teamtag);
+                const tf = JSON.parse(teamfilter);
+                console.log(typeof tt, "####", tt);
+                console.log(typeof tf, "####", tf);
                
                
                
