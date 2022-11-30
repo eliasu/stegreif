@@ -29,10 +29,18 @@
     </div>
 
 
+    {{# shouldShow('{{ {team_tags pluck ('slug')} | list}}',
+    '{{ {team_filters pluck ('slug')} | list}}')"> #}}
+
     <div class="flex flex-wrap gap-2">
         {{ collection:personen }}
+
+            {{
+                t_tags = {team_tags pluck ('slug')} | to_json;
+                t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true;
+            }}
             <div class="min-h-[200px] border-2" 
-            x-show="testing('{{ {team_tags pluck ('slug')} | list}}')">
+            x-show="shouldShow({{t_tags}})">
                 <div class="bg-green">
                     {{title}}
                 </div>
@@ -44,10 +52,12 @@
                 </div>
                 <div class="">
                     test
-                    {{check = {team_tags pluck ('slug')}}}
+                    {{# {{check = {team_tags pluck ('slug')} | to_json | sanitize:true }}
+                    {{ check  | console_log}}
+                    {{check = {team_tags pluck ('slug')} | to_json }}
+                    {{ check  | console_log}} #}}
                     {{# {{ check | console_log}} #}}
                     {{# {{ check | dump }} #}}
-                    {{ check }}
                     
                 
                 </div>
@@ -74,14 +84,11 @@
         Alpine.data('myfilter', () => ({
             team_tag: '',
             team_filter: '',
-            test: 'hallo',
-            testing(el) {
-                this.test = 'super';
-                console.log(el.includes(this.team_tag));
-
-                if(el.includes(this.team_tag)) {
-                    return true;
-                }
+            shouldShow(teamtag, teamfilter) {
+                const test = JSON.parse(teamtag);
+                console.log(typeof teamtag, "####", teamtag);
+                console.log(typeof test, "####", test);
+               
                
                
             },
