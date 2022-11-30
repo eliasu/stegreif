@@ -56,6 +56,11 @@
             {{# this storing the data converted to json without '"' to feed it later to the function #}}
             {{ t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true; }}
             {{ t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true}}
+
+            {{# {{ partial:components/test}} #}}
+
+            {{ show_newsletter ?= {partial:components/test} }}
+            {{ show_newsletter }}
             
             {{# here the elements attributs are being passed to check if visible/filtered or not #}}
             <div class="min-h-[200px] border-2" x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
