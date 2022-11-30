@@ -15,15 +15,15 @@
 
         {{# filter bar #}}
 
-        <select name="team-filters" id="team-fil" class="max-w-min" x-model="team_tag">
-            {{ taxonomy:team_filters}}
-                <option value="{{slug}}">{{title}}</option>
-            {{/taxonomy:team_filters}}
-        </select>
-        <select name="team-tags" id="team-tags" class="max-w-min" x-model="team_filter">
+        <select name="team-tags" id="team-tags" class="max-w-min" x-model="team_tag">
             {{ taxonomy:team_tags}}
                 <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_tags}}
+        </select>
+        <select name="team-filters" id="team-fil" class="max-w-min" x-model="team_filter">
+            {{ taxonomy:team_filters}}
+                <option value="{{slug}}">{{title}}</option>
+            {{/taxonomy:team_filters}}
         </select>
 
     </div>
@@ -36,10 +36,10 @@
         {{ collection:personen }}
 
             {{ t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true; }}
-            {{ t_tags | console_log}}
+            {{# {{ t_tags | console_log}} #}}
                
             {{ t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true}}
-            {{ t_filter | console_log}}
+            {{# {{ t_filter | console_log}} #}}
             
             <div class="min-h-[200px] border-2" 
             x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
@@ -89,8 +89,18 @@
             shouldShow(teamtag, teamfilter) {
                 const tt = JSON.parse(teamtag);
                 const tf = JSON.parse(teamfilter);
-                console.log(typeof tt, "####", tt);
-                console.log(typeof tf, "####", tf);
+                //console.log(typeof tt, "####", tt);
+                //console.log(typeof tf, "####", tf);
+                //console.log(tt.includes(this.team_tag));
+                //console.log(tt, this.team_tag);
+                //console.log(this.team_tag);
+
+                if(tt.includes(this.team_tag) || tf.includes(this.team_filter)) {
+                    return true;
+                }
+
+              
+                
                
                
                
