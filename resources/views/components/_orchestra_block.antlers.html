@@ -28,39 +28,33 @@
 <!-- /components/_orchestra_block.antlers.html -->
 <div class="flex flex-col fluid-container gap-y-20 xl:gap-y-40" x-data="orchester_filter">
     
-    <div class="flex flex-col gap-8">
+    {{ partial:typography/h2 :content="headline" }}
+   
         {{# orchestra headline #}}
-        {{ partial:typography/h2 :content="headline" }}
 
         {{# filter bar #}}
 
-        <select name="team-tags" id="team-tags" class="max-w-min" x-model="selected_team_tag">
-            {{# <option value="" selected disabled hidden>Kein filter</option> #}}
-            <option value="" selected>Kein filter</option>
+
+    <div class="flex gap-6 gap-y-2 xs:flex-row">
+        {{partial:components/select  label="Team Tags" model="selected_team_tag"}}
             {{ taxonomy:team_tags}}
                 <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_tags}}
-        </select>
-        <select name="team-filters" id="team-fil" class="max-w-min" x-model="selected_team_filter">
-            <option value="" selected>Kein filter</option>
+        {{/partial:components/select}}
+        {{partial:components/select  label="Team Filters" model="selected_team_filter"}}
             {{ taxonomy:team_filters}}
                 <option value="{{slug}}">{{title}}</option>
             {{/taxonomy:team_filters}}
-        </select>
-
-
-        {{# <div class="flex flex-row flex-wrap w-full gap-6 gap-y-4">
-            {{ taxonomy:team_filters }}
-                {{ temp_store = "$store.filters.titles.{ title | underscored }" }}
-                {{ partial:components/button as="button" button_type="lined_base_filter" label="{ title }" :store="temp_store" function="toggle(this)" }}
-            {{ /taxonomy:team_filters }}
-        </div>  #}}
+        {{/partial:components/select}}
     </div>
+        
+       
     
     {{# team cards grid wrapper #}}
     <div class="grid items-stretch w-full grid-cols-pill-s gap-x-8 gap-y-8">
             
         <div class="fixed w-40 h-40"></div>
+
         
         {{# all team #}}
         {{ collection:personen }}
@@ -74,6 +68,8 @@
             {{else}}
                 {{ t_filter = "[]" }}
             {{ /if }}
+
+            {{# {{ team_filters ?= ( t_filter = {team_filters pluck ('slug')} ) }} #}}
         
         
  
@@ -90,6 +86,7 @@
                     $store.modal.links = [ {{ links }} { title : '{{ label }}', url : '{{ url }}' }{{!last ?= ','}} {{ /links }} ],
                     $store.modal.teamTags = [ {{ team_tags }} { content : '{{ title }}', color : '{{ team_tag_type }}' }{{!last ?= ','}} {{ /team_tags }} ] "
                     class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none"
+                    x-transition.duration.500ms
                     x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
 
                 {{# tags  #}}
