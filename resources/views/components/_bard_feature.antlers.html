@@ -4,10 +4,9 @@
 #}}
 
 <!-- /components/_bard_feature.antlers.html -->
-<div class="flex gap-8 my-8 md:my-20 {{ alternate === '1' ? 'feature-right' : 'feature-left' }} {{ if feature_type == "big" }}block-full{{ /if }}">   
-
+<div class="flex gap-8 my-8 md:my-20 {{ alternate ? 'feature-right' : 'feature-left' }} {{ if feature_type == "big" }}block-full{{ /if }}">   
     {{# block wrapper #}}
-    <div class="flex gap-4">
+    <div class="flex w-full gap-4">
 
          
         {{# –––––––––––––––––––––––––––––––––––––––––––––––––––––– #}}

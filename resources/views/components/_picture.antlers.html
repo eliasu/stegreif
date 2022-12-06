@@ -60,13 +60,13 @@
             {{ /if }}
         {{ /asset }}
 
-        {{ feature_type | console_log }}
-        {{ feature_type | console_log }}
+        {{# {{ feature_type | console_log }} #}}
+        {{# {{ feature_type | console_log }} #}}
         
         {{# add image caption if set #}}
         {{ if !nocaption }}
             {{ if media_caption or image.image_title }}
-                {{ partial:typography/tag class="absolute self-start {{feature_type == 'bird' ? "left-20" : "left-4"}} bottom-4 z-front" content="{ media_caption ?? image.image_title }" color="inverted" }}
+                {{ partial:typography/tag class="absolute self-start {{feature_type == 'bird' ? "left-[calc(14.4%_+_.5rem)]" : "left-4"}} bottom-4 z-front" content="{ media_caption ?? image.image_title }" color="inverted" }}
             {{ /if }}
         {{ /if }}
         
