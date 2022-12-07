@@ -6,7 +6,7 @@ import 'focus-visible'
 import YouTubeToHtml5 from '@thelevicole/youtube-to-html5-loader'
 import Plyr from 'plyr';
 
-require('fslightbox');
+
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
