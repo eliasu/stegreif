@@ -63,12 +63,10 @@
     
         {{ lwResults }}
             {{ alternating = (index % 2) }}
-            {{# {{ index | type_of | console_log }}
-            {{ (index % 2) | type_of | console_log }} #}}
-    
+           
             <div class="filter-item-wrapper">
 
-                {{ partial:components/bard_feature alternate="{alternating}" reference_content="true" feature_type="big" }}
+                {{ partial:components/bard_feature :alternate="alternating" reference_content="true" feature_type="big" }}
 
             </div>
         {{ /lwResults }}
