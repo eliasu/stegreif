@@ -83,6 +83,19 @@ details:
             text: ' Lea Hladka'
     type: detail
     enabled: true
+  -
+    headline: 'Mit Werken von:'
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gustav Holst, Arvo Pärt, Arnold Schönberg, Naomi Pinnock, Miguel de Aguila und anderen'
+    type: detail
+    enabled: true
 theme_selector: dark
 article:
   -
@@ -207,105 +220,7 @@ add_section:
             type: bard_feature
             alternate: false
             feature_type: bird
-            select_media_feature: image
-            feature_image: 04_was-wir-tun/reihen-und-programme/trikestra-3_powerhouse-rotation/trikestra-iii-(c)-marcel-alber-02.png
-            article:
-              -
-                type: heading
-                attrs:
-                  level: 3
-                content:
-                  -
-                    type: text
-                    text: 'Über die Reihe '
-                  -
-                    type: hard_break
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          href: 'statamic://entry::3ab638ce-3bfb-4ec9-85b7-5c8e8685294a'
-                          rel: null
-                          target: _blank
-                          title: null
-                      -
-                        type: bts_span
-                        attrs:
-                          class: text-skin-primary
-                    text: TRIKESTRA
-              -
-                type: paragraph
-                attrs:
-                  class: null
-                content:
-                  -
-                    type: text
-                    text: 'TRIKESTRA ist das erste '
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: bts_span
-                        attrs:
-                          class: text-skin-primary
-                    text: 'Modellprojekt '
-                  -
-                    type: text
-                    text: 'in der Welt der klassischen Kunstmusik, das drei ganz unterschiedliche Ensemble zusammenbringt und zu einem Klangkörper werden lässt. Es führt Bereiche zusammen, die sich bis jetzt vermeintlich gegenüberstehen. Zusammen begreifen das '
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          href: 'https://www.dso-berlin.de/de/'
-                          rel: null
-                          target: _blank
-                          title: 'Website des DSO'
-                    text: 'Deutsche Symphonie-Orchester'
-                  -
-                    type: text
-                    text: ', die '
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          href: 'https://junge-norddeutsche.de/'
-                          rel: null
-                          target: _blank
-                          title: 'Website der jnp'
-                    text: ' junge norddeutsche philharmonie'
-                  -
-                    type: text
-                    text: ' und Stegreif die klassische Kunstmusik neu, betrachten sie aus '
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: bts_span
-                        attrs:
-                          class: text-skin-primary
-                    text: 'ungewohnten Blickwinkeln'
-                  -
-                    type: text
-                    text: ' und schaffen neuartige Verbindungen. Im Rahmen des Modellprojekts TRIKESTRA wird sowohl den beteiligten Musiker*innen als auch den Menschen, die TRIKESTRA erleben, klar, welche '
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: bts_span
-                        attrs:
-                          class: text-skin-primary
-                    text: 'Synergien '
-                  -
-                    type: text
-                    text: 'durch diese Formen der Kooperation entstehen können und welche unbändigen Potenziale sie bergen.'
             reference_content: true
-            feature_video: 'https://youtu.be/VbDbVlDBi9E'
             select_content: 3ab638ce-3bfb-4ec9-85b7-5c8e8685294a
 seo_noindex: false
 seo_nofollow: false
@@ -317,7 +232,7 @@ aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657723847
+updated_at: 1657807454
 header_headline: 'TRIKESTRA II - #planet_rotation'
 extend_section:
   -

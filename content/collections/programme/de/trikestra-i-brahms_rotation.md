@@ -20,7 +20,7 @@ select_type: programm
 related_reihe: 3ab638ce-3bfb-4ec9-85b7-5c8e8685294a
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657723933
+updated_at: 1657807488
 teaser_text: 'Alles dreht sich um Brahms 3. Sinfonie wenn drei sehr unterschiedliche Klangkörper im Rahmen von TRIKESTRA erstmals aufeinandertreffen. Stegreif meets Deutsches Symphonie-Orchester Berlin meets junge norddeutsche philharmonie.'
 headline: 'Klangperformance auf Basis der Symphonie Nr. 3 F-Dur von Johannes Brahms.'
 article:
@@ -193,6 +193,19 @@ details:
             text: ' Viola Schmitzer'
     type: detail
     enabled: true
+  -
+    headline: 'Mit Werken von:'
+    description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Johannes Brahms, Arnold Schönberg, Charles Ives, György Ligeti und anderen'
+    type: detail
+    enabled: true
 extend_section:
   -
     article:
@@ -361,6 +374,4 @@ add_section:
             feature_type: bird
             reference_content: true
             select_content: 3ab638ce-3bfb-4ec9-85b7-5c8e8685294a
-            select_media_feature: image
-            feature_video: 'https://youtu.be/VbDbVlDBi9E'
 ---

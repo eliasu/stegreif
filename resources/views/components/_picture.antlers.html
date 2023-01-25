@@ -5,7 +5,7 @@
 
 <!-- /components/_picture.antlers.html -->
 {{ if image }}
-    <picture>       
+    <picture>
         {{ asset :url="image" }}
             {{ if extension == 'svg' || extension == 'gif' }}
                 <img 
@@ -41,12 +41,13 @@
                     sizes="{{ sizes }}"
                     type="{{ image.mime_type ?? mime_type }}"
                 >
+                {{# <!-- no_trim feature for all images but SVG and Gif --> #}}
                 <img
-                    {{ if cover }}
+                    {{ if (contain || image.no_trim) }}
+                        class="object-contain w-full h-full {{ class }}"
+                    {{ elseif cover }}
                         class="object-cover w-full h-full {{ class }}"
                         style="object-position: {{ focus | background_position }}"
-                    {{ elseif contain }}
-                        class="object-contain w-full h-full {{ class }}"
                     {{ else }}
                         class="{{ class }}"
                     {{ /if }}
@@ -58,11 +59,14 @@
                 >
             {{ /if }}
         {{ /asset }}
+
+        {{# {{ feature_type | console_log }} #}}
+        {{# {{ feature_type | console_log }} #}}
         
         {{# add image caption if set #}}
         {{ if !nocaption }}
             {{ if media_caption or image.image_title }}
-                {{ partial:typography/tag class="absolute self-start left-4 bottom-4 z-front" content="{ media_caption ?? image.image_title }" color="inverted" }}
+                {{ partial:typography/tag class="absolute self-start {{feature_type == 'bird' ? "left-[calc(14.4%_+_.5rem)]" : "left-4"}} bottom-4 z-front" content="{ media_caption ?? image.image_title }" color="inverted" }}
             {{ /if }}
         {{ /if }}
         

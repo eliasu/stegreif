@@ -5,7 +5,7 @@ title: 'MOON MUSIC III: Neubeginn'
 header_headline: 'MOON MUSIC III: Neubeginn'
 header_theme_selector: dark
 header_select: image
-header_image: 04_was-wir-tun/reihen-und-programme/moon-music/titelfoto_moonmusic_(c)_lucaskemper_oranjewoud_2019_lr-408.jpg
+header_image: 04_was-wir-tun/reihen-und-programme/moon-music/moon_music.-cinematic_(c)_lucas-kemper.png
 quicklinks_enabled: false
 show_social: false
 teaser_text: |-
@@ -22,8 +22,8 @@ aktuell: false
 select_type: programm
 related_reihe: d60b90c5-bad4-46bc-b2fd-cba71e16211e
 template: single_page
-updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657714061
+updated_by: 5c84a3c2-1f9f-4c46-ace2-d9eaf068d261
+updated_at: 1658310404
 headline: 'Jedem Ende wohnt ein Anfang inne'
 article:
   -
@@ -314,16 +314,6 @@ add_section:
         type: set
         attrs:
           values:
-            type: bard_partners
-            headline: 'In Kooperation mit:'
-            text: 'MOON MUSIC ist ein gemeinsame Reihe der Neuköllner Oper, dem Stegreif Orchester und dem Prizenssinnengarten Kollektiv Berlin.'
-            entires:
-              - d31f2aab-8376-4e0f-8b32-727a8db6871f
-              - 4b6d6047-a434-44db-bacd-50356a874285
-      -
-        type: set
-        attrs:
-          values:
             type: bard_gallery
             size: big
             gallery_title: Impressionen
@@ -333,6 +323,22 @@ add_section:
               - 04_was-wir-tun/reihen-und-programme/moon-music/moon-music_screenshot_1.png
               - 04_was-wir-tun/reihen-und-programme/moon-music/moon-music_screenshot_3.jpg
               - 04_was-wir-tun/reihen-und-programme/moon-music/moon-music_screenshot_4.jpg
+  -
+    theme_selector: light
+    article:
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_partners
+            headline: 'In Kooperation mit:'
+            text: 'MOON MUSIC ist ein gemeinsame Reihe der Neuköllner Oper, dem Stegreif Orchester und dem Prizenssinnengarten Kollektiv Berlin.'
+            entires:
+              - d31f2aab-8376-4e0f-8b32-727a8db6871f
+              - 4b6d6047-a434-44db-bacd-50356a874285
+  -
+    theme_selector: yellow
+    article:
       -
         type: set
         attrs:
@@ -342,4 +348,6 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: d60b90c5-bad4-46bc-b2fd-cba71e16211e
+tags:
+  - digital
 ---

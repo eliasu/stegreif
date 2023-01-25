@@ -39,6 +39,29 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+          -
+            type: text
+            text: 'Sebastian Caspar'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: 'Regie, Choreographie'
           -
             type: hard_break
@@ -259,7 +282,7 @@ aktuell: true
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657617851
+updated_at: 1671120556
 header_headline: '#freebrahms'
 related_termine:
   - 67275990-be72-4dc8-81bb-1b0c6baca7c9

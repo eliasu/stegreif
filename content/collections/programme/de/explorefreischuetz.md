@@ -19,7 +19,7 @@ aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657637279
+updated_at: 1657810167
 headline: 'Stegreifs Pakt mit dem Teufel?'
 article:
   -
@@ -269,6 +269,9 @@ add_section:
               - 04_was-wir-tun/reihen-und-programme/explorefreischütz/explorefreischutz(c)-mark-buss-kuchenbuch-03.jpg
               - 04_was-wir-tun/reihen-und-programme/explorefreischütz/explorefreischutz(c)-mark-buss-kuchenbuch-04.jpg
               - 04_was-wir-tun/reihen-und-programme/explorefreischütz/explorefreischutz(c)-mark-buss-kuchenbuch-05.jpg
+  -
+    theme_selector: light
+    article:
       -
         type: set
         attrs:

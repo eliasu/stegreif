@@ -20,7 +20,7 @@ aktuell: false
 select_type: education
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657727084
+updated_at: 1657811433
 headline: 'Stegreifs 15-teilige Onlineeducation-Serie'
 article:
   -
@@ -128,8 +128,6 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: 23252b04-6ab9-4546-a826-b64eabdd2f0a
-            select_media_feature: image
-            feature_video: 'https://youtu.be/VbDbVlDBi9E'
 details:
   -
     headline: Team

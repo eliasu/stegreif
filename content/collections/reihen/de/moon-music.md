@@ -21,7 +21,7 @@ select_transition_theme: bird
 aktuell: false
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657730565
+updated_at: 1657810569
 related_programme:
   - 323dbd8b-3cf1-41d9-9446-532b384522cd
   - 66539f2c-8376-4247-a7b9-9de2a4ae142b
@@ -251,6 +251,9 @@ add_section:
               - 04_was-wir-tun/reihen-und-programme/moon-music/moon-music_screenshot_2.jpg
               - 04_was-wir-tun/reihen-und-programme/moon-music/moon-music_screenshot_3.jpg
               - 04_was-wir-tun/reihen-und-programme/moon-music/moon-music_screenshot_4.jpg
+  -
+    theme_selector: light
+    article:
       -
         type: set
         attrs:
@@ -261,10 +264,18 @@ add_section:
             entires:
               - d31f2aab-8376-4e0f-8b32-727a8db6871f
               - 4b6d6047-a434-44db-bacd-50356a874285
+  -
+    theme_selector: yellow
+    article:
       -
-        type: paragraph
+        type: set
         attrs:
-          class: null
+          values:
+            type: bard_feature
+            alternate: false
+            feature_type: bird
+            reference_content: true
+            select_content: 323dbd8b-3cf1-41d9-9446-532b384522cd
 tags:
   - digital
 ---

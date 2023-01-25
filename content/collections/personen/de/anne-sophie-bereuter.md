@@ -2,12 +2,24 @@
 id: 6cb2aa21-e688-4666-a58f-8ea2fef856ee
 blueprint: personen
 title: 'Anne-Sophie Bereuter'
-thumbnail: personen/anne-willem2.jpg
-image: personen/Bartosz1.jpg
-description: '…kam den ganzen Weg aus Neuseeland nach Europa und liebt es, Teil dieser diversen Kultur- und Musiklandschaft sein zu können. Edward interessiert sich vor allem für Projekte, die neue Perspektiven auf Musiktraditionen eröffnen, und beschäftigt sich gerne mit einem breiten Spektrum an Musik: Alte Musik, zeitgenössische Musik, Weltmusik, Kammermusik, elektronische Musik, improvisierte Musik, neu arrangierte Musik und neu komponierte Musik.'
-fun_fact: 'Begann seine musikalische Reise auf einem 1/16 Cello - im Alter von 3 Jahren'
+thumbnail: 03_wer-wir-sind/personenbilder_neu_c_navinafotografiert/anne-sophie-bereuter_(c)_navinafotografiert-0255-b.jpg
+image: 03_wer-wir-sind/personenbilder_neu_c_navinafotografiert/anne-sophie-bereuter_(c)_navinafotografiert-0255-b.jpg
+description: |-
+  … lebt und arbeitet als studierte Geigerin, sowie zertifizierter (Künstler-)Coach in Berlin und ist bei Stegreif seit der Gründung als Vorstandsvorsitzende tätig. Kammermusik liegt ihr sehr am Herzen, ebenso wie ein nahbarer, unterstützender, herzlicher Umgang und Austausch mit allen Menschen.  
+  Sie tritt freiberuflich in verschiedenen Ensembles der klassischen und Jazz-Szene auf und spielte - während ihres Masterstudiums an der UdK Berlin bei Nora Chastain - als Aushilfe an der deutschen Oper Berlin sowie der Kammerakademie Potsdam.
+fun_fact: 'Hat immer Hunger.'
 team_tags:
-  - fagott
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1656617847
+  - violine
+  - vorstandsvorsitz
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1670950548
+links:
+  -
+    label: Website
+    target_blank: true
+    button_type: lined
+    link_type: url
+    url: 'https://www.annesophiebereuter.de/'
+    type: button
+    enabled: true
 ---

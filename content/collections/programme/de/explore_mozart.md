@@ -19,7 +19,7 @@ aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657637234
+updated_at: 1657810245
 tags:
   - chamber
   - digital
@@ -40,6 +40,9 @@ add_section:
               - 04_was-wir-tun/reihen-und-programme/explore-mozart/explore_mozart_header-(c)-catriona-fadke-05_lowres.jpg
               - 04_was-wir-tun/reihen-und-programme/explore-mozart/explore_mozart_(c)-catriona-fadke-03_lowres.jpg
               - 04_was-wir-tun/reihen-und-programme/explore-mozart/explore_mozart_(c)-catriona-fadke(1)_lowres.jpg
+  -
+    theme_selector: light
+    article:
       -
         type: set
         attrs:
@@ -54,7 +57,7 @@ add_section:
         attrs:
           values:
             type: bard_partners
-            headline: 'Gefördert von:'
+            headline: 'Förder*innen'
             text: '#explore_mozart wurde gefördert durch die Karl Schlecht Stiftung.'
             entires:
               - 0ada25f7-f85a-48fb-b3ad-cbeb7aa45ce7

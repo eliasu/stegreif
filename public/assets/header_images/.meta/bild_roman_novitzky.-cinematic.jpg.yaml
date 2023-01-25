@@ -1,6 +1,8 @@
-data: {  }
+data:
+  image_title: '(C) Roman Novitzky'
+  no_trim: false
 size: 548245
-last_modified: 1654810930
+last_modified: 1656927840
 width: 1280
 height: 720
 mime_type: image/jpeg

@@ -49,12 +49,17 @@ class TerminFilter extends Component
         $query = Entry::query()
             ->where('collection', $this->type)
             ->where('status', 'published')
-            ->where('locale', $this->currentLocale);
+            ->where('locale', $this->currentLocale)
+            ;
 
         if($this->aktuell) {
-            $query = $query->whereDate('date', '>=', Carbon::parse('today'));
+            $query = $query
+            ->whereDate('date_field', '>=', Carbon::parse('today'))
+            ->orderBy('date_field', 'asc');
         } else {
-            $query = $query->whereDate('date', '<=', Carbon::parse('today'));
+            $query = $query
+            ->whereDate('date_field', '<=', Carbon::parse('today'))
+            ->orderBy('date_field', 'desc');
         }
             
         $results = $query->get();

@@ -4,7 +4,7 @@ blueprint: reihen
 title: '#bechange'
 header_theme_selector: dark
 header_select: image
-header_image: 04_was-wir-tun/reihen-und-programme/bechange_reihenseite/header_bechange_(c)_ludwig-nikulski_lowres.png
+header_image: 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5595.jpg
 teaser_text: '16 Workshops - 4 Premieren - 1 symphony of change. In Beschäftigung mit den 17 Nachhaltigkeitszielen und vier Komponistinnen erarbeitet Stegreif gemeinsam mit Menschen aus allen Bundesländern eine Sinfonie des Wandels.'
 theme_selector: dark
 article:
@@ -187,8 +187,8 @@ extend_section:
             type: bard_media
             size: big
             select_type: video
-            video: 'https://www.youtube.com/watch?v=VbDbVlDBi9E'
-            media_caption: '#bechange Trailer - Youtubekanal des Stegreif Orchesters'
+            video: 'https://youtu.be/tlZwDV61Piw'
+            media_caption: 'Trailer #bechange: Awakeining | Youtubekanal des Stegreif Orchesters'
       -
         type: paragraph
         attrs:
@@ -283,11 +283,33 @@ select_transition_theme: bechange
 aktuell: true
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657730643
+updated_at: 1671207310
 details:
   -
     headline: Infoheft
     description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: BEHIND
+          -
+            type: text
+            text: ' '
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: '#bechange'
       -
         type: set
         attrs:
@@ -295,11 +317,19 @@ details:
             type: bard_buttons
             buttons:
               -
-                label: 'behind #bechange'
+                label: Awakening
                 target_blank: true
                 button_type: background
                 link_type: asset
                 asset: 07_downloads/infoheft_behind_bechange_awakening.pdf
+                type: button
+                enabled: true
+              -
+                label: Feeling
+                target_blank: true
+                button_type: background
+                link_type: asset
+                asset: 07_downloads/infoheft_behind_bechange_feeling.pdf
                 type: button
                 enabled: true
     type: detail
@@ -511,6 +541,7 @@ related_programme:
   - 88878791-0d1f-46ce-94eb-f646bb7aa50c
   - c01db2b0-eb69-40e6-829c-64f24b4851cf
   - 745a9b70-74cd-4ff6-b32d-7e93959b04e6
+  - dfdfb3b5-0e09-4346-854e-e825d2782acb
 quicklinks_enabled: false
 show_social: false
 headline: '16 Workshops - 4 Premieren - 1 symphony of change'

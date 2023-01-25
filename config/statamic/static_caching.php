@@ -54,7 +54,11 @@ return [
     */
 
     'exclude' => [
-        '/sitemap.xml'
+        '/sitemap.xml',
+        '/termine',
+        '/en/dates',
+        '/en/what-we-do',
+        '/was-wir-tun',
     ],
 
     /*

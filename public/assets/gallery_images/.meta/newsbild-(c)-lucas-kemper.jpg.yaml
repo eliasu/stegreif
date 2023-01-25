@@ -1,7 +1,8 @@
 data:
-  image_title: '© Lucas Kemper'
+  image_title: '(C) Lucas Kemper'
+  no_trim: false
 size: 2956008
-last_modified: 1656539519
+last_modified: 1656927841
 width: 2048
 height: 1365
 mime_type: image/jpeg

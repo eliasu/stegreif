@@ -42,6 +42,29 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+          -
+            type: text
+            text: 'Sebastian Caspar'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: Rekomposition/Arrangement
           -
             type: hard_break
@@ -200,7 +223,6 @@ add_section:
           values:
             type: bard_gallery
             size: big
-            gallery_title: Impressionen
             images:
               - 04_was-wir-tun/reihen-und-programme/bfree/bfree-(c)-navina-neuschl-01_lowres.jpg
               - 04_was-wir-tun/reihen-und-programme/bfree/bfree-(c)-navina-neuschl-02_lowres.jpg
@@ -226,14 +248,12 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: false
+aktuell: true
 select_type: programm
-tags:
-  - chamber
 template: single_page
-updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
-updated_at: 1661275373
-header_headline: '#bfree – eine Neuinterpretation der Headline'
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1671120528
+header_headline: '#bfree'
 extend_section:
   -
     article:
@@ -243,17 +263,15 @@ extend_section:
           values:
             type: bard_media
             size: big
-            gallery_title: Impressionen
-            images:
-              - header_images/(c)-navina-neuschl.jpg
-              - header_images/(c)-sophia-hegewald---alternativ.jpg
-              - header_images/(c)-sophia-hegewald.jpg
-              - header_images/bild_roman_novitzky.-cinematic.jpg
-              - header_images/c_navina_neuschl_02.-cinematic.jpg
-related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
-related_termine:
-  - ee351bf6-74a9-49c4-9a72-1bcac5790a54
-  - 2edf54e3-8fb5-453f-8e76-eb8df9772cda
+            select_type: video
+            video: 'https://youtu.be/x1UWpBR0LPc'
+            media_caption: '#bfree Teaser | YouTube-Kanal von Stegreif'
 quicklinks_enabled: false
 show_social: false
+headline: 'Connecting European cultures through Beethoven‘s 9th Symphony'
+related_termine:
+  - 65489de1-a49c-4d6b-8f8d-ccdb8deeb452
+  - 54d00996-024c-408f-9a59-8312a282ea07
+  - 4f1fdfa0-7f78-4059-85fb-88b4e4de0506
+  - 6c987c56-09fd-4ab6-b114-575d195f4d4d
 ---

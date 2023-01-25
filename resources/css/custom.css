@@ -368,3 +368,8 @@ font-display: swap;
     opacity: 0;
     transition: opacity 0ms !important;
 }
+
+#stgrf_logo.fade-in {
+    opacity: 1;
+    
+}

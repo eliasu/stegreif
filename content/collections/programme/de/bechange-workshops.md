@@ -18,7 +18,7 @@ aktuell: true
 select_type: education
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657725519
+updated_at: 1657808048
 header_image: 04_was-wir-tun/reihen-und-programme/bechange-workshops/220623_news_bechange-workshop-(c)-viola-schmitzer_lowres-02.jpg
 teaser_text: 'Wie entfaltet sich Energie? Wie klingt Wasser? Wie bewegt sich Chancengleichheit? In 4-tägigen Workshops erarbeiten diverse Teilnehmergruppen mit Stegreif ihre eigene künstlerische Ausdrucksform für Nachhaltigkeitsziele.'
 related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
@@ -124,15 +124,6 @@ add_section:
             entires:
               - 530d7673-e742-4ee9-be5d-3750c4220019
               - 1ca1e23b-8c62-484f-967b-ee98ff09cc86
-      -
-        type: set
-        attrs:
-          values:
-            type: bard_feature
-            alternate: false
-            feature_type: big
-            reference_content: true
-            select_content: 455ef639-911c-4d07-b57e-ed09648ff5e3
   -
     theme_selector: yellow
     article:

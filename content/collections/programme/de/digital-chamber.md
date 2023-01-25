@@ -20,7 +20,7 @@ select_type: programm
 related_reihe: 09b7a50f-b2c0-413a-b623-a2d7e74c83ac
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657637399
+updated_at: 1657810364
 details:
   -
     headline: Team
@@ -166,7 +166,7 @@ tags:
 teaser_text: 'Wie musizieren wir in Zeiten des Lockdowns? Mit digital.chamber erfoschte Stegreif die Möglichkeiten des gemeinsamen Musizierens und Musikerlebens in 360° virtual-reality-concerts. Ein spannendes Experiment!'
 add_section:
   -
-    theme_selector: yellow
+    theme_selector: light
     article:
       -
         type: set
@@ -178,8 +178,16 @@ add_section:
             entires:
               - 530d7673-e742-4ee9-be5d-3750c4220019
               - 90cc8a9e-1837-46bb-88f3-1bda9a49c29e
+  -
+    theme_selector: yellow
+    article:
       -
-        type: paragraph
+        type: set
         attrs:
-          class: null
+          values:
+            type: bard_feature
+            alternate: false
+            feature_type: bird
+            reference_content: true
+            select_content: 09b7a50f-b2c0-413a-b623-a2d7e74c83ac
 ---

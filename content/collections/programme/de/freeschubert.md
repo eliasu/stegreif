@@ -19,7 +19,7 @@ aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657539516
+updated_at: 1657809978
 teaser_text: 'Die Große Sinfonie in C-Dur ist Franz Schuberts letzte Sinfonie. Doch Gottseidank nicht die letzte, die das Stegreif Orchester rekomponiert.'
 details:
   -
@@ -190,7 +190,7 @@ article:
         text: 'postum '
       -
         type: text
-        text: 'veröffentlicht wurde. Elf Jahre nach Ableben des Künstlers wurde die Große Sinfonie in C-Dur am 21. März 1839 im Gewandhaus in Leipzig unter der Leitung von Felix '
+        text: 'veröffentlicht wurde. Elf Jahre nach Ableben des Künstlers wurde die Große Sinfonie in C-Dur am 21. März 1839 im Gewandhaus in Leipzig unter der Leitung von '
       -
         type: text
         marks:
@@ -198,7 +198,7 @@ article:
             type: bts_span
             attrs:
               class: text-skin-primary
-        text: 'Mendelssohn Bartholdy'
+        text: 'Felix Mendelssohn Bartholdy'
       -
         type: text
         text: ' uraufgeführt.'

@@ -6,7 +6,18 @@ import 'focus-visible'
 import YouTubeToHtml5 from '@thelevicole/youtube-to-html5-loader'
 import Plyr from 'plyr';
 
-require('fslightbox');
+let logo_visible = (window.pageYOffset > 200) ? true : false;
+initLogo();
+
+function initLogo() {
+    const logo = document.querySelector('#stgrf_logo');
+    if(logo_visible) {
+        logo.classList.add("fade-in");
+    } else {
+        logo.classList.remove("fade-in");
+    }
+}
+
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
@@ -29,3 +40,22 @@ Alpine.start()
 
 new YouTubeToHtml5();
 const players = Plyr.setup('.video_sound');
+
+
+
+onscroll = (event) => {
+    
+    if(window.pageYOffset > 200 && !logo_visible) {
+        const logo = document.querySelector('#stgrf_logo');
+        logo.classList.add("fade-in");
+        console.log("bigger");
+        logo_visible = !logo_visible;
+    }  
+    if(window.pageYOffset < 200 && logo_visible) {
+        const logo = document.querySelector('#stgrf_logo');
+        logo.classList.remove("fade-in");
+        console.log("smaller");
+        logo_visible = !logo_visible;
+    }
+    
+};

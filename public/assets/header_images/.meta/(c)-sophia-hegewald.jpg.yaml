@@ -1,6 +1,8 @@
-data: {  }
+data:
+  image_title: '(C) Sophia Hegewald'
+  no_trim: false
 size: 14688804
-last_modified: 1656539099
+last_modified: 1656927838
 width: 6460
 height: 4307
 mime_type: image/jpeg

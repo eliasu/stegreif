@@ -58,8 +58,11 @@
                 {{# image container #}}
                 <div class="w-full {{ img_flow }} grow relative group cursor-pointer">
 
+                    {{# get image cation data as markup #}}
+                    {{img_caption =  {partial:typography/tag class='' content='{ media_caption ?? image_title }' color='inverted'} | sanitize }}
+
                     {{# lightbox link #}}
-                    <a href="{{url}}" data-fslightbox="lb-{{ lb_index }}">
+                    <a href="{{url}}" data-fslightbox="lb-{{ lb_index }}" data-caption="{{img_caption}}">
                         
                         {{# opening arrows on hover #}}
                         <div class="absolute inset-0 flex flex-col items-center justify-center text-skin-accent">
@@ -82,3 +85,11 @@
     </div>    
 </div> 
 <!-- End: /components/_bard_gallery.antlers.html -->
+
+
+{{ section:body }}
+    <script type="text/javascript" src="/site_assets/js/fslightbox.js"> 
+       
+    </script>
+   
+{{ /section:body }}

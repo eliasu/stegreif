@@ -50,7 +50,7 @@ aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657542468
+updated_at: 1657810019
 headline: 'ohne Noten, Dirigent*in und Stühle'
 article:
   -

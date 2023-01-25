@@ -41,7 +41,14 @@
                     {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="yellow" content="{ title }" }}
                 {{ /select_content ? select_content.related_reihe : related_reihe }}
                 
-                {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="green" content="{ title }" }}
+
+                {{# production or education tag #}}
+                {{ if { select_content ? select_content.select_type : select_type } == "programm" }}
+                    {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="green" content="{ title }" }}
+                {{ else }}
+                    {{ partial:typography/tag as="a" label="{title}" :url="url" link_type="url"  class="m-0" color="dark" content="{ title }" }}
+                {{ endif }}
+                
             {{ /select_content ? select_content.related_programm : related_programm }}
         </div>
     {{ /if }}

@@ -41,6 +41,7 @@ return [
 
     // Footer
     'on'                                => 'on',
+    'get_newsletter'                    => 'Subscribe to Newsletter',
 
     // Language picker
     'language_open'                     => 'Open language picker. Current language is :current_language',

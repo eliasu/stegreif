@@ -45,15 +45,8 @@ sections:
       -
         import: select_transition_theme
       -
-        handle: date
+        handle: date_field
         field:
-          type: date
-          required: true
-          validate:
-            - required
-          instructions_position: above
-          listable: hidden
-          read_only: false
           mode: single
           time_enabled: false
           time_seconds_enabled: false
@@ -62,6 +55,13 @@ sections:
           columns: 1
           rows: 1
           display: Date
+          type: date
+          icon: date
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
       -
         handle: time
         field:
@@ -102,6 +102,14 @@ sections:
           listable: hidden
           instructions_position: above
           read_only: false
+      -
+        handle: bundeslaender
+        field:
+          type: terms
+          taxonomies:
+            - bundeslaender
+          display: Bundesländer
+          mode: select
   seo:
     display: SEO
     fields:

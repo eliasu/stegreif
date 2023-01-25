@@ -23,7 +23,7 @@ select_type: education
 related_reihe: 23252b04-6ab9-4546-a826-b64eabdd2f0a
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657714078
+updated_at: 1657811155
 article:
   -
     type: paragraph
@@ -84,11 +84,11 @@ extend_section:
             type: bard_media
             size: big
             select_type: video
-            video: 'https://youtube.com/playlist?list=PLCjXhJS7oRybVZg4-ioaoKIudQZ5RvWEz'
-            media_caption: 'Playlist plural - Staffel 1 | YouTube-Kanal von Stegreif '
+            video: 'https://youtu.be/kLBtX2qgY2Y'
+            media_caption: 'plural - Staffel 1 | YouTube-Kanal von Stegreif '
 add_section:
   -
-    theme_selector: yellow
+    theme_selector: light
     article:
       -
         type: set
@@ -100,6 +100,9 @@ add_section:
             entires:
               - 82113a72-28ad-4a56-8979-cb3bfd8e05b3
               - 1ca1e23b-8c62-484f-967b-ee98ff09cc86
+  -
+    theme_selector: yellow
+    article:
       -
         type: set
         attrs:
@@ -109,10 +112,8 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: 23252b04-6ab9-4546-a826-b64eabdd2f0a
-      -
-        type: paragraph
-        attrs:
-          class: null
+            select_media_feature: image
+            feature_video: 'https://youtu.be/VbDbVlDBi9E'
 tags:
   - digital
 headline: 'Stegreif goes YouTube!'
@@ -120,6 +121,24 @@ details:
   -
     headline: Team
     description:
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Künstlerische Leitung'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Juri de Marco'
       -
         type: paragraph
         attrs:
@@ -168,12 +187,12 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
-            text: Kamera/Schnitt
+            text: 'Kamera & Schnitt'
           -
             type: hard_break
           -
             type: text
-            text: 'Stephan Boehme'
+            text: 'Jakob Joiko (Fewjar)'
       -
         type: paragraph
         attrs:
@@ -204,6 +223,24 @@ details:
           -
             type: text
             text: .
+      -
+        type: paragraph
+        attrs:
+          class: null
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: 'Staffel 1 - YouTube-Playlist'
+                target_blank: true
+                button_type: background
+                link_type: url
+                url: 'https://youtube.com/playlist?list=PLCjXhJS7oRybVZg4-ioaoKIudQZ5RvWEz'
+                type: button
+                enabled: true
     type: detail
     enabled: true
 ---

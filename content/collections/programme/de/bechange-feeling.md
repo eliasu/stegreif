@@ -5,7 +5,7 @@ title: '#bechange: Feeling'
 header_headline: '#bechange: Feeling'
 header_theme_selector: yellow
 header_select: image
-header_image: 04_was-wir-tun/reihen-und-programme/bechange_feeling/header_bechange-feeling_(c)_ludwig-nikulski_lowres.jpg
+header_image: 04_was-wir-tun/reihen-und-programme/bechange_feeling/bild-von-ios-(4).jpg
 quicklinks_enabled: false
 show_social: false
 theme_selector: dark
@@ -19,13 +19,32 @@ aktuell: true
 select_type: programm
 related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
 template: single_page
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1657725758
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1665397808
 teaser_text: 'Rekomposition, Klangperformance und Improvisation auf der Grundlage der Musik von Hildegard von Bingen (1098-1179). Ihre mittelalterliche Sphäre der Spiritualität und Naturverbundenheit trifft auf zeitgenössische Ausdrucksformen und Fragestellungen.'
 related_termine:
   - ee351bf6-74a9-49c4-9a72-1bcac5790a54
   - 94c4ba47-fa4b-4b6c-880d-d7c42a6827f4
 details:
+  -
+    headline: Infoheft
+    description:
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: 'Behind #bechange'
+                target_blank: true
+                button_type: background
+                link_type: asset
+                asset: 07_downloads/infoheft_behind_bechange_feeling.pdf
+                type: button
+                enabled: true
+    type: detail
+    enabled: true
   -
     headline: Team
     type: detail
@@ -253,7 +272,7 @@ article:
     content:
       -
         type: text
-        text: ' auf der Grundlage von Werken von '
+        text: 'auf der Grundlage von Werken von '
       -
         type: hard_break
       -
@@ -369,7 +388,7 @@ article:
     content:
       -
         type: text
-        text: 'Fotos: Ludwig Nikulski'
+        text: 'Fotos: Navina Neuschl'
 add_section:
   -
     theme_selector: yellow

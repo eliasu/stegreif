@@ -324,6 +324,9 @@ add_section:
             entires:
               - d31f2aab-8376-4e0f-8b32-727a8db6871f
             text: 'GIOVANNI ist eine gemeinsam Produktion der Neuköllner Oper und des Stegreif Orchesters. '
+  -
+    theme_selector: yellow
+    article:
       -
         type: set
         attrs:
@@ -333,6 +336,8 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: 1f3370c5-58eb-405e-aec1-3768947dc1aa
+            select_media_feature: image
+            feature_video: 'https://youtu.be/VbDbVlDBi9E'
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -343,7 +348,7 @@ aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657622787
+updated_at: 1657810077
 header_headline: 'GIOVANNI. Eine Passion'
 extend_section:
   -

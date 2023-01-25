@@ -42,6 +42,24 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Franziska Aller'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: Choreographie
           -
             type: hard_break
@@ -367,14 +385,9 @@ add_section:
               - 04_was-wir-tun/reihen-und-programme/freemahler/freemahler_(c)-sophia-hegewald-5_lowres.jpg
               - 04_was-wir-tun/reihen-und-programme/freemahler/freemahler_(c)-sophia-hegewald-6_lowres.jpg
               - 04_was-wir-tun/reihen-und-programme/freemahler/header_freemahler_(c)-sophia-hegewald-4_lowres.jpg
-      -
-        type: set
-        attrs:
-          values:
-            type: bard_quotes
-            size: small
-            quote: 'Mühelos und organisch verbinden sich im Stegreiforchester Holz- und Blechbläserklänge, Geigen, Bratschen und Celli mit dem modernen Sound von Rockgitarre, E-Bass und Drumset.'
-            author: 'rbb24, 23.11.2020'
+  -
+    theme_selector: light
+    article:
       -
         type: set
         attrs:
@@ -397,7 +410,7 @@ tags:
   - chamber
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657710830
+updated_at: 1671120773
 header_headline: '#freemahler - what the earth tells us'
 extend_section:
   -
@@ -414,5 +427,5 @@ extend_section:
 related_reihe: 09b7a50f-b2c0-413a-b623-a2d7e74c83ac
 quicklinks_enabled: false
 show_social: false
-headline: '1 ERDE — 11 MUSIKER — 111 MELODIEN'
+headline: '1 ERDE — 11 MUSIKER*INNEN — 111 MELODIEN'
 ---

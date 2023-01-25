@@ -10,7 +10,14 @@
     <div class="flex flex-row flex-wrap items-center justify-between lg:flex-nowrap gap-x-20 gap-y-20 fluid-container">
         
         {{# form #}}
-        {{ partial:components/newsletter_form form="contact" }}
+        {{# {{ partial:components/newsletter_form form="contact" }} #}}
+        <div class="flex flex-col">
+            {{ partial:components/button as="a" class="self-start" button_type="lined_dark" link_type="url" url="https://interact.stegreif.org/newsletter/" label="{ trans:strings.get_newsletter }" }}
+           
+          
+        </div>
+
+       
         
         <div class="flex flex-col gap-4 lg:basis-3/5 ">
             {{# footer social icons #}}
@@ -38,6 +45,10 @@
                 {{ yield:reset_cookie_consent }}
             </ul>
         </div>
+       
+    </div>
+    <div class="mt-20">
+        <img src="/site_assets/logos/logo_dark.png" class="max-w-[100px] ml-20" alt="{{ config:app:name }}"/>          
     </div>
 </footer>
 <!-- End: /layout/_footer.antlers.html -->

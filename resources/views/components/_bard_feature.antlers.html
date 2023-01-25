@@ -4,8 +4,7 @@
 #}}
 
 <!-- /components/_bard_feature.antlers.html -->
-<div class="flex gap-8 my-8 md:my-20 {{ alternate === '1' ? 'feature-right' : 'feature-left' }} {{ if feature_type == "big" }}block-full{{ /if }}">   
-
+<div class="flex gap-8 my-8 md:my-20 {{ alternate ? 'feature-right' : 'feature-left' }} {{ if feature_type == "big" }}block-full{{ /if }}">   
     {{# block wrapper #}}
     <div class="flex w-full gap-4">
 
@@ -31,7 +30,7 @@
                     
                         {{# image #}}
                         {{ if select_media_feature == "image" }}
-                            {{ partial:components/picture nocaption="true" :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
+                            {{ partial:components/picture  :image="feature_image" cover="true" sizes="(min-width: 768px) 50vw, 100vw" }}
                         
                         {{# video #}}
                         {{ elseif select_media_feature == "video" }}

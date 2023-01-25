@@ -4,7 +4,7 @@ blueprint: programme
 title: '#Improphonie'
 header_theme_selector: dark
 header_select: image
-header_image: header_images/mf_stehgreif_roll_6_001_ludwignikulski.-cinematic.jpg
+header_image: 04_was-wir-tun/reihen-und-programme/improphonie/220915_improfest_(c)-navina-neuschl-4161.jpg
 quicklinks_enabled: false
 show_social: false
 theme_selector: dark
@@ -17,10 +17,10 @@ select_transition_theme: bird
 aktuell: true
 select_type: programm
 related_termine:
-  - 755e7ce6-74ef-4915-8791-f310bb2562a1
+  - bf36b577-452a-49bb-ab52-171f4674e961
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657458458
+updated_at: 1673886473
 teaser_text: 'Wie kann Musik im Moment und im Kontakt mit dem Publikum entstehen? Wo begegnen sich Improvisation und Komposition? Wie lässt sich mitunter sogar eine Sinfonie improvisieren?'
 headline: 'Eine Sinfonie aus dem Moment'
 article:
@@ -31,15 +31,7 @@ article:
     content:
       -
         type: text
-        text: 'Wie kann Musik im Moment und im Kontakt mit dem Publikum entstehen? Wo begegnen sich Improvisation und Komposition? Wie lässt sich mitunter sogar eine Sinfonie improvisieren?'
-  -
-    type: paragraph
-    attrs:
-      class: null
-    content:
-      -
-        type: text
-        text: 'Den Auftakt des Programms bildet ein '
+        text: 'Wie kann Musik im Moment und im Kontakt mit dem Publikum entstehen? Wo begegnen sich '
       -
         type: text
         marks:
@@ -47,18 +39,90 @@ article:
             type: bts_span
             attrs:
               class: text-skin-primary
-        text: Wandelkonzert
+        text: 'Improvisation '
       -
         type: text
-        text: ' im Palmengarten Frankfurt. Das Publikum wird mit einer musikalischen Einleitung begrüßt und durchwandert dann gemeinsam mit den Musiker*innen die vier Sätze einer Sinfonie an mehreren Standorten des Palmengartens. Diese Stationen spiegeln jeweils den Charakter eines Standorts wieder. Das Finale des Konzerts soll im großen Konzertsaal des Gesellschaftshauses stattfinden.'
+        text: 'und '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: Komposition
+      -
+        type: text
+        text: '? Lässt sich sogar eine ganze Sinfonie improvisieren?'
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Groove – Bewegung – Augenkontakt'
+      -
+        type: text
+        text: '. Ziel der #improphonie ist es, die Magie der kollektiven, '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'freien Improvisation'
+      -
+        type: text
+        text: ' in ihrer Spontanität einzufangen und als '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'eigenständiges Werk'
+      -
+        type: text
+        text: ' einen Raum zu geben. Die individuelle Stärken der Musiker*innen werden hierbei zur treibenden Energie und die Kommunikation zur eigentlichen Komponistin.'
+  -
+    type: paragraph
+    attrs:
+      class: 'text-2xl leading-l'
+    content:
+      -
+        type: text
+        text: 'Anders als bei den meisten Programmen von Stegreif bezieht sich die #improphonie nicht auf ein bestehendes sinfonisches Werk, das rekomponiert wird, sondern'
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: ' beruht ausschließlich auf Improvisationskonzepten'
+      -
+        type: text
+        text: '. Das Publikum durchwandert gemeinsam mit den Musiker*innen die vier Sätze einer Sinfonie, die auf diese Art und Weise nie wieder erklingen wird – denn sie ist aus dem Moment geboren.'
   -
     type: set
     attrs:
       values:
         type: bard_quotes
-        size: big
-        quote: 'Composition is just improvisation slowed down, and improvisation is just composition sped up'
-        author: 'Wayne Shorter (2004)'
+        size: small
+        quote: '»Prägendster Gesamteindruck war die Atmosphäre: weg vom Spektakulären, Theatralischen, Nur-Unterhaltsamen, hin zu Achtsamkeit, Demut und Wertschätzung.«'
+        author: ' FAZ, 27.09.2022'
+  -
+    type: paragraph
+    attrs:
+      class: null
   -
     type: paragraph
     attrs:
@@ -66,7 +130,7 @@ article:
     content:
       -
         type: text
-        text: 'Anders als bei bisherigen Programmen von Stegreif bezieht sich die #Improphonie nicht auf ein bestehendes sinfonisches Werk, das rekomponiert wird, sondern beruht ausschließlich auf '
+        text: 'Wie eine klassischen Sinfonie besteht die #improphonie aus '
       -
         type: text
         marks:
@@ -74,10 +138,10 @@ article:
             type: bts_span
             attrs:
               class: text-skin-primary
-        text: Improvisationskonzepten
+        text: '4 Sätzen'
       -
         type: text
-        text: '. Durch Improvisation als '
+        text: ', in denen verschiedene musikalische Elemente vorgestellt und bearbeitet werden. Die ersten drei Sätze setzen sich jeweils mit den Aspekten '
       -
         type: text
         marks:
@@ -85,13 +149,133 @@ article:
             type: bts_span
             attrs:
               class: text-skin-primary
-        text: 'kollektive Live-Komposition'
+        text: Melodie
       -
         type: text
-        text: ' entsteht eine zeitgenössische Sinfonie vollkommen im Moment.'
+        text: ', '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Harmonie '
+      -
+        type: text
+        text: 'und '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Rhythmus '
+      -
+        type: text
+        text: 'auseinander. Diese werden aus verschiedenen Blickwinkeln, gemeinschaftlich und individuell vom Orchester beleuchtet. Während im ersten Satz mit dem '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Kontrast zwischen einzelnen Melodiestimmen und vollem Orchesterklang'
+      -
+        type: text
+        text: ' gespielt wird, stehen im zweiten Satz Melodie und Solo sowie Harmonie und Klangfläche im Vordergrund.  Im dritten Satz kommt das Orchester durch Rhythmen, Energie und Bewegung zusammen. Der abschließende vierte Satz folgt keiner festgelegten Form, um ihn beim Konzert gänzlich neu gestalten zu können. Anders als in einer klassischen Sinfonie stehen zwischen den Sätzen keine Pausen, sondern gesungene Chöre, die die Übergänge atmosphärisch gestalten.'
+  -
+    type: paragraph
+    attrs:
+      class: 'text-2xl leading-l'
+    content:
+      -
+        type: text
+        text: 'So verschwimmt auf der Bühne eindrucksvoll die '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Grenze zwischen Komposition und Improvisation'
+      -
+        type: text
+        text: ' in einem sich stets wandelnden Konzertprogramm. Und dabei wird die komplette Klangwelt von Stegreif eindrucksvoll ausgenutzt: Von traditionellen Spielweisen der '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Klassik '
+      -
+        type: text
+        text: 'und des '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: Jazz
+      -
+        type: text
+        text: ', über spannende instrumentale Techniken, bis hin zu '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'kollektivem Gesang'
+      -
+        type: text
+        text: ' und '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'intensiver Stille'
+      -
+        type: text
+        text: ' ist alles dabei. Diese fulminante Mischung wird begleitet durch eine choreographische Improvisation – direkt im Saal und zwischen dem sich frei bewegenden Publikum, welches als Kernelement aktiv mit einbezogen wird, und zum Mitsingen und Mittanzen eingeladen ist.'
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
+      -
+        type: text
+        text: 'Headerbild: Navina Neuschl'
 add_section:
   -
     theme_selector: yellow
+    article:
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_gallery
+            size: big
+            images:
+              - 04_was-wir-tun/reihen-und-programme/improphonie/220915_improfest_(c)-navina-neuschl-4161.jpg
+              - 04_was-wir-tun/reihen-und-programme/improphonie/220915_improfest_(c)-navina-neuschl-4326.jpg
+              - 04_was-wir-tun/reihen-und-programme/improphonie/220924_improphonie_palmengarten_(c)_-wonge-bergmann_alte-oper-frankfurt_1.jpg
+              - 04_was-wir-tun/reihen-und-programme/improphonie/220915_improfest_(c)-navina-neuschl-193421.jpg
+              - 04_was-wir-tun/reihen-und-programme/improphonie/220924_improphonie_palmengarten_(c)_wonge-bergmann_alte-oper-frankfurt_2.jpg
+              - 04_was-wir-tun/reihen-und-programme/improphonie/220915_improfest_(c)-navina-neuschl-193595.jpg
+  -
+    theme_selector: light
     article:
       -
         type: set
@@ -130,14 +314,12 @@ details:
             type: hard_break
           -
             type: text
-            text: 'Juri de Marco, '
-          -
-            type: hard_break
-          -
-            type: text
-            text: 'Lorenz Blaumer'
-          -
-            type: hard_break
+            text: 'Juri de Marco & Lorenz Blaumer'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
           -
             type: text
             marks:
@@ -169,8 +351,11 @@ details:
           -
             type: text
             text: 'Bertram Burkert'
-          -
-            type: hard_break
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
           -
             type: text
             marks:
@@ -204,6 +389,24 @@ details:
           -
             type: text
             text: 'Lea Hladka'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+            text: 'Kostüm und Bühne '
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Anja Kreher'
     type: detail
     enabled: true
 ---

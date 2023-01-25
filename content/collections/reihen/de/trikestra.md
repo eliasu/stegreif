@@ -149,7 +149,7 @@ select_transition_theme: bird
 aktuell: false
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657730440
+updated_at: 1657802567
 details:
   -
     headline: Team

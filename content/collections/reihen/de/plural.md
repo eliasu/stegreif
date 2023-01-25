@@ -125,11 +125,9 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
 aktuell: false
-tags:
-  - digital
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657730749
+updated_at: 1661521599
 details:
   -
     headline: Team
@@ -211,6 +209,24 @@ details:
           -
             type: text
             text: 'Stephan Boehme'
+      -
+        type: paragraph
+        attrs:
+          class: null
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: 'Zur YouTube-Playlist'
+                target_blank: true
+                button_type: background
+                link_type: url
+                url: 'https://youtube.com/playlist?list=PLCjXhJS7oRybWJ6R-qL2poFcgvxo5vc2R'
+                type: button
+                enabled: true
     type: detail
     enabled: true
 related_programme:
@@ -231,6 +247,8 @@ extend_section:
             type: bard_media
             size: big
             select_type: video
-            video: 'https://youtube.com/playlist?list=PLCjXhJS7oRybWJ6R-qL2poFcgvxo5vc2R'
+            video: 'https://youtu.be/kLBtX2qgY2Y'
             media_caption: 'plural Playlist Staffel 1-3 - Youtubekanal des Stegreif Orchesters'
+tags:
+  - digital
 ---
