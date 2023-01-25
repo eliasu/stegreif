@@ -1,0 +1,33 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          display: Name
+          type: text
+          validate:
+            - required
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          read_only: false
+          placeholder: Name
+          input_type: text
+          antlers: false
+      -
+        handle: email
+        field:
+          display: 'Email address'
+          type: text
+          validate:
+            - required
+            - email
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          read_only: false
+          input_type: email
+          antlers: false
+          placeholder: Email

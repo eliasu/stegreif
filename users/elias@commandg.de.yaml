@@ -1,0 +1,58 @@
+name: Elias
+super: true
+id: 7d709850-5c35-4065-be68-b627c348051d
+password_hash: $2y$10$KWT5S19SJMsKOtcpBlmhcey2/0CFT0ewLkRU3OerW3DWgsGExL1T2
+preferences:
+  collections:
+    pages:
+      columns:
+        - title
+        - site
+        - slug
+      after_save: continue_editing
+    reihen:
+      after_save: continue_editing
+      columns:
+        - title
+        - aktuell
+        - tags
+        - slug
+    termine:
+      columns:
+        - title
+        - date
+        - time
+    programme:
+      columns:
+        - title
+        - site
+        - aktuell
+        - select_type
+        - tags
+        - slug
+      after_save: continue_editing
+    neuigkeiten:
+      after_save: continue_editing
+      columns:
+        - title
+        - site
+        - date
+    personen:
+      after_save: continue_editing
+  taxonomies:
+    team_tags:
+      after_save: continue_editing
+      columns:
+        - title
+        - slug
+        - team_tag_type
+        - filter_category
+    team_filters:
+      after_save: create_another
+  forms:
+    contact:
+      columns:
+        - datestamp
+        - name
+        - email
+        - consent

@@ -1,0 +1,114 @@
+title: Button
+fields:
+  -
+    handle: label
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: Label
+      replicator_preview: false
+      instructions_position: above
+      antlers: false
+  -
+    handle: target_blank
+    field:
+      type: toggle
+      width: 25
+      listable: false
+      display: 'Open in new window?'
+      replicator_preview: false
+      instructions_position: above
+      read_only: false
+      default: true
+  -
+    handle: button_type
+    field:
+      options:
+        lined: Lined
+        background: Background
+      type: button_group
+      default: lined
+      listable: false
+      display: 'Button type'
+      replicator_preview: false
+      instructions_position: above
+      read_only: false
+      width: 75
+  -
+    handle: link_type
+    field:
+      options:
+        url: URL
+        email: E-mail
+        tel: Telephone
+        entry: Entry
+        asset: Asset
+      type: button_group
+      default: url
+      listable: false
+      display: 'Link type'
+      replicator_preview: false
+      instructions_position: above
+      read_only: false
+  -
+    handle: entry
+    field:
+      max_items: 1
+      mode: default
+      type: entries
+      listable: false
+      display: Entry
+      replicator_preview: false
+      validate:
+        - 'required_if:{this}.link_type,entry'
+      if:
+        link_type: entry
+  -
+    handle: url
+    field:
+      placeholder: 'https://site.com'
+      input_type: url
+      type: text
+      listable: false
+      display: URL
+      validate:
+        - 'required_if:{this}.link_type,url'
+      if:
+        link_type: url
+  -
+    handle: email
+    field:
+      placeholder: info@site.com
+      input_type: email
+      type: text
+      listable: false
+      display: E-mail
+      replicator_preview: false
+      validate:
+        - 'required_if:{this}.link_type,email'
+      if:
+        link_type: email
+  -
+    handle: tel
+    field:
+      placeholder: '+0 (0)12 345678'
+      input_type: tel
+      type: text
+      listable: false
+      display: Telephone
+      replicator_preview: false
+      validate:
+        - 'required_if:{this}.link_type,tel'
+      if:
+        link_type: tel
+  -
+    handle: asset
+    field: common.image
+    config:
+      display: Asset
+      localizable: false
+      width: 100
+      if:
+        link_type: asset

@@ -1,0 +1,34 @@
+{{#
+	@name Video
+	@desc The video component. A sizeable YouTube or Vimeo video rendered in a responsive container with an optional caption.
+    @set page.article.video
+#}}
+
+<!-- /components/_video.antlers.html -->
+<div class="relative w-full h-full">
+    
+    {{#  youtube embed with sound #}}
+    {{ if sound }}
+        <div class="plyr__video-embed video_sound">
+            <iframe
+                src="{{youtube_url}}"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+                data-plyr-config='{ "youtuber": "{rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1, controls: 0, }" }'
+            ></iframe>
+        </div>
+
+    {{# video with no sound #}}
+    {{ else }}
+        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full pointer-events-none" data-yt2html5="{{ youtube_url }}"></video>
+    {{ /if }}
+
+    {{ partial:snippets/image_tint }}
+
+    {{# add image caption if set #}}
+    {{ if !nocaption && media_caption }}
+        {{ partial:typography/tag class="absolute self-start right-4 top-4 z-front" content="{ media_caption }" color="inverted" }}
+    {{ /if }}
+</div>
+<!-- End: /components/_video.antlers.html -->

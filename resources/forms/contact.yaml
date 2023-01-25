@@ -1,0 +1,17 @@
+title: Contact
+honeypot: fax
+email:
+  -
+    to: noreply@stegreif.org
+    from: noreply@stegreif.org
+    reply_to: '{{ email }}'
+    subject: 'Newsletter Anmeldung auf Stegreif.org'
+    html: email/form_owner
+    text: email/form_owner_text
+  -
+    to: '{{ email }}'
+    from: noreply@stegreif.org
+    reply_to: noreply@stegreif.org
+    subject: 'Danke für deine Newsletter Anmeldung!'
+    html: email/form_sender
+    text: email/form_sender_text
