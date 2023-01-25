@@ -12,13 +12,13 @@
     */ 
     document.addEventListener('alpine:init', () => {
         Alpine.data('orchester_filter', () => ({
-            selected_team_tag: '',
-            selected_team_filter: '',
-            shouldShow(teamtag, teamfilter) {
-                if(this.selected_team_filter=='' && this.selected_team_tag=='') return true;
-                const tt = JSON.parse(teamtag);
-                const tf = JSON.parse(teamfilter);
-                if(tt.includes(this.selected_team_tag) || tf.includes(this.selected_team_filter)) return true;
+            selected_team_func: '',
+            selected_team_instrument: '',
+            shouldShow(team_func, team_instrument) {
+                if(this.selected_team_func=='' && this.selected_team_instrument=='') return true;
+                const tf = JSON.parse(team_func);
+                const ti = JSON.parse(team_instrument);
+                if(tf.includes(this.selected_team_func) || ti.includes(this.selected_team_instrument)) return true;
             },
             
         }))
@@ -36,15 +36,15 @@
 
 
     <div class="flex flex-wrap max-w-full gap-6 gap-y-2 xs:flex-row ">
-        {{partial:components/select  label="Team Tags" model="selected_team_tag"}}
-            {{ taxonomy:team_tags}}
+        {{partial:components/select  label="{{trans:strings.orchester_func}}" model="selected_team_func"}}
+            {{ taxonomy:personen_funktionen}}
                 <option value="{{slug}}">{{title}}</option>
-            {{/taxonomy:team_tags}}
+            {{/taxonomy:personen_funktionen}}
         {{/partial:components/select}}
-        {{partial:components/select  label="Team Filters" model="selected_team_filter"}}
-            {{ taxonomy:team_filters}}
+        {{partial:components/select  label="{{trans:strings.orchester_inst}}" model="selected_team_instrument"}}
+            {{ taxonomy:instrumenten_gruppen}}
                 <option value="{{slug}}">{{title}}</option>
-            {{/taxonomy:team_filters}}
+            {{/taxonomy:instrumenten_gruppen}}
         {{/partial:components/select}}
     </div>
         
@@ -58,15 +58,15 @@
         
         {{# all team #}}
         {{ collection:personen }}
-            {{ if team_tags}}
-                {{ t_tags = {team_tags pluck ('slug')} | to_json | sanitize:true; }}
+            {{ if instrumenten_gruppen}}
+                {{ t_inst = {instrumenten_gruppen pluck ('slug')} | to_json | sanitize:true; }}
             {{else}}
-                {{ t_tags = "[]" }}
+                {{ t_inst = "[]" }}
             {{ /if }}
-            {{ if team_filters}}
-                {{ t_filter = {team_filters pluck ('slug')} | to_json | sanitize:true}}
+            {{ if personen_funktionen}}
+                {{ t_func = {personen_funktionen pluck ('slug')} | to_json | sanitize:true}}
             {{else}}
-                {{ t_filter = "[]" }}
+                {{ t_func = "[]" }}
             {{ /if }}
 
             {{# {{ team_filters ?= ( t_filter = {team_filters pluck ('slug')} ) }} #}}
@@ -87,7 +87,7 @@
                     $store.modal.teamTags = [ {{ team_tags }} { content : '{{ title }}', color : '{{ team_tag_type }}' }{{!last ?= ','}} {{ /team_tags }} ] "
                     class="relative flex flex-col items-start p-4 cursor-pointer group focus-visible:outline-none"
                     x-transition.duration.500ms
-                    x-show="shouldShow('{{t_tags}}', '{{t_filter}}')">
+                    x-show="shouldShow('{{t_func}}', '{{t_inst}}')">
 
                 {{# tags  #}}
                 <div class="flex flex-col items-start">

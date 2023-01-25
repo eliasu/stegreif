@@ -82,6 +82,8 @@ return [
     'fun_fact'                          => 'Fun Fact',
     'further_links'                     => 'Apart from Stegreif',
     'area'                              => 'Bundesland',
+    'orchester_inst'                    => 'Instrumente',
+    'orchester_func'                    => 'Rollen',
 
 
     // Pagination
