@@ -137,7 +137,7 @@ details:
                 enabled: true
     type: detail
     enabled: true
-theme_selector: dark
+theme_selector: light
 article:
   -
     type: paragraph
@@ -355,18 +355,6 @@ article:
         text: 'Foto: Ludwig Nikulski'
 add_section:
   -
-    theme_selector: light
-    article:
-      -
-        type: set
-        attrs:
-          values:
-            type: bard_partners
-            headline: 'Förder*innen'
-            text: '#bechange wird gefördert von: Die Beauftragte der Bundesregierung für Kultur und Medien.'
-            entires:
-              - 530d7673-e742-4ee9-be5d-3750c4220019
-  -
     theme_selector: yellow
     article:
       -
@@ -387,6 +375,18 @@ add_section:
             feature_type: bird
             reference_content: true
             select_content: 455ef639-911c-4d07-b57e-ed09648ff5e3
+  -
+    theme_selector: light
+    article:
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_partners
+            headline: 'Förder*innen'
+            text: '#bechange wird gefördert von: Die Beauftragte der Bundesregierung für Kultur und Medien.'
+            entires:
+              - 530d7673-e742-4ee9-be5d-3750c4220019
 select_transition_theme: bechange
 date_field: '2023-02-12'
 time: '18:00'
@@ -400,5 +400,5 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1665490638
+updated_at: 1671189153
 ---

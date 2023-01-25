@@ -121,7 +121,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1662994304
+updated_at: 1673887027
 og_image: presse-og-1656608770.png
 twitter_image: presse-twitter-1656608770.png
 quicklinks_enabled: false
@@ -138,6 +138,66 @@ add_section:
           -
             type: text
             text: Pressemitteilungen
+      -
+        type: paragraph
+        attrs:
+          class: 'text-2xl leading-l'
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'PM Nr. 01/2023 - 16.01.2023'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'PREMIERE #bechange: thinking in der Dresdner Philharmonie'
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: Download
+                target_blank: true
+                button_type: background
+                link_type: asset
+                type: button
+                enabled: true
+                asset: 06_presse/pressemitteilungen/230116_pm_stegreif_-bechangethinking_orchester-des-wandels.pdf
+      -
+        type: paragraph
+        attrs:
+          class: 'text-2xl leading-l'
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'PM Nr. 04/2022 - 20.12.2022'
+          -
+            type: hard_break
+          -
+            type: text
+            text: '#freesolo - Stegreifs neue Konzertreihe '
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: Download
+                target_blank: true
+                button_type: background
+                link_type: asset
+                type: button
+                enabled: true
+                asset: 06_presse/pressemitteilungen/221220_pm_stegreiforchester_-freesolo.pdf
       -
         type: paragraph
         attrs:

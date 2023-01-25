@@ -412,25 +412,6 @@ article:
       -
         type: text
         text: ' abrufbaren Datenschutzhinweisen bereit.'
-  -
-    type: paragraph
-    attrs:
-      class: null
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: Reichweitenmessung
-  -
-    type: paragraph
-    attrs:
-      class: null
-    content:
-      -
-        type: text
-        text: 'GoogleAnalytics:'
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -439,7 +420,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657795957
+updated_at: 1670351873
 og_image: datenschutz-og-1656608745.png
 twitter_image: datenschutz-twitter-1656608745.png
 quicklinks_enabled: false

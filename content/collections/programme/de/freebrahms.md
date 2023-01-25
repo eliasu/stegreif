@@ -39,6 +39,29 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+          -
+            type: text
+            text: 'Sebastian Caspar'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: 'Regie, Choreographie'
           -
             type: hard_break
@@ -258,8 +281,8 @@ select_transition_theme: bird
 aktuell: true
 select_type: programm
 template: single_page
-updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
-updated_at: 1669816772
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1671120556
 header_headline: '#freebrahms'
 related_termine:
   - 67275990-be72-4dc8-81bb-1b0c6baca7c9
@@ -268,5 +291,4 @@ quicklinks_enabled: false
 show_social: false
 headline: 'Bühne frei für alle'
 teaser_text: '„Sinfonie“ bedeutet: Etwas gemeinsam zum Klingen bringen – und genau das tun die 30 jungen, genreübergreifenden Musiker*innen des Stegreif Orchesters bei #freebrahms. Der Ausgangspunkt für die Re-Komposition von Brahms 3. Sinfonie ist die eigene Stimme.'
-featured: true
 ---

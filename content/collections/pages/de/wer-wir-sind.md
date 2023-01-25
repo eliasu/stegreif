@@ -131,202 +131,6 @@ introduction_content:
       values:
         type: bard_feature
         alternate: false
-        feature_type: small
-        select_media_feature: image
-        feature_image: header_images/(c)-kasseler-musiktage---bernd-scholzchen-header-2(1).jpg
-        article:
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: 'hallo das ist ein testr'
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: 'Nicht nur auf der Bühne, sondern auch dahinter, steht Stegreif für eine '
-              -
-                type: text
-                marks:
-                  -
-                    type: bts_span
-                    attrs:
-                      class: text-skin-primary
-                text: 'kollektive Arbeitsweise'
-              -
-                type: text
-                text: '. Wir möchten traditionell streng hierarchischen Strukturen der Orchesterwelt durch '
-              -
-                type: text
-                marks:
-                  -
-                    type: bts_span
-                    attrs:
-                      class: text-skin-primary
-                text: 'gemeinschaftliche Prozesse'
-              -
-                type: text
-                text: ' ersetzen. In der Sparte Musik sind kollektive Schaffensprozesse bisher eine Rarität und es hält sich das Vorurteil, dass demokratisches Arbeiten im Orchester nicht möglich ist. Es ist uns ein Anliegen, neue Formen d'
-        reference_content: false
-  -
-    type: set
-    attrs:
-      values:
-        type: bard_feature
-        alternate: false
-        feature_type: big
-        select_media_feature: image
-        feature_image: header_images/(c)-kasseler-musiktage---bernd-scholzchen-header-2(1).jpg
-        article:
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: 'hallo das ist ein testr'
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: 'Nicht nur auf der Bühne, sondern auch dahinter, steht Stegreif für eine '
-              -
-                type: text
-                marks:
-                  -
-                    type: bts_span
-                    attrs:
-                      class: text-skin-primary
-                text: 'kollektive Arbeitsweise'
-              -
-                type: text
-                text: '. Wir möchten traditionell streng hierarchischen Strukturen der Orchesterwelt durch '
-              -
-                type: text
-                marks:
-                  -
-                    type: bts_span
-                    attrs:
-                      class: text-skin-primary
-                text: 'gemeinschaftliche Prozesse'
-              -
-                type: text
-                text: ' ersetzen. In der Sparte Musik sind kollektive Schaffensprozesse bisher eine Rarität und es hält sich das Vorurteil, dass demokratisches Arbeiten im Orchester nicht möglich ist. Es ist uns ein Anliegen, neue Formen d'
-        reference_content: false
-  -
-    type: set
-    attrs:
-      values:
-        type: bard_feature
-        alternate: false
-        feature_type: bird
-        select_media_feature: image
-        feature_image: header_images/(c)-kasseler-musiktage---bernd-scholzchen-header-2(1).jpg
-        article:
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: hallo
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: st
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: ' ein testr'
-          -
-            type: paragraph
-            attrs:
-              class: null
-        reference_content: false
-  -
-    type: set
-    attrs:
-      values:
-        type: bard_feature
-        alternate: false
-        feature_type: bird
-        select_media_feature: image
-        feature_image: header_images/(c)-kasseler-musiktage---bernd-scholzchen-header-2(1).jpg
-        article:
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: hallo
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: st
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                text: ' ein testr'
-          -
-            type: paragraph
-            attrs:
-              class: null
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: bts_span
-                    attrs:
-                      class: text-skin-primary
-                text: 'tliche Prozesse'
-              -
-                type: text
-                text: ' ersetzen. In der Sparte Musik sind kollektive Schaffensprozesse bisher eine Rarität und es hält sich das Vorurteil, dass demokratisches Arbeiten im Orchester nicht möglich ist. Es ist uns ein Anliegen, neue Formen d'
-          -
-            type: paragraph
-            attrs:
-              class: null
-        reference_content: false
-  -
-    type: paragraph
-    attrs:
-      class: null
-  -
-    type: set
-    attrs:
-      values:
-        type: bard_feature
-        alternate: false
         feature_type: bird
         select_media_feature: image
         feature_image: 03_wer-wir-sind/organisatorisch_(c)_ludwig-nikulski_lowres.jpg
@@ -471,10 +275,43 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
 template: who_we_are_page
-updated_by: 8139ed17-1abe-4d29-83d6-75258ed137c8
-updated_at: 1670340599
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1671189404
 section_headline_orchestra: 'Das Orchester'
 add_section:
+  -
+    theme_selector: yellow
+    article:
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: Initiativbewerbungen
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            text: 'Lust mitzuspielen? Gerne nehmen wir auch Initiativbewerbungen von Musiker*innen entgegen. Bitte wendet euch dafür per Mail an Lea Hladka (Tourmanagement & Produktion). Neben eurem Motivationsschreiben sendet uns bitte auch einige Hör- und Videobeispielen zu, damit wir einen Eindruck von eurer künstlerischen Tätigkeit bekommen können.'
+      -
+        type: set
+        attrs:
+          values:
+            type: bard_buttons
+            buttons:
+              -
+                label: E-Mail
+                target_blank: true
+                button_type: background
+                link_type: email
+                email: lea@stegreif.org
+                type: button
+                enabled: true
   -
     theme_selector: dark
     article:

@@ -42,6 +42,29 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
+          -
+            type: text
+            text: 'Sebastian Caspar'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: Rekomposition/Arrangement
           -
             type: hard_break
@@ -228,8 +251,8 @@ select_transition_theme: bird
 aktuell: true
 select_type: programm
 template: single_page
-updated_by: 5c84a3c2-1f9f-4c46-ace2-d9eaf068d261
-updated_at: 1658311184
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1671120528
 header_headline: '#bfree'
 extend_section:
   -
@@ -241,7 +264,7 @@ extend_section:
             type: bard_media
             size: big
             select_type: video
-            video: 'https://www.youtube.com/watch?v=AQdFwDfleeY'
+            video: 'https://youtu.be/x1UWpBR0LPc'
             media_caption: '#bfree Teaser | YouTube-Kanal von Stegreif'
 quicklinks_enabled: false
 show_social: false
@@ -250,4 +273,5 @@ related_termine:
   - 65489de1-a49c-4d6b-8f8d-ccdb8deeb452
   - 54d00996-024c-408f-9a59-8312a282ea07
   - 4f1fdfa0-7f78-4059-85fb-88b4e4de0506
+  - 6c987c56-09fd-4ab6-b114-575d195f4d4d
 ---

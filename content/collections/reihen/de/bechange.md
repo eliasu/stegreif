@@ -4,7 +4,7 @@ blueprint: reihen
 title: '#bechange'
 header_theme_selector: dark
 header_select: image
-header_image: 04_was-wir-tun/reihen-und-programme/bechange_reihenseite/ludwig-nikulski-stegreif-orchester--bechange-ludwigsburg--8.jpg
+header_image: 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5595.jpg
 teaser_text: '16 Workshops - 4 Premieren - 1 symphony of change. In Beschäftigung mit den 17 Nachhaltigkeitszielen und vier Komponistinnen erarbeitet Stegreif gemeinsam mit Menschen aus allen Bundesländern eine Sinfonie des Wandels.'
 theme_selector: dark
 article:
@@ -283,7 +283,7 @@ select_transition_theme: bechange
 aktuell: true
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1667388598
+updated_at: 1671207310
 details:
   -
     headline: Infoheft

@@ -444,18 +444,15 @@ add_section:
             type: bard_gallery
             size: big
             images:
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski--55.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski--8.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-10.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-35.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-34.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-27.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-41.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-6.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-18.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5595.jpg
               - 04_was-wir-tun/reihen-und-programme/bechange_awakening/header_bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-53.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-12.jpg
-              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-20.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5366.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-41.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5339.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/bechange-awakening_premiere-ludwigsburg_(c)_ludwig-nikulski-27.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5859.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5497.jpg
+              - 04_was-wir-tun/reihen-und-programme/bechange_awakening/2022_kasseler_musiktage/-bechange_c_kasseler-musiktage---bernd-schoelzchen_bz6_5158.jpg
   -
     theme_selector: light
     article:
@@ -495,7 +492,7 @@ aktuell: true
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1667388579
+updated_at: 1671120490
 header_headline: '#bechange: Awakening!'
 related_reihe: 455ef639-911c-4d07-b57e-ed09648ff5e3
 quicklinks_enabled: false
@@ -503,4 +500,5 @@ show_social: false
 headline: 'Rekomposition, Klangperformance und Improvisation'
 related_termine:
   - 26500b37-0dd9-4e27-bf99-31c64c984453
+  - c1d72c42-5c10-4c5b-aec7-520ee18a22e2
 ---

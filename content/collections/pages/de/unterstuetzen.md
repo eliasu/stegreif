@@ -342,7 +342,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1664453475
+updated_at: 1673887312
 header_headline: Unterstützen
 add_section:
   -
@@ -380,57 +380,68 @@ add_section:
                   class: text-skin-primary
             text: 'Stegreif Family'
       -
-        type: paragraph
-        attrs:
-          class: 'text-2xl leading-l'
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: italic
-            text: 'Die Stegreif Family wird betreut von Dr. Andrea Palent.'
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'Hast du Fragen zum Beitritt oder anderen Themen rund um die Stegreif Family? Dann melde dich gerne bei uns '
-          -
-            type: text
-            marks:
-              -
-                type: link
-                attrs:
-                  href: 'mailto:family@stegreif.org'
-                  rel: null
-                  target: _blank
-                  title: null
-            text: family@stegreif.org
-      -
-        type: paragraph
-        attrs:
-          class: null
-        content:
-          -
-            type: text
-            text: 'Du möchtest Mitglied werden? Dann füll einfach unser Beitrittsformular aus und schick es uns digital zurück!'
-      -
         type: set
         attrs:
           values:
-            type: bard_buttons
-            buttons:
+            type: bard_feature
+            alternate: false
+            feature_type: small
+            select_media_feature: image
+            feature_image: 03_wer-wir-sind/personenbilder_neu_c_navinafotografiert/andrea-palent_(c)_navinafotografiert-3269-b.jpg.png
+            article:
               -
-                label: 'Beitrittsformular | Download'
-                target_blank: true
-                button_type: background
-                link_type: asset
-                type: button
-                enabled: true
-                asset: 07_downloads/beitrittsformular-stegreif-family.pdf
+                type: paragraph
+                attrs:
+                  class: 'text-2xl leading-l'
+                content:
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: italic
+                    text: 'Die Stegreif Family wird betreut von Dr. Andrea Palent.'
+              -
+                type: paragraph
+                attrs:
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Hast du Fragen zum Beitritt oder anderen Themen rund um die Stegreif Family? Dann melde dich gerne bei uns '
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: link
+                        attrs:
+                          href: 'mailto:family@stegreif.org'
+                          rel: null
+                          target: _blank
+                          title: null
+                    text: family@stegreif.org
+              -
+                type: paragraph
+                attrs:
+                  class: null
+                content:
+                  -
+                    type: text
+                    text: 'Du möchtest Mitglied werden? Dann füll einfach unser Beitrittsformular aus und schick es uns digital zurück!'
+              -
+                type: set
+                attrs:
+                  values:
+                    type: bard_buttons
+                    buttons:
+                      -
+                        label: 'Beitrittsformular | Download'
+                        target_blank: true
+                        button_type: background
+                        link_type: asset
+                        type: button
+                        enabled: true
+                        asset: 07_downloads/beitrittsformular-stegreif-family.pdf
+            reference_content: false
       -
         type: paragraph
         attrs:

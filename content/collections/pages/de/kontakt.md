@@ -464,6 +464,44 @@ article:
   -
     type: paragraph
     attrs:
+      class: 'text-2xl leading-l'
+    content:
+      -
+        type: text
+        text: Initiativbewerbungen
+  -
+    type: paragraph
+    attrs:
+      class: null
+    content:
+      -
+        type: text
+        text: 'Lust mitzuspielen? Gerne nehmen wir auch Initiativbewerbungen von Musiker*innen entgegen. Lea Hladka ist genau dafür eure Ansprechperson. Sendet ihr bitte neben einem '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Motivationsschreiben '
+      -
+        type: text
+        text: 'auch einige '
+      -
+        type: text
+        marks:
+          -
+            type: bts_span
+            attrs:
+              class: text-skin-primary
+        text: 'Hör- und Videobeispielen'
+      -
+        type: text
+        text: ' zu, damit wir einen Eindruck von eurer künstlerischen Tätigkeit bekommen können.'
+  -
+    type: paragraph
+    attrs:
       class: null
   -
     type: heading
@@ -864,7 +902,7 @@ sitemap_priority: 0.5
 select_transition_theme: bird
 template: page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1667489717
+updated_at: 1671195703
 og_image: kontakt-og-1656608760.png
 twitter_image: kontakt-twitter-1656608760.png
 quicklinks_enabled: false

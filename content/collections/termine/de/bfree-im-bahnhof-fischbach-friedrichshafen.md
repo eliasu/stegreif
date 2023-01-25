@@ -86,7 +86,7 @@ details:
                 enabled: true
     type: detail
     enabled: true
-theme_selector: dark
+theme_selector: light
 headline: 'Connecting European cultures through Beethoven''s 9th Symphony'
 article:
   -
@@ -194,5 +194,5 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1665489480
+updated_at: 1671121434
 ---

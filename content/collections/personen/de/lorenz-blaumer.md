@@ -15,8 +15,8 @@ links:
     enabled: true
 team_tags:
   - vertretung-kuenstlerische-leitung
-updated_by: 7d709850-5c35-4065-be68-b627c348051d
-updated_at: 1657808396
-thumbnail: 03_wer-wir-sind/personenbilder/lorenz-blaumer-1_(c)_claudia-raudszus.jpg
-image: 03_wer-wir-sind/personenbilder/lorenz-blaumer-2-(c)-shirin-kasraeian.jpg
+updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
+updated_at: 1670953051
+thumbnail: 03_wer-wir-sind/personenbilder_neu_c_navinafotografiert/lorenz-blaumer_(c)_navinafotografiert-3802-b.jpg
+image: 03_wer-wir-sind/personenbilder_neu_c_navinafotografiert/lorenz-blaumer_(c)_navinafotografiert-3802-b.jpg
 ---

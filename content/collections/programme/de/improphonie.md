@@ -20,7 +20,7 @@ related_termine:
   - bf36b577-452a-49bb-ab52-171f4674e961
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1667305467
+updated_at: 1673886473
 teaser_text: 'Wie kann Musik im Moment und im Kontakt mit dem Publikum entstehen? Wo begegnen sich Improvisation und Komposition? Wie lässt sich mitunter sogar eine Sinfonie improvisieren?'
 headline: 'Eine Sinfonie aus dem Moment'
 article:
@@ -99,7 +99,7 @@ article:
     content:
       -
         type: text
-        text: 'Anders als bei den meisten Programmen von Stegreif bezieht sich die #Improphonie nicht auf ein bestehendes sinfonisches Werk, das rekomponiert wird, sondern'
+        text: 'Anders als bei den meisten Programmen von Stegreif bezieht sich die #improphonie nicht auf ein bestehendes sinfonisches Werk, das rekomponiert wird, sondern'
       -
         type: text
         marks:

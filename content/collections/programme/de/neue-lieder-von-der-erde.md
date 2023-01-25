@@ -16,11 +16,11 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 select_transition_theme: bird
-aktuell: true
+aktuell: false
 select_type: programm
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1667387461
+updated_at: 1671202133
 article:
   -
     type: paragraph

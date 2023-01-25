@@ -42,6 +42,24 @@ details:
                 type: bts_span
                 attrs:
                   class: text-skin-primary
+            text: 'Musikalische Leitung'
+          -
+            type: hard_break
+          -
+            type: text
+            text: 'Franziska Aller'
+      -
+        type: paragraph
+        attrs:
+          class: null
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bts_span
+                attrs:
+                  class: text-skin-primary
             text: Choreographie
           -
             type: hard_break
@@ -392,7 +410,7 @@ tags:
   - chamber
 template: single_page
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1666188440
+updated_at: 1671120773
 header_headline: '#freemahler - what the earth tells us'
 extend_section:
   -

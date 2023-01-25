@@ -7,6 +7,8 @@ template: default
 layout: layout
 taxonomies:
   - team_tags
+  - instrumenten_gruppen
+  - personen_funktionen
 revisions: false
 sort_dir: asc
 date_behavior:

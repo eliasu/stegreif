@@ -7,7 +7,7 @@ fun_fact: Räubertochter.
 team_tags:
   - bueroleitung-und-finanzen
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1657295972
+updated_at: 1671106630
 thumbnail: 03_wer-wir-sind/personenbilder/ronja_ruppert_1.jpg
 image: 03_wer-wir-sind/personenbilder/ronja_ruppert_1.jpg
 ---

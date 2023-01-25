@@ -2,7 +2,7 @@
 id: 94c4ba47-fa4b-4b6c-880d-d7c42a6827f4
 blueprint: termine
 title: '#BECHANGE: FEELING | ALTE OPER FRANKFURT'
-header_theme_selector: yellow
+header_theme_selector: dark
 header_select: image
 header_image: 02_termine/220923_termin_bechange-feeling_alte-oper-frankfurt(c)-_ludwig-nikulski_lowres.jpg
 teaser_text: 'Rekomposition, Klangperformance und Improvisation auf der Grundlage von Auszügen aus: Hildegard von Bingen – Singspiel "Ordo Virtutum"'
@@ -158,7 +158,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: f6128d7d-0471-44e5-b89a-e3213d7a0925
-updated_at: 1662990438
+updated_at: 1671121575
 headline: 'Rekomposition, Klangperformance und Improvisation'
 related_programm: c01db2b0-eb69-40e6-829c-64f24b4851cf
 quicklinks_enabled: false
@@ -242,8 +242,6 @@ add_section:
             feature_type: big
             reference_content: true
             select_content: 455ef639-911c-4d07-b57e-ed09648ff5e3
-            select_media_feature: image
-            feature_video: 'https://youtu.be/VbDbVlDBi9E'
   -
     theme_selector: light
     article:
