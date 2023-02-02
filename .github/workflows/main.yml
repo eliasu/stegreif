@@ -28,8 +28,9 @@ jobs:
     
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
-      # run: |
-      #   composer update
+      with:
+        php_version: "8.0"
+        version: 2.2.5
 
     - name: 📂 Deploy to Server
       uses: easingthemes/ssh-deploy@main
