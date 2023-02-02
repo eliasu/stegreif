@@ -32,19 +32,19 @@ jobs:
     #     php artisan config:clear
     #     php artisan view:clear
 
-    - name: storage
-      run: | 
-        cd storage/
-        mkdir -p framework/{sessions,views,cache}
-        cd storage/
-        chmod -R 775 framework
-        chown -R www-data:www-data framework   
+    # - name: storage
+    #   run: | 
+    #     cd storage/
+    #     mkdir -p framework/{sessions,views,cache}
+    #     cd storage/
+    #     chmod -R 775 framework
+    #     chown -R www-data:www-data framework   
     
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
       with:
-        php_version: "8.1.2"
-        version: 2.2.5
+        # php_version: "8.1.2"
+        # version: 2.2.5
         php_extensions: exif
         # args: --ignore-platform-reqs
       # uses: "ramsey/composer-install@v2"
