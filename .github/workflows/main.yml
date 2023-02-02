@@ -27,13 +27,13 @@ jobs:
         npm run production
     
     - name: 📦 Install Composer dependencies
-      # uses: php-actions/composer@v6
+      uses: php-actions/composer@v6
       # with:
       #   php_version: "8.1"
       #   version: latest
-      uses: "ramsey/composer-install@v2"
-      with:
-        dependency-versions: "highest"
+      # uses: "ramsey/composer-install@v2"
+      # with:
+      #   dependency-versions: "highest"
     
 
     - name: 📂 Deploy to Server
