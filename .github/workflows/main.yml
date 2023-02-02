@@ -27,13 +27,16 @@ jobs:
         npm run production
 
     - name: Clear cache:clear
-      run: php artisan cache:clear
+      run: | 
+        php artisan cache:clear
 
     - name: Clear config:clear
-      run: php artisan config:clear
+      run: |
+        php artisan config:clear
 
     - name: Clear view:clear
-      run: php artisan view:clear   
+      run: |
+        php artisan view:clear   
     
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
