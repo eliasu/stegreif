@@ -29,9 +29,9 @@ jobs:
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
       with:
-        # php_version: "8.1"
-        # version: latest
-        args: --ignore-platform-reqs
+        php_version: "8.1"
+        version: latest
+        # args: --ignore-platform-reqs
       # uses: "ramsey/composer-install@v2"
       # with:
       #   dependency-versions: "highest"
