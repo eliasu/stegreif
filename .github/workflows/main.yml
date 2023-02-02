@@ -28,6 +28,8 @@ jobs:
     
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
+      # run: |
+      #   composer update
 
     - name: 📂 Deploy to Server
       uses: easingthemes/ssh-deploy@main
