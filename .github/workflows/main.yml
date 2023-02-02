@@ -26,17 +26,19 @@ jobs:
       run: |
         npm run production
 
-    - name: Clear cache:clear
+    # - name: Clear cache:clear
+    #   run: | 
+    #     php artisan cache:clear
+    #     php artisan config:clear
+    #     php artisan view:clear
+
+    - name: storage
       run: | 
-        php artisan cache:clear
-
-    - name: Clear config:clear
-      run: |
-        php artisan config:clear
-
-    - name: Clear view:clear
-      run: |
-        php artisan view:clear   
+        cd storage/
+        mkdir -p framework/{sessions,views,cache}
+        cd storage/
+        chmod -R 775 framework
+        chown -R www-data:www-data framework   
     
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
