@@ -49,8 +49,8 @@ jobs:
     - name: 📦 Install Composer dependencies
       uses: php-actions/composer@v6
       with:
-        php_version: "8.1.2"
-        version: 2.2.5
+        # php_version: "8.1.2"
+        # version: 2.2.5
         php_extensions: exif gd bcmath
         args: --no-dev
         # args: --ignore-platform-reqs
