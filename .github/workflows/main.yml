@@ -28,9 +28,13 @@ jobs:
 
     - name: 🩺 Composer Diagnose
       run: |
+        echo "Diagnose"
         composer diagnose
+        echo "PWD"
         pwd
+        echo "LS"
         ls
+        echo "END"
 
     # - name: Clear cache:clear
     #   run: | 
