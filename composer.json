@@ -20,7 +20,13 @@
         "laravel/tinker": "^2.7",
         "spatie/browsershot": "^3.57",
         "statamic/cms": "3.3.67",
-        "stillat/relationships": "^1.0"
+        "stillat/relationships": "^1.0",
+       
+        "ext-bcmath": "*",
+        "ext-exif": "*",
+        "ext-gd": "*",
+        "ext-mbstring": "*"
+        
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
