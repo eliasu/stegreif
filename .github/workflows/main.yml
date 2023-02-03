@@ -26,6 +26,12 @@ jobs:
       run: |
         npm run production
 
+    - name: 🩺 Composer Diagnose
+      run: |
+        composer diagnose
+        pwd
+        ls
+
     # - name: Clear cache:clear
     #   run: | 
     #     @php artisan cache:clear
