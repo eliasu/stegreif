@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: 🚚 Get Latest Code
       uses: actions/checkout@v3
-      with:
-        path: /tmp/composer-cache
+      # with:
+      #   path: /tmp/composer-cache
 
     - name: 📦 Setup Node
       uses: actions/setup-node@v3
