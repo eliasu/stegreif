@@ -51,7 +51,7 @@ jobs:
       with:
         php_version: "8.1.2"
         version: 2.2.5
-        php_extensions: exif
+        php_extensions: exif gd bcmath
         args: --no-dev
         # args: --ignore-platform-reqs
       # uses: "ramsey/composer-install@v2"
