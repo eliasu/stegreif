@@ -50,7 +50,7 @@ jobs:
       uses: "ramsey/composer-install@v2"
       with:
         dependency-versions: "highest"
-        ignore-cache: "no"
+        # ignore-cache: "no"
     
 
     - name: 📂 Deploy to Server
