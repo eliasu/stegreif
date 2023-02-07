@@ -18,7 +18,7 @@ yarn-error.log
 # Comment the following lines if you don't compile your assets on the server:
 /public/js/
 /public/css/
-/public/mix-manifest.json
+# /public/mix-manifest.json 
 .DS_Stor??
 
 # original image files
