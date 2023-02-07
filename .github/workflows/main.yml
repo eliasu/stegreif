@@ -72,10 +72,10 @@ jobs:
     - name: 🔨 Execute Deploy Script
       uses: appleboy/ssh-action@v0.1.6
       with:
-        host: ${{ secrets.HOST_AI }}
-        username: ${{ secrets.NAME_AI }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        port: ${{ secrets.PORT_AI }}
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        # port: ${{ secrets.PORT_AI }}
         script: |
           echo "Dev Deployment started ..."
           cd ${{ secrets.REMOTE_PATH }}
