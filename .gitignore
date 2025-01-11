@@ -20,8 +20,7 @@ yarn-error.log
 /public/css/
 # /public/mix-manifest.json 
 .DS_Stor??
+.DS_Store
 
-# original image files
-/public/assets/
 # generated image files
 /public/img/
